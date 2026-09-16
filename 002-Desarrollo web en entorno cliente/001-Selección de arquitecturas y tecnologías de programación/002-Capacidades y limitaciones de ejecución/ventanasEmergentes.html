@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ventanas emergentes</title>
+</head>
+
+<body>
+
+    <h1>Prueba de ventanas emergentes</h1>
+
+    <button onclick="abrirVentana()">
+        Abrir ventana
+    </button>
+
+    <button onclick="abrirDespues()">
+        Intentar abrir dentro de 3 segundos
+    </button>
+
+    <script>
+
+        function abrirVentana() {
+
+            window.open(
+                "https://example.com",
+                "_blank"
+            );
+
+        }
+
+
+        function abrirDespues() {
+
+            setTimeout(function () {
+
+                window.open(
+                    "https://example.com",
+                    "_blank"
+                );
+
+            }, 3000);
+
+        }
+
+    </script>
+
+</body>
+
+</html>

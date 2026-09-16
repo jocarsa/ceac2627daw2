@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LocalStorage</title>
+</head>
+
+<body>
+
+    <h1>Guardar información en el navegador</h1>
+
+    <input
+        type="text"
+        id="nombre"
+        placeholder="Escribe tu nombre"
+    >
+
+    <button onclick="guardarNombre()">
+        Guardar
+    </button>
+
+    <button onclick="mostrarNombre()">
+        Recuperar
+    </button>
+
+    <button onclick="borrarNombre()">
+        Borrar
+    </button>
+
+    <p id="resultado"></p>
+
+    <script>
+
+        function guardarNombre() {
+
+            const nombre =
+                document.getElementById("nombre").value;
+
+            localStorage.setItem("nombre", nombre);
+
+        }
+
+
+        function mostrarNombre() {
+
+            const nombre =
+                localStorage.getItem("nombre");
+
+            document.getElementById("resultado").textContent =
+                "Nombre almacenado: " + nombre;
+
+        }
+
+
+        function borrarNombre() {
+
+            localStorage.removeItem("nombre");
+
+            document.getElementById("resultado").textContent =
+                "Información eliminada";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

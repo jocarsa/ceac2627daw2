@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Capacidades de JavaScript</title>
+</head>
+
+<body>
+
+    <h1 id="titulo">Título original</h1>
+
+    <p id="texto">
+        Este contenido pertenece a la página.
+    </p>
+
+    <button onclick="modificarPagina()">
+        Modificar página
+    </button>
+
+    <script>
+
+        function modificarPagina() {
+
+            document.getElementById("titulo").textContent =
+                "Título modificado con JavaScript";
+
+            document.getElementById("texto").textContent =
+                "JavaScript puede modificar el contenido de la página.";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
