@@ -1,0 +1,16 @@
+Diseña tu tarjeta de presentación.
+
+Esta tarjeta debe contener:
+		- Nombre
+		- Apellidos
+		- Edad
+		- Fecha de nacimiento
+		- Geolocalización
+
+Cada campo debe ser añadirse de manera independiente. 
+
+Tras rellenar todo el formulario, añade un botón que permita guardar en localstorage toda esta información, otro que lo recupere todo y otro que lo borre todo (localstorage y campos rellenados).
+
+Añade un campo "Estás en Valencia" que determine si estas en Valencia a partir de los datos de longitud y latitud actuales. La posición actual se tiene que autocalcular pero se tiene que añadir un campo para rellenar estos datos manualmente.
+
+Añade un campo "Web favorita" en el cual puedas añadir la url de tu web favorita y un botón para poder abrir dicha web.
