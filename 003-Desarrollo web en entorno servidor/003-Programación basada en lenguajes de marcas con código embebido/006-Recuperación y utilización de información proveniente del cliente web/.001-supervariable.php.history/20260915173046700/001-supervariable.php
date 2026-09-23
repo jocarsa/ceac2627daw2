@@ -1,0 +1,3 @@
+<?php
+	$servidor = $_SERVER;
+?>	

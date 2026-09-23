@@ -1,0 +1,3 @@
+<?php
+	$diadelasemana = "martes";
+?>

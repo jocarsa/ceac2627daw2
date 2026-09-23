@@ -1,0 +1,15 @@
+<?php
+
+$db = new SQLite3('database.db');
+
+$table = 'clientes';
+
+$result = $db->query("PRAGMA table_info($table)");
+
+while ($column = $result->fetchArray(SQLITE3_ASSOC)) {
+    echo $column['name'] . "<br>";
+}
+
+$db->close();
+
+?>
