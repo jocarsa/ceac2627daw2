@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo DOM</title>
+</head>
+
+<body>
+
+    <h1 id="titulo">
+        Mi tienda
+    </h1>
+
+    <p id="mensaje">
+        Bienvenido
+    </p>
+
+    <button id="boton">
+        Modificar página
+    </button>
+
+    <script>
+
+        document.getElementById("boton").onclick = function () {
+
+        document.getElementById("titulo").textContent =
+            "Tienda modificada";
+
+        document.getElementById("mensaje").textContent =
+            "JavaScript ha modificado el DOM";
+        };
+
+    </script>
+
+</body>
+
+</html>

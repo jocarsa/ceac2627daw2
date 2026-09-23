@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tienda insegura</title>
+</head>
+
+<body>
+
+    <h1>Tienda</h1>
+
+    <h2>Teclado gaming</h2>
+
+    <p>
+        Precio:
+        <span id="precio"></span>
+        €
+    </p>
+
+    <button onclick="comprar()">
+        Comprar
+    </button>
+
+    <p id="resultado"></p>
+
+    <script>
+
+        window.precio = 100;
+
+        function actualizarPrecio() {
+
+            document.getElementById("precio").textContent =
+                window.precio;
+
+        }
+
+
+        function comprar() {
+
+            document.getElementById("resultado").textContent =
+                "Compra realizada por " +
+                window.precio +
+                " €";
+
+        }
+
+
+        actualizarPrecio();
+
+    </script>
+
+</body>
+
+</html>

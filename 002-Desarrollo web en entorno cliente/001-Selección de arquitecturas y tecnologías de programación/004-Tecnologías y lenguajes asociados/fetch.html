@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch JSON</title>
+</head>
+
+<body>
+
+    <h1>Productos</h1>
+
+    <button id="cargar">
+        Cargar productos
+    </button>
+
+    <div id="productos"></div>
+
+    <script>
+
+        document.getElementById("cargar").onclick = function () {
+
+        fetch("productos.json")
+            .then(function (respuesta) {
+                return respuesta.json();
+            })
+            .then(function (productos) {
+
+                const contenedor =
+                    document.getElementById("productos");
+
+                contenedor.innerHTML = "";
+
+                productos.forEach(function (producto) {
+
+                    contenedor.innerHTML +=
+                        "<p>" +
+                        producto.nombre +
+                        " - " +
+                        producto.precio +
+                        " €</p>";
+                });
+            });
+        };
+
+    </script>
+
+</body>
+
+</html>

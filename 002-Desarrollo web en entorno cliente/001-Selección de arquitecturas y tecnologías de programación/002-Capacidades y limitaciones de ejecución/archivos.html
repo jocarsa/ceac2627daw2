@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Seleccionar archivo</title>
+</head>
+
+<body>
+
+    <h1>Trabajar con archivos</h1>
+
+    <input
+        type="file"
+        id="archivo"
+        accept=".txt"
+    >
+
+    <h2>Archivo seleccionado</h2>
+
+    <p id="nombre"></p>
+
+    <h2>Contenido</h2>
+
+    <pre id="contenido"></pre>
+
+    <script>
+
+        document.getElementById("archivo").addEventListener(
+            "change",
+            function () {
+
+                const archivo = this.files[0];
+
+                if (!archivo) {
+                    return;
+                }
+
+                document.getElementById("nombre").textContent =
+                    archivo.name;
+
+                const lector = new FileReader();
+
+                lector.onload = function () {
+
+                    document.getElementById("contenido").textContent =
+                        lector.result;
+
+                };
+
+                lector.readAsText(archivo);
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>
