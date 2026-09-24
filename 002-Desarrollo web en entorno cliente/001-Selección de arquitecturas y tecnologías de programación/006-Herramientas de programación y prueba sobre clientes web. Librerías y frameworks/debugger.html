@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Debugger</title>
+</head>
+
+<body>
+
+    <h1>Depuración paso a paso</h1>
+
+    <button onclick="calcular()">
+        Realizar cálculo
+    </button>
+
+    <p id="resultado"></p>
+
+    <script>
+
+        function calcular() {
+
+            let numero = 10;
+
+            numero = numero + 5;
+
+            numero = numero * 2;
+
+            document.getElementById("resultado").textContent =
+                "Resultado: " + numero;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

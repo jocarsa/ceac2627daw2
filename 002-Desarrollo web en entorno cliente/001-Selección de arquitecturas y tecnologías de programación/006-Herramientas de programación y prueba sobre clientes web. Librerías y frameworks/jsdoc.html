@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Introducción a JSDoc</title>
+</head>
+
+<body>
+
+    <h1>Documentación con JSDoc</h1>
+
+    <button onclick="mostrarPrecio()">
+        Calcular precio
+    </button>
+
+    <p id="resultado"></p>
+
+    <script>
+
+        /**
+         * Calcula el precio final de un producto
+         * después de aplicar un descuento.
+         *
+         * @param {number} precio Precio original.
+         * @param {number} descuento Descuento aplicado.
+         * @returns {number} Precio final.
+         */
+        function calcularPrecio(precio, descuento) {
+
+            return precio - descuento;
+
+        }
+
+
+        function mostrarPrecio() {
+
+            let resultado = calcularPrecio(100, 20);
+
+            document.getElementById("resultado").textContent =
+                "Precio final: " + resultado + " €";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

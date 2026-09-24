@@ -1,0 +1,157 @@
+========================================
+JSDoc y Jest - Guía rápida de instalación
+========================================
+
+REQUISITO PREVIO
+----------------
+Es necesario tener instalado Node.js.
+
+Para comprobarlo, abre una terminal y ejecuta:
+
+node -v
+
+También puedes comprobar npm con:
+
+npm -v
+
+Si ambos comandos muestran una versión, ya está preparado.
+
+
+========================================
+1. PREPARAR EL PROYECTO
+========================================
+
+1. Crea una carpeta para el proyecto.
+
+2. Ábrela con Visual Studio Code.
+
+3. Abre una terminal dentro de VS Code.
+
+4. Ejecuta:
+
+npm init -y
+
+Esto creará el archivo:
+
+package.json
+
+
+========================================
+2. INSTALAR JSDoc Y Jest
+========================================
+
+En la terminal ejecuta:
+
+npm install --save-dev jsdoc jest
+
+Esto instalará ambas herramientas dentro del proyecto.
+
+
+========================================
+3. DOCUMENTACIÓN CON JSDoc
+========================================
+
+Para generar la documentación ejecuta:
+
+npx jsdoc operaciones.js -d docs
+
+
+Se creará una carpeta:
+
+docs
+
+
+Dentro encontrarás:
+
+docs/index.html
+
+
+Abre ese archivo en el navegador para consultar
+la documentación generada.
+
+
+----------------------------------------
+Comando JSDoc:
+----------------------------------------
+
+npx jsdoc operaciones.js -d docs
+
+
+========================================
+4. TESTING CON JEST
+========================================
+
+Crea un archivo cuyo nombre termine en:
+
+.test.js
+
+Por ejemplo:
+
+Para ejecutar las pruebas utiliza:
+
+npx jest
+
+
+Si todo funciona correctamente aparecerá:
+
+PASS
+
+
+Si alguna prueba falla aparecerá:
+
+FAIL
+
+
+========================================
+5. EJECUTAR JEST CON npm test
+========================================
+
+Abre el archivo:
+
+package.json
+
+
+Busca la sección:
+
+"scripts"
+
+
+Déjala de esta forma:
+
+"scripts": {
+    "test": "jest"
+}
+
+
+Ahora puedes ejecutar las pruebas simplemente con:
+
+npm test
+
+
+========================================
+6. COMANDOS IMPORTANTES
+========================================
+
+Preparar proyecto:
+
+npm init -y
+
+
+Instalar herramientas:
+
+npm install --save-dev jsdoc jest
+
+
+Generar documentación:
+
+npx jsdoc documentacion.js -d docs
+
+
+Ejecutar tests directamente:
+
+npx jest
+
+
+Ejecutar tests mediante package.json:
+
+npm test
