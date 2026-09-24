@@ -31,6 +31,8 @@ Si ambos comandos muestran una versión, ya está preparado.
 
 npm init -y
 
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
 Esto creará el archivo:
 
 package.json

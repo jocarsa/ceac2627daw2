@@ -21,10 +21,15 @@
         function calcular() {
 
             let numero = 10;
+            console.log("Número inicial:", numero);
 
             numero = numero + 5;
+            console.log("Número después de sumar 5:", numero);
 
             numero = numero * 2;
+            console.log("Número después de multiplicar por 2:", numero);
+
+            console.log(variableQueNoExiste);
 
             document.getElementById("resultado").textContent =
                 "Resultado: " + numero;
