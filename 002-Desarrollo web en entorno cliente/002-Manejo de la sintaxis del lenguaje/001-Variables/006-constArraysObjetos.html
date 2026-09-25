@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>const con arrays y objetos</title>
+</head>
+<body>
+
+    <h1>const con arrays y objetos</h1>
+    <p>Abre la consola del navegador para ver los resultados.</p>
+
+    <script>
+        console.log("=== CONST CON ARRAYS Y OBJETOS ===");
+
+
+        // -------------------------
+        // ARRAY
+        // -------------------------
+
+        const numeros = [10, 20, 30];
+
+        console.log("Array inicial:");
+        console.log(numeros);
+
+
+        // Podemos modificar el contenido del array.
+
+        numeros.push(40);
+
+        console.log("Array después de añadir un elemento:");
+        console.log(numeros);
+
+
+        // Lo que NO podemos hacer es asignar otro array
+        // a la misma constante.
+
+        // numeros = [1, 2, 3];
+
+
+        // -------------------------
+        // OBJETO
+        // -------------------------
+
+        const jugador = {
+            nombre: "Ana",
+            puntos: 100
+        };
+
+        console.log("Jugador inicial:");
+        console.log(jugador);
+
+
+        // Podemos modificar una propiedad.
+
+        jugador.puntos = 200;
+
+        console.log("Jugador después de modificar sus puntos:");
+        console.log(jugador);
+
+
+        // Pero no podemos sustituir el objeto completo.
+
+        /*
+        jugador = {
+            nombre: "Pedro",
+            puntos: 500
+        };
+        */
+    </script>
+
+</body>
+</html>

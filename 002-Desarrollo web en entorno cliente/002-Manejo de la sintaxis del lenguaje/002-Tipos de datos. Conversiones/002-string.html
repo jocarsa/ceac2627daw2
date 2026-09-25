@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipo string</title>
+</head>
+<body>
+
+    <h1>Tipo string</h1>
+    <p>Abre la consola del navegador para ver los resultados.</p>
+
+    <script>
+        console.log("=== STRING ===");
+
+
+        // -------------------------
+        // COMILLAS DOBLES
+        // -------------------------
+
+        const nombre = "Ana";
+
+        console.log(nombre);
+        console.log(typeof nombre);
+
+
+        // -------------------------
+        // COMILLAS SIMPLES
+        // -------------------------
+
+        const ciudad = 'Valencia';
+
+        console.log(ciudad);
+
+
+        // -------------------------
+        // COMILLAS DENTRO DE CADENAS
+        // -------------------------
+
+        const frase1 = "El profesor dijo 'Hola'";
+
+        const frase2 = 'El profesor dijo "Hola"';
+
+        console.log(frase1);
+        console.log(frase2);
+
+
+        // -------------------------
+        // CARACTERES DE ESCAPE
+        // -------------------------
+
+        const frase3 = "El profesor dijo \"Hola\"";
+
+        console.log(frase3);
+
+
+        // Salto de línea
+
+        const texto = "Primera línea\nSegunda línea";
+
+        console.log(texto);
+
+
+        // Tabulación
+
+        const datos = "Nombre:\tAna";
+
+        console.log(datos);
+
+
+        // Barra invertida
+
+        const ruta = "C:\\Usuarios\\Alumno";
+
+        console.log(ruta);
+
+
+        // -------------------------
+        // CONCATENACIÓN
+        // -------------------------
+
+        const nombreUsuario = "Laura";
+        const edad = 25;
+
+        const mensaje1 =
+            "Me llamo " + nombreUsuario + " y tengo " + edad + " años";
+
+        console.log(mensaje1);
+
+
+        // -------------------------
+        // TEMPLATE LITERALS
+        // -------------------------
+
+        const mensaje2 =
+            `Me llamo ${nombreUsuario} y tengo ${edad} años`;
+
+        console.log(mensaje2);
+
+
+        // También permiten varias líneas.
+
+        const mensaje3 = `
+Primera línea
+Segunda línea
+Tercera línea
+        `;
+
+        console.log(mensaje3);
+    </script>
+
+</body>
+</html>

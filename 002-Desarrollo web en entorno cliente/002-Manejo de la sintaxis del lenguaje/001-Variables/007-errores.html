@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Errores frecuentes con variables</title>
+</head>
+<body>
+
+    <h1>Errores frecuentes con variables</h1>
+
+    <p>
+        Los ejemplos que producen errores están comentados.
+        Descomenta uno cada vez y observa la consola.
+    </p>
+
+    <script>
+        console.log("=== ERRORES FRECUENTES ===");
+
+
+        // -------------------------------------
+        // ERROR 1
+        // MODIFICAR UNA CONSTANTE
+        // -------------------------------------
+
+        const nombre = "Ana";
+
+        console.log(nombre);
+
+        // Descomentar:
+        // nombre = "Pedro";
+
+
+        // -------------------------------------
+        // ERROR 2
+        // VARIABLE INEXISTENTE
+        // -------------------------------------
+
+        // Descomentar:
+        // console.log(apellido);
+
+
+        // -------------------------------------
+        // ERROR 3
+        // MAYÚSCULAS Y MINÚSCULAS
+        // -------------------------------------
+
+        const edad = 20;
+
+        console.log(edad);
+
+        // Descomentar:
+        // console.log(Edad);
+
+
+        // -------------------------------------
+        // ERROR 4
+        // VARIABLE FUERA DE SU ÁMBITO
+        // -------------------------------------
+
+        {
+            const mensaje = "Hola";
+
+            console.log(mensaje);
+        }
+
+        // Descomentar:
+        // console.log(mensaje);
+
+
+        console.log("El programa ha terminado correctamente.");
+    </script>
+
+</body>
+</html>

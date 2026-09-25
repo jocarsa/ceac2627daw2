@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipo number</title>
+</head>
+<body>
+
+    <h1>Tipo number</h1>
+    <p>Abre la consola del navegador para ver los resultados.</p>
+
+    <script>
+        console.log("=== NUMBER ===");
+
+
+        // -------------------------
+        // NÚMEROS ENTEROS
+        // -------------------------
+
+        const edad = 25;
+
+        console.log(edad);
+        console.log(typeof edad);
+
+
+        // -------------------------
+        // NÚMEROS DECIMALES
+        // -------------------------
+
+        const precio = 19.99;
+
+        console.log(precio);
+        console.log(typeof precio);
+
+
+        // -------------------------
+        // NÚMEROS NEGATIVOS
+        // -------------------------
+
+        const temperatura = -5;
+
+        console.log(temperatura);
+        console.log(typeof temperatura);
+
+
+        // -------------------------
+        // NOTACIÓN CIENTÍFICA
+        // -------------------------
+
+        const numeroGrande = 6.022e23;
+
+        console.log(numeroGrande);
+        console.log(typeof numeroGrande);
+
+
+        // -------------------------
+        // INFINITY
+        // -------------------------
+
+        const division = 10 / 0;
+
+        console.log("10 / 0:");
+        console.log(division);
+
+        console.log(typeof division);
+
+
+        // -------------------------
+        // NAN
+        // -------------------------
+
+        const resultadoIncorrecto = Number("Hola");
+
+        console.log("Resultado de convertir 'Hola' en número:");
+        console.log(resultadoIncorrecto);
+
+        console.log("Tipo de NaN:");
+        console.log(typeof resultadoIncorrecto);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operador typeof</title>
+</head>
+<body>
+
+    <h1>Operador typeof</h1>
+    <p>Abre la consola del navegador para ver los resultados.</p>
+
+    <script>
+        console.log("=== TYPEOF ===");
+
+
+        const texto = "Hola";
+
+        const numero = 25;
+
+        const booleano = true;
+
+        let sinValor;
+
+        const valorNulo = null;
+
+        const persona = {
+            nombre: "Ana"
+        };
+
+        const numeros = [
+            10,
+            20,
+            30
+        ];
+
+
+        console.log("texto:");
+
+        console.log(texto);
+        console.log(typeof texto);
+
+
+        console.log("------------------");
+
+
+        console.log("numero:");
+
+        console.log(numero);
+        console.log(typeof numero);
+
+
+        console.log("------------------");
+
+
+        console.log("booleano:");
+
+        console.log(booleano);
+        console.log(typeof booleano);
+
+
+        console.log("------------------");
+
+
+        console.log("sinValor:");
+
+        console.log(sinValor);
+        console.log(typeof sinValor);
+
+
+        console.log("------------------");
+
+
+        console.log("valorNulo:");
+
+        console.log(valorNulo);
+        console.log(typeof valorNulo);
+
+
+        console.log("------------------");
+
+
+        console.log("persona:");
+
+        console.log(persona);
+        console.log(typeof persona);
+
+
+        console.log("------------------");
+
+
+        console.log("numeros:");
+
+        console.log(numeros);
+        console.log(typeof numeros);
+
+        console.log("¿Es un array?");
+
+        console.log(Array.isArray(numeros));
+    </script>
+
+</body>
+</html>

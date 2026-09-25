@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var, let y ámbito</title>
+</head>
+<body>
+
+    <h1>Diferencias entre var y let</h1>
+    <p>Abre la consola del navegador para ver los resultados.</p>
+
+    <script>
+        console.log("=== VAR Y LET ===");
+
+
+        // -------------------------
+        // VAR
+        // -------------------------
+
+        {
+            var mensajeVar = "Soy una variable declarada con var";
+        }
+
+        // var no tiene ámbito de bloque.
+        console.log("Fuera del bloque con var:");
+        console.log(mensajeVar);
+
+
+        // -------------------------
+        // LET
+        // -------------------------
+
+        {
+            let mensajeLet = "Soy una variable declarada con let";
+
+            console.log("Dentro del bloque con let:");
+            console.log(mensajeLet);
+        }
+
+
+        // let sí tiene ámbito de bloque.
+        // Si quitamos el comentario se producirá un error.
+
+        // console.log(mensajeLet);
+
+
+        // -------------------------
+        // FORMA RECOMENDADA
+        // -------------------------
+
+        const nombre = "Ana";
+        let puntuacion = 0;
+
+        puntuacion = 100;
+
+        console.log("Nombre:");
+        console.log(nombre);
+
+        console.log("Puntuación:");
+        console.log(puntuacion);
+    </script>
+
+</body>
+</html>

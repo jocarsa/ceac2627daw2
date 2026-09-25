@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos y arrays</title>
+</head>
+<body>
+
+    <h1>Objetos y arrays</h1>
+    <p>Abre la consola del navegador para ver los resultados.</p>
+
+    <script>
+        console.log("=== OBJETOS Y ARRAYS ===");
+
+
+        // -------------------------
+        // OBJETO
+        // -------------------------
+
+        const persona = {
+            nombre: "Ana",
+            edad: 25,
+            estudiante: true
+        };
+
+
+        console.log("Objeto completo:");
+
+        console.log(persona);
+
+
+        console.log("Nombre:");
+
+        console.log(persona.nombre);
+
+
+        console.log("Edad:");
+
+        console.log(persona.edad);
+
+
+        console.log("Tipo:");
+
+        console.log(typeof persona);
+
+
+        // -------------------------
+        // ARRAY
+        // -------------------------
+
+        const colores = [
+            "rojo",
+            "verde",
+            "azul"
+        ];
+
+
+        console.log("----------------------");
+
+        console.log("Array completo:");
+
+        console.log(colores);
+
+
+        console.log("Primer elemento:");
+
+        console.log(colores[0]);
+
+
+        console.log("Segundo elemento:");
+
+        console.log(colores[1]);
+
+
+        console.log("Tercer elemento:");
+
+        console.log(colores[2]);
+
+
+        // -------------------------
+        // ARRAY CON DIFERENTES TIPOS
+        // -------------------------
+
+        const datos = [
+            "Ana",
+            25,
+            true
+        ];
+
+        console.log("Array con varios tipos:");
+
+        console.log(datos);
+
+
+        // -------------------------
+        // TYPEOF DE UN ARRAY
+        // -------------------------
+
+        console.log("typeof del array:");
+
+        console.log(typeof colores);
+
+
+        // -------------------------
+        // COMPROBAR SI ES UN ARRAY
+        // -------------------------
+
+        console.log("¿colores es un array?");
+
+        console.log(Array.isArray(colores));
+
+
+        console.log("¿persona es un array?");
+
+        console.log(Array.isArray(persona));
+    </script>
+
+</body>
+</html>

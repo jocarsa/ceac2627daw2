@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipado dinámico</title>
+</head>
+<body>
+
+    <h1>Tipado dinámico en JavaScript</h1>
+    <p>Abre la consola del navegador para ver los resultados.</p>
+
+    <script>
+        console.log("=== TIPADO DINÁMICO ===");
+
+        let dato = 25;
+
+        console.log("Valor:");
+        console.log(dato);
+
+        console.log("Tipo:");
+        console.log(typeof dato);
+
+
+        // La misma variable puede recibir un valor de otro tipo.
+
+        dato = "Hola";
+
+        console.log("Nuevo valor:");
+        console.log(dato);
+
+        console.log("Nuevo tipo:");
+        console.log(typeof dato);
+
+
+        // Cambiamos nuevamente el valor y el tipo.
+
+        dato = true;
+
+        console.log("Nuevo valor:");
+        console.log(dato);
+
+        console.log("Nuevo tipo:");
+        console.log(typeof dato);
+    </script>
+
+</body>
+</html>
