@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Clientes</title>
+  </head>
+  
+  <body>
+    
+    <table border="1">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Apellidos</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      
+      <tbody></tbody>
+    </table>
+    
+    <script>
+      fetch("controlador.php")
+      .then(function(resultado){
+        return resultado.json()
+      })
+      .then(function(datos){
+        
+        console.log(datos)
+        
+        let tbody = document.querySelector("tbody")
+        
+        datos.forEach(function(cliente){
+          
+          let fila = document.createElement("tr")
+          
+          fila.innerHTML = `
+            <td>${cliente.id}</td>
+            <td>${cliente.nombre}</td>
+            <td>${cliente.apellidos}</td>
+            <td>${cliente.email}</td>
+          `
+          
+          tbody.appendChild(fila)
+          
+        })
+        
+      })
+    </script>
+    
+  </body>
+</html>

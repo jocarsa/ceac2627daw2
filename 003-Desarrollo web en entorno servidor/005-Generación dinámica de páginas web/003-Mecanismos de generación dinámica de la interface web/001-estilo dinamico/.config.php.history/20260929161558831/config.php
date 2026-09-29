@@ -1,0 +1,3 @@
+<?php
+	$color = "orange";
+?>

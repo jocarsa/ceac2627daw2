@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <table>
+    </table>
+    <script>
+      fetch("controlador.php")
+      .then(function(resultado){ return resultado.json()})
+      .then(function(datos){
+      	console.log(datos)
+      })
+    </script>
+  </body>
+</html>

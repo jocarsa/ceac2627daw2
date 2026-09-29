@@ -1,0 +1,26 @@
+<?php include "config.php";?>
+<!doctype html>
+<html>
+	<head>
+  	<style>
+    	html,body{padding:0px;margin:0px;width:100%;height:100%;}
+      body{display:flex;flex-direction:column;}
+      header{background:green;padding:10px;}
+      main{display:flex;height:100%;}
+      nav{background:green;flex:1;padding:10px;}
+      section{flex:9;}
+    </style>
+  </head>
+  <body>
+  	<header>
+    	jocarsa | software
+    </header>
+    <main>
+    	<nav>	
+      Hola
+      </nav>
+      <section>
+      </section>
+    </main>
+  </body>
+</html>
