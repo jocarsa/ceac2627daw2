@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DevTools</title>
+</head>
+
+<body>
+
+    <h1 id="titulo">Mi tienda</h1>
+
+    <p>
+        Ratón gaming - 50 €
+    </p>
+
+    <button onclick="guardarDatos()">
+        Guardar datos
+    </button>
+
+    <button onclick="hacerPeticion()">
+        Realizar petición
+    </button>
+
+    <p id="mensaje"></p>
+
+    <script>
+
+        function guardarDatos() {
+
+            localStorage.setItem("usuario", "Ana");
+            localStorage.setItem("tema", "oscuro");
+
+            document.getElementById("mensaje").textContent =
+                "Datos guardados en localStorage";
+
+        }
+
+
+        function hacerPeticion() {
+
+            fetch(window.location.href)
+                .then(function () {
+
+                    document.getElementById("mensaje").textContent =
+                        "Petición realizada. Comprueba Network.";
+
+                });
+
+        }
+
+    </script>
+
+</body>
+
+</html>

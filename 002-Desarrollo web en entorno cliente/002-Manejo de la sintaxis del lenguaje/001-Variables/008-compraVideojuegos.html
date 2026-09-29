@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de un videojuego</title>
+</head>
+<body>
+
+    <h1>Compra de un videojuego</h1>
+
+    <p>
+        Ejemplo completo de declaración, inicialización,
+        constantes, variables y reasignación.
+    </p>
+
+    <p>Abre la consola del navegador para ver los resultados.</p>
+
+    <script>
+        console.log("=== COMPRA DE UN VIDEOJUEGO ===");
+
+
+        // -----------------------------------
+        // DATOS QUE NO VAN A CAMBIAR
+        // -----------------------------------
+
+        const nombreJuego = "Space Adventure";
+
+        const precioUnidad = 59.99;
+
+        const descuento = 10;
+
+
+        // -----------------------------------
+        // DATOS QUE PUEDEN CAMBIAR
+        // -----------------------------------
+
+        let cantidad = 1;
+
+
+        // -----------------------------------
+        // CÁLCULOS
+        // -----------------------------------
+
+        let precioTotal = precioUnidad * cantidad;
+
+        let cantidadDescuento = precioTotal * descuento / 100;
+
+        let precioFinal = precioTotal - cantidadDescuento;
+
+
+        // -----------------------------------
+        // MOSTRAMOS LOS RESULTADOS
+        // -----------------------------------
+
+        console.log("Juego:");
+        console.log(nombreJuego);
+
+        console.log("Precio por unidad:");
+        console.log(precioUnidad);
+
+        console.log("Cantidad:");
+        console.log(cantidad);
+
+        console.log("Precio sin descuento:");
+        console.log(precioTotal);
+
+        console.log("Descuento aplicado:");
+        console.log(cantidadDescuento);
+
+        console.log("Precio final:");
+        console.log(precioFinal);
+
+
+        // -----------------------------------
+        // CAMBIAMOS LA CANTIDAD
+        // -----------------------------------
+
+        cantidad = 2;
+
+
+        // Recalculamos los valores.
+
+        precioTotal = precioUnidad * cantidad;
+
+        cantidadDescuento = precioTotal * descuento / 100;
+
+        precioFinal = precioTotal - cantidadDescuento;
+
+
+        // -----------------------------------
+        // NUEVOS RESULTADOS
+        // -----------------------------------
+
+        console.log("--------------------------");
+
+        console.log("Nueva cantidad:");
+        console.log(cantidad);
+
+        console.log("Nuevo precio sin descuento:");
+        console.log(precioTotal);
+
+        console.log("Nuevo descuento:");
+        console.log(cantidadDescuento);
+
+        console.log("Nuevo precio final:");
+        console.log(precioFinal);
+    </script>
+
+</body>
+</html>

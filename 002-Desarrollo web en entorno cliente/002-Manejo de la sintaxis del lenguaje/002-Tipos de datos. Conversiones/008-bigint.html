@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipo BigInt</title>
+</head>
+<body>
+
+    <h1>Tipo BigInt</h1>
+    <p>Abre la consola del navegador para ver los resultados.</p>
+
+    <script>
+        console.log("=== BIGINT ===");
+
+
+        const numeroGrande =
+            123456789012345678901234567890n;
+
+
+        console.log("Valor:");
+
+        console.log(numeroGrande);
+
+
+        console.log("Tipo:");
+
+        console.log(typeof numeroGrande);
+
+
+        // También podemos realizar operaciones
+        // entre valores BigInt.
+
+        const numero1 = 100n;
+
+        const numero2 = 200n;
+
+        const resultado = numero1 + numero2;
+
+
+        console.log("Resultado:");
+
+        console.log(resultado);
+
+        console.log("Tipo del resultado:");
+
+        console.log(typeof resultado);
+    </script>
+
+</body>
+</html>

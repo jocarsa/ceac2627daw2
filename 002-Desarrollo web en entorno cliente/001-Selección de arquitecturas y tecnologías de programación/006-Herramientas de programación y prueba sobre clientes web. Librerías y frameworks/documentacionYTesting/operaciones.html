@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Operaciones JavaScript</title>
+</head>
+
+<body>
+
+    <h1>Prueba de operaciones</h1>
+
+
+    <h2>Suma</h2>
+
+    <input type="number" id="sumaA" value="2">
+    <input type="number" id="sumaB" value="3">
+
+    <button onclick="probarSuma()">
+        Sumar
+    </button>
+
+    <p id="resultadoSuma"></p>
+
+
+    <h2>Resta</h2>
+
+    <input type="number" id="restaA" value="10">
+    <input type="number" id="restaB" value="4">
+
+    <button onclick="probarResta()">
+        Restar
+    </button>
+
+    <p id="resultadoResta"></p>
+
+
+    <h2>Precio con descuento</h2>
+
+    <label>
+        Precio:
+        <input type="number" id="precio" value="100">
+    </label>
+
+    <label>
+        Descuento:
+        <input type="number" id="descuento" value="20">
+    </label>
+
+    <button onclick="probarPrecio()">
+        Calcular precio
+    </button>
+
+    <p id="resultadoPrecio"></p>
+
+
+    <!--
+        Cargamos las funciones que queremos probar.
+    -->
+    <script src="operaciones.js"></script>
+
+
+    <script>
+
+        function probarSuma() {
+
+            const a = Number(
+                document.getElementById("sumaA").value
+            );
+
+            const b = Number(
+                document.getElementById("sumaB").value
+            );
+
+            const resultado = sumar(a, b);
+
+            document.getElementById("resultadoSuma").textContent =
+                "Resultado: " + resultado;
+
+        }
+
+
+        function probarResta() {
+
+            const a = Number(
+                document.getElementById("restaA").value
+            );
+
+            const b = Number(
+                document.getElementById("restaB").value
+            );
+
+            const resultado = restar(a, b);
+
+            document.getElementById("resultadoResta").textContent =
+                "Resultado: " + resultado;
+
+        }
+
+
+        function probarPrecio() {
+
+            const precio = Number(
+                document.getElementById("precio").value
+            );
+
+            const descuento = Number(
+                document.getElementById("descuento").value
+            );
+
+            const resultado =
+                calcularPrecio(precio, descuento);
+
+            document.getElementById("resultadoPrecio").textContent =
+                "Precio final: " + resultado + " €";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

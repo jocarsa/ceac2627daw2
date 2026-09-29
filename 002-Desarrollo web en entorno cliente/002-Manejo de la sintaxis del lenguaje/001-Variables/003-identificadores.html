@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificadores</title>
+</head>
+<body>
+
+    <h1>Identificadores y nombres de variables</h1>
+    <p>Abre la consola del navegador para ver los resultados.</p>
+
+    <script>
+        console.log("=== IDENTIFICADORES ===");
+
+
+        // -------------------------
+        // NOMBRES VÁLIDOS
+        // -------------------------
+
+        const nombre = "Laura";
+
+        const nombreUsuario = "laura23";
+
+        const usuario2 = "Pedro";
+
+        const _contador = 10;
+
+        const $elemento = "Ejemplo";
+
+
+        console.log(nombre);
+        console.log(nombreUsuario);
+        console.log(usuario2);
+        console.log(_contador);
+        console.log($elemento);
+
+
+        // -------------------------
+        // MAYÚSCULAS Y MINÚSCULAS
+        // -------------------------
+
+        const edad = 20;
+
+        const Edad = 50;
+
+        console.log("edad:");
+        console.log(edad);
+
+        console.log("Edad:");
+        console.log(Edad);
+
+
+        // -------------------------
+        // NOMBRES DESCRIPTIVOS
+        // -------------------------
+
+        // Es válido, pero poco descriptivo.
+        const p = 59.99;
+
+        console.log("Variable p:");
+        console.log(p);
+
+
+        // Es mucho más claro.
+        const precioProducto = 59.99;
+
+        console.log("Precio del producto:");
+        console.log(precioProducto);
+
+
+        // -------------------------
+        // CAMEL CASE
+        // -------------------------
+
+        const nombreCompleto = "Ana García";
+
+        const precioFinalProducto = 120;
+
+        const numeroIntentos = 3;
+
+        console.log(nombreCompleto);
+        console.log(precioFinalProducto);
+        console.log(numeroIntentos);
+
+
+        // -------------------------
+        // EJEMPLOS INCORRECTOS
+        // -------------------------
+
+        // Descomentar uno cada vez para comprobar el error.
+
+
+        // No puede comenzar por un número:
+
+        // let 2usuarios = 10;
+
+
+        // No puede contener espacios:
+
+        // let nombre usuario = "Ana";
+
+
+        // No podemos utilizar palabras reservadas:
+
+        // let const = 20;
+
+        // let if = true;
+    </script>
+
+</body>
+</html>

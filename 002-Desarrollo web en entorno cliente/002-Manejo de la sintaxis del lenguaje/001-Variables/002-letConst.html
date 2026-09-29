@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let y const</title>
+</head>
+<body>
+
+    <h1>Variables con let y const</h1>
+    <p>Abre la consola del navegador para ver los resultados.</p>
+
+    <script>
+        console.log("=== LET Y CONST ===");
+
+
+        // -------------------------
+        // LET
+        // -------------------------
+
+        let vidas = 3;
+
+        console.log("Vidas iniciales:");
+        console.log(vidas);
+
+        vidas = 2;
+
+        console.log("Vidas después de perder una:");
+        console.log(vidas);
+
+        vidas = 1;
+
+        console.log("Vidas actuales:");
+        console.log(vidas);
+
+
+        // -------------------------
+        // CONST
+        // -------------------------
+
+        const nombreJugador = "Mario";
+
+        console.log("Jugador:");
+        console.log(nombreJugador);
+
+
+        // Una constante no puede recibir un nuevo valor.
+        // Si quitamos el comentario se producirá un error.
+
+        // nombreJugador = "Luigi";
+
+
+        // -------------------------
+        // EJEMPLO MÁS REAL
+        // -------------------------
+
+        const puntosPorMoneda = 100;
+
+        let monedas = 0;
+        let puntuacion = 0;
+
+        monedas = 1;
+
+        puntuacion = monedas * puntosPorMoneda;
+
+        console.log("Monedas:");
+        console.log(monedas);
+
+        console.log("Puntuación:");
+        console.log(puntuacion);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ámbito de las variables</title>
+</head>
+<body>
+
+    <h1>Ámbito de las variables</h1>
+    <p>Abre la consola del navegador para ver los resultados.</p>
+
+    <script>
+        console.log("=== ÁMBITO DE LAS VARIABLES ===");
+
+
+        // -------------------------
+        // VARIABLE EXTERNA
+        // -------------------------
+
+        const nombre = "Carlos";
+
+        console.log("Fuera del bloque:");
+        console.log(nombre);
+
+
+        {
+            console.log("Dentro del bloque:");
+
+            // Podemos utilizar una variable declarada fuera.
+            console.log(nombre);
+        }
+
+
+        // -------------------------
+        // VARIABLE INTERNA
+        // -------------------------
+
+        {
+            const mensaje = "Hola desde dentro";
+
+            console.log("Mensaje dentro del bloque:");
+            console.log(mensaje);
+        }
+
+
+        // mensaje solamente existe dentro del bloque anterior.
+        // Si quitamos el comentario se producirá un error.
+
+        // console.log(mensaje);
+
+
+        // -------------------------
+        // OTRO EJEMPLO CON LET
+        // -------------------------
+
+        {
+            let puntuacion = 100;
+
+            puntuacion = puntuacion + 50;
+
+            console.log("Puntuación dentro del bloque:");
+            console.log(puntuacion);
+        }
+
+
+        // puntuacion tampoco existe aquí fuera.
+
+        // console.log(puntuacion);
+    </script>
+
+</body>
+</html>
