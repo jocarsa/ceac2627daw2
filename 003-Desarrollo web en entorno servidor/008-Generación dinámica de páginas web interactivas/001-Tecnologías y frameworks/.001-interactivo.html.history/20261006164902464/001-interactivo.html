@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <input type="text" id="operando1">
+    <input type="text" id="operando2">
+    <button>Calcula</button>
+    <output></output>
+    <script>
+      let boton = document.querySelector("button")
+      boton.onclick = function(){
+      	let valor1 = document.querySelector("#operando1").value * 1
+        let valor2 = document.querySelector("#operando2").value * 1
+        let resultado = valor1 + valor2;
+        let salida = document.querySelector("output")
+        salida.textContent = resultado
+      }
+    </script>
+  </body>
+</html>
