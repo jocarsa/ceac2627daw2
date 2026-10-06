@@ -1,0 +1,13 @@
+id,nombre,precio,stock,categoria_id,proveedor_id
+1,"Teclado mecánico",8.50,20,1,1
+2,"Ratón óptico",21.87,27,2,2
+3,"Monitor 24 pulgadas",35.24,34,3,1
+4,"SSD 1 TB",48.61,41,1,2
+5,"Cable HDMI 2m",61.98,48,2,1
+6,"Switch 8 puertos",75.35,55,3,2
+7,"Punto de acceso WiFi",88.72,62,1,1
+8,"Webcam Full HD",102.09,69,2,2
+9,"Auriculares USB",115.46,76,3,1
+10,"Hub USB-C",128.83,83,1,2
+11,"Cuaderno A4",142.20,90,2,1
+12,"Pack bolígrafos",155.57,97,2,2

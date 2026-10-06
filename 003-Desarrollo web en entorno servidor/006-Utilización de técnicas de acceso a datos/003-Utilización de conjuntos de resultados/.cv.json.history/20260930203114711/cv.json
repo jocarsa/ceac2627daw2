@@ -1,0 +1,92 @@
+{
+  "nombre": "José Vicente Carratalá",
+  "nombre_profesional": "JOCARSA",
+  "ubicacion": "Valencia, España",
+  "perfil": [
+    "Docente de informática",
+    "Desarrollador de software",
+    "Especialista en inteligencia artificial",
+    "Creador de contenidos técnicos"
+  ],
+  "experiencia": {
+    "docencia": "Desde 2000",
+    "formacion_profesional": "Desde 2017",
+    "modalidades": [
+      "Presencial",
+      "Online"
+    ]
+  },
+  "docencia": {
+    "ciclos": [
+      "DAM",
+      "DAW"
+    ],
+    "modulos": [
+      "Programación",
+      "Bases de Datos",
+      "Lenguajes de Marcas",
+      "Entornos de Desarrollo",
+      "Sistemas Informáticos",
+      "Acceso a Datos",
+      "Desarrollo de Interfaces",
+      "Programación de Servicios y Procesos",
+      "Programación Multimedia y Dispositivos Móviles"
+    ],
+    "especialidades": [
+      "Programación",
+      "Desarrollo web",
+      "Bases de datos",
+      "Inteligencia artificial"
+    ]
+  },
+  "tecnologias": {
+    "lenguajes": [
+      "Python",
+      "PHP",
+      "JavaScript",
+      "SQL",
+      "HTML",
+      "CSS"
+    ],
+    "bases_de_datos": [
+      "SQLite",
+      "MySQL",
+      "MariaDB",
+      "ChromaDB"
+    ],
+    "sistemas": [
+      "Linux",
+      "Apache",
+      "Moodle",
+      "Git",
+      "Docker"
+    ],
+    "inteligencia_artificial": [
+      "LLM",
+      "RAG",
+      "Ollama",
+      "Fine-tuning",
+      "QLoRA",
+      "Whisper",
+      "Modelos locales",
+      "Agentes IA"
+    ]
+  },
+  "competencias": [
+    "Desarrollo de software",
+    "Arquitectura de aplicaciones",
+    "Administración de sistemas",
+    "Inteligencia artificial aplicada",
+    "Automatización",
+    "Creación de plataformas educativas",
+    "Producción de contenidos formativos"
+  ],
+  "proyectos": [
+    "Plataformas de formación",
+    "Sistemas de videoconferencia",
+    "ERP y aplicaciones de gestión",
+    "Sistemas RAG",
+    "APIs de inteligencia artificial",
+    "Automatización de contenidos educativos"
+  ]
+}

@@ -1,0 +1,4 @@
+Identificador,nombre,apellidos,email,telefono,puesto,salario,fecha_alta
+1,Laura,Navarro,laura@empresa.test,610000001,Ventas,24500,2023-02-01
+2,Álvaro,Ruiz,alvaro@empresa.test,610000002,Almacén,22800,2024-05-15
+3,Nuria,Torres,nuria@empresa.test,610000003,Administración,26000,2022-09-12

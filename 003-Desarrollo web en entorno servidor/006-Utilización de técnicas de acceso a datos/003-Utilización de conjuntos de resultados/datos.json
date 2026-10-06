@@ -1,0 +1,11 @@
+{
+    "nombre": "Jose Vicente",
+    "apellidos": "Carratala",
+    "profesion": "Profesor",
+    "tecnologias": [
+        "PHP",
+        "Python",
+        "JavaScript",
+        "SQL"
+    ]
+}

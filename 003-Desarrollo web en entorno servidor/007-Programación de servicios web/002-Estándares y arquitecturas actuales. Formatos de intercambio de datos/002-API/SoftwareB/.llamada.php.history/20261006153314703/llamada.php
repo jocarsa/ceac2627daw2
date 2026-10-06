@@ -1,0 +1,10 @@
+Hola
+<?php
+
+  $curl = curl_init("http://localhost/ceac2627daw2/003-Desarrollo%20web%20en%20entorno%20servidor/007-Programaci%c3%b3n%20de%20servicios%20web/002-Est%c3%a1ndares%20y%20arquitecturas%20actuales.%20Formatos%20de%20intercambio%20de%20datos/002-API/SoftwareA/api.php");
+  curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+  $respuesta = curl_exec($curl);
+  curl_close($curl);
+  echo $respuesta;
+?>
+Adios

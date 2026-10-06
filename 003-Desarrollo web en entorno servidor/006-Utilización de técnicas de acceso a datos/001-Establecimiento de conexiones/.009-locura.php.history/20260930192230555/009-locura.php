@@ -1,0 +1,15 @@
+<?php
+	$nombre = "Jose Vicente";
+  $image = imagecreatefrompng("negra.png");
+  
+  for($i = 0;$i<strlen($nombre);$i++){
+    $r = $nombre[$i];
+    $g = 0;
+    $b = 0;
+
+    $color = imagecolorallocate($image, $r, $g, $b);
+
+    imagesetpixel($image, $i, 0, $color);
+  }
+  
+?>

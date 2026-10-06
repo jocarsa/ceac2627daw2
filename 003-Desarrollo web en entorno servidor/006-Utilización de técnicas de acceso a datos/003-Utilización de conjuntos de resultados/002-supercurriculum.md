@@ -1,0 +1,349 @@
+- **curriculum**
+  - **datos_personales**
+    - nombre: José Vicente
+    - apellidos: Carratalá
+    - nombre_profesional: JOCARSA
+    - año_nacimiento: 1978
+    - ubicación: Valencia, España
+    - perfil:
+      - docente de informática
+      - desarrollador de software
+      - especialista en desarrollo web
+      - especialista en inteligencia artificial
+      - creador de contenidos técnicos
+  - **perfil_profesional**
+    - áreas:
+      - docencia
+      - desarrollo de software
+      - desarrollo web
+      - bases de datos
+      - inteligencia artificial
+      - administración de sistemas
+      - producción de contenidos formativos
+    - experiencia_docente:
+      - inicio: 2000
+      - modalidades:
+        - presencial
+        - online
+        - formación profesional
+      - etapas:
+        - 2000-2010:
+          - docencia presencial
+        - 2010-2020:
+          - docencia online
+        - 2017-actualidad:
+          - Formación Profesional
+  - **docencia**
+    - formación_profesional:
+      - ciclos:
+        - DAM:
+          - Desarrollo de Aplicaciones Multiplataforma
+        - DAW:
+          - Desarrollo de Aplicaciones Web
+      - módulos_impartidos:
+        - Entornos de Desarrollo
+        - Lenguajes de Marcas y Sistemas de Gestión de Información
+        - Programación
+        - Bases de Datos
+        - Sistemas Informáticos
+        - Inglés Técnico
+        - Acceso a Datos
+        - Desarrollo de Interfaces
+        - Programación de Servicios y Procesos
+        - Programación Multimedia y Dispositivos Móviles
+        - Desarrollo de Videojuegos
+        - Desarrollo de Aplicaciones para Dispositivos Móviles
+    - inteligencia_artificial:
+      - áreas:
+        - modelos de lenguaje
+        - LLM
+        - RAG
+        - agentes de inteligencia artificial
+        - IA generativa
+        - modelos locales
+        - procesamiento de lenguaje natural
+        - generación de imágenes
+        - reconocimiento de voz
+        - automatización mediante IA
+      - cursos:
+        - curso_intensivo_IA:
+          - duración: 30 horas
+          - nivel: intermedio
+          - contenidos:
+            - fundamentos de LLM
+            - modelos locales
+            - RAG
+            - embeddings
+            - bases de datos vectoriales
+            - agentes
+            - APIs de inteligencia artificial
+            - proyecto final RAG
+  - **desarrollo_software**
+    - lenguajes:
+      - PHP
+      - Python
+      - JavaScript
+      - SQL
+      - HTML
+      - CSS
+      - XML
+    - paradigmas_y_arquitecturas:
+      - programación orientada a objetos
+      - MVC
+      - APIs REST
+      - arquitectura cliente-servidor
+      - procesamiento distribuido
+      - programación concurrente
+      - Web Workers
+    - desarrollo_web:
+      - frontend:
+        - HTML5
+        - CSS3
+        - JavaScript
+        - Canvas
+        - SVG
+        - Web APIs
+      - backend:
+        - PHP
+        - Python
+        - Flask
+        - Node.js
+      - servidores:
+        - Apache
+        - Linux
+        - VPS
+  - **bases_de_datos**
+    - tecnologías:
+      - SQLite
+      - MariaDB
+      - MySQL
+      - ChromaDB
+      - CSV como almacenamiento estructurado
+    - conocimientos:
+      - modelado relacional
+      - SQL
+      - CRUD
+      - migraciones
+      - importación y exportación
+      - diseño de esquemas
+      - claves foráneas
+      - consultas complejas
+      - integración con aplicaciones web
+  - **inteligencia_artificial**
+    - modelos_locales:
+      - Ollama
+      - Llama
+      - Qwen
+      - Gemma
+      - DeepSeek
+      - Granite
+      - Phi
+      - LLaVA
+    - RAG:
+      - embeddings
+      - chunking
+      - recuperación semántica
+      - bases de datos vectoriales
+      - ChromaDB
+      - generación aumentada mediante recuperación
+    - entrenamiento:
+      - preparación de datasets
+      - normalización de corpus
+      - tokenización
+      - fine-tuning
+      - QLoRA
+      - entrenamiento de modelos propios
+    - procesamiento_multimedia:
+      - Whisper
+      - speech-to-text
+      - generación de imágenes
+      - img2img
+      - visión artificial
+      - MediaPipe
+      - detección facial
+      - seguimiento facial
+  - **sistemas**
+    - sistemas_operativos:
+      - Ubuntu Linux
+    - administración:
+      - Apache
+      - PHP
+      - MariaDB
+      - cron
+      - SSH
+      - Fail2ban
+      - gestión de logs
+      - copias de seguridad
+      - monitorización
+      - despliegue de aplicaciones
+    - virtualización:
+      - VPS
+      - QEMU
+    - GPU:
+      - NVIDIA
+      - CUDA
+      - NVENC
+      - AV1
+  - **plataformas_educativas**
+    - Moodle:
+      - administración
+      - instalación
+      - actualización
+      - migración
+      - recuperación
+      - matriculación
+      - gestión de cursos
+      - integración mediante API
+      - importación CSV
+      - automatización de usuarios
+      - integración con plataformas externas
+    - plataformas_propias:
+      - gestión de formación
+      - seguimiento de alumnos
+      - quizzes
+      - entregas
+      - calificaciones
+      - resultados de aprendizaje
+      - criterios de evaluación
+      - informes
+      - calendarios
+      - materiales
+      - videoconferencia
+  - **proyectos_destacados**
+    - plataforma_formacion:
+      - gestión de grupos
+      - asignaturas
+      - materiales
+      - vídeos
+      - apuntes
+      - quizzes
+      - entregas
+      - calificaciones
+      - seguimiento de progreso
+      - integración Moodle
+    - sistema_videoconferencia:
+      - WebRTC
+      - SFU
+      - Node.js
+      - grabación de sesiones
+      - audio multicanal
+      - persistencia de sesiones
+      - procesamiento en tiempo real
+    - ERP:
+      - arquitectura modular
+      - SQLite
+      - generación de entidades
+      - diagramas de datos
+      - CRUD automático
+      - usuarios
+      - roles
+      - permisos
+      - migraciones
+    - sistema_asistencias:
+      - arquitectura multitenant
+      - grupos
+      - asignaturas
+      - alumnos
+      - matriculaciones
+      - registro de asistencias
+      - importación CSV
+    - sistema_practicas:
+      - alumnos
+      - empresas
+      - asignación de prácticas
+      - control de capacidad
+      - aceptación
+      - rechazo
+    - herramientas_IA:
+      - API propia para modelos locales
+      - streaming de respuestas
+      - colas de procesamiento
+      - Whisper remoto
+      - generación de imágenes
+      - fallback local/remoto
+      - procesamiento automático de contenidos formativos
+    - avatar_2D:
+      - SVG por capas
+      - seguimiento facial
+      - MediaPipe
+      - lip-sync
+      - síntesis de voz
+      - animación facial
+    - simulaciones:
+      - Canvas
+      - Web Workers
+      - SharedArrayBuffer
+      - simulaciones de agentes
+      - algoritmos genéticos
+      - ray tracing 2D
+      - Monte Carlo
+  - **produccion_multimedia**
+    - vídeo:
+      - FFmpeg
+      - codificación
+      - transcodificación
+      - AV1
+      - NVENC
+    - audio:
+      - procesamiento de audio
+      - transcripción automática
+      - Whisper
+      - waveform
+    - contenidos:
+      - grabación de clases
+      - generación de materiales educativos
+      - automatización de apuntes
+      - generación de cuestionarios
+      - generación de resúmenes
+  - **automatizacion**
+    - tecnologías:
+      - Python
+      - PHP
+      - Bash
+      - cron
+    - tareas:
+      - pipelines de procesamiento
+      - sincronización de archivos
+      - copias de seguridad
+      - generación de informes
+      - monitorización de servidores
+      - procesamiento de vídeos
+      - transcripción
+      - generación automática de contenidos
+  - **competencias**
+    - técnicas:
+      - programación
+      - arquitectura de software
+      - diseño de bases de datos
+      - administración de servidores
+      - inteligencia artificial
+      - desarrollo web
+      - automatización
+      - procesamiento multimedia
+      - integración de sistemas
+    - docentes:
+      - formación técnica
+      - creación de materiales
+      - enseñanza presencial
+      - enseñanza online
+      - diseño de prácticas
+      - diseño de proyectos
+      - evaluación
+      - seguimiento del alumnado
+      - creación de plataformas educativas
+  - **orientación_profesional**
+    - docencia:
+      - DAM
+      - DAW
+      - informática
+      - programación
+      - desarrollo web
+      - bases de datos
+      - inteligencia artificial
+    - tecnología:
+      - desarrollo de software
+      - arquitectura de aplicaciones
+      - inteligencia artificial aplicada
+      - automatización
+      - plataformas educativas
+      - herramientas para formación

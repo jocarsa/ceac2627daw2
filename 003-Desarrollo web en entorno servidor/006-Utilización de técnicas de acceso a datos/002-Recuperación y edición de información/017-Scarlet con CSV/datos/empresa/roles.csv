@@ -1,0 +1,16 @@
+Identificador,idrol,tabla
+1,1,clientes
+2,1,empleados
+3,1,categorias
+4,1,proveedores
+5,1,productos
+6,1,almacenes
+7,1,inventario
+8,1,pedidos
+9,1,lineas_pedido
+10,1,facturas
+11,1,pagos
+12,2,clientes
+13,2,productos
+14,2,pedidos
+15,2,facturas

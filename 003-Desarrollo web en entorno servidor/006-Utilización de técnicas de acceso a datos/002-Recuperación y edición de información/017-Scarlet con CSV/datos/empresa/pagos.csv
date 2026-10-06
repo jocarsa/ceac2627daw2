@@ -1,0 +1,15 @@
+id,factura_id,fecha,importe,metodo,referencia
+1,1,2026-09-03,52.25,transferencia,PAGO-1
+2,2,2026-09-04,69.5,bizum,PAGO-2
+3,4,2026-09-06,104,transferencia,PAGO-4
+4,5,2026-09-07,121.25,bizum,PAGO-5
+5,7,2026-09-09,155.75,transferencia,PAGO-7
+6,8,2026-09-10,173,bizum,PAGO-8
+7,10,2026-09-12,207.5,transferencia,PAGO-10
+8,11,2026-09-13,224.75,bizum,PAGO-11
+9,13,2026-09-15,259.25,transferencia,PAGO-13
+10,14,2026-09-16,276.5,bizum,PAGO-14
+11,16,2026-09-18,311,transferencia,PAGO-16
+12,17,2026-09-19,328.25,bizum,PAGO-17
+13,19,2026-09-21,362.75,transferencia,PAGO-19
+14,20,2026-09-22,380,bizum,PAGO-20
