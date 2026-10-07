@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <input type="text" name="nombre" id="nombre" list="nombres">
+    <datalist id="nombres">
+      <option value="Adriana">
+    </datalist>
+    <script>
+      let entrada = document.querySelector("input")
+      let datos = document.querySelector("datalist")
+      entrada.onkeyup = function(){
+      	let clave = this.value
+        fetch("004-busqueda con filtro.php?clave="+clave)
+        .then(function(resultado){ return resultado.text()})
+        .then(function(datos){
+        	let partido = datos.split(",")
+        })
+      }
+    </script>
+  </body>
+</html>

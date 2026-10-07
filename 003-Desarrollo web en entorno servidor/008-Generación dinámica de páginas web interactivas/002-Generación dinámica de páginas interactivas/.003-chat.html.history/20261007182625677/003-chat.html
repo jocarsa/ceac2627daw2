@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      html,body{width:100%;height:100%;padding:0px;margin:0px;}
+      p{padding:0px;margin:0px;}
+      body{display:flex;background:grey;justify-content:center;align-items:center;}
+      #login{
+        width:200px;height:200px;padding:20px;background:white;
+      	display:flex;flex-direction:column;justify-content:center;
+        gap:10px;
+      }
+      #chat{display:none;}
+    </style>
+  </head>
+  <body>
+    <div id="login">
+      <h3>Turquesa</h3>
+      <p>Introduce tu nombre</p>
+      <input type="text" id="usuario">
+      <button id="entrar">Entrar</button>
+      <script>
+        let boton = document.querySelector("#entrar")
+        boton.onclick = function(){
+          let entrada = document.querySelector("#usuario")
+          localStorage.setItem("usuario",entrada.value)
+        	document.querySelector("#login").style.display = "none"
+        }
+      </script>
+    </div>
+    <div id="chat">
+      <main>
+        <article>mensaje</article>
+      </main>
+      <nav>
+        <input type="text" id="mensaje">
+      </nav>
+    </div>
+  </body>
+</html>
