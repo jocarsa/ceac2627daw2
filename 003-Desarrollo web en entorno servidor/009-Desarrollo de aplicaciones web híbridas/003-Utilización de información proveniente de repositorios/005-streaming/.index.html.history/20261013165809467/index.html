@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="estilos.css">
+  </head>
+  <body>
+    <main>
+    </main>
+    <template id="titulo">
+      <article>
+        <img src="[imagen]">
+        <h3>[titulo]</h3>
+        <p>[categoria]</p>
+      </article>
+    </template>
+    <template id="mas">
+      <button>+</button>
+    </template>
+    <script>
+      
+      let multiplicador = 0;
+      let contenedor = document.querySelector("main");
+      let plantilla = document.querySelector("#titulo");
+      let boton = document.querySelector("#mas");
+
+      fetch("servidor.php?multiplicador=" + multiplicador)
+      .then(function(resultado){
+        return resultado.json();
+      })
+      .then(function(datos){
+        console.log(datos);
+
+        datos.forEach(function(dato){
+          let instancia = plantilla.content.cloneNode(true);
+          instancia.querySelector("h3").textContent = dato.titulo;
+          instancia.querySelector("p").textContent = dato.descripcion;
+          instancia.querySelector("img").setAttribute("src", "repositorio/" + dato.imagen);
+          contenedor.appendChild(instancia);
+        });
+
+        let instanciaboton = boton.content.cloneNode(true);
+
+        instanciaboton.querySelector("button").onclick = function(){
+          console.log("ok");
+          multiplicador++;
+
+          fetch("servidor.php?multiplicador=" + multiplicador)
+          .then(function(resultado){
+            return resultado.json();
+          })
+          .then(function(datos){
+            console.log(datos);
+
+            datos.forEach(function(dato){
+              let instancia = plantilla.content.cloneNode(true);
+              instancia.querySelector("h3").textContent = dato.titulo;
+              instancia.querySelector("p").textContent = dato.descripcion;
+              instancia.querySelector("img").setAttribute("src", "repositorio/" + dato.imagen);
+              contenedor.appendChild(instancia);
+            });
+
+          }); // Cierra el segundo .then()
+
+        }; // Cierra el onclick
+
+        contenedor.appendChild(instanciaboton);
+
+      }); // Cierra el primer .then()
+
+      
+     
+    </script>
+  </body>
+</html>

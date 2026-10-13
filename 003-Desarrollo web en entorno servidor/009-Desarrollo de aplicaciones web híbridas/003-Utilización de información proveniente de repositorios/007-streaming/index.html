@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="estilos.css">
+  </head>
+  <body>
+    <main>
+    </main>
+    <template id="titulo">
+      <article>
+        <img src="[imagen]">
+        <h3>[titulo]</h3>
+        <p>[categoria]</p>
+      </article>
+    </template>
+    <div id="modal-video" class="modal-video" role="dialog" aria-modal="true" aria-label="Reproductor de película" hidden>
+      <div class="modal-contenido">
+        <button id="cerrar-video" class="cerrar-video" type="button" aria-label="Cerrar reproductor">&times;</button>
+        <h2 id="titulo-video"></h2>
+        <video id="reproductor" controls playsinline preload="none"></video>
+      </div>
+    </div>
+    <div id="sentinela" aria-hidden="true"></div>
+    <script>
+      let multiplicador = 0;
+      let cargando = false;
+      let terminado = false;
+      const contenedor = document.querySelector("main");
+      const plantilla = document.querySelector("#titulo");
+      const sentinela = document.querySelector("#sentinela");
+
+      const modal = document.querySelector("#modal-video");
+      const reproductor = document.querySelector("#reproductor");
+      const tituloVideo = document.querySelector("#titulo-video");
+      const cerrarVideo = document.querySelector("#cerrar-video");
+      let focoAnterior = null;
+
+      function abrirVideo(dato) {
+        focoAnterior = document.activeElement;
+        const numero = String(dato.id).padStart(3, "0");
+        tituloVideo.textContent = dato.titulo;
+        reproductor.src = "video/" + numero + ".mp4";
+        modal.hidden = false;
+        document.body.style.overflow = "hidden";
+        cerrarVideo.focus();
+        reproductor.play().catch(() => {});
+      }
+      function cerrarModal() {
+        reproductor.pause();
+        reproductor.removeAttribute("src");
+        reproductor.load();
+        modal.hidden = true;
+        document.body.style.overflow = "";
+        if (focoAnterior) focoAnterior.focus();
+      }
+      cerrarVideo.addEventListener("click", cerrarModal);
+      modal.addEventListener("click", e => { if (e.target === modal) cerrarModal(); });
+      document.addEventListener("keydown", e => { if (e.key === "Escape" && !modal.hidden) cerrarModal(); });
+
+      async function cargarPeliculas() {
+        if (cargando || terminado) return;
+        cargando = true;
+        try {
+          const respuesta = await fetch("servidor.php?multiplicador=" + multiplicador);
+          if (!respuesta.ok) throw new Error("Error HTTP " + respuesta.status);
+          const datos = await respuesta.json();
+          datos.forEach(function(dato) {
+            const instancia = plantilla.content.cloneNode(true);
+            const tarjeta = instancia.querySelector("article");
+            tarjeta.tabIndex = 0;
+            tarjeta.setAttribute("role", "button");
+            tarjeta.setAttribute("aria-label", "Reproducir " + dato.titulo);
+            tarjeta.addEventListener("click", () => abrirVideo(dato));
+            tarjeta.addEventListener("keydown", e => {
+              if (e.key === "Enter" || e.key === " ") { e.preventDefault(); abrirVideo(dato); }
+            });
+            instancia.querySelector("h3").textContent = dato.titulo;
+            instancia.querySelector("p").textContent = dato.descripcion;
+            instancia.querySelector("img").src = "repositorio/" + dato.imagen;
+            instancia.querySelector("img").loading = "lazy";
+            contenedor.appendChild(instancia);
+          });
+          if (datos.length < 10) {
+            terminado = true;
+            observador.disconnect();
+          } else {
+            multiplicador++;
+          }
+        } catch (error) {
+          console.error("No se pudieron cargar las películas:", error);
+        } finally {
+          cargando = false;
+          // Si aún no hay suficiente contenido para llenar la pantalla, continúa.
+          if (!terminado && sentinela.getBoundingClientRect().top < window.innerHeight + 300) {
+            setTimeout(cargarPeliculas, 100);
+          }
+        }
+      }
+
+      const observador = new IntersectionObserver(function(entradas) {
+        if (entradas[0].isIntersecting) cargarPeliculas();
+      }, { rootMargin: "300px" });
+      observador.observe(sentinela);
+      cargarPeliculas();
+    </script>
+  </body>
+</html>
