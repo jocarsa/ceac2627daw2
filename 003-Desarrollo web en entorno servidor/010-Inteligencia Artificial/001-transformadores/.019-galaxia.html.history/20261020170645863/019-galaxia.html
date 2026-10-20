@@ -1,0 +1,709 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Galaxia neuronal</title>
+
+<style>
+*{box-sizing:border-box}
+
+html,body{
+  width:100%;
+  height:100%;
+  margin:0;
+  overflow:hidden;
+  background:#000;
+}
+
+canvas{
+  display:block;
+  width:100%;
+  height:100%;
+}
+
+#nucleo{
+  position:fixed;
+  left:50%;
+  top:50%;
+  width:76px;
+  height:76px;
+  margin:-38px;
+  padding:0;
+  border:2px solid #9bd5ff;
+  border-radius:50%;
+  background:#0863d9;
+  box-shadow:
+    0 0 12px #1684ff,
+    0 0 35px rgba(0,100,255,.5);
+  cursor:pointer;
+  z-index:5;
+  transform:scale(1);
+  will-change:transform;
+}
+
+#nucleo.activo{
+  background:#eaf7ff;
+  border-color:#fff;
+  box-shadow:
+    0 0 20px #65b8ff,
+    0 0 45px rgba(0,110,255,.7);
+}
+
+#nucleo:focus-visible{
+  outline:2px solid white;
+  outline-offset:10px;
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="universo"></canvas>
+
+<button
+  id="nucleo"
+  aria-label="Activar reconocimiento de voz"
+  aria-pressed="false">
+</button>
+
+<script>
+
+const canvas=document.querySelector("#universo");
+const ctx=canvas.getContext("2d",{alpha:false});
+const nucleo=document.querySelector("#nucleo");
+
+const SpeechRecognition=
+  window.SpeechRecognition||
+  window.webkitSpeechRecognition;
+
+const TAU=Math.PI*2;
+const ANGULO_AUREO=2.399963229728653;
+const UMBRAL_CAMBIO=.1;
+
+// Ajustes visuales
+const VELOCIDAD_ROTACION=.22;
+const EXAGERACION_ESCALA=42;
+const ESCALA_MAXIMA=22;
+const NUM_ESTRELLAS_FONDO=180;
+
+let W,H,cx,cy,R,dpr;
+let estrellas=[];
+let particulas=[];
+
+let vectorAnterior=null;
+let ultimaPalabra="";
+let peticionActual=0;
+let controlador=null;
+
+let escuchando=false;
+let reconocimiento=null;
+
+let intensidad=0;
+let intensidadSuave=0;
+let pulsoEmbedding=0;
+
+let audioContext=null;
+let analizador=null;
+let flujo=null;
+let datosAudio=null;
+
+let tiempo=0;
+let ultimoFrame=0;
+
+// ---------------------------------------
+// Utilidades
+// ---------------------------------------
+
+function aleatorio(a,b){
+  return a+Math.random()*(b-a);
+}
+
+function limitar(v,a,b){
+  return Math.max(a,Math.min(b,v));
+}
+
+// ---------------------------------------
+// Crear sprites luminosos una sola vez
+// ---------------------------------------
+
+function crearSprite(color){
+  let c=document.createElement("canvas");
+  c.width=64;
+  c.height=64;
+
+  let g=c.getContext("2d");
+
+  let gradiente=g.createRadialGradient(
+    32,32,0,32,32,32
+  );
+
+  gradiente.addColorStop(0,"rgba(255,255,255,1)");
+  gradiente.addColorStop(.12,color);
+  gradiente.addColorStop(.35,color.replace(
+    /[\d.]+\)$/,"0.35)"
+  ));
+  gradiente.addColorStop(1,"rgba(0,0,0,0)");
+
+  g.fillStyle=gradiente;
+  g.fillRect(0,0,64,64);
+
+  return c;
+}
+
+const spriteAzul=crearSprite("rgba(35,125,255,1)");
+const spriteBlanco=crearSprite("rgba(180,225,255,1)");
+
+// ---------------------------------------
+// Dimensiones
+// ---------------------------------------
+
+function ajustar(){
+  W=innerWidth;
+  H=innerHeight;
+  dpr=Math.min(devicePixelRatio||1,1.5);
+
+  canvas.width=Math.round(W*dpr);
+  canvas.height=Math.round(H*dpr);
+
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+
+  cx=W/2;
+  cy=H/2;
+  R=Math.min(W,H)*.44;
+
+  crearEstrellas();
+  colocarParticulas();
+}
+
+// ---------------------------------------
+// Estrellas de fondo
+// ---------------------------------------
+
+function crearEstrellas(){
+  estrellas=[];
+
+  for(let i=0;i<NUM_ESTRELLAS_FONDO;i++){
+    estrellas.push({
+      x:Math.random()*W,
+      y:Math.random()*H,
+      r:aleatorio(.4,1.5),
+      fase:aleatorio(0,TAU)
+    });
+  }
+}
+
+// ---------------------------------------
+// Partículas del embedding
+// ---------------------------------------
+
+function crearParticulas(n){
+  particulas=[];
+
+  for(let i=0;i<n;i++){
+    particulas.push({
+      angulo:i*ANGULO_AUREO,
+      radio:R*Math.sqrt((i+.5)/n),
+      valor:0,
+      cambio:0,
+      tamano:1,
+      tamanoActual:1,
+      fase:aleatorio(0,TAU),
+      brillo:aleatorio(.65,1),
+      x:0,
+      y:0
+    });
+  }
+}
+
+function colocarParticulas(){
+  let n=particulas.length;
+
+  particulas.forEach((p,i)=>{
+    p.radio=R*Math.sqrt((i+.5)/n);
+  });
+}
+
+crearParticulas(768);
+
+// ---------------------------------------
+// Actualizar embedding
+// ---------------------------------------
+
+function actualizarVector(vector){
+
+  if(particulas.length!==vector.length){
+    crearParticulas(vector.length);
+    vectorAnterior=null;
+  }
+
+  vector.forEach((valor,i)=>{
+
+    let p=particulas[i];
+
+    let anterior=vectorAnterior?.[i];
+
+    let diferencia=anterior===undefined
+      ?0
+      :Math.abs(valor-anterior);
+
+    p.valor=valor;
+
+    p.cambio=limitar(
+      diferencia/UMBRAL_CAMBIO,0,1
+    );
+
+    // Escala mucho más exagerada.
+    // Las dimensiones negativas también influyen.
+    p.tamano=limitar(
+      .65+
+      Math.abs(valor)*EXAGERACION_ESCALA+
+      p.cambio*7,
+      .65,
+      ESCALA_MAXIMA
+    );
+  });
+
+  vectorAnterior=[...vector];
+  pulsoEmbedding=1;
+}
+
+// ---------------------------------------
+// Consultar palabra
+// ---------------------------------------
+
+async function consultarPalabra(palabra){
+
+  palabra=palabra.toLowerCase()
+    .replace(
+      /^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu,
+      ""
+    );
+
+  if(!palabra||palabra===ultimaPalabra)return;
+
+  ultimaPalabra=palabra;
+
+  if(controlador)controlador.abort();
+
+  controlador=new AbortController();
+
+  let numero=++peticionActual;
+
+  try{
+
+    let respuesta=await fetch(
+      "007-servidor.php?palabra="+
+      encodeURIComponent(palabra),
+      {signal:controlador.signal}
+    );
+
+    if(!respuesta.ok){
+      throw Error("HTTP "+respuesta.status);
+    }
+
+    let datos=await respuesta.json();
+
+    if(numero!==peticionActual)return;
+    if(!Array.isArray(datos))return;
+
+    let vector=datos.map(Number);
+
+    if(
+      vector.length===0||
+      !vector.every(Number.isFinite)
+    )return;
+
+    actualizarVector(vector);
+
+  }catch(e){
+    if(e.name!=="AbortError"){
+      console.error(e);
+    }
+  }
+}
+
+// ---------------------------------------
+// Reconocimiento de voz
+// ---------------------------------------
+
+if(SpeechRecognition){
+
+  reconocimiento=new SpeechRecognition();
+
+  reconocimiento.lang="es-ES";
+  reconocimiento.continuous=true;
+  reconocimiento.interimResults=true;
+  reconocimiento.maxAlternatives=1;
+
+  reconocimiento.onresult=function(evento){
+
+    let texto="";
+
+    for(let i=0;i<evento.results.length;i++){
+      texto+=evento.results[i][0].transcript+" ";
+    }
+
+    let palabras=texto.trim().split(/\s+/);
+
+    if(palabras.length){
+      consultarPalabra(
+        palabras[palabras.length-1]
+      );
+    }
+  };
+
+  reconocimiento.onerror=function(e){
+
+    console.warn(e.error);
+
+    if(
+      e.error==="not-allowed"||
+      e.error==="service-not-allowed"
+    ){
+      detener();
+    }
+  };
+
+  reconocimiento.onend=function(){
+
+    if(escuchando){
+      try{
+        reconocimiento.start();
+      }catch(e){}
+    }
+  };
+}
+
+// ---------------------------------------
+// Audio y amplitud
+// ---------------------------------------
+
+async function activarAudio(){
+
+  flujo=await navigator.mediaDevices.getUserMedia({
+    audio:{
+      echoCancellation:true,
+      noiseSuppression:true,
+      autoGainControl:true
+    }
+  });
+
+  audioContext=new (
+    window.AudioContext||
+    window.webkitAudioContext
+  )();
+
+  let fuente=audioContext.createMediaStreamSource(flujo);
+
+  analizador=audioContext.createAnalyser();
+  analizador.fftSize=512;
+  analizador.smoothingTimeConstant=.5;
+
+  fuente.connect(analizador);
+
+  datosAudio=new Uint8Array(analizador.fftSize);
+}
+
+function medirVoz(){
+
+  if(!analizador){
+    intensidad=0;
+    return;
+  }
+
+  analizador.getByteTimeDomainData(datosAudio);
+
+  let suma=0;
+
+  for(let i=0;i<datosAudio.length;i++){
+    let v=(datosAudio[i]-128)/128;
+    suma+=v*v;
+  }
+
+  let rms=Math.sqrt(suma/datosAudio.length);
+
+  intensidad=limitar((rms-.008)*18,0,1);
+}
+
+// ---------------------------------------
+// Activar y detener
+// ---------------------------------------
+
+async function activar(){
+
+  if(!reconocimiento)return;
+
+  escuchando=true;
+  ultimaPalabra="";
+
+  try{
+
+    await activarAudio();
+
+    reconocimiento.start();
+
+    nucleo.classList.add("activo");
+    nucleo.setAttribute("aria-pressed","true");
+
+  }catch(e){
+    console.error(e);
+    detener();
+  }
+}
+
+function detener(){
+
+  escuchando=false;
+
+  nucleo.classList.remove("activo");
+  nucleo.setAttribute("aria-pressed","false");
+
+  if(reconocimiento){
+    try{reconocimiento.stop()}catch(e){}
+  }
+
+  if(flujo){
+    flujo.getTracks().forEach(t=>t.stop());
+    flujo=null;
+  }
+
+  if(audioContext){
+    audioContext.close();
+    audioContext=null;
+  }
+
+  analizador=null;
+  intensidad=0;
+}
+
+nucleo.onclick=()=>{
+  if(escuchando)detener();
+  else activar();
+};
+
+// ---------------------------------------
+// Dibujar fondo
+// ---------------------------------------
+
+function dibujarFondo(){
+
+  ctx.fillStyle="#000";
+  ctx.fillRect(0,0,W,H);
+
+  let halo=ctx.createRadialGradient(
+    cx,cy,0,cx,cy,R*1.3
+  );
+
+  halo.addColorStop(0,"rgba(0,35,100,.12)");
+  halo.addColorStop(.7,"rgba(0,12,45,.06)");
+  halo.addColorStop(1,"rgba(0,0,0,0)");
+
+  ctx.fillStyle=halo;
+  ctx.fillRect(0,0,W,H);
+}
+
+// ---------------------------------------
+// Estrellas de fondo
+// ---------------------------------------
+
+function dibujarEstrellas(){
+
+  ctx.fillStyle="#8caacc";
+
+  for(let e of estrellas){
+
+    let brillo=.35+
+      .35*Math.sin(tiempo*.9+e.fase);
+
+    ctx.globalAlpha=brillo;
+
+    ctx.beginPath();
+    ctx.arc(e.x,e.y,e.r,0,TAU);
+    ctx.fill();
+  }
+
+  ctx.globalAlpha=1;
+}
+
+// ---------------------------------------
+// Anillos
+// ---------------------------------------
+
+function dibujarAnillos(){
+
+  ctx.save();
+  ctx.translate(cx,cy);
+  ctx.rotate(tiempo*.08);
+
+  for(let i=0;i<3;i++){
+
+    ctx.beginPath();
+
+    let radio=R*(.35+i*.3);
+
+    ctx.ellipse(
+      0,0,
+      radio,
+      radio*.96,
+      i*.5,
+      0,TAU
+    );
+
+    ctx.strokeStyle="rgba(40,110,255,.10)";
+    ctx.lineWidth=.8;
+    ctx.stroke();
+  }
+
+  ctx.restore();
+}
+
+// ---------------------------------------
+// Dibujar partículas optimizadas
+// ---------------------------------------
+
+function dibujarParticulas(dt){
+
+  let rotacion=tiempo*VELOCIDAD_ROTACION;
+  let expansion=1+
+    intensidadSuave*.08+
+    pulsoEmbedding*.04;
+
+  ctx.save();
+
+  ctx.globalCompositeOperation="lighter";
+
+  for(let p of particulas){
+
+    let angulo=
+      p.angulo+
+      rotacion+
+      (1-p.radio/R)*tiempo*.045;
+
+    let radio=p.radio*expansion;
+
+    p.x=cx+Math.cos(angulo)*radio;
+    p.y=cy+Math.sin(angulo)*radio;
+
+    // Transición rápida del tamaño
+    let suavizado=1-Math.exp(-dt*14);
+
+    p.tamanoActual+=
+      (p.tamano-p.tamanoActual)*suavizado;
+
+    let tamano=p.tamanoActual;
+
+    // Halo mediante sprite precalculado
+    let sprite=p.cambio>.35
+      ?spriteBlanco
+      :spriteAzul;
+
+    let diametro=Math.max(4,tamano*3.5);
+
+    ctx.globalAlpha=p.brillo;
+
+    ctx.drawImage(
+      sprite,
+      p.x-diametro/2,
+      p.y-diametro/2,
+      diametro,
+      diametro
+    );
+
+    // Centro sólido, sin shadowBlur
+    let radioCentro=Math.max(.4,tamano*.22);
+
+    ctx.fillStyle=p.cambio>.35
+      ?"#e5f5ff"
+      :"#54aaff";
+
+    ctx.beginPath();
+    ctx.arc(
+      p.x,p.y,
+      radioCentro,
+      0,TAU
+    );
+    ctx.fill();
+  }
+
+  ctx.restore();
+}
+
+// ---------------------------------------
+// Círculo central reactivo
+// ---------------------------------------
+
+function dibujarNucleo(){
+
+  let actividad=intensidadSuave;
+
+  // Escala 2D del círculo
+  let escala=1+actividad*1.6;
+
+  nucleo.style.transform=`scale(${escala})`;
+
+  ctx.save();
+  ctx.translate(cx,cy);
+
+  for(let i=0;i<3;i++){
+
+    let radio=
+      50+i*18+actividad*65;
+
+    ctx.beginPath();
+    ctx.arc(0,0,radio,0,TAU);
+
+    ctx.lineWidth=1+actividad*2;
+
+    ctx.strokeStyle=
+      `rgba(50,145,255,${
+        .18-i*.04+actividad*.25
+      })`;
+
+    ctx.stroke();
+  }
+
+  ctx.restore();
+}
+
+// ---------------------------------------
+// Animación
+// ---------------------------------------
+
+function animar(timestamp){
+
+  tiempo=timestamp*.001;
+
+  let dt=ultimoFrame
+    ?Math.min((timestamp-ultimoFrame)/1000,.05)
+    :1/60;
+
+  ultimoFrame=timestamp;
+
+  medirVoz();
+
+  let factor=1-Math.exp(-dt*18);
+
+  intensidadSuave+=
+    (intensidad-intensidadSuave)*factor;
+
+  pulsoEmbedding*=Math.exp(-dt*5);
+
+  dibujarFondo();
+  dibujarEstrellas();
+  dibujarAnillos();
+  dibujarParticulas(dt);
+  dibujarNucleo();
+
+  requestAnimationFrame(animar);
+}
+
+addEventListener("resize",ajustar);
+
+ajustar();
+requestAnimationFrame(animar);
+
+</script>
+</body>
+</html>

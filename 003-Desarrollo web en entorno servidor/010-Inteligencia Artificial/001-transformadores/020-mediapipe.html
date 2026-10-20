@@ -1,0 +1,1291 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Mapa neuronal semántico 2D</title>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh@0.4/face_mesh.js"
+  crossorigin="anonymous">
+</script>
+
+<style>
+* {
+  box-sizing:border-box;
+}
+
+html,body {
+  width:100%;
+  height:100%;
+  margin:0;
+  overflow:hidden;
+  background:#000;
+}
+
+canvas {
+  display:block;
+  width:100%;
+  height:100%;
+}
+
+#nucleo {
+  position:fixed;
+  left:50%;
+  top:50%;
+  width:70px;
+  height:70px;
+  margin:-35px;
+  padding:0;
+
+  border-radius:50%;
+  background:#0755c8;
+  cursor:pointer;
+  z-index:5;
+  will-change:transform;
+  opacity:0.8;
+}
+
+#nucleo.activo {
+  background:#d9f2ff;
+  border-color:white;
+}
+
+#reiniciar,
+#camara {
+  position:fixed;
+  top:24px;
+  width:46px;
+  height:46px;
+  border:1px solid #29466a;
+  border-radius:50%;
+  background:#071324;
+  color:#9bcfff;
+  font-size:24px;
+  cursor:pointer;
+  z-index:10;
+  transition:background .2s,border-color .2s;
+}
+
+#reiniciar {
+  right:24px;
+}
+
+#camara {
+  right:82px;
+}
+
+#camara.activo {
+  color:white;
+  border-color:#69baff;
+  background:#12498d;
+}
+
+#reiniciar:hover,
+#camara:hover {
+  background:#12498d;
+}
+
+button:focus-visible {
+  outline:2px solid white;
+  outline-offset:5px;
+}
+
+#video {
+  position:fixed;
+  width:1px;
+  height:1px;
+  opacity:0;
+  pointer-events:none;
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="universo"></canvas>
+
+<video
+  id="video"
+  autoplay
+  playsinline
+  muted>
+</video>
+
+<button
+  id="nucleo"
+  aria-label="Activar reconocimiento de voz"
+  aria-pressed="false">
+</button>
+
+<button
+  id="camara"
+  title="Activar seguimiento facial"
+  aria-label="Activar cámara"
+  aria-pressed="false">◎</button>
+
+<button
+  id="reiniciar"
+  title="Reiniciar dictado y recalibrar cabeza"
+  aria-label="Reiniciar">↻</button>
+
+<script>
+
+// ========================================
+// CONFIGURACIÓN GENERAL
+// ========================================
+
+const EXAGERACION_ESCALA = 350;
+const DIAMETRO_MAXIMO = 70;
+const DIAMETRO_MINIMO = 2;
+
+const UMBRAL_CAMBIO = 0.1;
+const VELOCIDAD_TRANSICION = 20;
+
+const NUM_NEURONAS_INICIALES = 768;
+
+// ========================================
+// CONFIGURACIÓN PARALLAX
+// ========================================
+
+const PARALLAX_MAXIMO = 180;
+const PARALLAX_MINIMO = 2;
+
+const SENSIBILIDAD_CABEZA = 3.5;
+const SUAVIZADO_CABEZA = 12;
+
+const FPS_CAMARA = 20;
+
+// ========================================
+// CONFIGURACIÓN TRANSPARENCIA
+// ========================================
+
+const OPACIDAD_MINIMA = 0.75;
+const OPACIDAD_MAXIMA = 0.90;
+
+// ========================================
+// CONSTANTES
+// ========================================
+
+const TAU = Math.PI*2;
+const ANGULO_AUREO = 2.399963229728653;
+
+// ========================================
+// ELEMENTOS
+// ========================================
+
+const canvas =
+  document.querySelector("#universo");
+
+const ctx =
+  canvas.getContext("2d",{alpha:false});
+
+const nucleo =
+  document.querySelector("#nucleo");
+
+const reiniciar =
+  document.querySelector("#reiniciar");
+
+const botonCamara =
+  document.querySelector("#camara");
+
+const video =
+  document.querySelector("#video");
+
+const SpeechRecognition =
+  window.SpeechRecognition ||
+  window.webkitSpeechRecognition;
+
+// ========================================
+// ESTADO GENERAL
+// ========================================
+
+let W,H,cx,cy,R,dpr;
+
+let neuronas = [];
+
+let vectorAnterior = null;
+
+// Texto acumulado de sesiones anteriores
+let textoAcumulado = "";
+
+// Texto de la sesión actual
+let textoSesion = "";
+
+// Último texto enviado al servidor
+let ultimoTextoConsultado = "";
+
+let peticionActual = 0;
+let controlador = null;
+
+// ========================================
+// ESTADO VOZ
+// ========================================
+
+let escuchando = false;
+let reconocimiento = null;
+let reinicioReconocimiento = false;
+
+let intensidad = 0;
+let intensidadSuave = 0;
+
+let audioContext = null;
+let analizador = null;
+let flujoAudio = null;
+let datosAudio = null;
+
+// ========================================
+// ESTADO CÁMARA
+// ========================================
+
+let faceMesh = null;
+let flujoCamara = null;
+
+let camaraActiva = false;
+let procesandoCara = false;
+
+let ultimoAnalisis = 0;
+let sesionCamara = 0;
+
+// ========================================
+// ESTADO CABEZA
+// ========================================
+
+let cabezaX = 0;
+let cabezaY = 0;
+
+let cabezaObjetivoX = 0;
+let cabezaObjetivoY = 0;
+
+let referenciaCabeza = null;
+
+// ========================================
+// ANIMACIÓN
+// ========================================
+
+let ultimoFrame = 0;
+
+// ========================================
+// UTILIDADES
+// ========================================
+
+function limitar(valor,minimo,maximo){
+
+  return Math.max(
+    minimo,
+    Math.min(maximo,valor)
+  );
+}
+
+function normalizarTexto(texto){
+
+  return texto
+    .replace(/\s+/g," ")
+    .trim();
+}
+
+function suavizar(actual,objetivo,dt,velocidad){
+
+  return actual+
+    (objetivo-actual)*
+    (1-Math.exp(-dt*velocidad));
+}
+
+// ========================================
+// AJUSTAR CANVAS
+// ========================================
+
+function ajustar(){
+
+  W = innerWidth;
+  H = innerHeight;
+
+  dpr = Math.min(
+    devicePixelRatio || 1,
+    1.5
+  );
+
+  canvas.width = Math.round(W*dpr);
+  canvas.height = Math.round(H*dpr);
+
+  ctx.setTransform(
+    dpr,0,0,dpr,0,0
+  );
+
+  cx = W/2;
+  cy = H/2;
+
+  R = Math.min(W,H)*0.43;
+
+  colocarNeuronas();
+}
+
+// ========================================
+// CREAR NEURONAS
+// ========================================
+
+function crearNeuronas(total){
+
+  neuronas = [];
+
+  for(let i=0;i<total;i++){
+
+    neuronas.push({
+
+      x:0,
+      y:0,
+
+      valor:0,
+
+      diametro:DIAMETRO_MINIMO,
+      diametroActual:DIAMETRO_MINIMO,
+
+      activacion:0,
+      activacionActual:0
+
+    });
+  }
+
+  colocarNeuronas();
+}
+
+// ========================================
+// DISTRIBUCIÓN FIJA
+// ========================================
+
+function colocarNeuronas(){
+
+  let total = neuronas.length;
+
+  if(!total)return;
+
+  neuronas.forEach(function(n,i){
+
+    let angulo =
+      i*ANGULO_AUREO;
+
+    let radio =
+      R*Math.sqrt(
+        (i+0.5)/total
+      );
+
+    n.x =
+      cx+Math.cos(angulo)*radio;
+
+    n.y =
+      cy+Math.sin(angulo)*radio;
+  });
+}
+
+// ========================================
+// ACTUALIZAR VECTOR
+// ========================================
+
+function actualizarVector(vector){
+
+  if(neuronas.length !== vector.length){
+
+    crearNeuronas(vector.length);
+    vectorAnterior = null;
+  }
+
+  vector.forEach(function(valor,i){
+
+    let n = neuronas[i];
+
+    let anterior =
+      vectorAnterior?.[i];
+
+    let diferencia =
+      anterior === undefined
+      ? 0
+      : Math.abs(valor-anterior);
+
+    let cambio = limitar(
+      diferencia/UMBRAL_CAMBIO,
+      0,1
+    );
+
+    n.valor = valor;
+
+    n.diametro = limitar(
+
+      DIAMETRO_MINIMO+
+      Math.abs(valor)*EXAGERACION_ESCALA+
+      cambio*25,
+
+      DIAMETRO_MINIMO,
+      DIAMETRO_MAXIMO
+
+    );
+
+    n.activacion = cambio;
+
+  });
+
+  vectorAnterior = [...vector];
+}
+
+// ========================================
+// CONSULTAR TEXTO COMPLETO
+// ========================================
+
+async function consultarTexto(texto){
+
+  texto = normalizarTexto(texto);
+
+  if(!texto)return;
+
+  if(texto === ultimoTextoConsultado)return;
+
+  ultimoTextoConsultado = texto;
+
+  if(controlador){
+    controlador.abort();
+  }
+
+  controlador = new AbortController();
+
+  let numero = ++peticionActual;
+
+  try{
+
+    let respuesta = await fetch(
+
+      "007-servidor.php?palabra="+
+      encodeURIComponent(texto),
+
+      {
+        signal:controlador.signal
+      }
+
+    );
+
+    if(!respuesta.ok){
+      throw Error(
+        "HTTP "+respuesta.status
+      );
+    }
+
+    let datos = await respuesta.json();
+
+    if(numero !== peticionActual)return;
+
+    if(!Array.isArray(datos))return;
+
+    let vector = datos.map(Number);
+
+    if(
+      !vector.length ||
+      !vector.every(Number.isFinite)
+    )return;
+
+    actualizarVector(vector);
+
+  }catch(error){
+
+    if(error.name !== "AbortError"){
+
+      console.error(error);
+
+      if(numero === peticionActual){
+        ultimoTextoConsultado = "";
+      }
+    }
+  }
+}
+
+// ========================================
+// RECONOCIMIENTO DE VOZ
+// ========================================
+
+if(SpeechRecognition){
+
+  reconocimiento =
+    new SpeechRecognition();
+
+  reconocimiento.lang = "es-ES";
+
+  reconocimiento.continuous = true;
+  reconocimiento.interimResults = true;
+  reconocimiento.maxAlternatives = 1;
+
+  reconocimiento.onresult = function(evento){
+
+    let confirmado = "";
+    let provisional = "";
+
+    for(
+      let i=0;
+      i<evento.results.length;
+      i++
+    ){
+
+      let frase =
+        evento.results[i][0].transcript;
+
+      if(evento.results[i].isFinal){
+
+        confirmado += frase+" ";
+
+      }else{
+
+        provisional += frase+" ";
+
+      }
+    }
+
+    textoSesion = normalizarTexto(
+      confirmado+" "+provisional
+    );
+
+    let textoCompleto = normalizarTexto(
+      textoAcumulado+" "+textoSesion
+    );
+
+    consultarTexto(textoCompleto);
+  };
+
+  reconocimiento.onerror = function(evento){
+
+    console.warn(
+      "Reconocimiento:",evento.error
+    );
+
+    if(
+      evento.error === "not-allowed" ||
+      evento.error === "service-not-allowed"
+    ){
+      detenerVoz();
+    }
+  };
+
+  reconocimiento.onend = function(){
+
+    if(reinicioReconocimiento){
+
+      reinicioReconocimiento = false;
+      textoSesion = "";
+
+    }else{
+
+      textoAcumulado = normalizarTexto(
+        textoAcumulado+" "+textoSesion
+      );
+
+      textoSesion = "";
+    }
+
+    if(escuchando){
+
+      try{
+        reconocimiento.start();
+      }catch(error){
+        console.warn(error);
+      }
+    }
+  };
+}
+
+// ========================================
+// ACTIVAR AUDIO
+// ========================================
+
+async function activarAudio(){
+
+  flujoAudio =
+    await navigator.mediaDevices.getUserMedia({
+
+      audio:{
+        echoCancellation:true,
+        noiseSuppression:true,
+        autoGainControl:true
+      }
+
+    });
+
+  audioContext = new (
+    window.AudioContext ||
+    window.webkitAudioContext
+  )();
+
+  let fuente =
+    audioContext.createMediaStreamSource(
+      flujoAudio
+    );
+
+  analizador =
+    audioContext.createAnalyser();
+
+  analizador.fftSize = 512;
+  analizador.smoothingTimeConstant = 0.5;
+
+  fuente.connect(analizador);
+
+  datosAudio =
+    new Uint8Array(
+      analizador.fftSize
+    );
+}
+
+// ========================================
+// MEDIR VOLUMEN
+// ========================================
+
+function medirVoz(){
+
+  if(!analizador){
+
+    intensidad = 0;
+    return;
+  }
+
+  analizador.getByteTimeDomainData(
+    datosAudio
+  );
+
+  let suma = 0;
+
+  for(
+    let i=0;
+    i<datosAudio.length;
+    i++
+  ){
+
+    let v =
+      (datosAudio[i]-128)/128;
+
+    suma += v*v;
+  }
+
+  let rms =
+    Math.sqrt(
+      suma/datosAudio.length
+    );
+
+  intensidad = limitar(
+    (rms-0.008)*18,
+    0,1
+  );
+}
+
+// ========================================
+// ACTIVAR VOZ
+// ========================================
+
+async function activarVoz(){
+
+  if(!reconocimiento || escuchando)return;
+
+  escuchando = true;
+
+  try{
+
+    await activarAudio();
+
+    if(!escuchando){
+      detenerVoz();
+      return;
+    }
+
+    reconocimiento.start();
+
+    nucleo.classList.add("activo");
+
+    nucleo.setAttribute(
+      "aria-pressed","true"
+    );
+
+  }catch(error){
+
+    console.error(error);
+    detenerVoz();
+  }
+}
+
+// ========================================
+// DETENER VOZ
+// ========================================
+
+function detenerVoz(){
+
+  escuchando = false;
+
+  nucleo.classList.remove("activo");
+
+  nucleo.setAttribute(
+    "aria-pressed","false"
+  );
+
+  if(reconocimiento){
+
+    try{
+      reconocimiento.stop();
+    }catch(error){}
+  }
+
+  if(flujoAudio){
+
+    flujoAudio.getTracks().forEach(
+      track => track.stop()
+    );
+
+    flujoAudio = null;
+  }
+
+  if(audioContext){
+
+    audioContext.close();
+    audioContext = null;
+  }
+
+  analizador = null;
+  intensidad = 0;
+}
+
+// ========================================
+// BOTÓN CENTRAL
+// ========================================
+
+nucleo.onclick = function(){
+
+  if(escuchando){
+    detenerVoz();
+  }else{
+    activarVoz();
+  }
+};
+
+// ========================================
+// MEDIAPIPE FACE MESH
+// ========================================
+
+async function iniciarCamara(){
+
+  if(camaraActiva)return;
+
+  if(typeof FaceMesh === "undefined"){
+
+    console.error(
+      "MediaPipe no está disponible"
+    );
+
+    return;
+  }
+
+  camaraActiva = true;
+
+  const sesion = ++sesionCamara;
+
+  try{
+
+    let flujo =
+      await navigator.mediaDevices.getUserMedia({
+
+        video:{
+          width:{ideal:640},
+          height:{ideal:480},
+          frameRate:{ideal:30},
+          facingMode:"user"
+        },
+
+        audio:false
+
+      });
+
+    if(!camaraActiva || sesion !== sesionCamara){
+      flujo.getTracks().forEach(t=>t.stop());
+      return;
+    }
+
+    flujoCamara = flujo;
+
+    video.srcObject = flujoCamara;
+
+    await video.play();
+
+    if(!camaraActiva || sesion !== sesionCamara){
+      return;
+    }
+
+    if(!faceMesh){
+
+      faceMesh = new FaceMesh({
+
+        locateFile:(file)=>
+          "https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh@0.4/"+
+          file
+
+      });
+
+      faceMesh.setOptions({
+
+        maxNumFaces:1,
+        refineLandmarks:false,
+
+        minDetectionConfidence:0.6,
+        minTrackingConfidence:0.6
+
+      });
+
+      faceMesh.onResults(procesarCara);
+    }
+
+    referenciaCabeza = null;
+
+    botonCamara.classList.add("activo");
+
+    botonCamara.setAttribute(
+      "aria-pressed","true"
+    );
+
+    bucleCamara(sesion);
+
+  }catch(error){
+
+    console.error(
+      "Error de cámara:",error
+    );
+
+    detenerCamara();
+  }
+}
+
+// ========================================
+// SEGUIMIENTO DE LA CABEZA
+// ========================================
+
+function procesarCara(resultados){
+
+  if(!camaraActiva)return;
+
+  let caras =
+    resultados.multiFaceLandmarks;
+
+  if(!caras || !caras.length){
+
+    cabezaObjetivoX = 0;
+    cabezaObjetivoY = 0;
+
+    return;
+  }
+
+  let puntos = caras[0];
+
+  let izquierda = puntos[234];
+  let derecha = puntos[454];
+
+  let frente = puntos[10];
+  let menton = puntos[152];
+
+  let x =
+    (izquierda.x+derecha.x)/2;
+
+  let y =
+    (frente.y+menton.y)/2;
+
+  // Calibración inicial
+  if(referenciaCabeza === null){
+
+    referenciaCabeza = {x,y};
+  }
+
+  let dx =
+    (x-referenciaCabeza.x)*
+    SENSIBILIDAD_CABEZA;
+
+  let dy =
+    (y-referenciaCabeza.y)*
+    SENSIBILIDAD_CABEZA;
+
+  // EJE X INVERTIDO
+  cabezaObjetivoX = limitar(
+    dx,-1,1
+  );
+
+  cabezaObjetivoY = limitar(
+    -dy,-1,1
+  );
+}
+
+// ========================================
+// BUCLE DE MEDIAPIPE
+// ========================================
+
+async function bucleCamara(sesion){
+
+  if(
+    !camaraActiva ||
+    sesion !== sesionCamara
+  )return;
+
+  requestAnimationFrame(
+    ()=>bucleCamara(sesion)
+  );
+
+  if(
+    procesandoCara ||
+    video.readyState < 2 ||
+    !faceMesh
+  )return;
+
+  let ahora = performance.now();
+
+  if(
+    ahora-ultimoAnalisis <
+    1000/FPS_CAMARA
+  )return;
+
+  ultimoAnalisis = ahora;
+  procesandoCara = true;
+
+  try{
+
+    await faceMesh.send({
+      image:video
+    });
+
+  }catch(error){
+
+    if(camaraActiva){
+      console.warn(error);
+    }
+
+  }finally{
+
+    procesandoCara = false;
+  }
+}
+
+// ========================================
+// DETENER CÁMARA
+// ========================================
+
+function detenerCamara(){
+
+  camaraActiva = false;
+  sesionCamara++;
+
+  if(flujoCamara){
+
+    flujoCamara.getTracks().forEach(
+      track => track.stop()
+    );
+
+    flujoCamara = null;
+  }
+
+  video.pause();
+  video.srcObject = null;
+
+  referenciaCabeza = null;
+
+  cabezaObjetivoX = 0;
+  cabezaObjetivoY = 0;
+
+  botonCamara.classList.remove("activo");
+
+  botonCamara.setAttribute(
+    "aria-pressed","false"
+  );
+}
+
+// ========================================
+// BOTÓN CÁMARA
+// ========================================
+
+botonCamara.onclick = function(){
+
+  if(camaraActiva){
+    detenerCamara();
+  }else{
+    iniciarCamara();
+  }
+};
+
+// ========================================
+// REINICIAR
+// ========================================
+
+reiniciar.onclick = function(){
+
+  peticionActual++;
+
+  if(controlador){
+
+    controlador.abort();
+    controlador = null;
+  }
+
+  textoAcumulado = "";
+  textoSesion = "";
+  ultimoTextoConsultado = "";
+
+  vectorAnterior = null;
+
+  neuronas.forEach(function(n){
+
+    n.valor = 0;
+
+    n.diametro = DIAMETRO_MINIMO;
+    n.diametroActual = DIAMETRO_MINIMO;
+
+    n.activacion = 0;
+    n.activacionActual = 0;
+  });
+
+  // Recalibrar la cabeza
+  referenciaCabeza = null;
+
+  cabezaObjetivoX = 0;
+  cabezaObjetivoY = 0;
+
+  if(escuchando && reconocimiento){
+
+    reinicioReconocimiento = true;
+
+    try{
+      reconocimiento.abort();
+    }catch(error){}
+  }
+};
+
+// ========================================
+// DIBUJAR NEURONAS CON PROFUNDIDAD
+// ========================================
+
+function dibujarNeuronas(dt){
+
+  let suavizado =
+    1-Math.exp(
+      -dt*VELOCIDAD_TRANSICION
+    );
+
+  // Primero actualizar todas las animaciones
+  for(let n of neuronas){
+
+    n.diametroActual +=
+      (
+        n.diametro -
+        n.diametroActual
+      )*suavizado;
+
+    n.activacionActual +=
+      (
+        n.activacion -
+        n.activacionActual
+      )*suavizado;
+  }
+
+  // =====================================
+  // ORDEN DE PROFUNDIDAD
+  // =====================================
+
+  // Dibujar primero las pequeñas.
+  // Las grandes se dibujan después,
+  // por lo tanto quedan por delante.
+
+  let ordenadas = [...neuronas].sort(
+    (a,b)=>
+      a.diametroActual-b.diametroActual
+  );
+
+  // =====================================
+  // DIBUJAR EN ORDEN
+  // =====================================
+
+  for(let n of ordenadas){
+
+    let diametro = n.diametroActual;
+
+    let activacion =
+      n.activacionActual;
+
+    // Profundidad basada en diámetro
+    let profundidad = limitar(
+
+      (
+        diametro-DIAMETRO_MINIMO
+      )/
+      (
+        DIAMETRO_MAXIMO-DIAMETRO_MINIMO
+      ),
+
+      0,1
+
+    );
+
+    // Exagerar profundidad
+    profundidad =
+      Math.pow(profundidad,2.2);
+
+    // ===================================
+    // PARALLAX
+    // ===================================
+
+    let desplazamiento =
+      PARALLAX_MINIMO+
+      profundidad*PARALLAX_MAXIMO;
+
+    let x =
+      n.x+
+      cabezaX*desplazamiento;
+
+    let y =
+      n.y+
+      cabezaY*desplazamiento;
+
+    // ===================================
+    // COLOR
+    // ===================================
+
+    let rojo = Math.round(
+      255-(255-22)*activacion
+    );
+
+    let verde = Math.round(
+      255-(255-139)*activacion
+    );
+
+    let azul = 255;
+
+    // ===================================
+    // TRANSPARENCIA
+    // ===================================
+
+    // Pequeñas: 35 %
+    // Grandes: 70 %
+
+    let opacidad =
+      OPACIDAD_MINIMA+
+      profundidad*
+      (
+        OPACIDAD_MAXIMA-
+        OPACIDAD_MINIMA
+      );
+
+    // ===================================
+    // CÍRCULO
+    // ===================================
+
+    ctx.beginPath();
+
+    ctx.arc(
+      x,
+      y,
+      diametro/2,
+      0,
+      TAU
+    );
+
+    ctx.fillStyle =
+      `rgba(${rojo},${verde},${azul},${opacidad})`;
+
+    ctx.fill();
+  }
+}
+
+// ========================================
+// NÚCLEO CENTRAL
+// ========================================
+
+function dibujarNucleo(){
+
+  let escala =
+    1+intensidadSuave*1.8;
+
+  nucleo.style.transform =
+    `scale(${escala})`;
+}
+
+// ========================================
+// ANIMACIÓN PRINCIPAL
+// ========================================
+
+function animar(timestamp){
+
+  let dt = ultimoFrame
+    ?Math.min(
+      (timestamp-ultimoFrame)/1000,
+      0.05
+    )
+    :1/60;
+
+  ultimoFrame = timestamp;
+
+  medirVoz();
+
+  intensidadSuave = suavizar(
+    intensidadSuave,
+    intensidad,
+    dt,
+    18
+  );
+
+  // Suavizar movimiento facial
+  cabezaX = suavizar(
+    cabezaX,
+    cabezaObjetivoX,
+    dt,
+    SUAVIZADO_CABEZA
+  );
+
+  cabezaY = suavizar(
+    cabezaY,
+    cabezaObjetivoY,
+    dt,
+    SUAVIZADO_CABEZA
+  );
+
+  // Fondo negro
+  ctx.fillStyle = "#000";
+
+  ctx.fillRect(
+    0,0,W,H
+  );
+
+  // Neuronas con parallax,
+  // transparencia y profundidad
+  dibujarNeuronas(dt);
+
+  // Círculo central reactivo
+  dibujarNucleo();
+
+  requestAnimationFrame(animar);
+}
+
+// ========================================
+// INICIALIZACIÓN
+// ========================================
+
+addEventListener(
+  "resize",
+  ajustar
+);
+
+addEventListener(
+  "beforeunload",
+  function(){
+
+    detenerCamara();
+    detenerVoz();
+
+  }
+);
+
+ajustar();
+
+crearNeuronas(
+  NUM_NEURONAS_INICIALES
+);
+
+requestAnimationFrame(
+  animar
+);
+
+</script>
+
+</body>
+</html>
