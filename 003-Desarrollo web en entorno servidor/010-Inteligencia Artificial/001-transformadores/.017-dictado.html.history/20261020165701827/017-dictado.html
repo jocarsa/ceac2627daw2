@@ -1,0 +1,551 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visualizador de embeddings por voz</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      background: #f0f0f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      margin: 0;
+      padding: 20px;
+    }
+
+    #rejilla {
+      width: 500px;
+      height: 500px;
+      max-width: 90vw;
+      max-height: 90vw;
+      border: 1px solid #ddd;
+      border-radius: 50%;
+      position: relative;
+      background: #f8f8f8;
+      flex-shrink: 0;
+    }
+
+    .bloque {
+      width: 6px;
+      height: 6px;
+      background: black;
+      border-radius: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      transition:
+        background-color 0.35s ease,
+        transform 0.35s ease;
+    }
+
+    #microfono {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+
+      width: 100px;
+      height: 100px;
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 50%;
+
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+
+      box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+
+      font-size: 38px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #microfono:hover {
+      transform: translate(-50%, -50%) scale(1.08);
+    }
+
+    #microfono.activo {
+      background: #ffe5e5;
+      border-color: #ff7777;
+      box-shadow: 0 0 0 12px rgba(255,0,0,0.08);
+      animation: pulso 1.5s infinite;
+    }
+
+    @keyframes pulso {
+      0%, 100% {
+        box-shadow: 0 0 0 8px rgba(255,0,0,0.08);
+      }
+      50% {
+        box-shadow: 0 0 0 22px rgba(255,0,0,0.02);
+      }
+    }
+
+    #panel {
+      width: 500px;
+      max-width: 90vw;
+      text-align: center;
+    }
+
+    #estado {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 12px;
+    }
+
+    #dictado {
+      background: white;
+      padding: 20px;
+      border-radius: 16px;
+      min-height: 85px;
+      line-height: 1.8;
+      font-size: 18px;
+      color: #333;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+      overflow-wrap: anywhere;
+    }
+
+    #dictado .provisional {
+      color: #999;
+    }
+
+    #palabraActual {
+      margin-top: 12px;
+      font-size: 13px;
+      color: #888;
+      min-height: 20px;
+    }
+
+    #palabraActual strong {
+      color: #c33;
+    }
+
+    #limpiar {
+      margin-top: 15px;
+      border: 0;
+      background: transparent;
+      color: #999;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    #limpiar:hover {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="rejilla">
+    <button id="microfono" title="Activar micrófono">
+      🎤
+    </button>
+  </div>
+
+  <div id="panel">
+    <div id="estado">Pulsa el micrófono para comenzar</div>
+
+    <div id="dictado">
+      <span id="textoFinal"></span>
+      <span id="textoProvisional" class="provisional">
+        Aquí aparecerá el dictado...
+      </span>
+    </div>
+
+    <div id="palabraActual"></div>
+
+    <button id="limpiar">Limpiar dictado</button>
+  </div>
+
+  <script>
+    const rejilla = document.querySelector("#rejilla");
+    const microfono = document.querySelector("#microfono");
+    const estado = document.querySelector("#estado");
+    const textoFinal = document.querySelector("#textoFinal");
+    const textoProvisional =
+      document.querySelector("#textoProvisional");
+    const palabraActual =
+      document.querySelector("#palabraActual");
+    const limpiar = document.querySelector("#limpiar");
+
+    const UMBRAL_CAMBIO = 0.1;
+
+    let vectorAnterior = null;
+    let peticionActual = 0;
+
+    let escuchando = false;
+    let reconocimiento = null;
+    let reinicioPendiente = false;
+
+    let transcripcion = "";
+    let ultimoTextoProcesado = "";
+    let colaPalabras = [];
+    let procesando = false;
+    let controladorPeticion = null;
+
+    // ----------------------------------------
+    // Color de cada neurona
+    // ----------------------------------------
+
+    function obtenerColor(actual, anterior) {
+      if (anterior === undefined) {
+        return "rgb(0,0,0)";
+      }
+
+      let diferencia = Math.abs(actual - anterior);
+
+      let intensidad = Math.min(
+        diferencia / UMBRAL_CAMBIO,
+        1
+      );
+
+      let rojo = Math.round(intensidad * 255);
+
+      return "rgb(" + rojo + ",0,0)";
+    }
+
+    // ----------------------------------------
+    // Dibujar neuronas
+    // ----------------------------------------
+
+    function dibujarVector(vectorActual) {
+      let total = vectorActual.length;
+
+      if (total === 0) return;
+
+      let centro = rejilla.clientWidth / 2;
+      let radioMaximo = centro - 20;
+
+      let bloques = rejilla.querySelectorAll(".bloque");
+
+      // Crear puntos solamente cuando sea necesario
+      if (bloques.length !== total) {
+        bloques.forEach(bloque => bloque.remove());
+
+        let fragmento = document.createDocumentFragment();
+
+        for (let i = 0; i < total; i++) {
+          let bloque = document.createElement("div");
+          bloque.className = "bloque";
+
+          let angulo = i * 2.399963229728653;
+
+          let radio = radioMaximo *
+            Math.sqrt((i + 0.5) / total);
+
+          let x = centro + Math.cos(angulo) * radio;
+          let y = centro + Math.sin(angulo) * radio;
+
+          bloque.style.left = x + "px";
+          bloque.style.top = y + "px";
+
+          fragmento.appendChild(bloque);
+        }
+
+        rejilla.appendChild(fragmento);
+        bloques = rejilla.querySelectorAll(".bloque");
+      }
+
+      vectorActual.forEach(function(dato, i) {
+        let bloque = bloques[i];
+
+        let escala = Math.max(
+          0.1,
+          (dato + 0.2) * 10
+        );
+
+        let anterior = vectorAnterior === null
+          ? undefined
+          : vectorAnterior[i];
+
+        bloque.style.transform =
+          "translate(-50%, -50%) scale(" +
+          escala + ")";
+
+        bloque.style.backgroundColor =
+          obtenerColor(dato, anterior);
+
+        bloque.title =
+          "Dimensión: " + i +
+          "\nValor actual: " + dato +
+          "\nValor anterior: " +
+            (anterior ?? "Sin datos") +
+          "\nDiferencia: " +
+            (anterior === undefined
+              ? "N/A"
+              : Math.abs(dato - anterior).toFixed(4));
+      });
+
+      vectorAnterior = [...vectorActual];
+    }
+
+    // ----------------------------------------
+    // Consultar embedding de una palabra
+    // ----------------------------------------
+
+    async function consultarPalabra(palabra) {
+      let numeroPeticion = ++peticionActual;
+
+      controladorPeticion = new AbortController();
+
+      let respuesta = await fetch(
+        "007-servidor.php?palabra=" +
+        encodeURIComponent(palabra),
+        { signal: controladorPeticion.signal }
+      );
+
+      if (!respuesta.ok) {
+        throw new Error("Error HTTP " + respuesta.status);
+      }
+
+      let datos = await respuesta.json();
+
+      if (numeroPeticion !== peticionActual) {
+        return;
+      }
+
+      if (!Array.isArray(datos)) {
+        throw new Error("El servidor no devolvió un vector");
+      }
+
+      let vector = datos.map(Number);
+
+      if (
+        vector.length === 0 ||
+        !vector.every(Number.isFinite)
+      ) {
+        throw new Error("Vector no válido");
+      }
+
+      dibujarVector(vector);
+    }
+
+    // ----------------------------------------
+    // Cola de palabras
+    // Procesar en orden para comparar vectores
+    // ----------------------------------------
+
+    async function procesarCola() {
+      if (procesando) return;
+
+      procesando = true;
+
+      while (colaPalabras.length > 0) {
+        let palabra = colaPalabras.shift();
+
+        palabraActual.innerHTML =
+          "Procesando: <strong></strong>";
+        palabraActual.querySelector("strong")
+          .textContent = palabra;
+
+        try {
+          await consultarPalabra(palabra);
+        } catch (error) {
+          if (error.name !== "AbortError") {
+            console.error("Error embedding:", error);
+          }
+        }
+      }
+
+      procesando = false;
+    }
+
+    function agregarPalabra(palabra) {
+      palabra = palabra
+        .toLowerCase()
+        .replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, "");
+
+      if (!palabra) return;
+
+      colaPalabras.push(palabra);
+      procesarCola();
+    }
+
+    // ----------------------------------------
+    // Extraer palabras nuevas
+    // ----------------------------------------
+
+    function procesarTextoNuevo(texto) {
+      texto = texto.trim();
+
+      if (!texto) return;
+
+      let palabras = texto.split(/\s+/);
+
+      palabras.forEach(function(palabra) {
+        agregarPalabra(palabra);
+      });
+    }
+
+    // ----------------------------------------
+    // Reconocimiento de voz
+    // ----------------------------------------
+
+    const SpeechRecognition =
+      window.SpeechRecognition ||
+      window.webkitSpeechRecognition;
+
+    if (!SpeechRecognition) {
+      estado.textContent =
+        "Tu navegador no soporta reconocimiento de voz";
+      microfono.disabled = true;
+    } else {
+      reconocimiento = new SpeechRecognition();
+
+      reconocimiento.lang = "es-ES";
+      reconocimiento.continuous = true;
+      reconocimiento.interimResults = true;
+      reconocimiento.maxAlternatives = 1;
+
+      reconocimiento.onstart = function() {
+        estado.textContent = "Escuchando...";
+        microfono.classList.add("activo");
+        microfono.textContent = "🔴";
+      };
+
+      reconocimiento.onresult = function(evento) {
+        let confirmado = "";
+        let provisional = "";
+
+        for (let i = 0; i < evento.results.length; i++) {
+          let resultado = evento.results[i];
+          let frase = resultado[0].transcript;
+
+          if (resultado.isFinal) {
+            confirmado += frase + " ";
+          } else {
+            provisional += frase;
+          }
+        }
+
+        // El texto final puede volver a aparecer en
+        // eventos posteriores. Procesar solo lo nuevo.
+        if (confirmado.length > ultimoTextoProcesado.length) {
+          let nuevo = confirmado.slice(
+            ultimoTextoProcesado.length
+          );
+
+          procesarTextoNuevo(nuevo);
+          ultimoTextoProcesado = confirmado;
+        }
+
+        transcripcion = confirmado;
+
+        textoFinal.textContent = confirmado;
+        textoProvisional.textContent = provisional;
+
+        if (!confirmado && !provisional) {
+          textoProvisional.textContent =
+            "Esperando voz...";
+        }
+      };
+
+      reconocimiento.onerror = function(evento) {
+        console.error("Reconocimiento:", evento.error);
+
+        if (
+          evento.error === "not-allowed" ||
+          evento.error === "service-not-allowed"
+        ) {
+          escuchando = false;
+          estado.textContent =
+            "Permiso de micrófono denegado";
+        } else if (evento.error === "no-speech") {
+          estado.textContent =
+            "Esperando que hables...";
+        } else {
+          estado.textContent =
+            "Reconocimiento: " + evento.error;
+        }
+      };
+
+      reconocimiento.onend = function() {
+        microfono.classList.remove("activo");
+        microfono.textContent = "🎤";
+
+        if (escuchando) {
+          // Reiniciar si el navegador termina
+          // automáticamente la sesión.
+          try {
+            reconocimiento.start();
+          } catch (error) {
+            console.warn(error);
+          }
+        } else {
+          estado.textContent =
+            "Micrófono desactivado";
+        }
+      };
+    }
+
+    // ----------------------------------------
+    // Activar / desactivar micrófono
+    // ----------------------------------------
+
+    microfono.onclick = function() {
+      if (!reconocimiento) return;
+
+      if (!escuchando) {
+        escuchando = true;
+
+        // Nueva sesión de reconocimiento
+        ultimoTextoProcesado = "";
+
+        try {
+          reconocimiento.start();
+        } catch (error) {
+          escuchando = false;
+          console.error(error);
+        }
+      } else {
+        escuchando = false;
+        reconocimiento.stop();
+      }
+    };
+
+    // ----------------------------------------
+    // Limpiar
+    // ----------------------------------------
+
+    limpiar.onclick = function() {
+      transcripcion = "";
+      ultimoTextoProcesado = "";
+
+      textoFinal.textContent = "";
+      textoProvisional.textContent =
+        "Aquí aparecerá el dictado...";
+
+      palabraActual.textContent = "";
+
+      colaPalabras = [];
+
+      peticionActual++;
+
+      if (controladorPeticion) {
+        controladorPeticion.abort();
+      }
+
+      vectorAnterior = null;
+
+      rejilla.querySelectorAll(".bloque")
+        .forEach(bloque => bloque.remove());
+
+      // Reiniciar sesión para que los resultados
+      // anteriores no reaparezcan.
+      if (escuchando) {
+        reconocimiento.stop();
+      }
+    };
+  </script>
+
+</body>
+</html>

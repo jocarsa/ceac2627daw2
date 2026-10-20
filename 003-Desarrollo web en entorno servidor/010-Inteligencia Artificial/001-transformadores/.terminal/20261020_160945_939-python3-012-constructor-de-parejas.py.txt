@@ -1,0 +1,11 @@
+Datetime: 2026-10-20T14:09:45.939Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/001-transformadores
+Command: python3 012-constructor\ de\ parejas.py
+
+Result:
+Sentence 1:
+Los modelos de inteligencia artificial aprenden patrones mediante redes neuronales a partir de grandes cantidades de información.
+
+Sentence 2:
+Mediante el uso de redes neuronales, los modelos de inteligencia artificial extraen patrones de información en grandes volúmenes.
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/001-transformadores$ 

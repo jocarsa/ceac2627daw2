@@ -1,0 +1,4 @@
+body,html{width:100%;height:100%;padding:0px;margin:0px;}
+body{background:grey;display:flex;flex-direction:column;
+justify-content:space-between;align-items:center;}
+header,main,footer{width:1200px;background:white;margin:10px;}

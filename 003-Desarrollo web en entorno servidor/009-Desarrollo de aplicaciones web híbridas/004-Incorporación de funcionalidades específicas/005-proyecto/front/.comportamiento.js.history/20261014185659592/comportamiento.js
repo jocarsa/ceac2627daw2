@@ -1,0 +1,1 @@
+let plantilla = document.querySelector("#publicacion")

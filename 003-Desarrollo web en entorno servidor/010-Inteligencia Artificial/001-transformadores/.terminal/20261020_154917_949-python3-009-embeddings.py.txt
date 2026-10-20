@@ -1,0 +1,55 @@
+Datetime: 2026-10-20T13:49:17.949Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/001-transformadores
+Command: python3 009-embeddings.py
+
+Result:
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+modules.json:   0%|                                    | 0.00/229 [00:00<?, ?B/s]modules.json: 100%|██████████████████████████████| 229/229 [00:00<00:00, 553kB/s]
+config_sentence_transformers.json:   0%|               | 0.00/122 [00:00<?, ?B/s]config_sentence_transformers.json: 100%|█████████| 122/122 [00:00<00:00, 473kB/s]
+README.md: 0.00B [00:00, ?B/s]README.md: 3.89kB [00:00, 12.6MB/s]
+sentence_bert_config.json:   0%|                      | 0.00/53.0 [00:00<?, ?B/s]sentence_bert_config.json: 100%|███████████████| 53.0/53.0 [00:00<00:00, 158kB/s]
+config.json:   0%|                                     | 0.00/645 [00:00<?, ?B/s]config.json: 100%|██████████████████████████████| 645/645 [00:00<00:00, 4.68MB/s]
+model.safetensors:   0%|                              | 0.00/471M [00:00<?, ?B/s]model.safetensors:   0%|                              | 0.00/471M [00:00<?, ?B/s]model.safetensors:   0%|                              | 0.00/471M [00:00<?, ?B/s]model.safetensors:   0%|                              | 0.00/471M [00:00<?, ?B/s]model.safetensors:   0%|                              | 0.00/471M [00:00<?, ?B/s]model.safetensors:   0%|                              | 0.00/471M [00:01<?, ?B/s]model.safetensors:   0%|                              | 0.00/471M [00:01<?, ?B/s]model.safetensors:   0%|                              | 0.00/471M [00:01<?, ?B/s]model.safetensors:   0%|                              | 0.00/471M [00:01<?, ?B/s]model.safetensors:   0%|                              | 0.00/471M [00:01<?, ?B/s]model.safetensors:   0%|                              | 0.00/471M [00:02<?, ?B/s]model.safetensors:   0%|                              | 0.00/471M [00:02<?, ?B/s]model.safetensors:   0%|                              | 0.00/471M [00:02<?, ?B/s]model.safetensors:   0%|                              | 0.00/471M [00:02<?, ?B/s]model.safetensors:   0%|                              | 0.00/471M [00:02<?, ?B/s]model.safetensors:   0%|                              | 0.00/471M [00:03<?, ?B/s]model.safetensors:   0%|                              | 0.00/471M [00:03<?, ?B/s]model.safetensors:   0%|                              | 0.00/471M [00:03<?, ?B/s]model.safetensors:   0%|                              | 0.00/471M [00:03<?, ?B/s]model.safetensors:   0%|                              | 0.00/471M [00:03<?, ?B/s]model.safetensors:   0%|                              | 0.00/471M [00:04<?, ?B/s]model.safetensors:   0%|                              | 0.00/471M [00:04<?, ?B/s]model.safetensors:   0%|                              | 0.00/471M [00:04<?, ?B/s]model.safetensors:   0%|                              | 0.00/471M [00:04<?, ?B/s]model.safetensors:   0%|                              | 0.00/471M [00:04<?, ?B/s]model.safetensors:  14%|███▏                  | 67.0M/471M [00:05<00:01, 334MB/s]model.safetensors:  28%|██████▎               | 134M/471M [00:06<00:03, 85.0MB/s]model.safetensors:  57%|████████████▌         | 268M/471M [00:14<00:08, 23.9MB/s]model.safetensors: 100%|██████████████████████| 471M/471M [00:15<00:00, 46.0MB/s]model.safetensors: 100%|██████████████████████| 471M/471M [00:15<00:00, 29.7MB/s]
+Loading weights:   0%|                                   | 0/199 [00:00<?, ?it/s]Loading weights: 100%|███████████████████████| 199/199 [00:00<00:00, 4127.80it/s]
+BertModel LOAD REPORT from: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+tokenizer_config.json:   0%|                           | 0.00/526 [00:00<?, ?B/s]tokenizer_config.json: 100%|████████████████████| 526/526 [00:00<00:00, 1.35MB/s]
+tokenizer.json:   0%|                                | 0.00/9.08M [00:00<?, ?B/s]tokenizer.json:   0%|                                | 0.00/9.08M [00:00<?, ?B/s]tokenizer.json:   0%|                                | 0.00/9.08M [00:00<?, ?B/s]tokenizer.json: 100%|███████████████████████| 9.08M/9.08M [00:00<00:00, 45.3MB/s]tokenizer.json: 100%|███████████████████████| 9.08M/9.08M [00:00<00:00, 14.8MB/s]
+special_tokens_map.json:   0%|                         | 0.00/239 [00:00<?, ?B/s]special_tokens_map.json: 100%|███████████████████| 239/239 [00:00<00:00, 477kB/s]
+config.json:   0%|                                     | 0.00/190 [00:00<?, ?B/s]config.json: 100%|███████████████████████████████| 190/190 [00:00<00:00, 598kB/s]
+
+Frase: El perro está jugando
+Dimensiones: 384
+Primeros valores: [ 0.16513196 -0.33021304 -0.29114315 -0.0012902  -0.21509402  0.04273824
+ -0.12892641  0.01623086  0.24287793 -0.09300768]
+
+Frase: Un cachorro corre por el parque
+Dimensiones: 384
+Primeros valores: [ 0.41935277  0.10299374 -0.42299438  0.10563623  0.2575072  -0.00602396
+ -0.09302901 -0.22353414  0.11760844 -0.23069432]
+
+Frase: El gato está durmiendo
+Dimensiones: 384
+Primeros valores: [ 0.37842625  0.04663026 -0.0157552   0.30215406  0.00713067  0.14128458
+  0.230616    0.11783685 -0.02667984  0.01709035]
+
+Frase: Estoy programando en Python
+Dimensiones: 384
+Primeros valores: [ 0.01838051 -0.14939426 -0.249567   -0.0877672  -0.20909034 -0.05618548
+  0.15545593 -0.15454173 -0.06269889  0.47452912]
+
+Frase: Me gusta desarrollar software
+Dimensiones: 384
+Primeros valores: [-0.13262166 -0.25902107 -0.13057421 -0.10728818 -0.17250894  0.0360111
+ -0.288797    0.06549699  0.09321199  0.29457158]
+
+Frase: La base de datos contiene registros
+Dimensiones: 384
+Primeros valores: [-0.0418986  -0.02145661 -0.63425565 -0.06860933 -0.11658801 -0.01562423
+ -0.32171667 -0.12908357  0.2622396   0.23799112]
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/001-transformadores$ 

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      .bloque{
+      	width:10px;
+        height:10px;
+        background:black;
+        float:left;
+        border-radius:20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="rejilla">
+    </div>
+    <input>
+    <script>
+      let rejilla = document.querySelector("#rejilla")
+      let entrada = document.querySelector("input")
+      entrada.onblur = function(){
+        rejilla.innerHTML = ""
+        fetch("007-servidor.php?palabra="+encodeURI(entrada.value))
+        .then(function(resultado){return resultado.json()})
+        .then(function(datos){
+          console.log(datos)
+          datos.forEach(function(dato){
+            rejilla.innerHTML += `
+              <div class="bloque" style="transform:scale(`+(dato+0.2)*3+`);"></div>
+            `
+          })
+        })
+      }
+    </script>
+  </body>
+</html>

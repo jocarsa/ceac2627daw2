@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <div id="rejilla">
+    </div>
+    <script>
+      let rejilla = document.querySelector("#rejilla")
+      fetch("003-ahora lo quiero como json.php")
+      .then(function(resultado){return resultado.json()})
+      .then(function(datos){
+      	console.log(datos)
+        datos.forEach(function(dato){
+        	
+        })
+      })
+    </script>
+  </body>
+</html>

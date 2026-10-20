@@ -1,0 +1,11 @@
+Datetime: 2026-10-20T14:25:22.111Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/001-transformadores
+Command: python3 014-cachos\ a\ partir\ del\ texto.py
+
+Result:
+usage: 014-cachos a partir del texto.py [-h] [--output OUTPUT]
+                                        [--chunk-size CHUNK_SIZE]
+                                        [--overlap OVERLAP]
+                                        archivo
+014-cachos a partir del texto.py: error: the following arguments are required: archivo
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/001-transformadores$ 

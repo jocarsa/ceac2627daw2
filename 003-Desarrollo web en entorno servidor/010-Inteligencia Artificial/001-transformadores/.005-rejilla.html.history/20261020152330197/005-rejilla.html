@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <div id="rejilla">
+    </div>
+    <script>
+      fetch("003-ahora lo quiero como json.php")
+      .then(function(resultado){return resultado.json()})
+      .then(function(datos){
+      	console.log(datos)
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+Datetime: 2026-10-20T14:27:23.393Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/001-transformadores
+Command: python3 014-cachos\ a\ partir\ del\ texto.py "/var/www/html/clases/2024 09 11 17 06 14 Marcas [cZPBC0bj1LU].txt"
+
+Result:
+Leyendo archivo: /var/www/html/clases/2024 09 11 17 06 14 Marcas [cZPBC0bj1LU].txt
+Caracteres: 32144
+Chunks generados: 25
+Modelo: granite4.1:8b
+------------------------------------------------------------
+Continuando desde chunk: 1
+
+[1/25] Procesando 1500 caracteres
+Frase 1: El lenguaje HTML, junto con su hermano CSS, es fundamental para crear páginas web y sitios web, aunque originalmente se diseñó para publicar documentos en la web.
+Frase 2: HTML y CSS son los principales lenguajes de marcas utilizados para desarrollar páginas y sitios web, a pesar de que HTML fue creado inicialmente como un estándar para publicar documentos en Internet.
+
+[2/25] Procesando 1500 caracteres
+Frase 1: El texto habla sobre la creación de carpetas organizadas para temas como la programación y los lenguajes de marcas, mencionando HTML como un ejemplo famoso.
+Frase 2: Se describe el proceso de establecer estructuras de carpetas correspondientes a temas de programación, destacando HTML como un lenguaje de marcas conocido.
+
+[3/25] Procesando 1500 caracteres
+Frase 1: Para empezar a escribir código, se recomienda utilizar Brackets, un editor de código gratuito y multiplataforma que se puede descargar desde brackets.io.
+Frase 2: El editor sugerido para comenzar a programar es Brackets, disponible sin costo en su página web brackets.io y compatible en varios sistemas operativos.
+
+[4/25] Procesando 1498 caracteres
+Frase 1: Los lenguajes de marcas se fundamentan en el uso de etiquetas, y en el editor mencionado, al escribir una etiqueta como `<etiqueta>`, se cierra automáticamente al colocar `</etiqueta>`.
+Frase 2: En los lenguajes de marcas, las estructuras se construyen mediante etiquetas; en el entorno de edición, al introducir una etiqueta, como `<etiqueta>`, la herramienta cierra la etiqueta al final con `</etiqueta>` automáticamente.
+
+[5/25] Procesando 1499 caracteres
+Frase 1: Las etiquetas en los lenguajes de marcas se abren y cierran, permitiendo que contengan etiquetas hijas.
+Frase 2: En los lenguajes de marcas, cada etiqueta tiene un par de apertura y cierre que puede incluir etiquetas secundarias.
+
+[6/25] Procesando 1498 caracteres
+Frase 1: El documento XML debe incluir una cabecera que indique la versión 1.0 y la codificación de caracteres UTF-8.
+Frase 2: Es necesario que el archivo XML tenga una etiqueta de cabecera especificando la versión 1.0 y que utilice la codificación UTF-8.
+
+[7/25] Procesando 1500 caracteres
+Frase 1: Los documentos XML sirven para almacenar información, lo cual es crucial en el desarrollo de aplicaciones informáticas.
+Frase 2: En el desarrollo de aplicaciones informáticas, los archivos XML tienen la función de guardar información, algo esencial.
+
+[8/25] Procesando 1500 caracteres
+Frase 1: LibreOffice crea sus propias etiquetas XML personalizadas al guardar documentos, y estas etiquetas son validadas como correctas por el validador XML.
+Frase 2: Al guardar un documento, LibreOffice se encarga de definir etiquetas XML específicas que, a pesar de ser inventadas por la aplicación, son reconocidas como válidas por el sistema de validación.
+
+[9/25] Procesando 1500 caracteres
+Frase 1: Cuando se crea una página web utilizando XML, es posible definir etiquetas propias que cumplan ciertas normas, y XML puede ser aplicado para ese propósito.
+Frase 2: XML permite la creación de etiquetas personalizadas para páginas web, siguiendo un conjunto de reglas, y se emplea en esta tarea.
+
+[10/25] Procesando 1499 caracteres
+Frase 1: Lo primero que debemos hacer es escribir la etiqueta raíz `<html>` y luego incluir las etiquetas `<head>` y `<body>` dentro de ella para que la página valide correctamente en la web.
+Frase 2: En primer lugar, es necesario iniciar con la etiqueta raíz `<html>` y asegurar la presencia de las etiquetas `<head>` y `<body>` dentro, de modo que el documento sea válido en la plataforma web.
+
+[11/25] Procesando 1499 caracteres
+Frase 1: Cuando se crea una página web, es necesario adherirse a estándares específicos que no son demasiado complicados de aprender.
+Frase 2: Es obligatorio seguir normas determinadas al elaborar una página web, y estas normas no presentan gran dificultad para su comprensión.
+
+[12/25] Procesando 1500 caracteres
+Frase 1: Los lenguajes de marcas, como XML, permiten definir el estándar de almacenamiento de información según las necesidades de la aplicación.
+Frase 2: XML y otros lenguajes de marcas ofrecen la libertad de estructurar la información de acuerdo con los requisitos específicos del programa.
+
+[13/25] Procesando 1500 caracteres
+Frase 1: La flexibilidad de estructurar documentos XML es una ventaja clave en el manejo de información, permitiendo crear una estructura personalizada desde el principio.
+Frase 2: Es evidente que la libertad para diseñar la estructura de un documento XML ofrece una gran ventaja en el tratamiento de datos, asegurando que la base esté claramente definida al inicio.
+
+[14/25] Procesando 1499 caracteres
+Frase 1: El lenguaje HTML se inició en 1989 y fue lanzado oficialmente en 1991, comenzando su estandarización.
+Frase 2: HTML fue concebido a partir de 1989, su publicación ocurrió en 1991 y posteriormente se establecieron sus normas.
+
+[15/25] Procesando 1500 caracteres
+Frase 1: El lenguaje HTML, siendo específico, se desarrolló primero y se lanzó en 1993, mientras que XML, un lenguaje genérico, se creó cinco años después en 1998.
+Frase 2: Primero se diseñó HTML como un lenguaje específico en 1993, y posteriormente, en 1998, se introdujo XML como un lenguaje genérico que incluía a HTML como un subconjunto.
+
+[16/25] Procesando 1500 caracteres
+Frase 1: No comiencen la casa por el tejado; en este caso, comenzaron la casa por el tejado, es decir, hicieron primero lo específico y luego lo genérico.
+Frase 2: Es preferible iniciar un proyecto por sus partes más específicas antes de generalizar, tal como hicieron al comenzar la casa por el tejado.
+
+[17/25] Procesando 1500 caracteres
+Frase 1: La aplicación informática para una tienda de ropa debe guardar cada pieza en un documento HTML, utilizando una etiqueta raíz llamada 'pieza' que debe ser cerrada manualmente.
+Frase 2: Para una tienda de prendas, se propone una herramienta que almacene cada artículo en un archivo HTML, empleando una etiqueta principal denominada 'pieza' que requiere un cierre explícito.
+
+[18/25] Procesando 1500 caracteres
+Frase 1: Es necesario cerrar manualmente la etiqueta de apertura de pieza al crearla.
+Frase 2: La etiqueta de apertura de pieza debe ser cerrada por el editor en el momento de su creación.
+
+[19/25] Procesando 1499 caracteres
+Frase 1: Es crucial desde el primer día comprender qué hace y qué no hace un entorno de desarrollo, tal como se discutió con Fran durante la sesión de inicio.
+Frase 2: Desde el principio, es importante que ustedes entiendan las capacidades y limitaciones de un entorno de desarrollo, tema que Fran planteó en la sesión de inicio.
+
+[20/25] Procesando 1499 caracteres
+Frase 1: Es necesario comprender que entre los participantes y el código pueden no existir intermediarios, permitiendo a los usuarios editar directamente el código si así lo desean.
+Frase 2: Quedé claro que los entornos de desarrollo, aunque útiles, no son imprescindibles, ya que cada uno tiene la capacidad de modificar el código sin intermediarios.
+
+[21/25] Procesando 1500 caracteres
+Frase 1: Siempre intento que las herramientas que utilizo sean compatibles con Windows, Mac y Linux.
+Frase 2: Procuró que cualquier herramienta que emplee funcione en los tres sistemas operativos: Windows, macOS y Linux.
+
+[22/25] Procesando 1500 caracteres
+Frase 1: Los espacios de nombres son una idea fantástica que permite evitar colisiones entre etiquetas utilizadas por diferentes desarrolladores en archivos XML.
+Frase 2: Es fundamental adoptar espacios de nombres para garantizar que los nombres de etiqueta, como 'pieza', 'precio' o 'color', no entren en conflicto cuando se mezclan archivos XML de distintas fuentes.
+
+[23/25] Procesando 1500 caracteres
+Frase 1: He inaugurado el espacio de nombres 'jarsa', donde todo a la izquierda de los dos puntos representa el espacio de nombres y todo a la derecha es el nombre de la etiqueta, como 'pieza', 'nombre', 'precio' y 'color'.
+Frase 2: Declaramos el espacio de nombres 'jarsa'; el contenido a la izquierda de los dos puntos indica el espacio de nombres, mientras que lo que sigue a la derecha son los nombres de las etiquetas, incluyendo 'pieza', 'nombre', 'precio' y 'color'.
+
+[24/25] Procesando 1500 caracteres
+Frase 1: Es fundamental entender que en XML, los espacios de nombres permiten evitar colisiones cuando se combinan documentos, a diferencia de HTML donde no existen espacios de nombres.
+Frase 2: La utilidad de los espacios de nombres en XML es crucial para prevenir conflictos al integrar documentos, algo que no ocurre en HTML debido a la ausencia de dichos espacios.
+
+[25/25] Procesando 944 caracteres
+Frase 1: Es común unificar y agrupar documentos XML para evitar colisiones, especialmente cuando se trata de espacios de nombres en informática.
+Frase 2: La integración de documentos XML es usual con el fin de prevenir conflictos, teniendo en cuenta los espacios de nombres en el ámbito de la computación.
+
+Proceso completado.
+Dataset: training_pairs.jsonl
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/001-transformadores$ 

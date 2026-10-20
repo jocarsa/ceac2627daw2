@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+      fetch("003-ahora lo quiero como json.php")
+      .then(function(resultado){return resultado.json()})
+      .then(function(datos){
+      	console.log(datos)
+      })
+    </script>
+  </body>
+</html>

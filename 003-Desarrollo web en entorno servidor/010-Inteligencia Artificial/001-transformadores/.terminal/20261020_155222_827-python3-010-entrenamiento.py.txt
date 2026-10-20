@@ -1,0 +1,19 @@
+Datetime: 2026-10-20T13:52:22.827Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/001-transformadores
+Command: python3 010-entrenamiento.py
+
+Result:
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|                                   | 0/199 [00:00<?, ?it/s]Loading weights: 100%|███████████████████████| 199/199 [00:00<00:00, 9973.67it/s]
+BertModel LOAD REPORT from: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Computing widget examples:   0%|                      | 0/1 [00:00<?, ?example/s]                                                                                   0%|                                                     | 0/30 [00:00<?, ?it/s]  3%|█▌                                           | 1/30 [00:00<00:09,  2.91it/s] 10%|████▌                                        | 3/30 [00:00<00:03,  7.28it/s] 17%|███████▌                                     | 5/30 [00:00<00:02,  9.40it/s] 23%|██████████▌                                  | 7/30 [00:00<00:02, 10.75it/s] 30%|█████████████▌                               | 9/30 [00:00<00:01, 11.63it/s] 37%|████████████████▏                           | 11/30 [00:01<00:01, 12.09it/s] 43%|███████████████████                         | 13/30 [00:01<00:01, 12.54it/s] 50%|██████████████████████                      | 15/30 [00:01<00:01, 12.86it/s] 57%|████████████████████████▉                   | 17/30 [00:01<00:01, 12.90it/s] 63%|███████████████████████████▊                | 19/30 [00:01<00:00, 13.05it/s] 70%|██████████████████████████████▊             | 21/30 [00:01<00:00, 13.15it/s] 77%|█████████████████████████████████▋          | 23/30 [00:01<00:00, 13.17it/s] 83%|████████████████████████████████████▋       | 25/30 [00:02<00:00, 13.24it/s] 90%|███████████████████████████████████████▌    | 27/30 [00:02<00:00, 13.34it/s] 97%|██████████████████████████████████████████▌ | 29/30 [00:02<00:00, 13.36it/s]                                                                                 {'train_runtime': '2.542', 'train_samples_per_second': '19.67', 'train_steps_per_second': '11.8', 'train_loss': '5.324e-05', 'epoch': '10'}
+100%|████████████████████████████████████████████| 30/30 [00:02<00:00, 13.36it/s]100%|████████████████████████████████████████████| 30/30 [00:02<00:00, 11.80it/s]
+Writing model shards:   0%|                                | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|████████████████████████| 1/1 [00:00<00:00,  1.16it/s]Writing model shards: 100%|████████████████████████| 1/1 [00:00<00:00,  1.16it/s]
+Modelo entrenado y guardado
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/001-transformadores$ 

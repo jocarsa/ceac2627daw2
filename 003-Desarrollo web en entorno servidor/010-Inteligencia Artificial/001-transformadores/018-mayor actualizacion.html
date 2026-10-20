@@ -1,0 +1,535 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Embeddings en tiempo real</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: #f0f0f0;
+  min-height: 100vh;
+  margin: 0;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+#rejilla {
+  width: 500px;
+  height: 500px;
+  max-width: 90vw;
+  max-height: 90vw;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  position: relative;
+  background: #f8f8f8;
+  flex-shrink: 0;
+}
+
+.bloque {
+  width: 6px;
+  height: 6px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+#microfono {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+
+  font-size: 38px;
+  cursor: pointer;
+}
+
+#microfono.activo {
+  background: #ffe5e5;
+  border-color: #ff7777;
+  animation: pulso 1.5s infinite;
+}
+
+@keyframes pulso {
+  0%, 100% {
+    box-shadow: 0 0 0 8px rgba(255,0,0,0.08);
+  }
+  50% {
+    box-shadow: 0 0 0 22px rgba(255,0,0,0.02);
+  }
+}
+
+#panel {
+  width: 500px;
+  max-width: 90vw;
+  text-align: center;
+}
+
+#estado {
+  color: #888;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+#dictado {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  min-height: 90px;
+  line-height: 1.8;
+  font-size: 18px;
+  text-align: left;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+  overflow-wrap: anywhere;
+}
+
+#textoProvisional {
+  color: #999;
+}
+
+#palabraActual {
+  margin-top: 15px;
+  font-size: 15px;
+  color: #888;
+  min-height: 24px;
+}
+
+#palabraActual strong {
+  color: #c33;
+}
+
+#limpiar {
+  margin-top: 15px;
+  border: none;
+  background: transparent;
+  color: #999;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div id="rejilla">
+  <button id="microfono">🎤</button>
+</div>
+
+<div id="panel">
+
+  <div id="estado">
+    Pulsa el micrófono para comenzar
+  </div>
+
+  <div id="dictado">
+    <span id="textoFinal"></span>
+    <span id="textoProvisional"></span>
+  </div>
+
+  <div id="palabraActual"></div>
+
+  <button id="limpiar">Limpiar</button>
+
+</div>
+
+<script>
+
+const rejilla = document.querySelector("#rejilla");
+const microfono = document.querySelector("#microfono");
+const estado = document.querySelector("#estado");
+
+const textoFinal = document.querySelector("#textoFinal");
+const textoProvisional =
+  document.querySelector("#textoProvisional");
+
+const palabraActual =
+  document.querySelector("#palabraActual");
+
+const limpiar = document.querySelector("#limpiar");
+
+const UMBRAL_CAMBIO = 0.1;
+
+let vectorAnterior = null;
+let peticionActual = 0;
+let controlador = null;
+
+let escuchando = false;
+let reconocimiento = null;
+
+let ultimaPalabra = "";
+let ultimoSegmento = "";
+let textoAcumulado = "";
+
+// ----------------------------------------
+// Color según diferencia
+// ----------------------------------------
+
+function obtenerColor(actual, anterior) {
+
+  if (anterior === undefined) {
+    return "rgb(0,0,0)";
+  }
+
+  let diferencia = Math.abs(actual - anterior);
+
+  let intensidad = Math.min(
+    diferencia / UMBRAL_CAMBIO,
+    1
+  );
+
+  let rojo = Math.round(intensidad * 255);
+
+  return "rgb(" + rojo + ",0,0)";
+}
+
+// ----------------------------------------
+// Dibujar neuronas
+// ----------------------------------------
+
+function dibujarVector(vectorActual) {
+
+  let total = vectorActual.length;
+
+  if (!total) return;
+
+  let centro = rejilla.clientWidth / 2;
+  let radioMaximo = centro - 20;
+
+  let bloques = rejilla.querySelectorAll(".bloque");
+
+  if (bloques.length !== total) {
+
+    bloques.forEach(b => b.remove());
+
+    let fragmento = document.createDocumentFragment();
+
+    for (let i = 0; i < total; i++) {
+
+      let angulo = i * 2.399963229728653;
+
+      let radio = radioMaximo *
+        Math.sqrt((i + 0.5) / total);
+
+      let x = centro + Math.cos(angulo) * radio;
+      let y = centro + Math.sin(angulo) * radio;
+
+      let bloque = document.createElement("div");
+      bloque.className = "bloque";
+
+      bloque.style.left = x + "px";
+      bloque.style.top = y + "px";
+
+      fragmento.appendChild(bloque);
+    }
+
+    rejilla.appendChild(fragmento);
+
+    bloques = rejilla.querySelectorAll(".bloque");
+  }
+
+  vectorActual.forEach(function(dato, i) {
+
+    let bloque = bloques[i];
+
+    let escala = Math.max(
+      0.1,
+      (dato + 0.2) * 10
+    );
+
+    let anterior = vectorAnterior === null
+      ? undefined
+      : vectorAnterior[i];
+
+    bloque.style.transform =
+      "translate(-50%, -50%) scale(" +
+      escala + ")";
+
+    bloque.style.backgroundColor =
+      obtenerColor(dato, anterior);
+
+    bloque.title =
+      "Dimensión: " + i +
+      "\nValor: " + dato +
+      "\nAnterior: " + (anterior ?? "N/A");
+
+  });
+
+  vectorAnterior = [...vectorActual];
+}
+
+// ----------------------------------------
+// Consultar embedding inmediatamente
+// ----------------------------------------
+
+async function consultarPalabra(palabra) {
+
+  palabra = palabra.toLowerCase()
+    .replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, "");
+
+  if (!palabra) return;
+
+  // Evitar repetir la misma palabra provisional
+  if (palabra === ultimaPalabra) return;
+
+  ultimaPalabra = palabra;
+
+  palabraActual.innerHTML =
+    "Palabra detectada: <strong></strong>";
+
+  palabraActual.querySelector("strong")
+    .textContent = palabra;
+
+  // Cancelar consulta anterior
+  if (controlador) {
+    controlador.abort();
+  }
+
+  controlador = new AbortController();
+
+  let numero = ++peticionActual;
+
+  try {
+
+    let respuesta = await fetch(
+      "007-servidor.php?palabra=" +
+      encodeURIComponent(palabra),
+      {
+        signal: controlador.signal
+      }
+    );
+
+    if (!respuesta.ok) {
+      throw new Error("HTTP " + respuesta.status);
+    }
+
+    let datos = await respuesta.json();
+
+    if (numero !== peticionActual) return;
+
+    if (!Array.isArray(datos)) return;
+
+    let vector = datos.map(Number);
+
+    if (
+      vector.length === 0 ||
+      !vector.every(Number.isFinite)
+    ) return;
+
+    dibujarVector(vector);
+
+  } catch (error) {
+
+    if (error.name !== "AbortError") {
+      console.error(error);
+    }
+
+  }
+}
+
+// ----------------------------------------
+// Detectar última palabra provisional
+// ----------------------------------------
+
+function procesarReconocimiento(evento) {
+
+  let confirmado = "";
+  let provisional = "";
+
+  for (let i = 0; i < evento.results.length; i++) {
+
+    let resultado = evento.results[i];
+    let frase = resultado[0].transcript;
+
+    if (resultado.isFinal) {
+      confirmado += frase + " ";
+    } else {
+      provisional += frase;
+    }
+  }
+
+  textoFinal.textContent =
+    textoAcumulado + confirmado;
+
+  textoProvisional.textContent = provisional;
+
+  // Utilizamos TODO el texto reconocido,
+  // incluyendo el provisional.
+  let textoCompleto =
+    (confirmado + " " + provisional).trim();
+
+  if (!textoCompleto) return;
+
+  let palabras = textoCompleto.split(/\s+/);
+
+  // Consultar inmediatamente la última palabra
+  // aunque todavía no sea definitiva.
+  let palabra = palabras[palabras.length - 1];
+
+  consultarPalabra(palabra);
+}
+
+// ----------------------------------------
+// Reconocimiento de voz
+// ----------------------------------------
+
+const SpeechRecognition =
+  window.SpeechRecognition ||
+  window.webkitSpeechRecognition;
+
+if (!SpeechRecognition) {
+
+  estado.textContent =
+    "Reconocimiento de voz no soportado";
+
+  microfono.disabled = true;
+
+} else {
+
+  reconocimiento = new SpeechRecognition();
+
+  reconocimiento.lang = "es-ES";
+  reconocimiento.continuous = true;
+  reconocimiento.interimResults = true;
+  reconocimiento.maxAlternatives = 1;
+
+  reconocimiento.onstart = function() {
+
+    estado.textContent = "Escuchando en tiempo real...";
+
+    microfono.classList.add("activo");
+    microfono.textContent = "🔴";
+  };
+
+  reconocimiento.onresult = function(evento) {
+
+    // Actualizar con cada resultado,
+    // sin esperar a isFinal.
+    procesarReconocimiento(evento);
+  };
+
+  reconocimiento.onerror = function(evento) {
+
+    console.error(evento.error);
+
+    if (
+      evento.error === "not-allowed" ||
+      evento.error === "service-not-allowed"
+    ) {
+
+      escuchando = false;
+      estado.textContent =
+        "Permiso de micrófono denegado";
+    }
+  };
+
+  reconocimiento.onend = function() {
+
+    microfono.classList.remove("activo");
+    microfono.textContent = "🎤";
+
+    if (escuchando) {
+
+      // Conservar el texto reconocido antes
+      // de iniciar una nueva sesión.
+      textoAcumulado =
+        textoFinal.textContent + " " +
+        textoProvisional.textContent + " ";
+
+      textoFinal.textContent = textoAcumulado;
+      textoProvisional.textContent = "";
+
+      try {
+        reconocimiento.start();
+      } catch (error) {
+        console.error(error);
+      }
+
+    } else {
+      estado.textContent = "Micrófono desactivado";
+    }
+  };
+}
+
+// ----------------------------------------
+// Botón micrófono
+// ----------------------------------------
+
+microfono.onclick = function() {
+
+  if (!reconocimiento) return;
+
+  if (!escuchando) {
+
+    escuchando = true;
+
+    try {
+      reconocimiento.start();
+    } catch (error) {
+      escuchando = false;
+      console.error(error);
+    }
+
+  } else {
+
+    escuchando = false;
+    reconocimiento.stop();
+  }
+};
+
+// ----------------------------------------
+// Limpiar
+// ----------------------------------------
+
+limpiar.onclick = function() {
+
+  textoAcumulado = "";
+  ultimaPalabra = "";
+  ultimoSegmento = "";
+
+  textoFinal.textContent = "";
+  textoProvisional.textContent = "";
+  palabraActual.textContent = "";
+
+  vectorAnterior = null;
+
+  peticionActual++;
+
+  if (controlador) {
+    controlador.abort();
+  }
+
+  rejilla.querySelectorAll(".bloque")
+    .forEach(b => b.remove());
+
+  if (escuchando) {
+    reconocimiento.stop();
+  }
+};
+
+</script>
+
+</body>
+</html>

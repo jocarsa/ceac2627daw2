@@ -1,0 +1,11 @@
+Datetime: 2026-10-20T14:10:57.437Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/001-transformadores
+Command: python3 013-interactivo\ con\ input.py
+
+Result:
+Sentence 1:
+Python es un lenguaje de programación de alto nivel que es fácil de usar y comprender.
+
+Sentence 2:
+El lenguaje Python, de nivel alto, resulta sencillo de utilizar y fácil de entender.
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/001-transformadores$ 

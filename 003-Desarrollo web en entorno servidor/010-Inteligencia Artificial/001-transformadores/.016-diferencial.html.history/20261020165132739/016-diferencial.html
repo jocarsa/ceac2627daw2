@@ -1,0 +1,249 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      background: #f0f0f0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+
+    #rejilla {
+      width: 500px;
+      height: 500px;
+      border: 1px solid #ddd;
+      border-radius: 50%;
+      position: relative;
+      background: #f8f8f8;
+    }
+
+    .bloque {
+      width: 6px;
+      height: 6px;
+      background: black;
+      border-radius: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      transition:
+        background-color 0.5s ease,
+        transform 0.5s ease;
+    }
+
+    #entrada {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+
+      width: 220px;
+      padding: 16px 22px;
+
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 50px;
+
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(12px);
+
+      box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+
+      font-family: inherit;
+      font-size: 18px;
+      text-align: center;
+      color: #222;
+
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    #entrada:focus {
+      width: 260px;
+      border-color: #888;
+      box-shadow: 0 8px 35px rgba(0,0,0,0.18);
+    }
+
+    #entrada::placeholder {
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="rejilla">
+    <input
+      id="entrada"
+      placeholder="Escribe una palabra"
+      autocomplete="off"
+    >
+  </div>
+
+  <script>
+    let rejilla = document.querySelector("#rejilla");
+    let entrada = document.querySelector("#entrada");
+
+    // Vector de la consulta anterior
+    let vectorAnterior = null;
+
+    // Control de peticiones
+    let peticionActual = 0;
+
+    // Diferencia que consideramos cambio máximo
+    const UMBRAL_CAMBIO = 0.5;
+
+    function obtenerColor(valorActual, valorAnterior) {
+
+      if (valorAnterior === undefined) {
+        return "rgb(0,0,0)";
+      }
+
+      let diferencia = Math.abs(
+        valorActual - valorAnterior
+      );
+
+      // Normalizar diferencia entre 0 y 1
+      let intensidad = Math.min(
+        diferencia / UMBRAL_CAMBIO,
+        1
+      );
+
+      // Negro -> rojo
+      let rojo = Math.round(intensidad * 255);
+
+      return "rgb(" + rojo + ",0,0)";
+    }
+
+    function consultar() {
+
+      let palabra = entrada.value.trim();
+
+      if (!palabra) return;
+
+      let numeroPeticion = ++peticionActual;
+
+      fetch(
+        "007-servidor.php?palabra=" +
+        encodeURIComponent(palabra)
+      )
+      .then(function(resultado) {
+
+        if (!resultado.ok) {
+          throw new Error("Error HTTP " + resultado.status);
+        }
+
+        return resultado.json();
+
+      })
+      .then(function(datos) {
+
+        // Evitar respuestas antiguas
+        if (numeroPeticion !== peticionActual) return;
+
+        if (!Array.isArray(datos)) return;
+
+        let vectorActual = datos.map(Number);
+
+        if (!vectorActual.every(Number.isFinite)) {
+          throw new Error("Vector no válido");
+        }
+
+        let total = vectorActual.length;
+
+        if (total === 0) return;
+
+        let centro = 250;
+        let radioMaximo = 230;
+
+        // Eliminar puntos anteriores
+        rejilla.querySelectorAll(".bloque")
+          .forEach(function(bloque) {
+            bloque.remove();
+          });
+
+        vectorActual.forEach(function(dato, i) {
+
+          let angulo = i * 2.399963229728653;
+
+          let radio = radioMaximo *
+            Math.sqrt((i + 0.5) / total);
+
+          let x = centro + Math.cos(angulo) * radio;
+          let y = centro + Math.sin(angulo) * radio;
+
+          let bloque = document.createElement("div");
+          bloque.className = "bloque";
+
+          bloque.style.left = x + "px";
+          bloque.style.top = y + "px";
+
+          // Tamaño según valor del embedding
+          let escala = Math.max(
+            0.1,
+            (dato + 0.2) * 10
+          );
+
+          bloque.style.transform =
+            "translate(-50%, -50%) scale(" +
+            escala + ")";
+
+          // Comparación con el vector anterior
+          let anterior = vectorAnterior === null
+            ? undefined
+            : vectorAnterior[i];
+
+          bloque.style.backgroundColor =
+            obtenerColor(dato, anterior);
+
+          // Información al pasar el ratón
+          bloque.title =
+            "Dimensión: " + i +
+            "\nValor actual: " + dato +
+            "\nValor anterior: " +
+              (anterior ?? "Sin datos") +
+            "\nDiferencia: " +
+              (anterior === undefined
+                ? "N/A"
+                : Math.abs(dato - anterior).toFixed(4));
+
+          rejilla.appendChild(bloque);
+
+        });
+
+        // Guardar copia para la siguiente ronda
+        vectorAnterior = [...vectorActual];
+
+      })
+      .catch(function(error) {
+        console.error("Error consultando embedding:", error);
+      });
+    }
+
+    // Ejecutar al pulsar ESPACIO
+    entrada.addEventListener("keydown", function(evento) {
+
+      if (evento.code === "Space" && !evento.repeat) {
+
+        evento.preventDefault();
+
+        consultar();
+      }
+
+    });
+
+    // Ejecutar al perder el foco
+    entrada.addEventListener("blur", consultar);
+
+  </script>
+
+</body>
+</html>

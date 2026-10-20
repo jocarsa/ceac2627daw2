@@ -1,0 +1,11 @@
+body,html{width:100%;min-height:100%;padding:0;margin:0;box-sizing:border-box}
+*,*:before,*:after{box-sizing:inherit}
+body{background:grey;display:flex;flex-direction:column;align-items:center}
+header,main,footer{width:min(1200px,calc(100% - 20px));background:white;margin:10px;padding:20px;border-radius:10px}
+main{display:flex;gap:20px;align-items:flex-start}
+#izquierda{background:grey;flex:1;padding:20px;border-radius:10px}
+#derecha{background:grey;flex:2;min-width:0;padding:20px;border-radius:10px}
+#publicaciones{display:flex;flex-direction:column;gap:20px;overflow-anchor:none}
+#publicaciones article{background:white;padding:20px;border-radius:10px;overflow-wrap:anywhere}
+.espaciador{height:0;flex:none;pointer-events:none}
+@media(max-width:700px){main{flex-direction:column}#izquierda,#derecha{width:100%}}

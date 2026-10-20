@@ -1,0 +1,153 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      background: #f0f0f0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+
+    #rejilla {
+      width: 500px;
+      height: 500px;
+      border: 1px solid #ddd;
+      border-radius: 50%;
+      position: relative;
+      background: #f8f8f8;
+    }
+
+    .bloque {
+      width: 6px;
+      height: 6px;
+      background: black;
+      border-radius: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    #entrada {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+
+      width: 220px;
+      padding: 16px 22px;
+
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 50px;
+
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(12px);
+
+      box-shadow:
+        0 5px 25px rgba(0,0,0,0.12);
+
+      font-family: inherit;
+      font-size: 18px;
+      text-align: center;
+      color: #222;
+
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    #entrada:focus {
+      width: 260px;
+      border-color: #888;
+      box-shadow:
+        0 8px 35px rgba(0,0,0,0.18);
+    }
+
+    #entrada::placeholder {
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="rejilla">
+    <input
+      id="entrada"
+      placeholder="Escribe una palabra"
+      autocomplete="off"
+    >
+  </div>
+
+  <script>
+    let rejilla = document.querySelector("#rejilla");
+    let entrada = document.querySelector("#entrada");
+
+    function consultar() {
+
+      if (!entrada.value.trim()) return;
+
+      fetch("007-servidor.php?palabra=" +
+        encodeURIComponent(entrada.value))
+      .then(function(resultado) {
+        return resultado.json();
+      })
+      .then(function(datos) {
+
+        // Eliminar solamente los puntos,
+        // conservando el input.
+        rejilla.querySelectorAll(".bloque")
+          .forEach(function(bloque) {
+            bloque.remove();
+          });
+
+        let total = datos.length;
+        let centro = 250;
+        let radioMaximo = 230;
+
+        datos.forEach(function(dato, i) {
+
+          let angulo = i * 2.399963229728653;
+
+          let radio = radioMaximo *
+            Math.sqrt((i + 0.5) / total);
+
+          let x = centro + Math.cos(angulo) * radio;
+          let y = centro + Math.sin(angulo) * radio;
+
+          let bloque = document.createElement("div");
+          bloque.className = "bloque";
+
+          bloque.style.left = x + "px";
+          bloque.style.top = y + "px";
+
+          bloque.style.transform =
+            "translate(-50%, -50%) scale(" +
+            ((Number(dato) + 0.2) * 10) + ")";
+
+          rejilla.appendChild(bloque);
+
+        });
+
+      });
+    }
+
+    entrada.addEventListener("keydown", function(evento) {
+      if (evento.key === "Enter") {
+        consultar();
+      }
+    });
+
+    entrada.addEventListener("blur", consultar);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      .bloque{
+      	width:10px;
+        height:10px;
+        background:black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="rejilla">
+    </div>
+    <script>
+      let rejilla = document.querySelector("#rejilla")
+      fetch("003-ahora lo quiero como json.php")
+      .then(function(resultado){return resultado.json()})
+      .then(function(datos){
+      	console.log(datos)
+        datos.forEach(function(dato){
+        	rejilla.innerHTML += `
+          	<div class="bloque" style="transform:scale(`+(dato+1)+`);"></div>
+          `
+        })
+      })
+    </script>
+  </body>
+</html>
