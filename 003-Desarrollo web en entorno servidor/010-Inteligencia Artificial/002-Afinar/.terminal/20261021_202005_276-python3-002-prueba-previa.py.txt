@@ -1,0 +1,60 @@
+Datetime: 2026-10-21T18:20:05.276Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/002-Afinar
+Command: python3 002-prueba\ previa.py
+
+Result:
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Traceback (most recent call last):
+  File "/home/josevicente/.local/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 275, in __getattr__
+    return self.data[item]
+           ~~~~~~~~~^^^^^^
+KeyError: 'shape'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/002-Afinar/002-prueba previa.py", line 20, in <module>
+    salida = model.generate(entrada, max_new_tokens=256, do_sample=False, pad_token_id=tokenizer.eos_token_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/josevicente/.local/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/josevicente/.local/lib/python3.12/site-packages/transformers/generation/utils.py", line 2398, in generate
+    batch_size = inputs_tensor.shape[0]
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/josevicente/.local/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 277, in __getattr__
+    raise AttributeError
+AttributeError
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 228, in partial_apport_excepthook
+    return apport_excepthook(binary, exc_type, exc_obj, exc_tb)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 144, in apport_excepthook
+    os.open(pr_filename, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o640), "wb"
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '/var/crash/_var_www_html_ceac2627daw2_003-Desarrollo web en entorno servidor_010-Inteligencia Artificial_002-Afinar_002-prueba previa.py.1000.crash'
+
+Original exception was:
+Traceback (most recent call last):
+  File "/home/josevicente/.local/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 275, in __getattr__
+    return self.data[item]
+           ~~~~~~~~~^^^^^^
+KeyError: 'shape'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/002-Afinar/002-prueba previa.py", line 20, in <module>
+    salida = model.generate(entrada, max_new_tokens=256, do_sample=False, pad_token_id=tokenizer.eos_token_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/josevicente/.local/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/josevicente/.local/lib/python3.12/site-packages/transformers/generation/utils.py", line 2398, in generate
+    batch_size = inputs_tensor.shape[0]
+                 ^^^^^^^^^^^^^^^^^^^
+  File "/home/josevicente/.local/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 277, in __getattr__
+    raise AttributeError
+AttributeError
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/002-Afinar$ 

@@ -1,0 +1,391 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#4f5d95">
+
+  <title>Notificaciones</title>
+
+  <style>
+    :root {
+      --primario: #4f5d95;
+      --fondo: #f4f6fa;
+      --blanco: #ffffff;
+      --texto: #202638;
+      --secundario: #788196;
+      --borde: #e6e9f0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--fondo);
+      color: var(--texto);
+      font-family: system-ui, sans-serif;
+    }
+
+    .app {
+      max-width: 600px;
+      min-height: 100dvh;
+      margin: auto;
+      background: var(--blanco);
+      padding-bottom: 85px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--blanco);
+      padding: 22px 20px 16px;
+      border-bottom: 1px solid var(--borde);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 25px;
+      font-weight: 700;
+    }
+
+    header p {
+      margin: 6px 0 0;
+      font-size: 13px;
+      color: var(--secundario);
+    }
+
+    .filtros {
+      display: flex;
+      gap: 8px;
+      padding: 16px 20px;
+    }
+
+    .filtros button {
+      border: 0;
+      border-radius: 20px;
+      padding: 9px 16px;
+      background: var(--fondo);
+      color: var(--secundario);
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .filtros button.activo {
+      background: var(--primario);
+      color: white;
+    }
+
+    section {
+      padding: 0 14px;
+    }
+
+    .fecha-grupo {
+      padding: 14px 6px 10px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--secundario);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    article {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      padding: 16px 12px;
+      border-bottom: 1px solid var(--borde);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    article:active {
+      background: #f0f2f8;
+    }
+
+    article.no-leida {
+      background: #f7f8ff;
+    }
+
+    .icono {
+      width: 43px;
+      height: 43px;
+      flex-shrink: 0;
+      border-radius: 13px;
+      display: grid;
+      place-items: center;
+      background: #e9edfa;
+      font-size: 21px;
+    }
+
+    .contenido {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .cabecera {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 650;
+    }
+
+    time {
+      font-size: 11px;
+      color: var(--secundario);
+      white-space: nowrap;
+    }
+
+    article p {
+      margin: 6px 0 0;
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--secundario);
+    }
+
+    .punto {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--primario);
+      flex-shrink: 0;
+      margin-top: 7px;
+    }
+
+    nav {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 600px;
+      height: 72px;
+      display: flex;
+      background: white;
+      border-top: 1px solid var(--borde);
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    nav a {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      text-decoration: none;
+      color: var(--secundario);
+      font-size: 11px;
+    }
+
+    nav a span {
+      font-size: 22px;
+    }
+
+    nav a.activo {
+      color: var(--primario);
+      font-weight: 700;
+    }
+
+    @media (min-width: 650px) {
+      body {
+        padding: 30px 0;
+      }
+
+      .app {
+        border-radius: 18px;
+        box-shadow: 0 10px 40px #20263812;
+        overflow: hidden;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="app">
+
+    <header>
+      <h1>Notificaciones</h1>
+      <p id="contador">3 notificaciones sin leer</p>
+    </header>
+
+    <main>
+
+      <div class="filtros">
+        <button class="activo" data-filtro="todas">
+          Todas
+        </button>
+        <button data-filtro="no-leidas">
+          No leídas
+        </button>
+      </div>
+
+      <section>
+
+        <div class="fecha-grupo">Hoy</div>
+
+        <article class="no-leida" data-id="1">
+          <div class="icono">📩</div>
+
+          <div class="contenido">
+            <div class="cabecera">
+              <h3>Nuevo mensaje</h3>
+              <time datetime="2026-10-27T15:30">
+                15:30
+              </time>
+            </div>
+
+            <p>
+              Has recibido un nuevo mensaje
+              relacionado con tu solicitud.
+            </p>
+          </div>
+
+          <span class="punto"></span>
+        </article>
+
+        <article class="no-leida" data-id="2">
+          <div class="icono">📅</div>
+
+          <div class="contenido">
+            <div class="cabecera">
+              <h3>Recordatorio</h3>
+              <time datetime="2026-10-27T12:15">
+                12:15
+              </time>
+            </div>
+
+            <p>
+              Tienes una actividad programada
+              para mañana a las 10:00.
+            </p>
+          </div>
+
+          <span class="punto"></span>
+        </article>
+
+        <div class="fecha-grupo">Ayer</div>
+
+        <article class="no-leida" data-id="3">
+          <div class="icono">✅</div>
+
+          <div class="contenido">
+            <div class="cabecera">
+              <h3>Proceso completado</h3>
+              <time datetime="2026-10-26T18:45">
+                18:45
+              </time>
+            </div>
+
+            <p>
+              Tu operación se ha realizado
+              correctamente.
+            </p>
+          </div>
+
+          <span class="punto"></span>
+        </article>
+
+        <article data-id="4">
+          <div class="icono">🔔</div>
+
+          <div class="contenido">
+            <div class="cabecera">
+              <h3>Actualización disponible</h3>
+              <time datetime="2026-10-26T09:20">
+                09:20
+              </time>
+            </div>
+
+            <p>
+              Hemos incorporado nuevas
+              funcionalidades a la aplicación.
+            </p>
+          </div>
+        </article>
+
+      </section>
+
+    </main>
+
+    <nav aria-label="Navegación principal">
+      <a href="#inicio">
+        <span>⌂</span>
+        Inicio
+      </a>
+
+      <a href="#notificaciones" class="activo">
+        <span>🔔</span>
+        Avisos
+      </a>
+
+      <a href="#perfil">
+        <span>👤</span>
+        Perfil
+      </a>
+    </nav>
+
+  </div>
+
+  <script>
+    const articulos = document.querySelectorAll("article");
+    const botones = document.querySelectorAll(".filtros button");
+    const contador = document.getElementById("contador");
+
+    function actualizarContador() {
+      const cantidad = document.querySelectorAll(
+        "article.no-leida"
+      ).length;
+
+      contador.textContent =
+        cantidad + " notificaciones sin leer";
+    }
+
+    function aplicarFiltro(filtro) {
+      articulos.forEach(articulo => {
+        articulo.hidden =
+          filtro === "no-leidas" &&
+          !articulo.classList.contains("no-leida");
+      });
+    }
+
+    articulos.forEach(articulo => {
+      articulo.addEventListener("click", () => {
+        articulo.classList.remove("no-leida");
+
+        const punto = articulo.querySelector(".punto");
+        if (punto) punto.remove();
+
+        actualizarContador();
+
+        const activo = document.querySelector(
+          ".filtros button.activo"
+        );
+
+        aplicarFiltro(activo.dataset.filtro);
+      });
+    });
+
+    botones.forEach(boton => {
+      boton.addEventListener("click", () => {
+        botones.forEach(b => b.classList.remove("activo"));
+        boton.classList.add("activo");
+        aplicarFiltro(boton.dataset.filtro);
+      });
+    });
+
+    actualizarContador();
+  </script>
+
+</body>
+</html>

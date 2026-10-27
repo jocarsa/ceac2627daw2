@@ -1,0 +1,38 @@
+Datetime: 2026-10-27T14:31:14.781Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/003-agentes
+Command: python3 005-doble\ curl.py
+
+Result:
+Yo soy un agente
+
+--- RESPUESTA DE OLLAMA ---
+
+Para el día de hoy, 27 de octubre de 2026, en Valencia, el cielo estará en 
+su mayoría poco nuboso con algunas áreas despejadas, especialmente por la t
+tarde y noche. Las temperaturas oscilarán entre un mínimo de 12°C y un máxi
+máximo de 26°C. La probabilidad de lluvia es muy baja, con cero posibilidad
+posibilidades durante todo el día. Los vientos predominantes vendrán del su
+sur a sudeste, con velocidades moderadas. Se recomienda disfrutar de activi
+actividades al aire libre, ya que las condiciones son generalmente favorabl
+favorables.
+
+
+Yo soy un agente
+
+--- RESPUESTA DE OLLAMA ---
+
+Para el día de hoy, 27 de octubre de 2026, en Valencia, el cielo estará pri
+principalmente poco nuboso y despejado, con una mínima probabilidad de lluv
+lluvia (0%). Las temperaturas oscilarán entre un mínimo de 12°C y un máximo
+máximo de 26°C. El viento procederá del norte a 15 km/h durante la tarde y 
+noche, y será más suave en la mañana y mediodía. Se recomienda disfrutar de
+de actividades al aire libre con precaución por las posibles variaciones de
+de temperatura.
+
+
+^CTraceback (most recent call last):
+  File "/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/003-agentes/005-doble curl.py", line 63, in <module>
+    time.sleep(60)
+KeyboardInterrupt
+
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/003-agentes$ 

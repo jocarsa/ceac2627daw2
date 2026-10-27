@@ -1,0 +1,27 @@
+Datetime: 2026-10-27T15:58:26.710Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/004-jocarsa notificaciones
+Command: python3 006-agente_practicas_notificaciones.py
+
+Result:
+Notificación enviada: Jocarsa (ID 1)
+Empresa detectada: Jocarsa
+Notificación enviada: Jocarsa (ID 2)
+Notificación enviada: Jose Vicente Carratala (ID 3)
+Empresa detectada: Jose Vicente Carratala
+Notificación enviada: CEAC FP (ID 4)
+Empresa detectada: CEAC FP
+Notificación enviada: UNANIME CREATIVE GROUP S.L. (ID 5)
+Empresa detectada: UNANIME CREATIVE GROUP S.L.
+Notificación enviada: EDICOM (ID 6)
+Empresa detectada: EDICOM
+Notificación enviada: Essedi (ID 7)
+Empresa detectada: Essedi
+Notificación enviada: Essedi IT Consulting S.L. (ID 8)
+Empresa detectada: Essedi IT Consulting S.L.
+Notificación enviada: UNANIME CREATIVE GROUP S.L. (ID 9)
+Notificación enviada: UNANIME CREATIVE GROUP S.L. (ID 10)
+
+Total empresas: 7
+Total solicitudes: 10
+Notificaciones nuevas enviadas: 10
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/004-jocarsa notificaciones$ 

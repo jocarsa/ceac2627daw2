@@ -1,0 +1,40 @@
+Datetime: 2026-10-27T14:38:21.677Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/003-agentes
+Command: python3 007-agente\ mail\ imap\ mas\ IA.py
+
+Result:
+
+------------------------------------------------------------
+Fecha: Tue, 27 Oct 2026 19:34:45 +0800
+De: Molly <info@fymotor.cn>
+Asunto: EXHAUST DOWNPIPE FROM FY MOTO
+SOLICITA ALUMNOS: NO
+
+------------------------------------------------------------
+Fecha: Tue, 27 Oct 2026 10:45:32 +0000
+De: LinkedIn <notifications-noreply@linkedin.com>
+Asunto: Jose Vicente, tus publicaciones obtuvieron 42,857 impresiones la semana pasada.
+SOLICITA ALUMNOS: NO
+
+------------------------------------------------------------
+Fecha: Tue, 27 Oct 2026 08:53:09 +0000
+De: Movistar Prosegur <comunicaciones@hyperionup.com>
+Asunto: SuperSeguridad para tu negocio con garantía antirrobo y antiocupación.
+SOLICITA ALUMNOS: NO
+
+------------------------------------------------------------
+Fecha: Tue, 27 Oct 2026 08:38:44 +0000
+De: Teresa Villar <teresa.villar@consultoriahorizonte.co>
+Asunto: RE: consulta
+SOLICITA ALUMNOS: NO
+
+------------------------------------------------------------
+Fecha: Tue, 27 Oct 2026 06:58:59 +0100
+De: "tecnoempleo.com" <alertas@push.tecnoempleo.com>
+Asunto: Nuevas alertas de empleo en Valencia
+SOLICITA ALUMNOS: NO
+
+============================================================
+Correos analizados: 5
+Solicitudes detectadas: 0
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/003-agentes$ 

@@ -1,0 +1,14 @@
+Datetime: 2026-10-27T14:23:03.343Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/003-agentes
+Command: python3 003-curl\ y\ guardar.py
+
+Result:
+Yo soy un agente
+Yo soy un agente
+Yo soy un agente
+^CTraceback (most recent call last):
+  File "/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/003-agentes/003-curl y guardar.py", line 16, in <module>
+    time.sleep(60)
+KeyboardInterrupt
+
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/003-agentes$ 

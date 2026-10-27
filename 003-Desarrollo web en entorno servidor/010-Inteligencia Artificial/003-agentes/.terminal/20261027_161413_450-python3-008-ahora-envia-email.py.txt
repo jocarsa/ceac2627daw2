@@ -1,0 +1,18 @@
+Datetime: 2026-10-27T15:14:13.450Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/003-agentes
+Command: python3 008-ahora\ envia\ email.py
+
+Result:
+Empresa detectada: Jocarsa
+Empresa detectada: Jose Vicente Carratala
+Empresa detectada: CEAC FP
+Empresa detectada: UNANIME CREATIVE GROUP S.L.
+Empresa detectada: EDICOM
+Empresa detectada: Essedi
+Empresa detectada: Essedi IT Consulting S.L.
+
+Total empresas: 7
+Total solicitudes: 10
+
+Informe enviado a: info@josevicentecarratala.com
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/003-agentes$ 

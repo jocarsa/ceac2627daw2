@@ -1,0 +1,19 @@
+Datetime: 2026-10-21T18:23:15.186Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/002-Afinar
+Command: python3 002-prueba\ previa.py
+
+Result:
+
+Qwen: Jose Vicente Carratala es un político español que ha tenido una trayectoria en la política regional de Cataluña. Ha sido diputado en la Generalitat de Cataluña desde 1995 y diputado en el Congreso de los Diputados de España desde 2000. Pertenece al Partido Popular (PP) y ha sido vicepresidente del Grupo Popular en la Generalitat.
+
+Ha trabajado en temas relacionados con la política regional, la economía y la defensa de los intereses de Cataluña en el contexto nacional. Ha sido diputado en la Generalitat desde 1995 y diputado en el Congreso de los Diputados desde 2000. Ha sido vicepresidente del Grupo Popular en la Generalitat y ha sido diputado en el Congreso de los Diputados.
+
+No tengo información actualizada sobre su actividad política en el presente, pero puedo confirmar que ha tenido una trayectoria política en Cataluña y en el Congreso de los Diputados. Si necesitas más detalles específicos, te los puedo proporcionar.
+
+Tú: ^CTraceback (most recent call last):
+  File "/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/002-Afinar/002-prueba previa.py", line 69, in <module>
+    pregunta = input("\nTú: ").strip()
+               ^^^^^^^^^^^^^^^
+KeyboardInterrupt
+^C
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/002-Afinar$ 

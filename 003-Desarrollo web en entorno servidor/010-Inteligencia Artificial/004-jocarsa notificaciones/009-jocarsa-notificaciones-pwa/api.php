@@ -1,0 +1,120 @@
+<?php
+declare(strict_types=1);
+require __DIR__ . '/config.php';
+require __DIR__ . '/push.php';
+header('Referrer-Policy: same-origin');
+try {
+    $db = db();
+    $data = input();
+    $accion = (string)($_GET['accion'] ?? $data['accion'] ?? '');
+    $method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
+    if ($accion === 'login') {
+        if ($method !== 'POST') json_response(['ok'=>false,'error'=>'Método no permitido'],405);
+        $usuario = trim((string)($data['usuario'] ?? ''));
+        $password = (string)($data['password'] ?? '');
+        $stmt = $db->prepare('SELECT * FROM usuarios WHERE usuario=? LIMIT 1');
+        $stmt->execute([$usuario]);
+        $user = $stmt->fetch();
+        if (!$user || !password_verify($password,$user['password_hash'])) json_response(['ok'=>false,'error'=>'Usuario o contraseña incorrectos'],401);
+        $token = bin2hex(random_bytes(32));
+        $db->prepare('DELETE FROM sesiones WHERE expira <= ?')->execute([time()]);
+        $db->prepare('INSERT INTO sesiones(usuario_id,token_hash,expira) VALUES(?,?,?)')->execute([$user['id'],hash('sha256',$token),time()+86400*SESSION_DAYS]);
+        json_response(['ok'=>true,'token'=>$token,'usuario'=>$user['usuario']]);
+    }
+    $user = require_user($db);
+    if ($accion === 'push_config') {
+        if ($method !== 'GET') json_response(['ok'=>false,'error'=>'Método no permitido'],405);
+        $publica = getenv('VAPID_PUBLIC_KEY') ?: '';
+        json_response(['ok'=>true,'publicKey'=>$publica,'disponible'=>$publica !== '' && is_file(__DIR__.'/vendor/autoload.php')]);
+    }
+    if ($accion === 'push_suscribir') {
+        if ($method !== 'POST') json_response(['ok'=>false,'error'=>'Método no permitido'],405);
+        $sub=$data['subscription'] ?? null;
+        if (!is_array($sub)) json_response(['ok'=>false,'error'=>'Suscripción inválida'],422);
+        $endpoint=(string)($sub['endpoint'] ?? '');
+        $keys=$sub['keys'] ?? [];
+        $p256dh=(string)($keys['p256dh'] ?? '');
+        $auth=(string)($keys['auth'] ?? '');
+        $url=parse_url($endpoint);
+        if (strlen($endpoint)>2048 || ($url['scheme'] ?? '')!=='https' || !$p256dh || !$auth || strlen($p256dh)>512 || strlen($auth)>512) json_response(['ok'=>false,'error'=>'Suscripción inválida'],422);
+        $db->prepare('INSERT INTO push_suscripciones(usuario_id,endpoint,p256dh,auth) VALUES(?,?,?,?) ON CONFLICT(endpoint) DO UPDATE SET usuario_id=excluded.usuario_id,p256dh=excluded.p256dh,auth=excluded.auth')->execute([$user['id'],$endpoint,$p256dh,$auth]);
+        json_response(['ok'=>true]);
+    }
+    if ($accion === 'push_cancelar') {
+        if ($method !== 'POST') json_response(['ok'=>false,'error'=>'Método no permitido'],405);
+        $endpoint=(string)($data['endpoint'] ?? '');
+        $db->prepare('DELETE FROM push_suscripciones WHERE usuario_id=? AND endpoint=?')->execute([$user['id'],$endpoint]);
+        json_response(['ok'=>true]);
+    }
+    if ($accion === 'agentes') {
+        if ($method !== 'GET') json_response(['ok'=>false,'error'=>'Método no permitido'],405);
+        $stmt=$db->prepare('SELECT a.clave,a.nombre,COUNT(n.id) AS total FROM agentes a LEFT JOIN notificaciones n ON n.agente_id=a.id AND n.usuario_id=a.usuario_id WHERE a.usuario_id=? GROUP BY a.id ORDER BY a.nombre');
+        $stmt->execute([$user['id']]);
+        json_response(['ok'=>true,'agentes'=>$stmt->fetchAll()]);
+    }
+    if ($accion === 'listar') {
+        if ($method !== 'GET') json_response(['ok'=>false,'error'=>'Método no permitido'],405);
+        $agente=trim((string)($_GET['agente'] ?? ''));
+        $sql='SELECT n.id,n.titulo,n.descripcion,n.icono,n.leida,n.creada,a.clave AS agente_clave,COALESCE(a.nombre,\'Sin agente\') AS agente_nombre FROM notificaciones n LEFT JOIN agentes a ON a.id=n.agente_id WHERE n.usuario_id=?';
+        $params=[$user['id']];
+        if ($agente==='__sin_agente__') $sql.=' AND n.agente_id IS NULL';
+        elseif ($agente!=='') { $sql.=' AND a.clave=?'; $params[]=$agente; }
+        $sql.=' ORDER BY n.id DESC LIMIT 300';
+        $stmt=$db->prepare($sql);
+        $stmt->execute($params);
+        json_response(['ok'=>true,'notificaciones'=>$stmt->fetchAll()]);
+    }
+    if ($accion === 'enviar') {
+        if ($method !== 'POST') json_response(['ok'=>false,'error'=>'Método no permitido'],405);
+        $titulo = trim((string)($data['titulo'] ?? ''));
+        $descripcion = trim((string)($data['descripcion'] ?? ''));
+        $icono = trim((string)($data['icono'] ?? '🔔')) ?: '🔔';
+        if ($titulo === '' || $descripcion === '') json_response(['ok'=>false,'error'=>'Título y descripción son obligatorios'],422);
+        if (mb_strlen($titulo)>160 || mb_strlen($descripcion)>4000 || mb_strlen($icono)>12) json_response(['ok'=>false,'error'=>'Contenido demasiado largo'],422);
+        $clave=trim((string)($data['agente'] ?? ''));
+        $nombre=trim((string)($data['agente_nombre'] ?? $clave));
+        if ($clave==='' || !preg_match('/^[a-zA-Z0-9_-]{2,64}$/D',$clave)) json_response(['ok'=>false,'error'=>'Identificador de agente inválido'],422);
+        if ($nombre==='' || mb_strlen($nombre)>100) json_response(['ok'=>false,'error'=>'Nombre de agente inválido'],422);
+        $db->prepare('INSERT INTO agentes(usuario_id,clave,nombre) VALUES(?,?,?) ON CONFLICT(usuario_id,clave) DO UPDATE SET nombre=excluded.nombre')->execute([$user['id'],$clave,$nombre]);
+        $stmt=$db->prepare('SELECT id FROM agentes WHERE usuario_id=? AND clave=?');
+        $stmt->execute([$user['id'],$clave]);
+        $agenteId=(int)$stmt->fetchColumn();
+        $stmt = $db->prepare('INSERT INTO notificaciones(usuario_id,agente_id,titulo,descripcion,icono) VALUES(?,?,?,?,?)');
+        $stmt->execute([$user['id'],$agenteId,$titulo,$descripcion,$icono]);
+        $id=(int)$db->lastInsertId();
+        // Persistir antes de intentar Push: un fallo del proveedor no pierde el aviso.
+        try { enviar_push($db,(int)$user['id'],$id,$titulo,$descripcion,$nombre); }
+        catch (Throwable $e) { error_log('Push: '.$e->getMessage()); }
+        json_response(['ok'=>true,'id'=>$id],201);
+    }
+    if ($accion === 'leer') {
+        if ($method !== 'POST') json_response(['ok'=>false,'error'=>'Método no permitido'],405);
+        $id = filter_var($data['id'] ?? null,FILTER_VALIDATE_INT);
+        if (!$id || $id < 1) json_response(['ok'=>false,'error'=>'ID inválido'],422);
+        $stmt=$db->prepare('UPDATE notificaciones SET leida=1 WHERE id=? AND usuario_id=?');
+        $stmt->execute([$id,$user['id']]);
+        json_response(['ok'=>true]);
+    }
+    if ($accion === 'cambiar_password') {
+        if ($method !== 'POST') json_response(['ok'=>false,'error'=>'Método no permitido'],405);
+        $actual=(string)($data['actual'] ?? '');
+        $nueva=(string)($data['nueva'] ?? '');
+        $stmt=$db->prepare('SELECT password_hash FROM usuarios WHERE id=?');
+        $stmt->execute([$user['id']]);
+        if (!password_verify($actual,(string)$stmt->fetchColumn())) json_response(['ok'=>false,'error'=>'Contraseña actual incorrecta'],403);
+        if (strlen($nueva)<12) json_response(['ok'=>false,'error'=>'La nueva contraseña debe tener al menos 12 caracteres'],422);
+        $db->prepare('UPDATE usuarios SET password_hash=? WHERE id=?')->execute([password_hash($nueva,PASSWORD_DEFAULT),$user['id']]);
+        $db->prepare('DELETE FROM sesiones WHERE usuario_id=?')->execute([$user['id']]);
+        json_response(['ok'=>true,'mensaje'=>'Contraseña actualizada; vuelve a iniciar sesión']);
+    }
+    if ($accion === 'logout') {
+        if ($method !== 'POST') json_response(['ok'=>false,'error'=>'Método no permitido'],405);
+        $db->prepare('DELETE FROM sesiones WHERE token_hash=?')->execute([hash('sha256',token_from_request())]);
+        json_response(['ok'=>true]);
+    }
+    json_response(['ok'=>false,'error'=>'Acción desconocida'],404);
+} catch (Throwable $e) {
+    error_log('Notificaciones: '.$e->getMessage());
+    json_response(['ok'=>false,'error'=>'Error interno del servidor'],500);
+}
+

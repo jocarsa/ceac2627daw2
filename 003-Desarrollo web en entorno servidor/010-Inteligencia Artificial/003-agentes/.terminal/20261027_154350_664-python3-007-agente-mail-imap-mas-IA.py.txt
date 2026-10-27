@@ -1,0 +1,15 @@
+Datetime: 2026-10-27T14:43:50.664Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/003-agentes
+Command: python3 007-agente\ mail\ imap\ mas\ IA.py
+
+Result:
+Jocarsa
+Jose Vicente Carratala
+Quicking Courier 2019 SL (NACEX)
+Quicking Courier 2019 SL
+UNANIME CREATIVE GROUP S.L.
+EDICOM
+Essedi
+
+Total empresas: 7
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/003-agentes$ 

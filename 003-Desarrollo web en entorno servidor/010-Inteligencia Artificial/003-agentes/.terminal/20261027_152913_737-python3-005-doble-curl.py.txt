@@ -1,0 +1,53 @@
+Datetime: 2026-10-27T14:29:13.737Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/003-agentes
+Command: python3 005-doble\ curl.py
+
+Result:
+Yo soy un agente
+
+--- RESPUESTA DE OLLAMA ---
+
+**Previsión meteorológica para Valencia (27 de octubre de 2026)**
+
+- **Estado del cielo**:  
+  - De 00:00 a 06:00: sin descripción (espera cielo despejado).  
+  - De 06:00 a 12:00: *Despejado* (estado_cielo 11).  
+  - De 12:00 a 18:00: *Poco nuboso* (estado_cielo 12).  
+  - De 18:00 a 24:00: *Nubes* con cielo parcialmente nublado (estado_cielo 
+44 indica nuboso con lluvia escasa).  
+
+- **Probabilidad de precipitación**: 0 % (no se registran probabilidades de
+de lluvia para este día).  
+
+- **Temperaturas**:  
+  - **Máxima**: 25 °C (medida a las 12:00).  
+  - **Mínima**: 13 °C (medida a las 06:00).  
+
+- **Viento**:  
+  - De 00:00 a 12:00: dirección **O** con velocidad de 10 km/h.  
+  - De 12:00 a 24:00: dirección **S** con velocidad de 5 km/h.  
+
+- **Humedad relativa**:  
+  - Máxima: 95 % (a las 06:00).  
+  - Mínima: 60 % (a las 18:00).  
+
+- **UV Index**: 3 (moderado).  
+
+**Recomendaciones**:  
+- Dado el cielo principalmente despejado y poco nublado, es un buen día par
+para actividades al aire libre.  
+- Aunque la probabilidad de lluvia es cero, mantén una previsión para posib
+posibles cambios en el cielo después del mediodía.  
+- Usa protector solar (UV Index 3) si estás expuesto al sol durante mucho t
+tiempo.  
+
+Esta información se basa en los datos proporcionados por el servicio meteor
+meteorológico para Valencia el 27 de octubre de 2026.
+
+
+^CTraceback (most recent call last):
+  File "/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/003-agentes/005-doble curl.py", line 62, in <module>
+    time.sleep(60)
+KeyboardInterrupt
+
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/003-agentes$ 
