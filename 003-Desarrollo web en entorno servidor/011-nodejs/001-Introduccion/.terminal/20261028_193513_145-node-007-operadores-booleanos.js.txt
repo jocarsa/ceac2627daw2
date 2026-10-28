@@ -1,0 +1,8 @@
+Datetime: 2026-10-28T18:35:13.145Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/011-nodejs/001-Introduccion
+Command: node 007-operadores\ booleanos.js
+
+Result:
+true
+false
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/011-nodejs/001-Introduccion$ 

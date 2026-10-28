@@ -1,0 +1,7 @@
+Datetime: 2026-10-28T18:28:49.125Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/011-nodejs/001-Introduccion
+Command: node 002-hola\ mundo.js
+
+Result:
+Hola mundo desde nodejs
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/011-nodejs/001-Introduccion$ 

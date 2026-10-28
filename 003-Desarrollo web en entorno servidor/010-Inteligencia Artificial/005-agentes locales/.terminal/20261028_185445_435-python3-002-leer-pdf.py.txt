@@ -1,0 +1,165 @@
+Datetime: 2026-10-28T17:54:45.435Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/005-agentes locales
+Command: python3 002-leer\ pdf.py
+
+Result:
+JOCARSA | PRACTICAS
+INFORME DE ALUMNOS
+SELECCIONADOS
+Empresa: Propio
+2 alumnos
+Fecha: 28/10/2026
+Grupos: CEAC2627DAW2
+Dossier con fichas individuales y CV adjuntos
+Documento de uso interno - datos personales
+
+INDICE DE ALUMNOS
+1. Iman Kebour Dahmoun - CEAC2627DAW2
+2. Piero Gabriel Funes Larios - CEAC2627DAW2
+
+1. Iman Kebour Dahmoun
+GRUPO
+CEAC2627DAW2
+EMAIL
+iman.kebourdahmoun@alu.ceacfp.es
+TELEFONO
+602099388
+DNI/NIE
+26880146T
+DIRECCION
+Plaza Cardenal Monescillo
+CIUDAD
+Valencia
+CODIGO POSTAL
+46015
+NOTAS
+-
+CV URL
+https://imankd06.github.io/Curriculum/
+GITHUB
+https://github.com/ImanKD06
+WEB PERSONAL
+https://imankd06.github.io/Portafolio/
+PORTAFOLIO
+https://imankd06.github.io/Portafolio/
+LINKEDIN
+www.linkedin.com/in/imankebourdahmoun
+
+
+2. Piero Gabriel Funes Larios
+GRUPO
+CEAC2627DAW2
+EMAIL
+piero.funeslarios@alu.ceacfp.es
+TELEFONO
+652210540
+DNI/NIE
+Z3398358K
+DIRECCION
+Calle Maestro Giner 8
+CIUDAD
+Burjassot
+CODIGO POSTAL
+46100
+NOTAS
+-
+CV URL
+https://cv.pierooof.dev/
+GITHUB
+https://github.com/pierooof
+WEB PERSONAL
+-
+PORTAFOLIO
+https://portafolio.pierooof.dev/
+LINKEDIN
+https://www.linkedin.com/in/piero-funes-larios-44360a166/
+
+Piero Funes Larios
+Desarrollador Web Junior
+PERFIL PROFESIONAL
+Estudiante de Desarrollo de Aplicaciones Web, enfocado en la creación ágil de
+herramientas y MVPs con Python y Flask, con experiencia en prácticas en React,
+TypeScript y Node.js. Mi base en Psicología y mi experiencia en soporte y
+atención al cliente me permiten entender los flujos de trabajo de los usuarios,
+detectar fricciones y convertir necesidades reales en soluciones prácticas.
+STACK TÉCNICO
+Frontend
+HTML5
+CSS3
+JavaScript
+TypeScript
+React
+Tailwind CSS
+Backend
+Python
+Flask
+Node.js
+API REST
+Bases de datos
+MySQL
+Herramientas
+Git
+GitHub
+Railway
+EXPERIENCIA PROFESIONAL
+CE
+Desarrollador Web (prácticas)
+Corner Estudios · 03/2026 – 06/2026
+Desarrollo de interfaces web y componentes interactivos con React,
+TypeScript y Tailwind CSS, priorizando vistas funcionales y diseño
+responsivo.
+Colaboración en la construcción y mantenimiento de servicios backend
+con Node.js, integrando la lógica de servidor con el frontend.
+Soporte técnico y atención al cliente
+Servicios Industriales KIP E.I.R.L. · 01/2023 – 04/2023
+Asesoría técnica y resolución de incidencias tecnológicas para
+clientes.
+Implementación de hardware de realidad virtual (VR), adaptándome
+rápidamente a nuevas tecnologías.
+Otra experiencia: atención al cliente en hostelería y comercio (Starbucks, Liaopastel,
+Bombon Boss), 08/2024 – actualidad.
+PROYECTOS DESTACADOS
+Resilio
+Proyecto personal · Python · Flask · MySQL
+Plataforma web para detectar el síndrome de burnout mediante la digitalización
+del test BAT-12, con métricas, gráficos de resultados y consejos generados con
+IA.
+Modelo multitenant con roles diferenciados (RR. HH., empleado, administrador)
+y un panel distinto para cada rol.
+Backend en Flask con rutas organizadas en una arquitectura modular y base
+de datos MySQL.
+Desplegada en producción en Railway.
+Ver demo (https://resilio.pierooof.dev/)
+Código en GitHub (https://github.com/pierooof/Resilio)
+FORMACIÓN
+CFGS Desarrollo de Aplicaciones Web (DAW)
+CEAC FP · 09/2025 – 06/2027 (previsto)
+Psicología
+Universidad de Lima · 2023 – 2024
+CONTACTO
+TEL.
++34 652 210 540
+EMAIL
+pierofl2005@gmail.com
+UBICACIÓN
+Burjassot, Valencia
+LINKEDIN
+in/piero-funes-larios
+GITHUB
+github.com/pierooof
+PORTAFOLIO
+portafolio.pierooof.dev
+IDIOMAS
+Español — Nativo
+Inglés — Intermedio. Lectura fluida
+de documentación técnica;
+mejorando activamente la
+conversación.
+SOFT SKILLS
+Resolución de problemas
+Proactividad
+Trabajo en entornos dinámicos
+Empatía con el usuario
+
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/005-agentes locales$
+ 

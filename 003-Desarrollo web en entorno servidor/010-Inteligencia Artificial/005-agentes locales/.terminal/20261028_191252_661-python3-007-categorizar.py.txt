@@ -1,0 +1,305 @@
+Datetime: 2026-10-28T18:12:52.661Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/005-agentes locales
+Command: python3 007-categorizar.py
+
+Result:
+
+================================================================================
+CLASIFICADOR DOCUMENTAL CON OLLAMA
+================================================================================
+Carpeta: /home/josevicente/Escritorio
+Modelo: granite4.1:8b
+Máximo caracteres: 12000
+Documentos encontrados: 602
+Resultados anteriores: 0
+================================================================================
+
+================================================================================
+DOCUMENTO 1 DE 602
+================================================================================
+Archivo: /home/josevicente/Escritorio/Archivar22/000-Presentación.pdf
+Texto extraído: 12005 caracteres
+Páginas: 6/57
+Analizando con Ollama...
+
+ERROR: Categoría no válida: None
+
+PROGRESO: 1/602 | Correctos: 0 | Errores: 1 | Omitidos: 0
+
+================================================================================
+DOCUMENTO 2 DE 602
+================================================================================
+Archivo: /home/josevicente/Escritorio/Archivar22/001-Bases de datos.pdf
+Texto extraído: 12007 caracteres
+Páginas: 8/121
+Analizando con Ollama...
+
+RESUMEN:
+El documento contiene apuntes de una asignatura de Bases de Datos, que abarca objetivos, contenidos básicos, unidades didácticas sobre bases de datos relacionales y no relacionales, evolución del sector, metodología didáctica y un proyecto intermodular que integra programación, lenguajes de marcas y gestión de datos. También incluye instrucciones para la creación de una cuenta en GitHub y la organización de repositorios, destacando la importancia de un perfil GitHub bien mantenido para la evaluación por parte de empresas.
+
+CLASIFICACIÓN:
+Categoría: Informática y desarrollo
+Subcategoría: Bases de datos
+
+Tiempo: 10.0 segundos
+Tokens: 4120 entrada / 153 salida
+
+PROGRESO: 2/602 | Correctos: 1 | Errores: 1 | Omitidos: 0
+
+================================================================================
+DOCUMENTO 3 DE 602
+================================================================================
+Archivo: /home/josevicente/Escritorio/Archivar22/002-Identificación de necesidades del sector productivo.pdf
+Texto extraído: 12007 caracteres
+Páginas: 8/38
+Analizando con Ollama...
+
+RESUMEN:
+El documento analiza las necesidades del sector productivo, identificando competidores directos e indirectos y evaluando oportunidades en inteligencia artificial, como agentes de IA integrados con ERPs y CRMs, IA privada y modelos locales, y soluciones RAC documental para pymes. Se propone reforzar nichos con menor competencia y aprovechar el ecosistema de software propio, utilizando herramientas de IA como ChatGPT para decisiones estratégicas. Se establecen próximos pasos para validar la idea inicial y realizar un análisis continuo de la competencia y oportunidades.
+
+CLASIFICACIÓN:
+Categoría: Prácticas y empresas
+Subcategoría: Empresas colaboradoras
+
+Tiempo: 10.5 segundos
+Tokens: 4158 entrada / 163 salida
+
+PROGRESO: 3/602 | Correctos: 2 | Errores: 1 | Omitidos: 0
+
+================================================================================
+DOCUMENTO 4 DE 602
+================================================================================
+Archivo: /home/josevicente/Escritorio/Archivar22/003-Lenguajes de marcas y sistemas de gestión de información.pdf
+Texto extraído: 12007 caracteres
+Páginas: 8/278
+Analizando con Ollama...
+
+ERROR: Subcategoría no válida: Lenguajes de marcas y sistemas de gestión de información
+
+PROGRESO: 4/602 | Correctos: 2 | Errores: 2 | Omitidos: 0
+
+================================================================================
+DOCUMENTO 5 DE 602
+================================================================================
+Archivo: /home/josevicente/Escritorio/Archivar22/005-Proyecto intermodular.pdf
+Texto extraído: 12006 caracteres
+Páginas: 7/56
+Analizando con Ollama...
+
+ERROR: Subcategoría no válida: Proyectos intermodulares
+
+PROGRESO: 5/602 | Correctos: 2 | Errores: 3 | Omitidos: 0
+
+================================================================================
+DOCUMENTO 6 DE 602
+================================================================================
+Archivo: /home/josevicente/Escritorio/Archivar22/Alumnado de Informática para prácticas en empresa.pdf
+Texto extraído: 10086 caracteres
+Páginas: 7/7
+Analizando con Ollama...
+
+RESUMEN:
+El documento es una invitación de José Vicente Carratalá, profesor de ciclos formativos de informática, para que las empresas colaboren en la acogida de alumnado de ciclos formativos de informática durante el curso 2026/2027. Ofrecen alumnado de Desarrollo de Aplicaciones Multiplataforma, Desarrollo de Aplicaciones Web, Sistemas Microinformáticos y Redes y Administración de Sistemas Informáticos en Red, con diferentes grupos y periodos de prácticas. Se destacan los perfiles técnicos del alumnado, incluyendo el uso de Inteligencia Artificial en DAM y DAW, y se proporcionan medios para que las empresas evalúen previamente el nivel técnico del alumnado antes de iniciar las prácticas.
+
+CLASIFICACIÓN:
+Categoría: Prácticas y empresas
+Subcategoría: Empresas colaboradoras
+
+Tiempo: 12.39 segundos
+Tokens: 3579 entrada / 213 salida
+
+PROGRESO: 6/602 | Correctos: 3 | Errores: 3 | Omitidos: 0
+
+================================================================================
+DOCUMENTO 7 DE 602
+================================================================================
+Archivo: /home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/14102026113929.pdf
+Texto extraído: 935 caracteres
+Páginas: 1/1
+Analizando con Ollama...
+
+RESUMEN:
+El documento confirma que se realizó una transferencia de 423,08€ de la cuenta de José Vicente Carratala Sanchis a la cuenta de Raquel Sorlí Ortiz en CaixaBank, S.A., con un precio aplicado por SMS de 0,36€, destinada a cubrir gastos extraordinarios. La transferencia fue recibida por el destinatario el 14 de octubre de 2026 a las 11:39:23.
+
+CLASIFICACIÓN:
+Categoría: Administración y finanzas
+Subcategoría: Facturas recibidas
+
+Tiempo: 5.6 segundos
+Tokens: 1189 entrada / 134 salida
+
+PROGRESO: 7/602 | Correctos: 4 | Errores: 3 | Omitidos: 0
+
+================================================================================
+DOCUMENTO 8 DE 602
+================================================================================
+Archivo: /home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/16102026212132.pdf
+Texto extraído: 926 caracteres
+Páginas: 1/1
+Analizando con Ollama...
+
+RESUMEN:
+El documento es un comprobante de una transferencia bancaria realizada por José Vicente Carratala Sanchis a una cuenta de CaixaBank en beneficio de Raquel Sorlí Ortiz, con un importe de 112,50 euros y un concepto de 'Pila y Médico'. La transferencia fue confirmada y recibida por el destinatario el 16 de octubre de 2026 a las 21:21:23, con un precio aplicado por el SMS de 0,36 euros. No se aplicó financiación a la operación.
+
+CLASIFICACIÓN:
+Categoría: Administración y finanzas
+Subcategoría: Facturas recibidas
+
+Tiempo: 6.18 segundos
+Tokens: 1190 entrada / 156 salida
+
+PROGRESO: 8/602 | Correctos: 5 | Errores: 3 | Omitidos: 0
+
+================================================================================
+DOCUMENTO 9 DE 602
+================================================================================
+Archivo: /home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/003-Programación de servicios y procesos.pdf
+Texto extraído: 12006 caracteres
+Páginas: 7/57
+Analizando con Ollama...
+
+RESUMEN:
+El documento contiene apuntes de una asignatura sobre programación de servicios y procesos, enfocada en el desarrollo de aplicaciones multinúcleo y multiproceso, programación con procesos y hilos, comunicación mediante sockets, utilización de librerías para servicios en red, criterios de eficiencia y disponibilidad, y programación segura con criptografía. Incluye objetivos de aprendizaje, contenidos básicos, ejercicios prácticos con JavaScript y ejemplos de código para trabajar con workers en HTML, así como consideraciones sobre la importancia educativa de la asignatura y el interés del docente en impartirla.
+
+CLASIFICACIÓN:
+Categoría: Informática y desarrollo
+Subcategoría: Programación y lenguajes
+
+Tiempo: 12.36 segundos
+Tokens: 4934 entrada / 177 salida
+
+PROGRESO: 9/602 | Correctos: 6 | Errores: 3 | Omitidos: 0
+
+================================================================================
+DOCUMENTO 10 DE 602
+================================================================================
+Archivo: /home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/006-Sistemas de gestión empresarial.pdf
+Texto extraído: 12006 caracteres
+Páginas: 7/282
+Analizando con Ollama...
+
+RESUMEN:
+El documento proporciona un análisis exhaustivo de los sistemas de gestión empresarial, destacando la importancia de los ERP/CRM en la gestión de recursos y relaciones con clientes. Se discuten los principales ERP disponibles en el mercado, como SAP, Oracle, NetSuite y Odoo, cada uno con sus características y desafíos. Se comparan alternativas como Dynamics y Oracle Fusion, destacando la necesidad de equilibrar funcionalidad y simplicidad en el diseño del sistema. Además, se aborda la arquitectura del sistema, metodologías de desarrollo (bottom-up vs. top-down) y la importancia de la exposición visual para fomentar la creatividad en el diseño de interfaces. También se menciona el proyecto Hocars.IU, que enfatiza la creación de plantillas de diseño personalizadas para mejorar la interfaz de usuario. Finalmente, se introduce el concepto de CRM como gestión de la relación con el cliente, centrándose en la optimización de procesos de ventas y la personalización de recomendaciones basadas en el historial del cliente.
+
+CLASIFICACIÓN:
+Categoría: Material educativo general
+Subcategoría: Matemáticas
+
+Tiempo: 16.06 segundos
+Tokens: 4098 entrada / 267 salida
+
+PROGRESO: 10/602 | Correctos: 7 | Errores: 3 | Omitidos: 0
+
+================================================================================
+DOCUMENTO 11 DE 602
+================================================================================
+Archivo: /home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/2026-10-01_16-33-51.pdf
+Texto extraído: 8743 caracteres
+Páginas: 5/5
+Analizando con Ollama...
+
+RESUMEN:
+El documento contiene apuntes de clase sobre la unión de las asignaturas de Programación y Bases de Datos, con el objetivo de mejorar la experiencia de aprendizaje mediante la intermodularidad. Se detallan los pasos para preparar una base de datos MySQL llamada 'programación', incluyendo la creación de una tabla 'alumnos' con campos id, nombre, apellidos y email. Además, se proporcionan instrucciones para crear un usuario específico con permisos adecuados para conectar desde un lenguaje de programación como Python, asegurando la seguridad evitando el uso del usuario root. Finalmente, se menciona la conexión a la base de datos y la transición a la subunidad didáctica para establecer conexiones, con referencia a la creación previa de una base de datos.
+
+CLASIFICACIÓN:
+Categoría: Informática y desarrollo
+Subcategoría: Bases de datos
+
+Tiempo: 12.86 segundos
+Tokens: 3537 entrada / 209 salida
+
+PROGRESO: 11/602 | Correctos: 8 | Errores: 3 | Omitidos: 0
+
+================================================================================
+DOCUMENTO 12 DE 602
+================================================================================
+Archivo: /home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/02102026130327.pdf
+Texto extraído: 954 caracteres
+Páginas: 1/1
+Analizando con Ollama...
+
+RESUMEN:
+El documento es una confirmación de una transferencia bancaria realizada por Jose Vicente Carratala Sanchis a la entidad CAIXA POPULAR CAIXA RURAL, destinada al Mislata Basquet Club, con un importe de 65,00 euros y un concepto de inscripción. La transferencia fue recibida inmediatamente por el destinatario el 02/10/2026 a las 13:03:24 y no está financiada, aunque se ofrece la opción de financiar hasta el 5 de Octubre.
+
+CLASIFICACIÓN:
+Categoría: Administración y finanzas
+Subcategoría: Facturas recibidas
+
+Tiempo: 6.79 segundos
+Tokens: 1181 entrada / 153 salida
+
+PROGRESO: 12/602 | Correctos: 9 | Errores: 3 | Omitidos: 0
+
+================================================================================
+DOCUMENTO 13 DE 602
+================================================================================
+Archivo: /home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/02102026130521.pdf
+Texto extraído: 965 caracteres
+Páginas: 1/1
+Analizando con Ollama...
+
+RESUMEN:
+El documento es una confirmación de una transferencia bancaria realizada por Jose Vicente Carratala Sanchis a la entidad CAIXA POPULAR CAIXA RURAL, destinada al Mislata Basquet Club por un importe de 130,00 euros para la compra de un equipamiento denominado 'Pack Plus - Vicente Carratala Sorli'. La transferencia se realizó el 02/10/2026 a las 13:05:20 y fue recibida inmediatamente por el titular de la cuenta destino. La operación sigue las normas SEPA y no se aplica financiación, aunque se menciona la posibilidad de financiar hasta el 5 de Octubre.
+
+CLASIFICACIÓN:
+Categoría: Administración y finanzas
+Subcategoría: Facturas recibidas
+
+Tiempo: 7.27 segundos
+Tokens: 1181 entrada / 184 salida
+
+PROGRESO: 13/602 | Correctos: 10 | Errores: 3 | Omitidos: 0
+
+================================================================================
+DOCUMENTO 14 DE 602
+================================================================================
+Archivo: /home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/5eceac96-8ddb-4ea2-8395-c5d63c64a0a7.pdf
+Texto extraído: 861 caracteres
+Páginas: 1/1
+Analizando con Ollama...
+
+ERROR: Subcategoría no válida: Normativa educativa
+
+PROGRESO: 14/602 | Correctos: 10 | Errores: 4 | Omitidos: 0
+
+================================================================================
+DOCUMENTO 15 DE 602
+================================================================================
+Archivo: /home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/10092026222546.pdf
+Texto extraído: 924 caracteres
+Páginas: 1/1
+Analizando con Ollama...
+
+RESUMEN:
+El documento confirma que se realizó una transferencia de 235,39€ de la cuenta de José Vicente Carratala Sanchis (ES31 2100 4699 1113 0027 0302) a la cuenta de Raquel Sorlí Ortiz (ES63 2100 7000 9302 0011 6435) en la entidad CaixaBank, S.A., con un precio aplicado por SMS de 0,36€. La transferencia fue recibida por el destinatario el 10 de septiembre de 2026 a las 22:25:41.
+
+CLASIFICACIÓN:
+Categoría: Administración y finanzas
+Subcategoría: Facturas recibidas
+
+Tiempo: 6.5 segundos
+Tokens: 1189 entrada / 164 salida
+
+PROGRESO: 15/602 | Correctos: 11 | Errores: 4 | Omitidos: 0
+
+================================================================================
+DOCUMENTO 16 DE 602
+================================================================================
+Archivo: /home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/11092026225418.pdf
+Texto extraído: 723 caracteres
+Páginas: 1/1
+Analizando con Ollama...
+^C
+Procesamiento interrumpido.
+Los resultados anteriores están guardados.
+================================================================================
+PROCESAMIENTO FINALIZADO
+================================================================================
+Total encontrados: 602
+Procesados correctamente: 11
+Errores: 4
+Omitidos: 0
+Resultados: clasificacion_pdfs.jsonl
+Errores: errores_pdfs.jsonl
+================================================================================
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/005-agentes locales$ 

@@ -1,0 +1,36 @@
+Datetime: 2026-10-28T18:37:14.777Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/011-nodejs/001-Introduccion
+Command: node 008-estructuras\ de\ bucle.js
+
+Result:
+Hoy es el dia  1 del mes
+Hoy es el dia  2 del mes
+Hoy es el dia  3 del mes
+Hoy es el dia  4 del mes
+Hoy es el dia  5 del mes
+Hoy es el dia  6 del mes
+Hoy es el dia  7 del mes
+Hoy es el dia  8 del mes
+Hoy es el dia  9 del mes
+Hoy es el dia  10 del mes
+Hoy es el dia  11 del mes
+Hoy es el dia  12 del mes
+Hoy es el dia  13 del mes
+Hoy es el dia  14 del mes
+Hoy es el dia  15 del mes
+Hoy es el dia  16 del mes
+Hoy es el dia  17 del mes
+Hoy es el dia  18 del mes
+Hoy es el dia  19 del mes
+Hoy es el dia  20 del mes
+Hoy es el dia  21 del mes
+Hoy es el dia  22 del mes
+Hoy es el dia  23 del mes
+Hoy es el dia  24 del mes
+Hoy es el dia  25 del mes
+Hoy es el dia  26 del mes
+Hoy es el dia  27 del mes
+Hoy es el dia  28 del mes
+Hoy es el dia  29 del mes
+Hoy es el dia  30 del mes
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/011-nodejs/001-Introduccion$ 

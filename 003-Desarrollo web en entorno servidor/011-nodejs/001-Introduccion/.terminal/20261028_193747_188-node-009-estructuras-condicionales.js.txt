@@ -1,0 +1,6 @@
+Datetime: 2026-10-28T18:37:47.188Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/011-nodejs/001-Introduccion
+Command: node 009-estructuras\ condicionales.js
+
+Result:
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/011-nodejs/001-Introduccion$ 

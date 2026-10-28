@@ -1,0 +1,13 @@
+Datetime: 2026-10-28T17:58:00.867Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/005-agentes locales
+Command: python3 004-un\ solo\ parrafo.py
+
+Result:
+El documento presenta un informe de dos alumnos seleccionados para prácticas en la empresa Propio, correspondiente al grupo CEAC2627DAW2 y fecha 28/10/2026. Incluye fichas individuales y CV adjuntos, siendo un documento de uso interno que contiene datos personales. 
+
+El primer alumno, Iman Kebour Dahmoun, posee contacto a través de correo electrónico iman.kebourdahmoun@alu.ceacfp.es, teléfono 602099388, DNI 26880146T, y dirección en Plaza Cardenal Monescillo, Valencia 46015. Su perfil en línea está en https://imankd06.github.io/Curriculum/, GitHub en https://github.com/ImanKD06, web personal en https://imankd06.github.io/Portafolio/, y LinkedIn en www.linkedin.com/in/imankebourdahmoun.
+
+El segundo alumno, Piero Gabriel Funes Larios, tiene contacto por correo electrónico piero.funeslarios@alu.ceacfp.es, teléfono 652210540, DNI/Z 3398358K, y dirección en Calle Maestro Giner 8, Burjassot 46100. Su CV está en https://cv.pierooof.dev/, GitHub en https://github.com/pierooof, portafolio en https://portafolio.pierooof.dev/, y LinkedIn en https://www.linkedin.com/in/piero-funes-larios-44360a166/.
+
+Piero Funes Larios describe su perfil profesional como estudiante de Desarrollo de Aplicaciones Web, enfocado en creación ágil de herramientas con Python y Flask, y con experiencia en React, TypeScript y Node.js. Su base en Psicología y experiencia en soporte al cliente le permite entender flujos de trabajo de usuarios y detectar fricciones. Su stack técnico incluye HTML5, CSS3, JavaScript, TypeScript, React, Tailwind CSS, Python, Flask, Node.js, API REST, MySQL, Git, GitHub, y Railway. Tiene experiencia profesional como Desarrollador Web en Corner Estudios (03/2026 – 06/2026) y en Servicios Industriales KIP E.I.R.L. (01/2023 – 04/2023). Proyectos destacados incluyen Resilio, una plataforma web para detectar el síndrome de burnout mediante digitalización del test BAT-12, con backend en Flask y base de datos MySQL, desplegada en Railway. También ha trabajado en atención al cliente en hostelería y comercio. Su formación incluye CFGS Desarrollo de Aplicaciones Web y Psicología. Ofrece contacto por teléfono +34 652 210 540, correo pierofl2005@gmail.com, ubicación en Burjassot, Valencia, e idiomas en español (nativo) e inglés (intermedio). Soft skills destacadas son resolución de problemas, proactividad, trabajo en entornos dinámicos y empatía con el usuario.
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/005-agentes locales$ 

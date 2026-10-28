@@ -1,0 +1,12 @@
+Datetime: 2026-10-28T18:34:31.224Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/011-nodejs/001-Introduccion
+Command: node 006-operadores\ de\ comparacion.js
+
+Result:
+false
+true
+false
+true
+false
+true
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/011-nodejs/001-Introduccion$ 

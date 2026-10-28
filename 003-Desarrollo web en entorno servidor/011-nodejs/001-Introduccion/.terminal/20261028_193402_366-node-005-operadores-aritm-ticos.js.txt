@@ -1,0 +1,11 @@
+Datetime: 2026-10-28T18:34:02.366Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/011-nodejs/001-Introduccion
+Command: node 005-operadores\ aritméticos.js
+
+Result:
+7
+1
+12
+1.3333333333333333
+1
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/011-nodejs/001-Introduccion$ 

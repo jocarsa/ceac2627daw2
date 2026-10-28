@@ -1,0 +1,36 @@
+Datetime: 2026-10-28T17:56:37.179Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/005-agentes locales
+Command: python3 003-resumir\ con\ IA.py
+
+Result:
+
+===== RESUMEN DEL DOCUMENTO =====
+
+**Resumen del Documento sobre Alumnos Selecionados para Prácticas en JOCARSA**
+
+**Temática:**  
+El documento presenta un informe interno de dos estudiantes seleccionados para realizar prácticas en la empresa Propio, específicamente en el grupo CEAC2627DAW2. Contiene detalles personales y profesionales de Iman Kebour Dahmoun y Piero Gabriel Funes Larios, incluyendo sus contactos, historial académico y experiencia previa.
+
+**Datos Importantes:**  
+- **Iman Kebour Dahmoun:**  
+  - Email: iman.kebourdahmoun@alu.ceacfp.es  
+  - Teléfono: 602099388  
+  - DNI/NIE: 26880146T  
+  - Dirección: Plaza Cardenal Monescillo, Valencia, 46015  
+  - Perfiles: GitHub (https://github.com/ImanKD06), Web Personal (https://imankd06.github.io/Portafolio/), LinkedIn (www.linkedin.com/in/imankebourdahmoun)  
+- **Piero Gabriel Funes Larios:**  
+  - Email: piero.funeslarios@alu.ceacfp.es  
+  - Teléfono: 652210540  
+  - DNI/NIE: Z3398358K  
+  - Dirección: Calle Maestro Giner 8, Burjassot, 46100  
+  - Perfiles: GitHub (https://github.com/pierooof), Web Personal (https://portafolio.pierooof.dev/), LinkedIn (https://www.linkedin.com/in/piero-funes-larios-44360a166/)  
+  - **Proyecto Destacado:** Resilio (Plataforma web para detectar el síndrome de burnout, desarrollada con Python, Flask y MySQL, desplegada en Railway).
+
+**Conclusiónes Relevantes:**  
+- Ambos estudiantes poseen sólidos conocimientos en desarrollo web, con experiencia práctica en React, TypeScript, Node.js y Python.  
+- Piero Funes Larios destaca por su proyecto Resilio, que integra técnicas de IA y multitenancy, demostrando habilidades avanzadas en desarrollo de aplicaciones web.  
+- La formación académica de ambos incluye CFGS en Desarrollo de Aplicaciones Web y Psicología, lo que complementa su capacidad para entender y resolver necesidades de usuario de manera práctica y empática.
+
+**Clareza y Estructura:**  
+El resumen proporciona una visión clara y concisa de los datos esenciales del documento, destacando la idoneidad de los estudiantes para las prácticas en JOCARSA, basada en sus habilidades técnicas y experiencias previas.
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/005-agentes locales$ 

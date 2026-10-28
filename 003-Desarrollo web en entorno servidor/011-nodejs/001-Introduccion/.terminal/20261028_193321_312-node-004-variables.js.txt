@@ -1,0 +1,7 @@
+Datetime: 2026-10-28T18:33:21.312Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/011-nodejs/001-Introduccion
+Command: node 004-variables.js
+
+Result:
+Mi nombre es: JOse Vicente
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/011-nodejs/001-Introduccion$ 

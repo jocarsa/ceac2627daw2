@@ -1,0 +1,609 @@
+Datetime: 2026-10-28T17:52:38.669Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/005-agentes locales
+Command: python3 001-recorrer.py
+
+Result:
+/home/josevicente/Escritorio/informe_alumnos_seleccionados_2026-10-28 NACEX.pdf
+/home/josevicente/Escritorio/informe_alumnos_seleccionados_2026-10-28 Avantio.pdf
+/home/josevicente/Escritorio/informe_alumnos_seleccionados_2026-10-28.pdf
+/home/josevicente/Escritorio/Archivar22/003-Lenguajes de marcas y sistemas de gestión de información.pdf
+/home/josevicente/Escritorio/Archivar22/Manual de Identidad Corporativa JOCARSA _ Marca, diseño y productos.pdf
+/home/josevicente/Escritorio/Archivar22/Calificaciones 2025_2026.pdf
+/home/josevicente/Escritorio/Archivar22/001-Bases de datos.pdf
+/home/josevicente/Escritorio/Archivar22/informe_alumnos_seleccionados_2026-10-21 EDICOM.pdf
+/home/josevicente/Escritorio/Archivar22/000-Presentación.pdf
+/home/josevicente/Escritorio/Archivar22/005-Proyecto intermodular.pdf
+/home/josevicente/Escritorio/Archivar22/informe_alumnos_seleccionados_2026-10-22 Nacex.pdf
+/home/josevicente/Escritorio/Archivar22/informe_alumnos_seleccionados_2026-10-22 Poetica.pdf
+/home/josevicente/Escritorio/Archivar22/Resumen módulos profesionales SMR_DAM_DAW_ASIR.pdf
+/home/josevicente/Escritorio/Archivar22/informe_alumnos_seleccionados_2026-10-21 Tyris.pdf
+/home/josevicente/Escritorio/Archivar22/jocarsa _ proyectointermodular.pdf
+/home/josevicente/Escritorio/Archivar22/Programacion.pdf
+/home/josevicente/Escritorio/Archivar22/Informe · Marcos Vidal Marco · jocarsa _ formación.pdf
+/home/josevicente/Escritorio/Archivar22/Informe_envios_empresas_Iman_Kebour_Dahmoun.pdf
+/home/josevicente/Escritorio/Archivar22/informe_alumnos_seleccionados_2026-10-27.pdf
+/home/josevicente/Escritorio/Archivar22/Informe_envios_empresas_Piero_Gabriel_Funes_Larios.pdf
+/home/josevicente/Escritorio/Archivar22/Calificaciones 2025_2026 Bogas.pdf
+/home/josevicente/Escritorio/Archivar22/informe_alumnos_seleccionados_2026-10-19.pdf
+/home/josevicente/Escritorio/Archivar22/002-Identificación de necesidades del sector productivo.pdf
+/home/josevicente/Escritorio/Archivar22/Informe · EUSEBIO MARIA ESONO OBIANG NFIANGONO · jocarsa _ formación.pdf
+/home/josevicente/Escritorio/Archivar22/informe_alumnos_seleccionados_2026-10-28 Aduana del Guadalquivir.pdf
+/home/josevicente/Escritorio/Archivar22/Alumnado de Informática para prácticas en empresa.pdf
+/home/josevicente/Escritorio/Archivar22/informe_alumnos_seleccionados_2026-10-21.pdf
+/home/josevicente/Escritorio/Archivar22/informe_alumnos_seleccionados_2026-10-27 Onna digital.pdf
+/home/josevicente/Escritorio/Archivar22/informe_alumnos_seleccionados_2026-10-27-Sodire.pdf
+/home/josevicente/Escritorio/Archivar22/stay_with_me/OriginFonts-EULA.pdf
+/home/josevicente/Escritorio/Archivar22/informes/Informe_envios_empresas_Bohdan_Sydorenko.pdf
+/home/josevicente/Escritorio/Archivar22/informes/Informe_envios_empresas_Alejandro_Calderon_Sanchez.pdf
+/home/josevicente/Escritorio/Archivar22/informes/Informe_envios_empresas_Valentin_Antonio_De_Gennaro.pdf
+/home/josevicente/Escritorio/Archivar22/informes/Informe_envios_empresas_Rodrigo_Menendezmolina.pdf
+/home/josevicente/Escritorio/Archivar22/informes/Informe_envios_empresas_Ayman_Mouzakki.pdf
+/home/josevicente/Escritorio/Archivar22/informes/Informe_envios_empresas_Piero_Gabriel_Funes_Larios.pdf
+/home/josevicente/Escritorio/Archivar22/informes/Informe_envios_empresas_Alfredo_Armando_Martinez_Cantero.pdf
+/home/josevicente/Escritorio/Archivar22/informes/Informe_envios_empresas_Bryan_Alexander_Glot_Fong.pdf
+/home/josevicente/Escritorio/Archivar22/informes/Informe_envios_empresas_Gustavo_Enrique_Delnardo_Vallejo.pdf
+/home/josevicente/Escritorio/Archivar22/informes/Informe_envios_empresas_Iman_Kebour_Dahmoun (1).pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/informe_alumnos_seleccionados_2026-10-18 (2).pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Gmail - Rendimiento en la plataforma.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Informe · Alejandro Calderón Sanchez · jocarsa _ formación.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Teresa y JV _3 — Architectural plan.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Informe · Eddy Sebastián Maguiña Corzo · jocarsa _ formación.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/informe_alumnos_seleccionados_2026-10-18 (1).pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/informe_alumnos_seleccionados_2026-10-18.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Informe · Sergio Busquier Garcia · jocarsa _ formación.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Informe · Iris Lozano López · jocarsa _ formación.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Teresa y JV _3 — Architectural plan actual.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Informe · Ramon Garcia Ulloa · jocarsa _ formación.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/CARTA_PANTALAN_MENU.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/informe_alumnos_seleccionados_2026-10-14 (1).pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Jose Vicente Carratalá Sanchis - INF2026014 - 2026-07-31 - Centro de formación Capitol SLU.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/14102026113929.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Informe Lenguajes de marcas y Sistemas de gestión empresarial.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/informe_alumnos_seleccionados_2026-10-14 Grupo 2.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/informe_alumnos_seleccionados_2026-10-14 Grupo 1.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Informe · Juan Vicente Gallart Andres · jocarsa _ formación.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/informe_alumnos_seleccionados_2026-10-14 (3).pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Jose Vicente Carratalá Sanchis - INF2026025 - 2026-10-16 - Centro de formación Capitol SLU.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/informe_alumnos_seleccionados_2026-10-14.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/informe_alumnos_seleccionados_2026-10-14 (2).pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Jose Vicente Carratalá Sanchis - R2026001 - 2026-10-16 - Centro de formación Capitol SLU.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/16102026212132.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/stay_with_me/OriginFonts-EULA.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Manual de Identidad Corporativa JOCARSA _ Marca, diseño y productos.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Informe de alumnos seleccionados.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Gmail - RV_ [Externo] Acceso externo temporal a la red de DAE Formación.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Informe · Eddy Sebastián Maguiña Corzo · jocarsa _ formación.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/FortiClient Linux Product Downloads Information.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/informe_alumnos_seleccionados_2026-10-12.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/informe_alumnos_seleccionados_2026-10-12 (1).pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Informe · JORGE BELTRAN PASTOR · jocarsa _ formación.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/informe_empresas_seleccionadas_2026-10-12 (1).pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/informe_empresas_seleccionadas_2026-10-12.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Informe · Diego Fernandez Ortega · jocarsa _ formación.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/006-Sistemas de gestión empresarial.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/BOE-A-2009-18355.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/informe_alumnos_seleccionados_2026-10-12 (2).pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Informe · Sergio Busquier Garcia · jocarsa _ formación.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Informe · Iris Lozano López · jocarsa _ formación.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/informe_alumnos_seleccionados_2026-10-12 (3).pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/informe_empresas_seleccionadas_2026-10-12 (2).pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Informe · Ramon Garcia Ulloa · jocarsa _ formación.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/2026-10-01_16-33-51.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Informe · Juan Daniel Alvarez Gonzalez · jocarsa _ formación.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/003-Programación de servicios y procesos.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Manual de Identidad Corporativa JOCARSA _ Marca, diseño y productos.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/02102026130327.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Informe Lenguajes de marcas y Sistemas de gestión empresarial.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/02102026130521.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/BOE-A-2023-13221.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Duración de vídeos - tame2627dam1.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Informe · Eddy Sebastián Maguiña Corzo · jocarsa _ formación.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Colores de productos.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/U.D.1.3 - COMPETENCIAS NECESARIAS PRL (3ª parte) (4) (2).pptx.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/5eceac96-8ddb-4ea2-8395-c5d63c64a0a7.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Informe · Joan Nueda Gimeno · jocarsa _ formación.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Horario semanal - 1º GM Inst. Eléctricas ONLINE estudiante.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Horario semanal - 1º GM Inst. Eléctricas ONLINE profesor.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Horario semanal - 1º GM Inst. Eléctricas ONLINE administrador.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Informe EUSEBIO MARIA ESONO OBIANG NFIANGONO.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Jose Vicente Carratalá Sanchis - INF2026024 - 2026-10-03 - ELIDE GESTION EDUCATIVA, SL.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Informe · JORGE BELTRAN PASTOR · jocarsa _ formación.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Horario 1º GM Inst. Eléctricas_online_alumnos_v1.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Informe · Marcos Vidal Marco · jocarsa _ formación.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Informe · Danial Arshad Khan Constantina · jocarsa _ formación.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Gmail - Rendimiento en el ciclo formativo.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Jose Vicente Carratalá Sanchis - INF2026022 - 2026-09-30 - Centro de formación Capitol SLU.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Informe · Sergio Busquier Garcia · jocarsa _ formación.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Informe · Ramon Garcia Ulloa · jocarsa _ formación.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Informe · EUSEBIO MARIA ESONO OBIANG NFIANGONO · jocarsa _ formación.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Jose Vicente Carratalá Sanchis - INF2026023 - 2026-09-30 - GRUPO PARADIGMA DAE SL.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/PAT 10 parte documento (1).pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Informe · Serena SANIA ESTEVE · jocarsa _ formación.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/matric/desistimiento.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Vicente/8a8f0372-6554-4600-b06a-59b1041fbc18.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/RNT MISLATA 2025.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/11092026225418.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/CEAC 26_27 DAM1.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/BOE-A-2023-13221.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Horario semanal - Cristina Cerro.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Horario semanal - 26_27-CEAC-P-GS-DAW-2-A _ Desarrollo de Aplicaciones Web (DAW).pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/CEAC 26_27 DAW2.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Horario semanal - 1º GM Gestión Administrativa ONLINE.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/BOE-A-2009-18355.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/10092026222546.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/hoarios/Horario semanal - María Ortega.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/hoarios/Horario semanal - 2º GS Automoción ONLINE.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/hoarios/Horario semanal - 1º GS Administración y Finanzas ONLINE.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/hoarios/Horario semanal - Paula Gallardo.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/hoarios/Horario semanal - Jose Ramón Buitrón.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/hoarios/Horario semanal - Isabel Valero.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/hoarios/Horario semanal - María Boil.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/hoarios/Horario semanal - 2º GM Gestión Administrativa ONLINE.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/hoarios/Horario semanal - Cristina Cerro.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/hoarios/Horario semanal - Cristina Leandro.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/hoarios/Horario semanal - Ana Garrido.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/hoarios/Horario semanal - 1º GM Gestión Administrativa ONLINE.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/hoarios/Horario semanal - Dragos Zgirdan.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/hoarios/Horario semanal - Silvia Veintimilla.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/hoarios/Horario semanal - Nieves de Vicente.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/hoarios/Horario semanal - Jaime Ramón Berga.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/hoarios/Horario semanal - 1º GM Farmacia y Parafarmacia ONLINE.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/hoarios/Horario semanal - 1º GS Automoción ONLINE.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/hoarios/Horario semanal - Malena Caballero.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/hoarios/Horario semanal - Mª Ángeles Reig.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/hoarios/Horario semanal - GM TCAE ONLINE.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/elide/Horario semanal - Dragos Zgirdan.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/OJ_C_202604668_ES_TXT.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Manual de Identidad Corporativa JOCARSA _ Marca, diseño y productos.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/TAME DAM 26_27.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/DAE Formación · Análisis de archivos.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/ASIR1 - Lenguajes de marcas.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Matricular en Formación en empresa _ campuscapitolformacion.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/BOE-A-2009-18355.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Profesores → Proyecto intermodular _ campuscapitolformacion.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Jose Vicente Carratalá Sanchis - INF2026021 - 2026-09-06 - ELIDE GESTION EDUCATIVA, SL.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/vida_laboral.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Manual de Identidad Corporativa JOCARSA _ Marca, diseño y productos.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/emails_to_dariolacal94@gmail.com.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/BOE-A-2023-13221.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Currículum actualizado.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/jocarsa _ documentos.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/TAME DAM 26_27.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/BOE-A-2023-13221 (1).pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Guía para elaboración del proyecto intermodular cas.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Ciclo Formativo de Grado Superior DAM - TAME.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Mensajes tutoria CEAC.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/jocarsa   asistencias - prontuario.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/BOE-A-2023-13221.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/jocarsa-asistencias manual completo.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/ATLAS DEL CUERPO HUMANO-b (1).pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/jocarsa   asistencias - prontuario AulaCampus.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/01092026183029.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Jose Vicente Carratalá Sanchis - INF2026019 - 2026-08-31 - Centro de formación Capitol SLU.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Modulares.pdf (1).pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Jose Vicente Carratalá Sanchis - INF2026020 - 2026-08-31 - GRUPO PARADIGMA DAE SL.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/01092026183243.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Modulares.pdf.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/jocarsa _ asistencias.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/CV José Vicente Carratalá Sánchis.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/BOE-A-2023-13221.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Horario_GM_es.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/sandie3h.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/sancae2h.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Horario GS 26-27 cas.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/matric/desistimiento.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/voz/Retrieval-based-Voice-Conversion-WebUI/venv/lib/python3.10/site-packages/matplotlib/mpl-data/images/home.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/voz/Retrieval-based-Voice-Conversion-WebUI/venv/lib/python3.10/site-packages/matplotlib/mpl-data/images/subplots.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/voz/Retrieval-based-Voice-Conversion-WebUI/venv/lib/python3.10/site-packages/matplotlib/mpl-data/images/forward.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/voz/Retrieval-based-Voice-Conversion-WebUI/venv/lib/python3.10/site-packages/matplotlib/mpl-data/images/qt4_editor_options.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/voz/Retrieval-based-Voice-Conversion-WebUI/venv/lib/python3.10/site-packages/matplotlib/mpl-data/images/help.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/voz/Retrieval-based-Voice-Conversion-WebUI/venv/lib/python3.10/site-packages/matplotlib/mpl-data/images/back.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/voz/Retrieval-based-Voice-Conversion-WebUI/venv/lib/python3.10/site-packages/matplotlib/mpl-data/images/move.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/voz/Retrieval-based-Voice-Conversion-WebUI/venv/lib/python3.10/site-packages/matplotlib/mpl-data/images/matplotlib.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/voz/Retrieval-based-Voice-Conversion-WebUI/venv/lib/python3.10/site-packages/matplotlib/mpl-data/images/filesave.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/voz/Retrieval-based-Voice-Conversion-WebUI/venv/lib/python3.10/site-packages/matplotlib/mpl-data/images/hand.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/voz/Retrieval-based-Voice-Conversion-WebUI/venv/lib/python3.10/site-packages/matplotlib/mpl-data/images/zoom_to_rect.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Modulares.pdf (1).pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Modulares.pdf.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matric/desistimiento.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2404096_primerffranquismo.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5960448.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5859840.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2392320.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2632448_Fotografa_de_pgina_completa.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5959424.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5974528_Prova_setembre_2010.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2552832.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5920256_08_u08_matem2bach_CC_sol_indd.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2391552.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5924864.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2635776_2B_Q_T_00_FEM_04.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5935360.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5906432.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2458624.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5984768_2B_Q_T_00_COMPOS_01_02.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2612736_EQUILIBRIO_QU_MICO.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5978624_2B_Q_T_00_GLB_02_03.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5982208_2B_Q_T_00_DCNS_01_02_03.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f6693888_28_problemas_de_gen_351tica_resueltos.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2491904.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5980416_2B_Q_T_00_GLB_01.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2474240.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2493696.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2539008.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2394624.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5887232.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f6006784_TEMA_2_CIN_TICA_Y_EQUILIBRIO_QU_MICO.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5965312.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2485248.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2640128_2_BACH_T_8_EQUILIBRIOS_HETEROG_NEOS_SOLUBILIDAD_Y_PRECIPITACI_N.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5980928_2B_Q_T_00_COMPOS_03.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5974016_Prova_juny_2010_tif.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5942016.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2606848_TEMA_3_EQUILIBRIO_DE_TRANSFERENCIA_DE_PROTONES.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2633472_2B_Q_T_00_COMPOS_03.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5959680.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2608640_TEMA_2_CIN_TICA_Y_EQUILIBRIO_QU_MICO.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f1557760_Examen_2018_ING.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2570752.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f6011136_Tema_2.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2641920_Tema_2.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f1559808_An_lisis_de_texto_Valenciano.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2490368.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5877760.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2491392.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2651136_Pronoms_relatius_teoria.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2610432.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5985536.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5941760.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2638848_2B_Q_T_00_PUR_01.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2519808.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5975808_TEMA_3_EQUILIBRIO_DE_TRANSFERENCIA_DE_PROTONES.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2652160_Prova_juny_2010_tif.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5987840_2_BACH_T_8_EQUILIBRIOS_HETEROG_NEOS_SOLUBILIDAD_Y_PRECIPITACI_N.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2593536_07_u07_matem2bach_CC_sol_indd.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5956608.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2637312_2B_Q_T_00_GLB_04_05.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5941504.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5981696_Fotografa_de_pgina_completa.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f1556480_CamScanner_10_08_2021_22_45.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2469632_La_construcci_n_del_Estado_Liberal.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2634496_2B_Q_T_00_FEM_01_02.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2489344_Microsoft_Word_COMENTARIO_DE_TEXTOS.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2636800_2B_Q_T_00_GLB_02_03.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2632960_2B_Q_T_00_COMPOS_01_02.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5965568.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2599936_08_u08_matem2bach_CC_sol_indd.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f1585920_28_problemas_de_gen_351tica_resueltos.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5957888_Examen_ING_Juliol18.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2394368.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5963264.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f6012928_3_Sistema_Peri_dico.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2490624.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2477824.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2488320.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5941248.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2638080_2B_Q_T_00_OLIMP_1415_01.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2485504.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2652672_Prova_setembre_2010.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5983744_2B_Q_T_00_PUR_01.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2393600.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5913856_07_u07_matem2bach_CC_sol_indd.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2606080_4041be187a5443a3b083aa007f0d7efebec535187e22555d0f2a246b1a96b061.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2587648.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2443520.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2509312.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2482688.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2478080.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5964032.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2391808.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5977856_2B_Q_T_00_GLB_04_05.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5957376_Examen_2018_ING.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2580992.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2509056.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2412032.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5958656.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2453504.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5977344_4041be187a5443a3b083aa007f0d7efebec535187e22555d0f2a246b1a96b061.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2488832.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2636288_2B_Q_T_00_GLB_01.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f1554688_CamScanner_09_15_2021_17_35.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5963776_Microsoft_Word_COMENTARIO_DE_TEXTOS.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2635264_2B_Q_T_00_FEM_03.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2493952.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2633728_2B_Q_T_00_DCNS_01_02_03.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2490880.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2394112.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2494464.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5958912.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2418432.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2410496_Microsoft_Word_II_Republica_2012.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5968640_Pronoms_relatius_teoria.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2393856.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f1517312.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2494208.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2643712_3_Sistema_Peri_dico.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f1556736_CamScanner_10_30_2021_23_53.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5981184_2B_Q_T_00_FEM_04.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f1557248_Examen_ING_Juliol18.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5982976_2B_Q_T_00_OLIMP_1415_01.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5979904_2B_Q_T_00_FEM_03.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f1554944_CamScanner_09_27_2021_20_04.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5984256_2B_Q_T_00_RSUC_01.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2407680_1.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2639360_2B_Q_T_00_RSUC_01.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2405888_Microsoft_Word_Tema_11_El_segundo_franquismo_1959_1975.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f1559040_An_lisis_de_texto_Valenciano.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f2414336_La_Guerra_Civil.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f6008576_EQUILIBRIO_QU_MICO.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f1553920_CamScanner_05_27_2021_13_02.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5979136_2B_Q_T_00_FEM_01_02.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/Archivado3/Archivado2/Archivado/Archivar2/Archivar/Archivado nuevo/Archivar5/Archivado10/Archivado8/recover/recup_dir.4/f5846016.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/Cotejo · dashboard + matrículas manuales vs Excel.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/H. MATRICULA  1ºACO presencial - SANCHEZ CARCELLER, PABLO.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Matrícula RODRIGUEZ DEL PINO, ALVARO CI2º M.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Matricula NEUS TOMAS Capitol Presencial COI.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Inscripción Capitol Presencial MKP.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/InscripciÃ³n Capitol Presencial APSD.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Matricula 1ºACO Presencial - CASTILLEJOS VERA, ALEJANDRO.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Inscripción Capitol Online AFI ANDREA SERRANO.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Matrícula 1ºACO Presencial - MARTINEZ MARCO, PAU.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/HOJA INSCRIPCION CAPITOL 2º CURSO EDUCACION INFANTIL PRESENCIAL 2026-2027.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Matrícula Capitol 1 TL OL.pdf.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Matricula 1ºACO Presencial - MOUALLEM BASOLS, HADY.pdf.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Inscripción Capitol 1º ACO MIHAMMADYOUNES MASJOUDI (1).pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/MATRICULA CLAUDIA ALAPONT MARKETING.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Matrícula Capitol 1 ACO Axel Esteban Barrera.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Matrícula 1º ACO Presencial - LOZADA BLANCO, MERY AMY.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Hoja de matricula.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/hoja 1.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Inscripción Capitol 1 Presencial Semi y Online Afonso Lloris.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/MATRÍCULA GS COMERCIO JAIME GARCÍA GIMENO -COI 1º PRESENCIAL - sequra.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Matricula Marina Raga Giner 2º APSD contado.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/matricula capitol.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Inscripción Capitol  Online MKP 2º Curso (Alejandro Piles Tormo).pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Matricula 1ºACO Presencial - PASTOR MARTI, PATRICIA.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Matrícula Capitol 1º MYP presencial Marcos García Bellot_signed_signed.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/CAPITOL (1).pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Matricula 1ºACO Presencial - MONTES TERUEL, SANDRA.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/capitol.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/H. RESERVA DE PLAZA - SALAS MAGDALENA, ALEJANDRO.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Inscripción Capitol Presencial MKP FIRMADO.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Matrícula Capitol Carmen Catalán_FIRMADA.pdf.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/MATRICULA MARIA ESTRUCH.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Inscripción Paula Montero Merino.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/CAPITOL.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Matrícula Capitol 1º ACO ADRIANA PERIS SAUCO.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Inscripción Capitol Presencial, Semi y Online CAPITOL_FP_InscGrad1_2503.pdf (80).pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Matrícula 1ºMKP Presencial - Gonzalez Loor, Melany.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/H. MATRICULA 1ºMKP - SEMPRUN DIAZ, JUAN DIEGO.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Matrícula 1ºACO presencial - SOLIS CALLEJAS, MARÍA.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/MATRICULA ANDREA LORENTE AYUSO 2 APSD FIRMADA.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Documento escaneado.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Modulares.pdf.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/Archivado/matriculasmanuales/anterior/Inscripción Capitol 2026 ..pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/matriculas manuales/BRN94DDF817246A_000347.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/matriculas manuales/archivado/Matricula 1ºCOI Presencial - DEL RIO MUÑOZ, LUIS.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/matriculas manuales/archivado/Matricula 1ºCOI Presencial - ANDRADE TUA, ALEJANDRO.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/matriculas manuales/archivado/MATRÍCULA.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/matriculas manuales/archivado/JUSTIFICANTE PAGO Y MATRÍCULA.PDF
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/matriculas manuales/archivado/Matrícula 1º APSD Presencial - CASANOVA CORTES, ANDREA.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/matriculas manuales/archivado/Matricula 2ºCOI Online - MARTIN FERNANDEZ, ANA.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/matriculas manuales/archivado/Matrícula 1º MKP Presencial - LARA DELEGIDO, CARMELA_.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/matriculas manuales/archivado/Matricula 1º MKP Presencial - SALGUERO BENITEZ, DAVID.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/matriculas manuales/archivado/Inscripción Capitol 1º GVEC Online CAPITOL - MERENCIANO CABELLO, JAVIER_copia.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/matriculas manuales/archivado/Matrícula 1ºCOI Semi - ETO AYEVEGUE, HECTOR REGINALDO.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/matriculas manuales/archivado/Matricula 1ºMKP Presencial - VILLASMIL MENDEZ, MARIA JOSE.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/matriculas manuales/archivado/Matrícula 1º Administración y finanzas Semi.PDF
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/matriculas manuales/archivado/H. MATRICULA 1ºCOI Presencial - ANNICCHIARICO, ANTONELLA.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/matriculas manuales/archivado/Matrícula CAPITOL 2º AFI IZAN SENDRA SOLER (1).pdf.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/matriculas manuales/archivado/HOJA DE MATRÍCULA LAURA ANDRÉS BALLESTEROS 05.2026.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/matriculas manuales/archivado/Matricula 1ºEDI Online - SUBIAS GUTIERREZ, FRANCESC.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/matriculas manuales/archivado/Matrícula 1ºACO semipresencial - PEÑA HERRERA, ALEJANDRO.pdf.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/matriculas manuales/archivado/HOJA DE MATRÍCULA CLAUDIA ANDRÉS BALLESTEROS 05.2026.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/matriculas manuales/archivado/Matrícula 1ºTL online - HERRERO TOMAS, HIGINIO.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/matriculas manuales/archivado/Matrcula 1º MKP Semi - TORRES CARDENAS, CARLOS.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/matriculas manuales/archivado/Matrícula 1º Administración y finanzas tardes lleno.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/matriculas manuales/archivado/Matrícula 1ºACO Semi - NZUGA ANDEME, MARIA FRANCISCA.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/matriculas manuales/archivado/Matrícula 1ºAPSD Presencial - VEGAS PERIS, EMMA.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/matriculas manuales/archivado/Matricula 1ºAFI online - FERNANDEZ CHAMIZO, EINAR.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/matriculas manuales/archivado/Matrícula 1ºMKP Presencial - GONZALEZ ALMEIDA, HELEN NICOLE.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/Archivar3/Archivar/manuales2/Matrícula 1ºAPSD Presencial - NAVAS PICULO, CARMEN.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/wetransfer_portada-taber-png_2026-09-04_0719/DICCIONARIO ENCICLOPEDICO TABER DE CIENCIAS DE LA SALUD.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/presentacion/BOE-A-2009-18355.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/ingles/Manual de Identidad Corporativa JOCARSA _ Marca, diseño y productos.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/ingles/Horario GS 26-27 cas.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/ingles/Horario GM 26-27 cas.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/biblioteca/private/pdfs/712563ae322579239f9ef985d84e7657719c3d7f.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/biblioteca/private/pdfs/416085b20f4631405d952326c9d5a4de1489e4ce.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/biblioteca/private/pdfs/47b97de70b1d9c396a85a5d1481a6653eae0b582.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/biblioteca/private/pdfs/0c85870bbd6fb329a363778f22626d9bf870007c.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/biblioteca/private/pdfs/8a5425f015f64011624baf62.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/biblioteca/private/pdfs/f9c45e38b22f831fe2782fb9c3aec131c169e952.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/biblioteca/private/pdfs/affccff7a2d859f21ac9dc99.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/biblioteca/private/pdfs/9ff9a5d47cb9b4866bdd8f46b605844b94a962dc.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/biblioteca/private/pdfs/c48c186afac6cdcc6ab342e1254aac25479526b2.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/biblioteca/private/pdfs/7d8b1a6a1fff72702b0ad998.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/biblioteca/private/pdfs/00e24bc68a9b4776d35547d3.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/biblioteca/private/pdfs/48ab7c69450bbb278bab3a1ee4162059a6dc2e1a.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/biblioteca/private/pdfs/788226eeca3b68cd59013a9b.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/biblioteca/private/pdfs/da077a183e3d49e4fbf8eb84.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/biblioteca/private/pdfs/7818c12014b7b069c7aeae7c.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/Archivar4/biblioteca/pdfs/sample.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/4a6c4f_ACERCAMIENTO AL ESTUDIO DE LAS GAMMAPATIAS MONOCLONALES. Nazaret Vicenti Sampalo.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/c7467e_Rosón Matilla Laura.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/cc026a_TFG - GÓMEZ LIÉBANA, ANA BELÉN.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/fe6b2d_Ortiz_Gutiérrez_B_TFG.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/8b7cbd_GALLEGO_DELAMATA_L_TFG.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/5124d3_TFG. El consumo de bebidas energéticas en adolescentes. Word.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/769bf3_Trabajo Fin de Grado. ELISA SÁEZ ANTÓN.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/776643_TFG. ATENCION A PACIENTE INMIGRANTE.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/e03812_TFG Violencia de Género aspectos destacables y  abordaje multidisciplinar recomendando. (1).pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/ebf236_TFGfinalb.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/751363_PERCEPCIÓN DE LA MUERTE EN LOS ESTUDIANTES DE ENFERMERÍA DEL CENTRO UNIVERSITARIO DE MÉRIDA.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/4f6ea2_ANA VICTORIA MARTIN MONTILLA_TFG_ENFERMERIA.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/f8e1ac_TFG Miriam Fernández Nogales.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/2e5745_Robert Prat TFG.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/97d5b9_TFG Enfermedades Mitocondriales El caso de MNGIE desde su descubrimiento a las terapias.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/049849_Alba García Jaime. Vida con traqueostomia. Cuidados y guía de los mismos FIN.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/e720c2_TFGBlancaMorenoBorrero.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/72f891_Cámara_Muiña_Miriam.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/2614bd_289_TRABAJO+ENTERO+TERMINADO+ACTUALIZADA.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/fb29bc_TFG_Estíbaliz_Cabañero.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/14e68a_TFG Miguel Moreno Final.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/888311_TFG_elena_tellez.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/29d78c_TFG SANDRA ELVIRA CEDILLO.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/777828_Trabajo Fin de Grado Irene Blanco.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/aec60b_TFG_JOSEMANUELGARCIAINFANTE_FINAL.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/be88c7_San Martín_Francisco_Isabel2.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/f4fc89_tratamiento diabetes mellitus...pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/bd8d2d_López González, María. Trabajo Fin de Grado..pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/6b2f5a_Papel de la nutricion en la cicatrizacion de las heridas.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/102. La estimulacion sensorial como parte de los cuidados de enfermeria en los pacientes en estado de coma. Factores que influyen en su aplicacion.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/077c0c_González Esteban Laura.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/63de75_TFG. DissenyLaiaFarranPich.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/dbf934_Enfermería del deporte en Andalucía. Roles y oportunidades.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/5d89ea_TFG final.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/102. Riesgos laborales para el personal de enfermeria de quirofano.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/pdf/9ab095_García_Saiz_Eva María..pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/biblioteca/private/pdfs/b42941099137538206f4986b69baa1ae92d09884.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/Archivar5/biblioteca/pdfs/sample.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/programaciones/proyecto curricular DAW.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/programaciones/BOE-A-2023-13221.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/programaciones/2026_24495_es.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/programaciones/Guía para elaboración del proyecto intermodular cas.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/programaciones/proyecto curricular DAM.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/programaciones/Mensajes tutoria CEAC.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/programaciones/subir/ceac-programacion-didactica-desarrollo-web-entorno-servidor-0613-daw-2026-2027-CEAC.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/programaciones/subir/ceac-programacion-didactica-desarrollo-de-interfaces-0488-dam-2026-2027-revisada-CEAC.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/programaciones/subir/ceac-programacion-didactica-PMDM-0489-DAM-2026-2027-revisada.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/programaciones/subir/ceac-programacion-didactica-programacion-servicios-procesos-0490-dam-2026-2027-revisada-CEAC.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/programaciones/subir/ceac-programacion-didactica-programacion-0485-dam-2026-2027-revisada-CEAC.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/programaciones/subir/ceac-programacion-didactica-acceso-a-datos-0486-dam-2026-2027-revisada-CEAC.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/programaciones/subir/Índice oficial de proyecto intermodular I y II.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/programaciones/subir/ceac-programacion-didactica-proyecto-intermodular-II-DAM-2026-2027-revisada-CEAC.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/programaciones/subir/ceac-programacion-didactica-diseno-interfaces-web-0615-daw-2026-2027-CEAC.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/programaciones/subir/ceac-programacion-didactica-entornos-de-desarrollo-0487-dam-2026-2027-revisada-CEAC.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/programaciones/subir/ceac-programacion-didactica-despliegue-aplicaciones-web-0614-daw-2026-2027-CEAC.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/programaciones/subir/ceac-programacion-didactica-sistemas-informaticos-0483-dam-2026-2027-revisada-CEAC.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/programaciones/subir/ceac-programacion-didactica-SGE-0491-DAM-2026-2027-revisada-CEAC.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/programaciones/subir/ceac-programacion-didactica-bases-de-datos-0484-dam-2026-2027-revisada-CEAC.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/programaciones/subir/ceac-programacion-didactica-lenguajes-de-marcas-0373-dam-2026-2027-revisada-CEAC.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/Archivar7/Archivar6/programaciones/subir/ceac-programacion-didactica-desarrollo-web-entorno-cliente-0612-daw-2026-2027-CEAC.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/wetransfer_atlas-del-cuerpo-humano-pdf_2026-09-09_0704/salida.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/wetransfer_atlas-del-cuerpo-humano-pdf_2026-09-09_0704/ATLAS DEL CUERPO HUMANO.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/horarios/Horario 2º GM Gestión Administrativa_online_alumnos_v1.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/horarios/Horario GM FARMACIA 2026-27_online_alumnos.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/horarios/Horario 1º GS AyF_online (1).pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/horarios/Horario GM TCAE 2026-27_online.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/horarios/Horario 1º GM Gestión Administrativa_online_alumnos_v1.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/horarios/Horario 2º GS Automoción_online.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/horarios/Horario 1º GS Automoción_online.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/Archivar8/biblioteca/pdfs/sample.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p003.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p007.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p010.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p027.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p035.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p022.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p025.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p032.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p024.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p028.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p009.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p020.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p008.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p016.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p017.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p014.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p019.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p015.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p018.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p026.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p030.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p001.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p029.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p034.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p023.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p005.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p004.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p031.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p011.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p021.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p006.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p033.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p002.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p012.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/Archivar9/resultado_split_pdf/001_RNT_MISLATA_2025_p013.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Archivar12/matric2/desistimiento.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/netbeans-31-bin/netbeans/nb/shortcuts.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/netbeans-31-bin/netbeans/nb/shortcuts_mac.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Eusebio/003-Lenguajes de marcas y sistemas de gestión de información.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Eusebio/001-Bases de datos.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Eusebio/005-Proyecto intermodular.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Eusebio/Informe EUSEBIO MARIA ESONO OBIANG NFIANGONO.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Eusebio/Informe · EUSEBIO MARIA ESONO OBIANG NFIANGONO · jocarsa _ formación.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Eusebio/Programacion/002-Utilización de objetos.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Eusebio/Programacion/000-Presentación.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Eusebio/Programacion/004-Desarrollo de clases.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Eusebio/Programacion/001-Identificación de los elementos de un programa informático.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Eusebio/Programacion/003-Uso de estructuras de control.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Eusebio/Programacion/010-Flask.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Eusebio/Programacion/009-Gestión de bases de datos.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Archivar17/Eusebio/Programacion/005-Lectura y escritura de información.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/certificado/FUNCIONES Y OBLIGACIONES DEL PERSONAL.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/certificado/CONFIDENCIALIDAD.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/certificado/CONFIDENCIALIDAD_signed.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/certificado/FUNCIONES Y OBLIGACIONES DEL PERSONAL_signed.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Facturas/ingresos/Jose Vicente Carratalá Sanchis - INF2026014 - 2026-07-31 - Centro de formación Capitol SLU.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Facturas/ingresos/Jose Vicente Carratalá Sanchis - INF2026014 - 2026-07-02 - GRUPO PARADIGMA DAE SL.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Facturas/ingresos/Jose Vicente Carratalá Sanchis - 2026002 - 2026-07-17 - Escuela Especializada en Formación Multimedia y Marketing S.L_.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Facturas/ingresos/Jose Vicente Carratalá Sanchis - INF2026016 - 2026-07-31 - GRUPO PARADIGMA DAE SL.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Facturas/ingresos/Jose Vicente Carratalá Sanchis - INF2026015 - 2026-07-31 - Centro de formación Capitol SLU.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Facturas/ingresos/Jose Vicente Carratalá Sanchis - INF2026017 - 2026-07-31 - AULA MI2 S.L_.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Facturas/ingresos/Jose Vicente Carratalá Sanchis - INF2026022 - 2026-09-30 - Centro de formación Capitol SLU.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Facturas/ingresos/Jose Vicente Carratalá Sanchis - INF2026019 - 2026-08-31 - Centro de formación Capitol SLU.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Facturas/ingresos/Jose Vicente Carratalá Sanchis - INF2026023 - 2026-09-30 - GRUPO PARADIGMA DAE SL.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Facturas/ingresos/Jose Vicente Carratalá Sanchis - INF2026021 - 2026-09-06 - ELIDE GESTION EDUCATIVA, SL.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Facturas/ingresos/Jose Vicente Carratalá Sanchis - INF2026020 - 2026-08-31 - GRUPO PARADIGMA DAE SL.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Facturas/ingresos/Jose Vicente Carratalá Sanchis - INF2026018 - 2026-08-04 - ELIDE GESTION EDUCATIVA, SL.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Facturas/ingresos/Jose Vicente Carratalá Sanchis - INF2026013 - 2026-07-02 - Centro de formación Capitol SLU.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Facturas/gastos/IONOS factura 2026-08-12 - FA_202786986822.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Facturas/gastos/IONOS factura 2026-09-12 - FA_202787149987.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Facturas/gastos/IONOS factura 2026-07-23 - FA_202786876800.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Facturas/gastos/Invoice-FDC2ED89-0032.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Facturas/gastos/IONOS factura 2026-09-02 - FA_202787099850.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Facturas/gastos/IONOS factura 2026-09-23 - FA_202787203358.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Facturas/gastos/IONOS factura 2026-08-23 - FA_202787045562.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Facturas/gastos/Invoice-FDC2ED89-0034.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Facturas/gastos/Invoice-FDC2ED89-0033.pdf
+/home/josevicente/Escritorio/Archivar22/Archivar19/Archivar18/Facturas/gastos/IONOS factura 2026-07-12 - FA_202786814336.pdf
+/home/josevicente/Escritorio/Archivar22/memorias/ceac-programacion-didactica-proyecto-intermodular-II-DAM-2026-2027-revisada-CEAC.pdf
+/home/josevicente/Escritorio/Archivar22/memorias/CEAC - Proyecto curricular del ciclo formativo - DAM - Curso 26-27.pdf
+/home/josevicente/Escritorio/Archivar22/memorias/CEAC - Proyecto curricular del ciclo formativo - DAW - Curso 26-27.pdf
+/home/josevicente/Escritorio/Archivar22/memorias/ceac-programacion-didactica-desarrollo-web-entorno-cliente-0612-daw-2026-2027-CEAC.pdf
+/home/josevicente/Escritorio/Archivar22/facturas/ingresos/Jose Vicente Carratalá Sanchis - INF2026014 - 2026-07-31 - Centro de formación Capitol SLU.pdf
+/home/josevicente/Escritorio/Archivar22/facturas/ingresos/Jose Vicente Carratalá Sanchis - INF2026014 - 2026-07-02 - GRUPO PARADIGMA DAE SL.pdf
+/home/josevicente/Escritorio/Archivar22/facturas/ingresos/Jose Vicente Carratalá Sanchis - 2026002 - 2026-07-17 - Escuela Especializada en Formación Multimedia y Marketing S.L_.pdf
+/home/josevicente/Escritorio/Archivar22/facturas/ingresos/Jose Vicente Carratalá Sanchis - INF2026016 - 2026-07-31 - GRUPO PARADIGMA DAE SL.pdf
+/home/josevicente/Escritorio/Archivar22/facturas/ingresos/Jose Vicente Carratalá Sanchis - INF2026015 - 2026-07-31 - Centro de formación Capitol SLU.pdf
+/home/josevicente/Escritorio/Archivar22/facturas/ingresos/Jose Vicente Carratalá Sanchis - INF2026017 - 2026-07-31 - AULA MI2 S.L_.pdf
+/home/josevicente/Escritorio/Archivar22/facturas/ingresos/Jose Vicente Carratalá Sanchis - INF2026022 - 2026-09-30 - Centro de formación Capitol SLU.pdf
+/home/josevicente/Escritorio/Archivar22/facturas/ingresos/Jose Vicente Carratalá Sanchis - INF2026019 - 2026-08-31 - Centro de formación Capitol SLU.pdf
+/home/josevicente/Escritorio/Archivar22/facturas/ingresos/Jose Vicente Carratalá Sanchis - INF2026023 - 2026-09-30 - GRUPO PARADIGMA DAE SL.pdf
+/home/josevicente/Escritorio/Archivar22/facturas/ingresos/Jose Vicente Carratalá Sanchis - INF2026021 - 2026-09-06 - ELIDE GESTION EDUCATIVA, SL.pdf
+/home/josevicente/Escritorio/Archivar22/facturas/ingresos/Jose Vicente Carratalá Sanchis - INF2026020 - 2026-08-31 - GRUPO PARADIGMA DAE SL.pdf
+/home/josevicente/Escritorio/Archivar22/facturas/ingresos/Jose Vicente Carratalá Sanchis - INF2026018 - 2026-08-04 - ELIDE GESTION EDUCATIVA, SL.pdf
+/home/josevicente/Escritorio/Archivar22/facturas/ingresos/Jose Vicente Carratalá Sanchis - INF2026013 - 2026-07-02 - Centro de formación Capitol SLU.pdf
+/home/josevicente/Escritorio/Archivar22/facturas/gastos/IONOS factura 2026-08-12 - FA_202786986822.pdf
+/home/josevicente/Escritorio/Archivar22/facturas/gastos/IONOS factura 2026-09-12 - FA_202787149987.pdf
+/home/josevicente/Escritorio/Archivar22/facturas/gastos/IONOS factura 2026-07-23 - FA_202786876800.pdf
+/home/josevicente/Escritorio/Archivar22/facturas/gastos/Invoice-FDC2ED89-0032.pdf
+/home/josevicente/Escritorio/Archivar22/facturas/gastos/IONOS factura 2026-09-02 - FA_202787099850.pdf
+/home/josevicente/Escritorio/Archivar22/facturas/gastos/IONOS factura 2026-09-23 - FA_202787203358.pdf
+/home/josevicente/Escritorio/Archivar22/facturas/gastos/IONOS factura 2026-08-23 - FA_202787045562.pdf
+/home/josevicente/Escritorio/Archivar22/facturas/gastos/Invoice-FDC2ED89-0034.pdf
+/home/josevicente/Escritorio/Archivar22/facturas/gastos/Invoice-FDC2ED89-0033.pdf
+/home/josevicente/Escritorio/Archivar22/facturas/gastos/IONOS factura 2026-07-12 - FA_202786814336.pdf
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/005-agentes locales$
+ 

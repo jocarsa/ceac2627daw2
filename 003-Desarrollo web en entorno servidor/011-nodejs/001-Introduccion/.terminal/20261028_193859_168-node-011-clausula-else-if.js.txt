@@ -1,0 +1,7 @@
+Datetime: 2026-10-28T18:38:59.168Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/011-nodejs/001-Introduccion
+Command: node 011-clausula\ else\ if.js
+
+Result:
+Ya no eres joven
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/011-nodejs/001-Introduccion$ 

@@ -1,0 +1,13 @@
+Datetime: 2026-10-28T18:32:17.956Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/011-nodejs/001-Introduccion
+Command: node 003-saco\ un\ array.js
+
+Result:
+[ 'Jose Vicente', 'Carratala' ]
+┌─────────┬────────────────┐
+│ (index) │     Values     │
+├─────────┼────────────────┤
+│    0    │ 'Jose Vicente' │
+│    1    │  'Carratala'   │
+└─────────┴────────────────┘
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/011-nodejs/001-Introduccion$ 

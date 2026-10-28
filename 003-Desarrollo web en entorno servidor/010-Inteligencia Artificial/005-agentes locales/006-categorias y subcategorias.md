@@ -1,0 +1,70 @@
+
+- Educación y docencia
+  - Programaciones didácticas
+  - Materiales y apuntes
+  - Exámenes y actividades
+  - Evaluaciones y calificaciones
+  - Normativa educativa
+  - Horarios y planificación
+- Alumnos y gestión académica
+  - Expedientes y fichas
+  - Informes individuales
+  - Matrículas
+  - Asistencia y seguimiento
+  - Comunicaciones y tutorías
+- Prácticas y empresas
+  - Empresas colaboradoras
+  - Selección de alumnos
+  - Envíos de currículums
+  - Convenios y documentación
+  - Seguimiento de prácticas
+- Informática y desarrollo
+  - Programación y lenguajes
+  - Bases de datos
+  - Desarrollo web
+  - Sistemas y redes
+  - Inteligencia artificial
+  - Manuales técnicos
+- Proyectos y productos
+  - Proyectos JOCARSA
+  - Proyectos intermodulares
+  - Aplicaciones y herramientas
+  - Documentación funcional
+  - Identidad corporativa
+- Administración y finanzas
+  - Facturas emitidas
+  - Facturas recibidas
+  - Presupuestos
+  - Contratos y acuerdos
+  - Justificantes y pagos
+- Laboral y profesional
+  - Currículums
+  - Contratos laborales
+  - Vida laboral
+  - Certificados profesionales
+- Legislación y normativa
+  - BOE y legislación estatal
+  - Normativa autonómica
+  - Protección de datos
+  - Documentación legal
+- Empresa y negocio
+  - Clientes y proveedores
+  - Propuestas comerciales
+  - Informes empresariales
+  - Marketing y comunicación
+- Material educativo general
+  - Matemáticas
+  - Física y química
+  - Biología y salud
+  - Historia y humanidades
+  - Ejercicios y soluciones
+- Personal y patrimonio
+  - Documentación personal
+  - Vivienda y planos
+  - Gestiones particulares
+  - Ocio y otros documentos
+- Archivo y pendientes
+  - Sin clasificar
+  - Duplicados y versiones
+  - Documentos sin texto
+  - Documentación obsoleta
