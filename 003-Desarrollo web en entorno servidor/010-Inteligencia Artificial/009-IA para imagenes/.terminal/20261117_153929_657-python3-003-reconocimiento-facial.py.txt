@@ -1,0 +1,8 @@
+Datetime: 2026-11-17T14:39:29.657Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/009-IA para imagenes
+Command: python3 003-reconocimiento\ facial.py
+
+Result:
+Trained: 2024-04-28-19-49-02color.jpg
+Training completed: 1 photos
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/009-IA para imagenes$ 

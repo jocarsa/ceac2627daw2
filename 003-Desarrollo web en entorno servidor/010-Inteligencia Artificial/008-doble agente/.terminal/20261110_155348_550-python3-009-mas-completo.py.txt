@@ -1,0 +1,20 @@
+Datetime: 2026-11-10T14:53:48.550Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/008-doble agente
+Command: python3 009-mas\ completo.py
+
+Result:
+
+========== AGENTE 1: GENERADOR ==========
+
+Consultando IA: codegemma:7b
+  Creado: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/008-doble agente/objetivo/index.php
+  Creado: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/008-doble agente/objetivo/estilo.css
+  Creado: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/008-doble agente/objetivo/app.js
+
+Aplicación generada:
+Gestor de Clientes
+
+========== AGENTE 2: EVALUADOR ==========
+
+Error procesando el proyecto: '/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/008-doble agente/objetivo/index.php' is not in the subpath of 'objetivo'
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/008-doble agente$ 

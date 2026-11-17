@@ -1,0 +1,7 @@
+Datetime: 2026-11-17T14:09:19.960Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/009-IA para imagenes
+Command: ollama run gemma3:4b "Describe esta imagen: /home/josevicente/Escritorio/Captura desde 2026-11-08 11-14-23.png"
+
+Result:
+ollama run gemma3:4b "Describe esta imagen: /home/josevicente/Escritorio/Captura desde 2026-11-08 11-14-23.png"
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/009-IA para imagenes$ 

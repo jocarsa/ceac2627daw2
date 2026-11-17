@@ -1,0 +1,18 @@
+Datetime: 2026-11-17T14:40:58.029Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/009-IA para imagenes
+Command: python3 004-reconocer\ webcam.py
+
+Result:
+^CTraceback (most recent call last):
+  File "/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/009-IA para imagenes/004-reconocer webcam.py", line 20, in <module>
+    locations = face_recognition.face_locations(rgb)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/josevicente/.local/lib/python3.12/site-packages/face_recognition/api.py", line 121, in face_locations
+    return [_trim_css_to_bounds(_rect_to_css(face), img.shape) for face in _raw_face_locations(img, number_of_times_to_upsample, model)]
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/josevicente/.local/lib/python3.12/site-packages/face_recognition/api.py", line 105, in _raw_face_locations
+    return face_detector(img, number_of_times_to_upsample)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/009-IA para imagenes$ 

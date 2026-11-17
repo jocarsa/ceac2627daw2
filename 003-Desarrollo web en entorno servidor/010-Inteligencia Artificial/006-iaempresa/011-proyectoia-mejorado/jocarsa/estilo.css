@@ -1,0 +1,1132 @@
+:root {
+  --tono:200;
+  --saturacion:50%;
+  --brillo:30%;
+  --escalon:20%;
+  --relleno:12px;
+  --texto:12px;
+  --chaflan:12px;
+  --color0:hsl(var(--tono),var(--saturacion),calc(var(--brillo) - var(--escalon)));
+  --color:hsl(var(--tono),var(--saturacion),var(--brillo));
+  --color2:hsl(var(--tono),var(--saturacion),calc(var(--brillo) + var(--escalon)));
+  --color3:hsl(var(--tono),var(--saturacion),calc(var(--brillo) + var(--escalon)*2));
+  --color4:hsl(var(--tono),var(--saturacion),calc(var(--brillo) + var(--escalon)*3));
+  --texto-nav:white;
+  --ancho-nav:210px;
+  --ancho-section:260px
+}
+* {
+  box-sizing:border-box
+}
+html,body {
+  width:100%;
+  height:100%;
+  margin:0
+}
+.jocarsa-iu {
+  font-family:Ubuntu,Arial,sans-serif;
+  font-size:var(--texto);
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  background:var(--color3)
+}
+header {
+  height:54px;
+  flex:none;
+  background:var(--color);
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px;
+  color:var(--texto-nav)
+}
+.corporativo {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex:1
+}
+.corporativo img {
+  width:28px;
+  height:28px
+}
+.corporativo h1 {
+  font-size:20px;
+  font-weight:bold;
+  margin:0
+}
+header input,header button {
+  border:0;
+  padding:8px 10px;
+  background:var(--color2);
+  color:inherit;
+  outline:none
+}
+header input {
+  min-width:260px;
+  background:var(--color0)
+}
+main {
+  display:flex;
+  flex:1;
+  min-height:0
+}
+nav,section {
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  padding:12px;
+  background:var(--color);
+  color:white;
+  overflow:hidden;
+  flex:none;
+  transition:width .25s
+}
+nav {
+  width:var(--ancho-nav)
+}
+section {
+  width:var(--ancho-section);
+  background:var(--color2);
+  color:#111;
+  padding-left:3px;
+}
+.titulo-columna {
+  font-weight:bold;
+  opacity:.75
+}
+.contenido-columna {
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  overflow:auto;
+  min-height:0
+}
+.contenido-columna a,.contenido-columna article {
+  display:flex;
+  align-items:center;
+  gap:9px;
+  padding:9px;
+  background:var(--color2);
+  color:inherit;
+  text-decoration:none;
+  cursor:pointer;
+  clip-path:polygon(0 0,calc(100% - var(--chaflan)) 0,100% var(--chaflan),100% 100%,0 100%);
+  transition:.2s
+}
+.contenido-columna article {
+  background:var(--color3)
+}
+.contenido-columna .activo {
+  transform:translateX(8px);
+}
+.ficha {
+  width:28px;
+  height:28px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  color:white;
+  font-weight:bold;
+  flex:none
+}
+.minimizar {
+  position:absolute;
+  right:5px;
+  bottom:5px;
+  border:0;
+  width:28px;
+  height:28px;
+  cursor:pointer
+}
+.compacto {
+  width:58px!important
+}
+.compacto .titulo-columna,.compacto .etiqueta {
+  display:none
+}
+.compacto .contenido-columna {
+  overflow:hidden
+}
+.separador {
+  width:5px;
+  cursor:col-resize;
+  background:var(--color0);
+  flex:none
+}
+.escenario {
+  flex:1;
+  min-width:0;
+  padding:14px;
+  overflow:auto;
+  background:var(--color3);
+  padding-left: 5px;position:relative;z-index:1000;
+}
+table {
+  width:100%;
+  border-collapse:collapse;
+  background:white
+}
+caption {
+  text-align:left;
+  padding:12px;
+  background:var(--color2);
+  font-weight:bold
+}
+th,td {
+  padding:10px;
+  border-bottom:1px solid #ddd;
+  text-align:left
+}
+thead {
+  background:var(--color)
+}
+tbody tr:hover {
+  background:#f1f1f1
+}
+.panel {
+  background:white;
+  padding:16px;
+  max-width:1000px
+}
+.campos {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:12px
+}
+.campo {
+  display:flex;
+  flex-direction:column;
+  gap:5px
+}
+.campo input,.campo textarea,.campo select {
+  padding:9px;
+  border:1px solid #bbb
+}
+.campo textarea {
+  min-height:90px
+}
+.acciones {
+  display:flex;
+  gap:8px;
+  margin-top:14px
+}
+.acciones button {
+  padding:9px 14px;
+  border:0;
+  background:var(--color);
+  color:white
+}
+.drag-over {
+  outline:3px dashed var(--color0)
+}
+.estado {
+  margin:0 0 10px;
+  padding:8px;
+  background:rgba(255,255,255,.55)
+}
+/* =========================================================
+   REGLAS 010: SEPARADORES + MENUS CONTRAIDOS
+   ========================================================= */
+nav,section {
+  transition:width .3s ease,flex-basis .3s ease,padding .3s ease
+}
+.separador {
+  flex:0 0 7px;
+  width:7px;
+  min-width:7px;
+  padding:0;
+  cursor:col-resize;
+  position:relative;
+  z-index:4;
+  transition:background .3s ease
+}
+nav + .separador {
+  background:var(--color2)
+}
+section + .separador {
+  background:var(--color3)
+}
+.separador:hover {
+  background:var(--color4)
+}
+body.redimensionando {
+  cursor:col-resize;
+  user-select:none
+}
+body.redimensionando * {
+  cursor:col-resize!important
+}
+.minimizar {
+  position:absolute;
+  bottom:var(--relleno);
+  left:var(--relleno);
+  right:var(--relleno);
+  width:auto;
+  height:28px;
+  border:0;
+  background:var(--color2);
+  color:inherit;
+  cursor:pointer;
+  font:inherit;
+  z-index:20;
+  transition:left .3s,right .3s,width .3s,background .3s
+}
+section .minimizar {
+  background:var(--color3)
+}
+.minimizar:hover {
+  background:var(--color4)
+}
+nav.compacto,section.compacto {
+  flex-basis:52px!important;
+  width:52px!important;
+  padding-left:6px;
+  padding-right:6px;
+  align-items:center
+}
+nav.compacto .contenido-columna,section.compacto .contenido-columna {
+  width:40px;
+  overflow:hidden;
+  align-items:center
+}
+nav.compacto .contenido-columna a,section.compacto .contenido-columna article {
+  width:40px!important;
+  min-width:40px;
+  max-width:40px;
+  height:40px;
+  min-height:40px;
+  max-height:40px;
+  padding:6px;
+  justify-content:center;
+  overflow:hidden;
+  flex:none;
+  transform:none!important
+}
+nav.compacto .titulo-columna,section.compacto .titulo-columna,nav.compacto .etiqueta,section.compacto .etiqueta {
+  display:none
+}
+nav.compacto .minimizar,section.compacto .minimizar {
+  left:6px;
+  right:6px;
+  width:40px
+}
+/* =========================================================
+   LIBRERIA: FORMULARIOS
+   ========================================================= */
+.ju-card {
+  background:white;
+  padding:18px;
+  clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%)
+}
+.ju-form-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+  margin-top:16px
+}
+.ju-form-full {
+  grid-column:1/-1
+}
+.ju-form-grid label {
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  font-size:14px;
+  font-weight:500
+}
+.ju-form-grid input,.ju-form-grid select,.ju-form-grid textarea {
+  width:100%;
+  border:1px solid #d8dfeb;
+  background:#f8fafc;
+  color:#172033;
+  padding:12px 14px;
+  font:inherit;
+  outline:none;
+  clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%)
+}
+.ju-form-grid textarea {
+  min-height:110px;
+  resize:vertical
+}
+.ju-form-grid input:focus,.ju-form-grid select:focus,.ju-form-grid textarea:focus {
+  border-color:var(--color);
+  box-shadow:0 0 0 4px color-mix(in srgb,var(--color) 18%,transparent);
+  background:white
+}
+.ju-check {
+  display:inline-flex!important;
+  flex-direction:row!important;
+  align-items:center;
+  gap:10px!important
+}
+.ju-check input {
+  width:18px!important;
+  height:18px;
+  clip-path:none!important
+}
+.ju-btn {
+  border:0;
+  padding:11px 16px;
+  background:var(--color);
+  color:white;
+  cursor:pointer;
+  font:inherit;
+  clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%)
+}
+.ju-btn.secondary {
+  background:var(--color2);
+  color:#111
+}
+.ju-button-row {
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:16px
+}
+/* LOGIN jocarsa-iu */
+.ju-login-page {
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:radial-gradient(circle at top left,var(--color4),transparent 35%),linear-gradient(180deg,var(--color3),var(--color4));
+  padding:30px
+}
+.ju-login-layout {
+  width:min(920px,100%);
+  display:grid;
+  grid-template-columns:minmax(280px,400px) minmax(320px,520px);
+  gap:24px
+}
+.ju-login-side,.ju-login-card {
+  padding:28px;
+  clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%)
+}
+.ju-login-side {
+  background:linear-gradient(180deg,var(--color0),var(--color));
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center
+}
+.ju-login-card {
+  background:white
+}
+.ju-login-brand {
+  text-align:center
+}
+.ju-login-brand img {
+  width:72px;
+  height:72px
+}
+.ju-login-product-title {
+  font-size:28px;
+  margin:12px 0 6px
+}
+.ju-login-card h2 {
+  margin-top:0
+}
+.ju-login-actions {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px
+}
+.ju-text-link {
+  color:var(--color);
+  font-weight:bold;
+  text-decoration:none
+}
+/* TOASTS jocarsa-iu */
+.ju-toast-stack {
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:1000;
+  width:min(420px,calc(100vw - 44px));
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  pointer-events:none
+}
+.ju-toast {
+  pointer-events:auto;
+  position:relative;
+  display:grid;
+  grid-template-columns:42px 1fr auto;
+  gap:12px;
+  align-items:start;
+  padding:14px;
+  background:rgba(255,255,255,.97);
+  box-shadow:0 18px 38px rgba(0,0,0,.14);
+  clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%);
+  transform:translateX(22px);
+  opacity:0;
+  animation:juToastIn .28s ease forwards
+}
+.ju-toast:before {
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:7px;
+  background:#3b82f6
+}
+.ju-toast.is-success:before {
+  background:#22c55e
+}
+.ju-toast.is-warning:before {
+  background:#f59e0b
+}
+.ju-toast.is-danger:before {
+  background:#ef4444
+}
+.ju-toast-icon {
+  width:42px;
+  height:42px;
+  display:grid;
+  place-items:center;
+  background:var(--color3);
+  font-weight:800
+}
+.ju-toast-title {
+  margin:0 0 3px;
+  font-weight:800
+}
+.ju-toast-text {
+  margin:0;
+  color:#667085;
+  font-size:13px
+}
+.ju-toast-close {
+  border:0;
+  background:transparent;
+  font-size:20px;
+  cursor:pointer
+}
+.ju-toast.is-leaving {
+  animation:juToastOut .22s ease forwards
+}
+@keyframes juToastIn {
+  to {
+    transform:translateX(0);
+    opacity:1
+  }
+}
+@keyframes juToastOut {
+  to {
+    transform:translateX(24px);
+    opacity:0
+  }
+}
+@media(max-width:800px) {
+  .ju-form-grid,.ju-login-layout {
+    grid-template-columns:1fr
+  }
+}
+/* =========================================================
+   V3 · AJUSTES DE COHERENCIA JOCARSA-IU
+   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+html,body,button,input,select,textarea {
+  font-family:Ubuntu,Arial,sans-serif
+}
+/* Las cajas de ambas columnas quedan centradas dentro de su menú. */
+nav .contenido-columna,section .contenido-columna {
+  align-items:center;
+  width:100%
+}
+nav .contenido-columna>a,section .contenido-columna>article {
+  width:100%;
+  margin-left:auto;
+  margin-right:auto
+}
+nav.compacto .contenido-columna,section.compacto .contenido-columna {
+  margin-left:auto;
+  margin-right:auto
+}
+/* Login: composición centrada y fondo de proyecto. jocarsa.png vive en la raíz. */
+.ju-login-page {
+  position:relative;
+  isolation:isolate;
+  min-height:100vh;
+  margin:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px 20px;
+  background-image:linear-gradient(rgba(215,230,227,.72),rgba(215,230,227,.72)),url('../jocarsa.png');
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+.ju-login-layout {
+  width:min(980px,100%);
+  margin:auto;
+  align-items:stretch
+}
+.ju-login-side,.ju-login-card {
+  min-height:450px
+}
+.ju-login-card {
+  display:flex;
+  flex-direction:column;
+  justify-content:center
+}
+.ju-login-brand {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center
+}
+/* Páginas de demostración de la librería */
+.ju-demo-page {
+  min-height:100vh;
+  overflow:auto;
+  background:var(--color3);
+  color:#172033
+}
+.ju-demo-header {
+  min-height:64px;
+  background:var(--color);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:12px 20px
+}
+.ju-demo-header h1 {
+  margin:0;
+  font-size:20px;
+  font-weight:500
+}
+.ju-demo-header p {
+  margin:3px 0 0;
+  opacity:.75
+}
+.ju-demo-header nav {
+  width:auto!important;
+  background:transparent;
+  padding:0;
+  display:flex;
+  flex-direction:row;
+  gap:8px;
+  overflow:visible
+}
+.ju-demo-header a {
+  color:white;
+  text-decoration:none;
+  padding:10px 14px;
+  background:var(--color2);
+  clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%)
+}
+.ju-demo-main {
+  width:min(1100px,calc(100% - 40px));
+  margin:32px auto;
+  display:grid;
+  gap:20px
+}
+.ju-demo-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:20px
+}
+.ju-demo-page .ju-card h2,.ju-demo-page .ju-card h3 {
+  margin-top:0
+}
+.ju-fieldset {
+  border:1px solid #e2e8f0;
+  background:#f8fafc;
+  padding:16px;
+  display:flex;
+  flex-direction:column;
+  gap:12px
+}
+.ju-check-group {
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap
+}
+@media(max-width:800px) {
+  .ju-demo-grid {
+    grid-template-columns:1fr
+  }
+  .ju-demo-header {
+    align-items:flex-start;
+    flex-direction:column
+  }
+  .ju-demo-header nav {
+    flex-wrap:wrap
+  }
+}
+/* =========================================================
+   V4 · fidelidad jocarsa-iu 010
+   ========================================================= */
+/* Header completo: corporativo / herramientas / usuario */
+header .corporativo {
+  flex:1
+}
+header #herramientas {
+  display:flex;
+  gap:var(--relleno);
+  align-items:center;
+  justify-content:center;
+  flex:2;
+  height:100%
+}
+header #usuario {
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:var(--relleno);
+  flex:1;
+  height:100%
+}
+header #usuario .imagen {
+  width:28px;
+  height:28px;
+  background:var(--color2);
+  border-radius:100px;
+  flex:none
+}
+header #usuario>div:last-child {
+  display:flex;
+  align-items:center;
+  gap:var(--relleno);
+  flex:none
+}
+header #usuario p {
+  margin:0;
+  white-space:nowrap
+}
+header #usuario a {
+  background:var(--color2);
+  border:0;
+  padding:calc(var(--relleno)/2);
+  height:28px;
+  display:flex;
+  align-items:center;
+  color:var(--texto-nav);
+  text-decoration:none;
+  font:inherit
+}
+/* Las fichas de letra son cuadrados achaflanados, nunca círculos */
+.ficha {
+  border-radius:0!important;
+  clip-path:polygon(0 0,calc(100% - 7px) 0,100% 7px,100% 100%,0 100%)
+}
+/* El destacado atraviesa visualmente el separador, sin provocar scroll horizontal. */
+nav {
+  overflow:visible!important;
+  z-index:3
+}
+nav .contenido-columna {
+  overflow-y:auto;
+  overflow-x:visible;
+  padding-right:0
+}
+section {
+  overflow:visible!important;
+  z-index:200;
+}
+section .contenido-columna {
+  overflow-y:auto;
+  overflow-x:visible;
+  padding-right:0
+}
+.contenido-columna .activo {
+  transform:none
+}
+#navegacion .contenido-columna a,#entidades .contenido-columna article {
+  width:100%;
+  height:40px;
+  flex:none;
+  transition:width .3s ease,background .3s ease
+}
+#navegacion .contenido-columna a:hover,#entidades .contenido-columna article:hover {
+  width:calc(100% + var(--relleno)*.9)
+}
+#navegacion .contenido-columna a.activo,#entidades .contenido-columna article.activo {
+  width:calc(100% + var(--relleno)*2);
+  position:relative;
+  z-index:10
+}
+nav.compacto .contenido-columna a:hover,nav.compacto .contenido-columna a.activo,section.compacto .contenido-columna article:hover,section.compacto .contenido-columna article.activo {
+  width:40px!important
+}
+/* Login realmente centrado + fondo jocarsa.png de la raíz */
+body.ju-login-page {
+  width:100%;
+  height:100vh;
+  min-height:100vh;
+  margin:0;
+  display:grid!important;
+  place-items:center;
+  overflow:auto;
+  padding:30px;
+  background:linear-gradient(rgba(235,244,243,.72),rgba(235,244,243,.72)),url('../jocarsa.png') center center/cover no-repeat fixed
+}
+body.ju-login-page main.ju-login-layout {
+  flex:none!important;
+  min-height:0!important;
+  margin:0!important;
+  width:min(920px,calc(100vw - 60px));
+  align-self:center;
+  justify-self:center
+}
+/* Páginas de demostración: mismo esqueleto de dos menús + escenario */
+body.ju-library-page {
+  font-family:Ubuntu,Arial,sans-serif;
+  font-size:var(--texto);
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  background:var(--color3)
+}
+body.ju-library-page main {
+  display:flex;
+  flex:1;
+  min-height:0;
+  overflow:hidden
+}
+body.ju-library-page .library-nav {
+  width:var(--ancho-nav);
+  flex:0 0 var(--ancho-nav);
+  background:var(--color);
+  color:white;
+  padding:12px;
+  position:relative;
+  overflow:visible;
+  display:flex;
+  flex-direction:column;
+  gap:10px
+}
+body.ju-library-page .library-section {
+  width:var(--ancho-section);
+  flex:0 0 var(--ancho-section);
+  background:var(--color2);
+  color:#111;
+  padding:12px 12px 12px 3px;
+  position:relative;
+  overflow:visible;
+  display:flex;
+  flex-direction:column;
+  gap:10px
+}
+body.ju-library-page .library-nav .contenido-columna,body.ju-library-page .library-section .contenido-columna {
+  overflow-y:auto;
+  overflow-x:visible
+}
+body.ju-library-page .library-nav a,body.ju-library-page .library-section a {
+  height:40px;
+  flex:none;
+  display:flex;
+  align-items:center;
+  gap:9px;
+  padding:6px;
+  background:var(--color2);
+  color:inherit;
+  text-decoration:none;
+  clip-path:polygon(0 0,calc(100% - var(--chaflan)) 0,100% var(--chaflan),100% 100%,0 100%)
+}
+body.ju-library-page .library-section a {
+  background:var(--color3)
+}
+body.ju-library-page .library-nav a.activo,body.ju-library-page .library-section a.activo {
+  width:calc(100% + var(--relleno)*2);
+  position:relative;
+  z-index:10
+}
+body.ju-library-page .library-stage {
+  flex:1;
+  min-width:0;
+  padding:14px;
+  overflow:auto;
+  background:var(--color3)
+}
+body.ju-library-page .library-stage>.ju-card {
+  max-width:1100px
+}
+/* =========================================================
+   V5 · continuidad entre columnas sin scroll horizontal
+   ========================================================= */
+/*
+  No usamos un contenedor scrollable alrededor de las fichas: cuando un
+  elemento activo es más ancho que su columna, overflow:auto convierte el
+  desbordamiento horizontal en una barra de scroll. En jocarsa-iu el
+  destacado debe poder atravesar el límite de la columna y cubrir el
+  separador visualmente.
+*/
+.jocarsa-iu nav .contenido-columna, .jocarsa-iu section .contenido-columna, body.ju-library-page .library-nav .contenido-columna, body.ju-library-page .library-section .contenido-columna {
+  overflow:visible !important;
+  width:100%;
+  min-width:0;
+  align-items:stretch;
+}
+/* Las fichas normales ocupan siempre todo el ancho útil de su columna. */
+.jocarsa-iu nav .contenido-columna > a, .jocarsa-iu section .contenido-columna > article, body.ju-library-page .library-nav .contenido-columna > a, body.ju-library-page .library-section .contenido-columna > a {
+  width:100%;
+  max-width:none;
+  margin:0;
+  flex:0 0 40px;
+}
+/* Hover y selección continúan físicamente hacia la columna siguiente. */
+.jocarsa-iu nav .contenido-columna > a:hover, .jocarsa-iu section .contenido-columna > article:hover, body.ju-library-page .library-nav .contenido-columna > a:hover, body.ju-library-page .library-section .contenido-columna > a:hover {
+  width:calc(100% + (var(--relleno) * .9));
+  position:relative;
+  z-index:9;
+}
+.jocarsa-iu nav .contenido-columna > a.activo, .jocarsa-iu section .contenido-columna > article.activo, body.ju-library-page .library-nav .contenido-columna > a.activo, body.ju-library-page .library-section .contenido-columna > a.activo {
+  width:calc(100% + (var(--relleno) * 2));
+  position:relative;
+  z-index:10;
+}
+/* El separador queda por debajo del destacado, como en 010. */
+.jocarsa-iu main .separador, body.ju-library-page main .separador {
+  z-index:4
+}
+.jocarsa-iu nav, body.ju-library-page .library-nav {
+  z-index:6
+}
+.jocarsa-iu section, body.ju-library-page .library-section {
+  z-index:500
+}
+/* La columna central de las demos conserva exactamente la misma geometría
+   que la columna central de index.html. */
+body.ju-library-page .library-section {
+  padding:var(--relleno);
+  padding-left:3px;
+}
+body.ju-library-page .library-section .contenido-columna > a {
+  padding:calc(var(--relleno) / 2);
+  height:40px;
+  min-height:40px;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:calc(var(--relleno) / 2);
+  background:var(--color3);
+}
+/* Contraído: conserva la misma continuidad visual hacia la columna siguiente. */
+.jocarsa-iu nav.compacto .contenido-columna,
+.jocarsa-iu section.compacto .contenido-columna {
+  width:40px;
+  align-items:center;
+  overflow:visible !important;
+}
+
+/* Estado normal: la ficha permanece dentro de los 40px de la columna compacta. */
+.jocarsa-iu nav.compacto .contenido-columna > a,
+.jocarsa-iu section.compacto .contenido-columna > article {
+  width:40px !important;
+  min-width:40px;
+  max-width:none;
+  overflow:visible;
+  position:relative;
+}
+
+/* Hover: sobresale ligeramente hacia la siguiente sección. */
+.jocarsa-iu nav.compacto .contenido-columna > a:hover,
+.jocarsa-iu section.compacto .contenido-columna > article:hover {
+  width:calc(40px + (var(--relleno) * .9)) !important;
+  z-index:9;
+}
+
+/* Activo: atraviesa el separador igual que en el estado desplegado. */
+.jocarsa-iu nav.compacto .contenido-columna > a.activo,
+.jocarsa-iu section.compacto .contenido-columna > article.activo {
+  width:calc(50px + (var(--relleno) * 2)) !important;
+  z-index:10;
+}
+
+
+/* =========================================================
+   V6 · DRAWER DERECHO REDIMENSIONABLE + MODAL
+   ========================================================= */
+.ju-drawer-overlay{position:fixed;inset:54px 0 0 0;background:rgba(20,35,45,.12);z-index:70;opacity:0;pointer-events:none;transition:opacity .25s ease}
+.ju-drawer-overlay.abierto{opacity:1;pointer-events:auto}
+.ju-drawer{--drawer-width:440px;position:fixed;z-index:80;top:54px;right:0;bottom:0;width:var(--drawer-width);max-width:50vw;background:white;box-shadow:-18px 0 45px rgba(0,0,0,.18);transform:translateX(calc(100% + 20px));transition:transform .3s ease;display:flex;flex-direction:column;color:#172033}
+.ju-drawer.abierto{transform:translateX(0)}
+.ju-drawer-resizer{position:absolute;left:-7px;top:0;bottom:0;width:7px;background:var(--color0);cursor:col-resize;z-index:3;transition:background .2s}
+.ju-drawer-resizer:hover{background:var(--color)}
+.ju-drawer-header{height:auto;min-height:76px;flex:none;background:var(--color);padding:14px 16px;color:white;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.ju-drawer-header small{display:block;opacity:.7;font-weight:700;letter-spacing:.12em;margin-bottom:3px}
+.ju-drawer-header h2{margin:0;font-size:20px}
+.ju-drawer-close,.ju-modal-close{border:0;background:var(--color2);color:inherit;width:36px;height:36px;font-size:24px;cursor:pointer;flex:none}
+.ju-drawer-body{padding:18px;overflow:auto;flex:1;min-height:0;background:var(--color3)}
+.ju-drawer-body .ju-card{min-height:100%}
+.ju-drawer-body .ju-form-grid{grid-template-columns:1fr}
+.ju-drawer-body .ju-form-full{grid-column:auto}
+.ju-drawer.ju-drawer-dos-columnas .ju-drawer-body .ju-form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.ju-drawer.ju-drawer-dos-columnas .ju-drawer-body .ju-form-full{grid-column:1/-1}
+.ju-row-editable{cursor:pointer}
+.ju-row-editable:hover{background:color-mix(in srgb,var(--color2) 35%,white)!important}
+.ju-row-editable:after{content:""}
+.ju-modal-layer{position:fixed;inset:0;z-index:120;display:grid;place-items:center;opacity:0;pointer-events:none;transition:opacity .22s ease;padding:24px}
+.ju-modal-layer.abierto{opacity:1;pointer-events:auto}
+.ju-modal-backdrop{position:absolute;inset:0;background:rgba(8,18,24,.62);backdrop-filter:blur(2px)}
+.ju-modal-window{position:relative;z-index:1;width:min(650px,calc(100vw - 48px));max-height:calc(100vh - 48px);background:white;box-shadow:0 28px 80px rgba(0,0,0,.3);clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,0 100%);transform:translateY(16px) scale(.98);transition:transform .22s ease;overflow:hidden}
+.ju-modal-layer.abierto .ju-modal-window{transform:none}
+.ju-modal-header{height:auto;min-height:62px;background:var(--color);color:white;padding:12px 16px;display:flex;align-items:center;justify-content:space-between}
+.ju-modal-header h2{margin:0;font-size:19px}
+.ju-modal-body{padding:22px;max-height:calc(100vh - 120px);overflow:auto}
+.ju-showcase-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:18px}
+.ju-showcase-box{padding:18px;background:var(--color3);min-height:150px;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%)}
+.ju-showcase-box h3{margin-top:0}
+body.redimensionando-drawer,body.redimensionando-drawer *{cursor:col-resize!important;user-select:none!important}
+@media(max-width:700px){.ju-drawer{--drawer-width:50vw;max-width:50vw}.ju-showcase-grid{grid-template-columns:1fr}}
+
+
+/* =========================================================
+   V7 · compacto: fusionar visualmente con la sección derecha
+   ========================================================= */
+.jocarsa-iu nav.compacto .contenido-columna > a:hover,
+.jocarsa-iu section.compacto .contenido-columna > article:hover,
+.jocarsa-iu nav.compacto .contenido-columna > a.activo,
+.jocarsa-iu section.compacto .contenido-columna > article.activo {
+  transform:translateX(16px) !important;
+}
+/* =========================================================
+   PROMPT IA FLOTANTE + CORRECCION DE CAPAS
+   ========================================================= */
+.escenario{
+  z-index:1 !important;
+}
+
+.ju-drawer-overlay{z-index:2000 !important}
+.ju-drawer{z-index:2100 !important}
+.ju-modal-layer{z-index:3000 !important}
+
+.ju-ai-prompt{
+  position:fixed;
+  left:50%;
+  bottom:26px;
+  transform:translateX(-50%);
+  width:min(720px,calc(100vw - 40px));
+  background:rgba(255,255,255,.96);
+  box-shadow:0 18px 55px rgba(0,0,0,.22);
+  z-index:1500;
+  color:#172033;
+  clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  user-select:none;
+}
+.ju-ai-prompt.is-dragging{box-shadow:0 24px 70px rgba(0,0,0,.3)}
+.ju-ai-drag{
+  height:30px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:0 12px;
+  background:var(--color);
+  color:white;
+  cursor:grab;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.04em;
+}
+.ju-ai-drag:active{cursor:grabbing}
+.ju-ai-spark{font-size:15px}
+.ju-ai-grip{margin-left:auto;opacity:.65;font-size:16px}
+.ju-ai-compose{
+  display:grid;
+  grid-template-columns:1fr 42px 42px;
+  gap:8px;
+  align-items:end;
+  padding:10px;
+}
+.ju-ai-compose textarea{
+  width:100%;
+  min-height:42px;
+  max-height:150px;
+  resize:none;
+  border:0;
+  outline:0;
+  padding:11px 12px;
+  background:#f3f6f7;
+  color:#172033;
+  font:inherit;
+  line-height:1.45;
+  user-select:text;
+}
+.ju-ai-mic,.ju-ai-send{
+  width:42px;
+  height:42px;
+  border:0;
+  cursor:pointer;
+  font:inherit;
+  font-size:17px;
+}
+.ju-ai-mic{background:var(--color2);color:#111}
+.ju-ai-send{background:var(--color);color:white}
+.ju-ai-mic.is-listening{outline:3px solid color-mix(in srgb,var(--color) 35%,white);filter:brightness(1.15)}
+.ju-ai-send:disabled,.ju-ai-mic:disabled{opacity:.45;cursor:not-allowed}
+.ju-ai-status{
+  display:none;
+  padding:0 12px 9px;
+  font-size:11px;
+  color:#667085;
+}
+.ju-ai-status:not(:empty){display:block}
+@media(max-width:700px){
+  .ju-ai-prompt{width:calc(100vw - 20px);bottom:10px}
+}
+
+/* V2 prompt: minimizar, redimensionar y salida IA maquetada */
+.ju-ai-prompt{
+  min-width:360px;min-height:82px;max-width:calc(100vw - 16px);max-height:calc(100vh - 70px);
+  overflow:hidden;resize:none;
+}
+.ju-ai-window-actions{margin-left:auto;display:flex;align-items:center;gap:8px}
+.ju-ai-window-actions button{width:24px;height:22px;border:0;background:rgba(255,255,255,.14);color:white;cursor:pointer;font:inherit;font-weight:800;line-height:1}
+.ju-ai-window-actions button:hover{background:rgba(255,255,255,.28)}
+.ju-ai-grip{margin-left:0!important;cursor:grab}
+.ju-ai-prompt.is-minimized{width:230px!important;min-width:230px;min-height:30px;height:30px!important}
+.ju-ai-prompt.is-minimized .ju-ai-compose,.ju-ai-prompt.is-minimized .ju-ai-status,.ju-ai-prompt.is-minimized .ju-ai-resizer{display:none}
+.ju-ai-resizer{position:absolute;right:0;bottom:0;width:18px;height:18px;cursor:nwse-resize;z-index:3}
+.ju-ai-resizer:after{content:"";position:absolute;right:4px;bottom:4px;width:8px;height:8px;border-right:2px solid var(--color);border-bottom:2px solid var(--color);opacity:.75}
+
+/* Salida del asistente: panel de lectura integrado en el escenario */
+.ju-ai-result{background:white;max-width:1200px;margin:0 auto;padding:22px 24px;box-shadow:0 8px 26px rgba(0,0,0,.08);clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%);color:#172033;line-height:1.55}
+.ju-ai-result h1,.ju-ai-result h2,.ju-ai-result h3{color:var(--color0);margin:1.1em 0 .55em}
+.ju-ai-result h1:first-child,.ju-ai-result h2:first-child,.ju-ai-result h3:first-child{margin-top:0}
+.ju-ai-result p{margin:.65em 0}
+.ju-ai-result ul,.ju-ai-result ol{padding-left:24px}
+.ju-ai-result code{background:var(--color3);padding:2px 5px}
+.ju-ai-result pre{background:#172033;color:white;padding:14px;overflow:auto;white-space:pre-wrap}
+.ju-ai-result pre code{background:transparent;padding:0;color:inherit}
+.ju-ai-result blockquote{margin:12px 0;padding:10px 14px;border-left:5px solid var(--color);background:var(--color3)}
+.ju-ai-result table{width:100%;border-collapse:collapse;margin:16px 0;background:white}
+.ju-ai-result caption{background:var(--color2);padding:12px;text-align:left;font-weight:bold}
+.ju-ai-result thead{background:var(--color);color:white}
+.ju-ai-result th,.ju-ai-result td{padding:10px;border-bottom:1px solid #ddd;text-align:left}
+.ju-ai-result tbody tr:hover{background:#f1f1f1}
+.ju-ai-result .ju-ai-table-wrap{width:100%;overflow:auto;margin:16px 0}
+.ju-ai-result .ju-ai-table-wrap table{margin:0;min-width:520px}
+@media(max-width:700px){.ju-ai-prompt{min-width:280px}.ju-ai-result{padding:16px}}
+
+/* V5 · salida hablada opcional */
+.ju-ai-options{display:flex;align-items:center;padding:0 14px 8px;background:#fff}
+.ju-ai-switch{display:inline-flex;align-items:center;gap:8px;cursor:pointer;user-select:none;font-size:12px;color:#526070}
+.ju-ai-switch input{position:absolute;opacity:0;pointer-events:none}
+.ju-ai-switch-track{width:34px;height:18px;background:#cbd5df;position:relative;transition:.2s;clip-path:polygon(0 0,calc(100% - 5px) 0,100% 5px,100% 100%,0 100%)}
+.ju-ai-switch-thumb{position:absolute;width:12px;height:12px;left:3px;top:3px;background:white;transition:.2s}
+.ju-ai-switch input:checked + .ju-ai-switch-track{background:var(--color)}
+.ju-ai-switch input:checked + .ju-ai-switch-track .ju-ai-switch-thumb{transform:translateX(16px)}
+.ju-ai-switch input:focus-visible + .ju-ai-switch-track{outline:2px solid var(--color0);outline-offset:2px}
+.ju-ai-prompt.is-minimized .ju-ai-options{display:none}
+/* Integración no invasiva: enlaces de acceso a los nuevos módulos */
+.ju-integracion-link{display:inline-flex;align-items:center;padding:9px 12px;background:var(--color2);color:white;text-decoration:none;white-space:nowrap;clip-path:polygon(0 0,calc(100% - 9px) 0,100% 9px,100% 100%,0 100%)}
+.ju-integracion-link:hover{filter:brightness(1.12)}
+
+/* Integración de módulos v5 en el escenario principal */
+#escenario:has(> .ju-componentes-frame){padding:0!important;overflow:hidden!important;}
+.ju-componentes-frame{display:block;width:100%;height:100%;border:0;background:var(--color3);}
+#entidades .contenido-columna article:has(.etiqueta){cursor:pointer;}

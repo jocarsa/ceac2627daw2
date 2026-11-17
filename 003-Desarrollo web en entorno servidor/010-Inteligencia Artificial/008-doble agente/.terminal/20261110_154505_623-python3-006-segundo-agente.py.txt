@@ -1,0 +1,70 @@
+Datetime: 2026-11-10T14:45:05.623Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/008-doble agente
+Command: python3 006-segundo\ agente.py
+
+Result:
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculadora de IVA</title>
+<style>
+body {
+font-family: sans-serif;
+}
+
+form {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100vh;
+}
+
+input {
+padding: 10px;
+margin: 10px;
+width: 200px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+button {
+padding: 10px;
+margin: 10px;
+background-color: #4CAF50;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.result {
+font-size: 24px;
+font-weight: bold;
+text-align: center;
+}
+</style>
+</head>
+<body>
+<form action="" method="post">
+<label for="base">Base Imponible:</label>
+<input type="number" name="base" id="base">
+<label for="iva">Porcentaje de IVA:</label>
+<input type="number" name="iva" id="iva">
+<button type="submit">Calcular</button>
+</form>
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+$base = $_POST["base"];
+$iva = $_POST["iva"];
+$total = $base * (1 + $iva / 100);
+?>
+<div class="result">Total: <?php echo $total; ?></div>
+<?php
+}
+?>
+</body>
+</html>
+```
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/008-doble agente$ 

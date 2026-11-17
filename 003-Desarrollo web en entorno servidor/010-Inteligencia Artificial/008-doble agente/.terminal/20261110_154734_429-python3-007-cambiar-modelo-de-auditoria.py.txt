@@ -1,0 +1,7 @@
+Datetime: 2026-11-10T14:47:34.429Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/008-doble agente
+Command: python3 007-cambiar\ modelo\ de\ auditoria.py
+
+Result:
+si
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/008-doble agente$ 

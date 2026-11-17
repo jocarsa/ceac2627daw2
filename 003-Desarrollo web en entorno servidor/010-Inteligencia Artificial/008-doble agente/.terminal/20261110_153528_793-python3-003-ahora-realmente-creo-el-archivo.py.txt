@@ -1,0 +1,6 @@
+Datetime: 2026-11-10T14:35:28.793Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/008-doble agente
+Command: python3 003-ahora\ realmente\ creo\ el\ archivo.py
+
+Result:
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/008-doble agente$ 

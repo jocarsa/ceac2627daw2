@@ -1,0 +1,43 @@
+Datetime: 2026-11-10T14:32:13.316Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/008-doble agente
+Command: python3 001-agente\ que\ crea.py
+
+Result:
+**Python** es un lenguaje de programación de alto nivel, interpretado y multiparadigma. Se destaca por su sintaxis clara y concisa, lo que lo hace fácil de leer y escribir.
+
+**Características principales:**
+
+* **Fácil de aprender:** Python tiene una sintaxis simple y clara, lo que la convierte en un lenguaje adecuado para los principiantes.
+* **Multiparadigma:** Soporta diferentes paradigmas de programación, como el orientado a objetos, el de funciones y el de scripting.
+* **Interpretado:** Python se ejecuta línea por línea, lo que lo hace ideal para pruebas y depuración.
+* **Amplia comunidad:** Python tiene una gran comunidad de desarrolladores y recursos disponibles.
+* **Versátil:** Se puede usar para diversas tareas, como desarrollo web, análisis de datos, inteligencia artificial y más.
+
+**Ventajas:**
+
+* Facilidad de uso
+* Readstabilidad
+* Flexibilidad
+* Amplia comunidad de soporte
+* Versatilidad
+
+**Desventajas:**
+
+* Performanza potencialmente baja en comparación con lenguajes compilados.
+* Menos eficiente para tareas que requieren un alto rendimiento.
+
+**Aplicaciones:**
+
+Python se utiliza en una amplia gama de áreas, como:
+
+* Desarrollo web
+* Análisis de datos
+* Inteligencia artificial
+* Machine learning
+* Scripting
+* Automación de tareas
+
+**Conclusión:**
+
+Python es un lenguaje de programación versátil y popular que ofrece una combinación única de facilidad de uso, flexibilidad y escalabilidad. Su amplia comunidad y recursos lo convierten en una excelente opción para una amplia gama de proyectos.
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/008-doble agente$ 

@@ -1,0 +1,12 @@
+Datetime: 2026-11-10T16:31:16.506Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/008-doble agente
+Command: python3 010-externo.py
+
+Result:
+
+========== AGENTE 1: GENERADOR ==========
+
+Consultando API externa: gemma4:e4b
+
+Error procesando el proyecto: Expecting ',' delimiter: line 7 column 10434 (char 10629)
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/008-doble agente$ 

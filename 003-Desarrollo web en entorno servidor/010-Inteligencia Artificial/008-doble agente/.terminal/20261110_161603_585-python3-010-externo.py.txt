@@ -1,0 +1,13 @@
+Datetime: 2026-11-10T15:16:03.585Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/008-doble agente
+Command: python3 010-externo.py
+
+Result:
+
+========== AGENTE 1: GENERADOR ==========
+
+Consultando API externa: gpt-oss:20b
+
+Error procesando el proyecto: Expecting value: line 1 column 1 (char 0)
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/008-doble agente
+$ 

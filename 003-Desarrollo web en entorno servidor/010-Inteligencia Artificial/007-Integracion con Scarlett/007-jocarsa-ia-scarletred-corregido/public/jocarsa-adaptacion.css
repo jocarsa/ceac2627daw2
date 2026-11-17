@@ -1,0 +1,76 @@
+/* Adaptación a la identidad jocarsa-iu: paneles, colores escalonados, chaflanes y tipografía Ubuntu. */
+:root{--tono:200;--saturacion:50%;--brillo:30%;--escalon:20%;--chaflan:12px;--bg:#e8f2f7;--panel:var(--color0);--panel2:var(--color);--hover:var(--color2);--text:#18384b;--muted:#587385;--line:#b8d0de;--accent:var(--color);--accent2:var(--color2);--bubble:#d9ebf4;--shadow:8px 8px 0 #102d3a25;color-scheme:light;font-family:Ubuntu,Arial,sans-serif}
+body,body.light{color-scheme:light;--bg:#e8f2f7;--panel:var(--color0);--panel2:var(--color);--hover:var(--color2);--text:#18384b;--muted:#587385;--line:#b8d0de;--accent:var(--color);--accent2:var(--color2);--bubble:#d9ebf4;--shadow:8px 8px 0 #102d3a25;font-family:Ubuntu,Arial,sans-serif}
+body.jocarsa-ia{background:var(--bg);color:var(--text)}
+.app{background:var(--color3)}
+aside{background:var(--color0);border:0;padding:0;gap:0;width:285px;color:white}
+.side-top{background:var(--color0);padding:18px 16px;min-height:76px}
+.side-brand{font-size:20px;color:white}.side-brand em{color:#c8e1ee}
+.brand-mark,.avatar,.welcome-icon{background:var(--color2);border-radius:0;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%);box-shadow:none;color:white}
+.new-chat{margin:12px;background:var(--color);color:white;border:0;border-radius:0;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%)}
+.new-chat:hover{background:var(--color2);color:var(--color0)}
+.side-label{color:#bad4e4;padding:16px 18px 10px}
+.conversation-list{padding:0 10px}.conversation{border-radius:0;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%)}.conversation.active{background:var(--color2)}.conversation:hover{background:var(--color)}.conversation-title{color:white}.delete-chat,.side-action,.icon-btn{color:#cce3ef}.delete-chat:hover{color:#ffd3d3}
+.side-bottom{border-color:#ffffff33;padding:12px}.profile{color:white}
+main{background:var(--color3)}main>header{background:var(--color);color:white;border:0;min-height:76px}main>header .icon-btn{color:white}.header-title strong{font-size:17px}.header-title small{color:#d7e8f2}.status-dot{background:#9ce4bd}
+.scroll{background:var(--color3)}.welcome{color:var(--color0)}.welcome p{color:#41657b}.suggestions button{border:1px solid #a5c6d8;border-left:4px solid var(--color);background:#fff;border-radius:0;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%)}.suggestions button:hover{background:#edf8ff}.suggestions button span{color:var(--color)}
+.message-avatar{border-radius:0;background:var(--color);color:white}.message.user .message-avatar{background:var(--color0)}.message-content{color:#173b51}.message.user .message-content{background:#d4e8f4;border:1px solid #b0cfdf;border-radius:0;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%)}
+.composer-wrap{background:var(--color3)}.composer{background:#fff;border:1px solid #a8c6d8;border-left:4px solid var(--color);border-radius:0;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%);box-shadow:none}.composer:focus-within{border-color:var(--color)}textarea{color:#173b51}.composer-footer span,.disclaimer{color:#557487}.composer-footer button,.primary{background:var(--color);border-radius:0;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%)}
+.auth{background:linear-gradient(135deg,var(--color0),var(--color),var(--color2))}.auth-card{border-radius:0;background:white;border:0;border-top:6px solid var(--color2);clip-path:polygon(0 0,calc(100% - 18px) 0,100% 18px,100% 100%,0 100%);box-shadow:12px 12px 0 #001e3440}.auth-card h1{color:var(--color0)}.auth-card h1 span{color:var(--color)}.auth-card>p{color:#537287}.tabs{background:#dcecf5;border-radius:0}.tabs button{border-radius:0}.tabs button.selected{background:var(--color);color:white}.auth-card label{color:#25475a}.auth-card input{background:#f4f9fc;border:1px solid #b3ccdb;border-radius:0;clip-path:polygon(0 0,calc(100% - 9px) 0,100% 9px,100% 100%,0 100%);color:#18384b}.auth-card input:focus{border-color:var(--color)}.primary{color:white}.error{color:#a62020}
+@media(max-width:760px){aside{z-index:10}main>header{min-height:66px}}
+
+/* Identidad corporativa jocarsa | ia — LightSkyBlue #87CEFA */
+:root{--tono:203;--saturacion:92%;--brillo:75%;--escalon:18%;--color0:#174967;--color:#318bbd;--color2:#87cefa;--color3:#eaf7ff;--accent:#87cefa;--accent2:#318bbd}
+body.jocarsa-ia{--color0:#174967;--color:#318bbd;--color2:#87cefa;--color3:#eaf7ff}
+.brand-mark{display:flex;align-items:center;justify-content:center;background:transparent!important;clip-path:none!important;box-shadow:none!important;overflow:visible}
+.brand-mark img{display:block;width:100%;height:100%;object-fit:contain}
+.side-brand .brand-mark{width:38px;height:38px;flex:0 0 38px}
+.auth-card .brand-mark{width:68px;height:68px;margin-inline:auto}
+.new-chat:hover,.conversation.active,.conversation:hover{color:#123d58}
+.conversation.active .conversation-title,.conversation:hover .conversation-title{color:#123d58}
+.tabs button.selected,.primary,.composer-footer button{background:#318bbd;color:white}
+
+/* Jerarquía nativa jocarsa-iu: superentidades / entidades / escenario */
+.app{display:flex;min-width:0}
+#superentities{width:225px;flex:0 0 225px;background:#174967;color:white;display:flex;flex-direction:column;padding:16px 9px;gap:6px;overflow:auto;border-right:4px solid #87cefa}
+.super-heading{font-size:11px;letter-spacing:.11em;padding:14px 11px;color:#b9e1f7;font-weight:700}
+.super-item{width:100%;border:0;text-align:left;background:transparent;color:#e6f5ff;cursor:pointer;padding:14px 12px;font:500 14px Ubuntu,Arial,sans-serif;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%);transition:background .2s}
+.super-item:hover{background:#318bbd}.super-item.selected{background:#318bbd;color:white;box-shadow:inset 4px 0 #87cefa}
+#entities-panel{width:280px;flex:0 0 280px;display:flex;flex-direction:column;background:#318bbd;color:white;overflow:auto;border-right:4px solid #87cefa}
+#entities-panel .side-label{padding:20px 16px 12px;font-size:12px;color:white;font-weight:700;letter-spacing:.1em}
+#entities-panel .conversation-list{flex:1;min-height:0;overflow:auto}
+#entities-panel .new-chat{order:0;background:#174967;margin:5px 12px 12px}
+#entities-panel .side-bottom{margin-top:auto}
+#entities-panel .conversation.active{background:#87cefa}
+#entities-panel .conversation.active .conversation-title{color:#174967}
+.entity-empty{margin:14px 12px;padding:16px 12px;background:#ffffff20;color:white;font-size:13px;line-height:1.6;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%)}
+#app main{min-width:0;flex:1}
+.header-logo{width:32px;height:32px;object-fit:contain;margin-right:8px}
+#stage-placeholder{padding:40px;position:absolute;inset:76px 0 0;background:#eaf7ff;z-index:3;color:#174967}
+#app main{position:relative}
+#app main.inactive-section #scroll,#app main.inactive-section .composer-wrap{visibility:hidden}
+#app main.inactive-section #stage-placeholder{display:block!important}
+#stage-placeholder[hidden]{display:none}
+@media(max-width:1050px){#superentities{width:180px;flex-basis:180px}#entities-panel{width:230px;flex-basis:230px}}
+@media(max-width:760px){#superentities,#entities-panel{position:fixed;top:0;bottom:0;left:0;transform:translateX(-110%);z-index:30;transition:transform .2s}#superentities.open{transform:translateX(0)}#entities-panel.open{transform:translateX(180px)}#superentities{width:180px;flex-basis:180px}#entities-panel{width:min(230px,calc(100vw - 180px));flex-basis:auto}#close-side{display:block;margin-top:auto}#stage-placeholder{inset:66px 0 0}}
+
+/* Fusión de elementos seleccionados con la siguiente columna, según jocarsa-iu. */
+#superentities,#entities-panel{overflow:visible!important;position:relative;isolation:auto}
+#superentities{z-index:4;border-right:0!important;padding-right:9px}
+#entities-panel{z-index:3;border-right:0!important}
+#app main{z-index:1}
+.super-brand{display:flex;align-items:center;gap:11px;padding:12px 9px 18px;margin-bottom:10px;border-bottom:1px solid #ffffff35;color:white;white-space:nowrap}
+.super-brand img{width:36px;height:36px;object-fit:contain;flex:none}
+.super-brand strong{font-size:18px;letter-spacing:-.4px}
+.super-brand span{font-weight:400;color:#c9edff}
+.super-item{position:relative;overflow:visible;z-index:1}
+.super-item.selected{background:#318bbd!important;color:#fff!important;box-shadow:inset 4px 0 #87cefa!important;clip-path:none!important}
+.super-item.selected::after{content:'';position:absolute;left:calc(100% - 1px);top:0;height:100%;width:23px;background:#318bbd;clip-path:polygon(0 0,calc(100% - 13px) 0,100% 13px,100% 100%,0 100%);pointer-events:none}
+#entities-panel .conversation{position:relative;overflow:visible;clip-path:none!important}
+#entities-panel .conversation.active{background:#eaf7ff!important;z-index:5;box-shadow:inset 4px 0 #87cefa}
+#entities-panel .conversation.active .conversation-title{color:#174967!important}
+#entities-panel .conversation.active .delete-chat{color:#174967!important}
+#entities-panel .conversation.active::after{content:'';position:absolute;left:calc(100% - 1px);top:0;height:100%;width:24px;background:#eaf7ff;clip-path:polygon(0 0,calc(100% - 13px) 0,100% 13px,100% 100%,0 100%);pointer-events:none}
+.message.assistant .message-avatar{background:transparent!important;clip-path:none!important;display:flex;align-items:center;justify-content:center}
+.message.assistant .message-avatar img{display:block;width:85%;height:85%;object-fit:contain}
+@media(max-width:760px){#superentities,#entities-panel{position:fixed!important} .super-brand strong{font-size:15px} .super-item.selected::after,#entities-panel .conversation.active::after{width:12px}}

@@ -1,0 +1,43 @@
+Datetime: 2026-11-17T14:31:32.625Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/009-IA para imagenes
+Command: python3 002-difusores.py
+
+Result:
+bitsandbytes library load error: Configured CUDA binary not found at /home/josevicente/.local/lib/python3.12/site-packages/bitsandbytes/libbitsandbytes_cuda132.so
+Traceback (most recent call last):
+  File "/home/josevicente/.local/lib/python3.12/site-packages/bitsandbytes/cextension.py", line 320, in <module>
+    lib = get_native_library()
+          ^^^^^^^^^^^^^^^^^^^^
+  File "/home/josevicente/.local/lib/python3.12/site-packages/bitsandbytes/cextension.py", line 288, in get_native_library
+    raise RuntimeError(f"Configured {BNB_BACKEND} binary not found at {cuda_binary_path}")
+RuntimeError: Configured CUDA binary not found at /home/josevicente/.local/lib/python3.12/site-packages/bitsandbytes/libbitsandbytes_cuda132.so
+Loading model...
+/home/josevicente/.local/lib/python3.12/site-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Loading pipeline components...:   0%|         | 0/7 [00:00<?, ?it/s]
+Loading weights:   0%|                      | 0/196 [00:00<?, ?it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 6412.51it/s]
+CLIPTextModel LOAD REPORT from: /home/josevicente/.cache/huggingface/hub/models--stable-diffusion-v1-5--stable-diffusion-v1-5/snapshots/451f4fe16113bff5a5d2269ed5ad43b0592e9a14/text_encoder
+Key                                | Status     |  | 
+-----------------------------------+------------+--+-
+text_model.embeddings.position_ids | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Loading pipeline components...:  29%|▎| 2/7 [00:00<00:02,  2.06it/s]Loading pipeline components...:  86%|▊| 6/7 [00:01<00:00,  5.87it/s]
+Loading weights:   0%|                      | 0/396 [00:00<?, ?it/s]
+Loading weights:  23%|██▊         | 93/396 [00:00<00:00, 922.18it/s]
+Loading weights:  48%|█████▎     | 189/396 [00:00<00:00, 919.08it/s]
+Loading weights:  71%|███████▊   | 281/396 [00:00<00:00, 910.01it/s]
+Loading weights:  96%|██████████▌| 381/396 [00:00<00:00, 939.70it/s]Loading weights: 100%|███████████| 396/396 [00:00<00:00, 950.42it/s]
+StableDiffusionSafetyChecker LOAD REPORT from: /home/josevicente/.cache/huggingface/hub/models--stable-diffusion-v1-5--stable-diffusion-v1-5/snapshots/451f4fe16113bff5a5d2269ed5ad43b0592e9a14/safety_checker
+Key                                               | Status     |  | 
+--------------------------------------------------+------------+--+-
+vision_model.vision_model.embeddings.position_ids | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Loading pipeline components...: 100%|█| 7/7 [00:01<00:00,  4.08it/s]
+Generating image...
+  0%|                                        | 0/30 [00:00<?, ?it/s]  3%|█                               | 1/30 [00:00<00:12,  2.40it/s] 10%|███▏                            | 3/30 [00:00<00:04,  5.55it/s] 17%|█████▎                          | 5/30 [00:00<00:03,  7.24it/s] 23%|███████▍                        | 7/30 [00:01<00:02,  8.25it/s] 30%|█████████▌                      | 9/30 [00:01<00:02,  8.85it/s] 33%|██████████▎                    | 10/30 [00:01<00:02,  9.07it/s] 40%|████████████▍                  | 12/30 [00:01<00:01,  9.43it/s] 47%|██████████████▍                | 14/30 [00:01<00:01,  9.66it/s] 53%|████████████████▌              | 16/30 [00:01<00:01,  9.82it/s] 60%|██████████████████▌            | 18/30 [00:02<00:01,  9.92it/s] 67%|████████████████████▋          | 20/30 [00:02<00:01,  9.96it/s] 73%|██████████████████████▋        | 22/30 [00:02<00:00, 10.00it/s] 80%|████████████████████████▊      | 24/30 [00:02<00:00, 10.04it/s] 87%|██████████████████████████▊    | 26/30 [00:02<00:00, 10.06it/s] 93%|████████████████████████████▉  | 28/30 [00:03<00:00, 10.09it/s]100%|███████████████████████████████| 30/30 [00:03<00:00, 10.08it/s]100%|███████████████████████████████| 30/30 [00:03<00:00,  9.14it/s]
+Image saved: resultado.png
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/009-IA para imagenes$ 

@@ -1,0 +1,59 @@
+
+/* jocarsa | refinamiento visual v10
+   Capa exclusivamente visual: no altera eventos, nombres, formularios ni datos. */
+:root {
+  --chaflan:12px;
+  --ju-borde:#a6c6d8;
+  --ju-tinta:#153e56;
+  --ju-papel:#f8fbfd;
+  --ju-foco:#ffcf64;
+}
+.jocarsa-iu { color:var(--ju-tinta); }
+.jocarsa-iu > header {
+  min-height:50px; height:auto; padding:8px 14px;
+  background:linear-gradient(90deg,var(--color0),var(--color));
+  border-bottom:2px solid #5ba4c7;
+  gap:14px;
+}
+.jocarsa-iu .corporativo { min-width:180px; text-decoration:none; color:white; }
+.jocarsa-iu .corporativo h1 { font-size:19px; letter-spacing:.1px; }
+.jocarsa-iu main { min-width:0; }
+.jocarsa-iu main > nav {
+  background:linear-gradient(180deg,var(--color),var(--color0));
+  border-right:1px solid #ffffff30;
+}
+.jocarsa-iu main > section {
+  background:var(--color2);
+  border-right:1px solid #ffffff55;
+}
+.jocarsa-iu .contenido-columna a,
+.jocarsa-iu .contenido-columna article,
+.jocarsa-iu .ju-integrated-menu a {
+  clip-path:polygon(0 0,calc(100% - var(--chaflan)) 0,100% var(--chaflan),100% 100%,0 100%);
+  border-radius:0;
+  min-height:40px;
+  transition:background-color .15s,filter .15s,transform .15s;
+}
+.jocarsa-iu .contenido-columna a:hover,
+.jocarsa-iu .contenido-columna article:hover,
+.jocarsa-iu .ju-integrated-menu a:hover { filter:brightness(1.09); }
+.jocarsa-iu .contenido-columna .activo { transform:none; filter:brightness(1.08); box-shadow:inset 4px 0 #fff; }
+.jocarsa-iu .ficha { border-radius:0; clip-path:polygon(0 0,calc(100% - 7px) 0,100% 7px,100% 100%,0 100%); }
+.jocarsa-iu .escenario { min-width:0; }
+.jocarsa-iu button:not(.jocarsa-switch):not(.jocarsa-radio),
+.jocarsa-iu input[type=button],.jocarsa-iu input[type=submit] {
+  border-radius:0;
+  clip-path:polygon(0 0,calc(100% - 7px) 0,100% 7px,100% 100%,0 100%);
+}
+.jocarsa-iu input:not([type=checkbox]):not([type=radio]):not([type=range]),
+.jocarsa-iu select,.jocarsa-iu textarea { border-radius:0; }
+.jocarsa-iu :is(a,button,input,select,textarea,[tabindex]):focus-visible {
+  outline:3px solid var(--ju-foco)!important; outline-offset:2px;
+}
+.jocarsa-iu .minimizar { width:auto; min-width:34px; }
+.jocarsa-iu .escenario :is(table,th,td) { border-radius:0; }
+@media(max-width:850px){
+ .jocarsa-iu .corporativo h1 { font-size:15px; }
+ .jocarsa-iu > header { gap:7px; }
+ .jocarsa-iu header input { min-width:100px; }
+}

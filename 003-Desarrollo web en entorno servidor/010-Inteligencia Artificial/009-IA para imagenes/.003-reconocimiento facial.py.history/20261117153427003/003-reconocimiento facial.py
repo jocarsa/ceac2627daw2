@@ -1,0 +1,1 @@
+pip install face_recognition opencv-python numpy

@@ -1,0 +1,31 @@
+/* Adaptación a la identidad jocarsa-iu: paneles, colores escalonados, chaflanes y tipografía Ubuntu. */
+:root{--tono:200;--saturacion:50%;--brillo:30%;--escalon:20%;--chaflan:12px;--bg:#e8f2f7;--panel:var(--color0);--panel2:var(--color);--hover:var(--color2);--text:#18384b;--muted:#587385;--line:#b8d0de;--accent:var(--color);--accent2:var(--color2);--bubble:#d9ebf4;--shadow:8px 8px 0 #102d3a25;color-scheme:light;font-family:Ubuntu,Arial,sans-serif}
+body,body.light{color-scheme:light;--bg:#e8f2f7;--panel:var(--color0);--panel2:var(--color);--hover:var(--color2);--text:#18384b;--muted:#587385;--line:#b8d0de;--accent:var(--color);--accent2:var(--color2);--bubble:#d9ebf4;--shadow:8px 8px 0 #102d3a25;font-family:Ubuntu,Arial,sans-serif}
+body.jocarsa-ia{background:var(--bg);color:var(--text)}
+.app{background:var(--color3)}
+aside{background:var(--color0);border:0;padding:0;gap:0;width:285px;color:white}
+.side-top{background:var(--color0);padding:18px 16px;min-height:76px}
+.side-brand{font-size:20px;color:white}.side-brand em{color:#c8e1ee}
+.brand-mark,.avatar,.welcome-icon{background:var(--color2);border-radius:0;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%);box-shadow:none;color:white}
+.new-chat{margin:12px;background:var(--color);color:white;border:0;border-radius:0;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%)}
+.new-chat:hover{background:var(--color2);color:var(--color0)}
+.side-label{color:#bad4e4;padding:16px 18px 10px}
+.conversation-list{padding:0 10px}.conversation{border-radius:0;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%)}.conversation.active{background:var(--color2)}.conversation:hover{background:var(--color)}.conversation-title{color:white}.delete-chat,.side-action,.icon-btn{color:#cce3ef}.delete-chat:hover{color:#ffd3d3}
+.side-bottom{border-color:#ffffff33;padding:12px}.profile{color:white}
+main{background:var(--color3)}main>header{background:var(--color);color:white;border:0;min-height:76px}main>header .icon-btn{color:white}.header-title strong{font-size:17px}.header-title small{color:#d7e8f2}.status-dot{background:#9ce4bd}
+.scroll{background:var(--color3)}.welcome{color:var(--color0)}.welcome p{color:#41657b}.suggestions button{border:1px solid #a5c6d8;border-left:4px solid var(--color);background:#fff;border-radius:0;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%)}.suggestions button:hover{background:#edf8ff}.suggestions button span{color:var(--color)}
+.message-avatar{border-radius:0;background:var(--color);color:white}.message.user .message-avatar{background:var(--color0)}.message-content{color:#173b51}.message.user .message-content{background:#d4e8f4;border:1px solid #b0cfdf;border-radius:0;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%)}
+.composer-wrap{background:var(--color3)}.composer{background:#fff;border:1px solid #a8c6d8;border-left:4px solid var(--color);border-radius:0;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%);box-shadow:none}.composer:focus-within{border-color:var(--color)}textarea{color:#173b51}.composer-footer span,.disclaimer{color:#557487}.composer-footer button,.primary{background:var(--color);border-radius:0;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%)}
+.auth{background:linear-gradient(135deg,var(--color0),var(--color),var(--color2))}.auth-card{border-radius:0;background:white;border:0;border-top:6px solid var(--color2);clip-path:polygon(0 0,calc(100% - 18px) 0,100% 18px,100% 100%,0 100%);box-shadow:12px 12px 0 #001e3440}.auth-card h1{color:var(--color0)}.auth-card h1 span{color:var(--color)}.auth-card>p{color:#537287}.tabs{background:#dcecf5;border-radius:0}.tabs button{border-radius:0}.tabs button.selected{background:var(--color);color:white}.auth-card label{color:#25475a}.auth-card input{background:#f4f9fc;border:1px solid #b3ccdb;border-radius:0;clip-path:polygon(0 0,calc(100% - 9px) 0,100% 9px,100% 100%,0 100%);color:#18384b}.auth-card input:focus{border-color:var(--color)}.primary{color:white}.error{color:#a62020}
+@media(max-width:760px){aside{z-index:10}main>header{min-height:66px}}
+
+/* Identidad corporativa jocarsa | ia — LightSkyBlue #87CEFA */
+:root{--tono:203;--saturacion:92%;--brillo:75%;--escalon:18%;--color0:#174967;--color:#318bbd;--color2:#87cefa;--color3:#eaf7ff;--accent:#87cefa;--accent2:#318bbd}
+body.jocarsa-ia{--color0:#174967;--color:#318bbd;--color2:#87cefa;--color3:#eaf7ff}
+.brand-mark{display:flex;align-items:center;justify-content:center;background:transparent!important;clip-path:none!important;box-shadow:none!important;overflow:visible}
+.brand-mark img{display:block;width:100%;height:100%;object-fit:contain}
+.side-brand .brand-mark{width:38px;height:38px;flex:0 0 38px}
+.auth-card .brand-mark{width:68px;height:68px;margin-inline:auto}
+.new-chat:hover,.conversation.active,.conversation:hover{color:#123d58}
+.conversation.active .conversation-title,.conversation:hover .conversation-title{color:#123d58}
+.tabs button.selected,.primary,.composer-footer button{background:#318bbd;color:white}

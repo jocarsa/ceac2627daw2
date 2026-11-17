@@ -1,0 +1,22 @@
+.ju-help-tooltip{position:fixed;z-index:2147483645;max-width:min(340px,calc(100vw - 16px));box-sizing:border-box;padding:12px 15px;background:#12394c;color:#fff;border:2px solid #8ac8e4;box-shadow:5px 5px 0 #071e2b,0 12px 28px #0005;font:14px/1.45 Ubuntu,Arial,sans-serif;pointer-events:none;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%)}
+.ju-help-tooltip[hidden]{display:none!important}.ju-a11y-extra{display:grid;gap:10px;margin-top:15px;padding-top:12px;border-top:1px solid #ffffff55}.ju-a11y-extra strong{font-size:14px}.ju-a11y-font{display:grid;gap:6px}.ju-a11y-font select{max-width:100%;width:100%;padding:9px;background:white;color:#152c39;border:1px solid #669db6}
+html.ju-custom-font body,html.ju-custom-font body :is(button,input,select,textarea){font-family:var(--ju-accessible-font)!important}
+html.ju-underline a{text-decoration:underline!important;text-underline-offset:3px!important;text-decoration-thickness:2px!important}
+/* Filtrar solo el contenido: nunca el ancestro del boton/panel de accesibilidad. */
+html.ju-invert body.jocarsa-iu>header>:not(.ju-accessibility),html.ju-invert body.jocarsa-iu>main,html.ju-invert body.jocarsa-iu>.ju-ai-widget{filter:invert(1) hue-rotate(180deg)}
+html.ju-grayscale body.jocarsa-iu>header>:not(.ju-accessibility),html.ju-grayscale body.jocarsa-iu>main,html.ju-grayscale body.jocarsa-iu>.ju-ai-widget{filter:grayscale(1)}
+html.ju-invert.ju-grayscale body.jocarsa-iu>header>:not(.ju-accessibility),html.ju-invert.ju-grayscale body.jocarsa-iu>main,html.ju-invert.ju-grayscale body.jocarsa-iu>.ju-ai-widget{filter:invert(1) grayscale(1)}
+/* La cabecera no crea un contexto de apilamiento filtrado. */
+.ju-accessibility{filter:none!important;isolation:isolate}
+.ju-a11y-panel{z-index:2147483640}
+.ju-all-helps{position:absolute;inset:0;z-index:2147483600;pointer-events:none}.ju-help-label{position:absolute;max-width:190px;overflow-wrap:anywhere;padding:5px 8px;background:#12394c;color:white;border:1px solid #b9e6f7;box-shadow:2px 2px 0 #0005;font:11px/1.3 Arial,sans-serif;pointer-events:none}
+
+/* v9: ampliación tipográfica independiente del zoom de contenido.
+   La variable se aplica al texto y no modifica anchuras ni alturas explícitas. */
+html.ju-font-enlarged body.jocarsa-iu :is(h1,h2,h3,h4,h5,h6,p,span,label,small,strong,em,b,i,li,dt,dd,th,td,button,a,summary,output,legend,blockquote,figcaption,input,textarea,select,[role="button"],[role="menuitem"],[role="tab"]):not(.ju-accessibility *){font-size:calc(1rem * var(--ju-font-scale,1))!important;line-height:1.5!important;overflow-wrap:anywhere}
+html.ju-font-enlarged body.jocarsa-iu :is(h1,h2,h3):not(.ju-accessibility *){font-size:calc(1.4rem * var(--ju-font-scale,1))!important}
+html.ju-uppercase body.jocarsa-iu :not(.ju-accessibility):not(input):not(textarea):not([contenteditable]):not(pre):not(code){text-transform:uppercase!important}
+html.ju-uppercase body.jocarsa-iu :is(input,textarea){text-transform:uppercase!important}
+.ju-a11y-font-size{display:grid;gap:7px;margin-top:10px}.ju-a11y-font-size label{display:flex;justify-content:space-between;gap:10px}.ju-a11y-font-size input{width:100%}.ju-a11y-font-reset{padding:8px 12px;cursor:pointer}
+/* No transformar el panel ni los controles de accesibilidad. */
+html.ju-uppercase .ju-accessibility,html.ju-uppercase .ju-accessibility *{text-transform:none!important}

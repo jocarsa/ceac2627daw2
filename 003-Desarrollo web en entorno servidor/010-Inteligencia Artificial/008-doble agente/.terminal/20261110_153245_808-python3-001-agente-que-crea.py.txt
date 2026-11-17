@@ -1,0 +1,7 @@
+Datetime: 2026-11-10T14:32:45.808Z
+Working directory: /var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/008-doble agente
+Command: python3 001-agente\ que\ crea.py
+
+Result:
+Python es un lenguaje de programación de alto nivel, interpretado y sin compilación. Es conocido por su facilidad de aprendizaje, sintaxis clara y sintaxis similar al inglés. Python es un lenguaje versátil que se puede utilizar para desarrollo web, aplicaciones móviles, análisis de datos, inteligencia artificial y más. Su sintaxis simple, tipos de datos integrados y estructuras de control de flujo lo hacen ideal para principiantes y expertos alike.
+josevicente@josevicenteportatil:/var/www/html/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/008-doble agente$ 
