@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <canvas></canvas>
+    <script>
+      let lienzo = document.querySelector("canvas")
+      lienzo.width= 512;
+      lienzo.height=512;
+      let contexto = lienzo.getContext("2d")
+      let sprite = new Image()
+      sprite.src = "sprite.png"
+      sprite.onload = function(){
+      	contexto.drawImage(sprite,40,40,32,32)
+      }
+      let x = 0;let y = 0;
+      document.onkeyup = function(){
+      	
+      }
+    </script>
+  </body>
+</html>

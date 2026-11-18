@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <canvas></canvas>
+    <script>
+      
+      class Personaje {
+          constructor(x, y) {
+              this.x = x;
+              this.y = y;
+          }
+      }
+      
+      let lienzo = document.querySelector("canvas")
+      lienzo.width= 512;
+      lienzo.height=512;
+      let contexto = lienzo.getContext("2d")
+      let sprite = new Image()
+      sprite.src = "sprite.png"
+      sprite.onload = function(){
+      	contexto.drawImage(sprite,40,40,32,32)
+      }
+      let personaje = Personaje(0,0)
+      document.onkeyup = function(tecla){
+        console.log(tecla)
+      	if(tecla.key == "w"){
+        	y-= 10;
+        }else if(tecla.key == "s"){
+        	y+= 10
+        }else if(tecla.key == "a"){
+        	x -= 10
+        }else if(tecla.key == "d"){
+        	x += 10
+        }
+        contexto.clearRect(0,0,512,512)
+        contexto.drawImage(sprite,x,y,32,32)
+      }
+    </script>
+  </body>
+</html>

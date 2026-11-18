@@ -1,0 +1,554 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mi casa estilo Zelda</title>
+<style>
+  body {
+    margin: 0;
+    background: #202020;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  canvas {
+    width: 768px;
+    height: 768px;
+    max-width: 95vw;
+    max-height: 95vh;
+    image-rendering: pixelated;
+    border: 6px solid #111;
+  }
+</style>
+</head>
+<body>
+
+<canvas></canvas>
+
+<script>
+
+// ============================================
+// CONFIGURACIÓN
+// ============================================
+
+const lienzo = document.querySelector("canvas");
+lienzo.width = 512;
+lienzo.height = 512;
+
+const contexto = lienzo.getContext("2d");
+contexto.imageSmoothingEnabled = false;
+
+const TAM = 32;
+const COLUMNAS = 16;
+const FILAS = 16;
+
+// ============================================
+// MAPA
+// ============================================
+
+// # = pared
+// . = suelo madera
+// c = suelo cocina
+// b = suelo baño
+// d = suelo dormitorio
+
+const mapa = [
+"################",
+"#.......#cccccc#",
+"#.......#cccccc#",
+"#.......#cccccc#",
+"#............cc#",
+"#.......#cccccc#",
+"#.......#cccccc#",
+"#.......#cccccc#",
+"####.######.####",
+"#ddddddd#bbbbbb#",
+"#ddddddd#bbbbbb#",
+"#ddddddd#bbbbbb#",
+"#..............#",
+"#ddddddd#bbbbbb#",
+"#ddddddd#bbbbbb#",
+"################"
+];
+
+// ============================================
+// COLORES
+// ============================================
+
+const colores = {
+  pared: "#514032",
+  paredLuz: "#80634b",
+  madera: "#bd8b57",
+  maderaOscura: "#a77547",
+  cocina: "#c6b99b",
+  cocinaOscura: "#ada087",
+  baño: "#a2c7cb",
+  bañoOscuro: "#8ab1b5",
+  dormitorio: "#b58d68"
+};
+
+// ============================================
+// PERSONAJE
+// ============================================
+
+class Personaje {
+
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.ancho = 24;
+    this.alto = 24;
+    this.velocidad = 2.3;
+  }
+
+  mover(dx, dy) {
+
+    const nx = this.x + dx;
+    const ny = this.y + dy;
+
+    if (!colision(nx, this.y, this.ancho, this.alto)) {
+      this.x = nx;
+    }
+
+    if (!colision(this.x, ny, this.ancho, this.alto)) {
+      this.y = ny;
+    }
+
+  }
+
+  dibujar() {
+
+    if (sprite.complete && sprite.naturalWidth > 0) {
+      contexto.drawImage(
+        sprite,
+        this.x - 4,
+        this.y - 8,
+        32,
+        32
+      );
+    } else {
+      // Personaje provisional
+      rect(this.x+4,this.y,16,10,"#503728");
+      rect(this.x+5,this.y+8,14,9,"#efbf91");
+      rect(this.x+3,this.y+17,18,7,"#437db4");
+      rect(this.x+4,this.y+24,6,4,"#453b37");
+      rect(this.x+14,this.y+24,6,4,"#453b37");
+    }
+
+  }
+
+}
+
+const sprite = new Image();
+sprite.src = "sprite.png";
+
+const personaje = new Personaje(112, 112);
+
+// ============================================
+// FUNCIONES DE DIBUJO
+// ============================================
+
+function rect(x,y,w,h,color) {
+  contexto.fillStyle = color;
+  contexto.fillRect(x,y,w,h);
+}
+
+function borde(x,y,w,h,color) {
+  contexto.strokeStyle = color;
+  contexto.lineWidth = 2;
+  contexto.strokeRect(x+1,y+1,w-2,h-2);
+}
+
+function mueble(x,y,w,h,color,sombra="#49372e") {
+  rect(x+3,y+4,w,h,sombra);
+  rect(x,y,w,h,color);
+  borde(x,y,w,h,"#594638");
+}
+
+function texto(t,x,y) {
+  contexto.fillStyle = "rgba(35,25,20,.65)";
+  contexto.font = "9px monospace";
+  contexto.fillText(t,x,y);
+}
+
+// ============================================
+// SUELOS Y PAREDES
+// ============================================
+
+function dibujarMapa() {
+
+  for(let y=0;y<FILAS;y++) {
+    for(let x=0;x<COLUMNAS;x++) {
+
+      const tipo = mapa[y][x];
+      const px = x*TAM;
+      const py = y*TAM;
+
+      if(tipo === "#") {
+
+        rect(px,py,32,32,colores.pared);
+        rect(px,py,32,5,colores.paredLuz);
+        rect(px,py+27,32,5,"#302820");
+
+      } else {
+
+        let color = colores.madera;
+
+        if(tipo==="c") color=colores.cocina;
+        if(tipo==="b") color=colores.baño;
+        if(tipo==="d") color=colores.dormitorio;
+
+        rect(px,py,32,32,color);
+
+        if(tipo==="." || tipo==="d") {
+
+          rect(px,py+15,32,1,"#936c48");
+          rect(px+((y%2)*16),py,1,15,"#936c48");
+
+        } else {
+
+          rect(px,py,32,1,"#ffffff30");
+          rect(px,py,1,32,"#ffffff30");
+          rect(px+31,py,1,32,"#00000020");
+
+        }
+
+      }
+
+    }
+  }
+}
+
+// ============================================
+// MUEBLES
+// ============================================
+
+// Cada mueble tiene una zona de colisión.
+// La lista también se utiliza para dibujarlos.
+
+const muebles = [];
+
+function agregarMueble(x,y,w,h,dibujar) {
+  muebles.push({x,y,w,h,dibujar});
+}
+
+// SALÓN
+
+agregarMueble(45,55,75,29,()=>{
+
+  mueble(45,55,75,29,"#8d4540");
+  rect(51,59,63,8,"#b86c60");
+  rect(51,69,63,9,"#a6574c");
+  rect(45,55,9,29,"#713b35");
+  rect(111,55,9,29,"#713b35");
+
+});
+
+agregarMueble(67,116,48,30,()=>{
+
+  mueble(67,116,48,30,"#875936");
+  rect(72,121,38,20,"#b4824d");
+  rect(75,124,32,2,"#d4a36c");
+
+});
+
+agregarMueble(176,53,39,18,()=>{
+
+  mueble(176,53,39,18,"#46352d");
+  rect(181,56,29,11,"#243e45");
+  rect(184,58,23,7,"#488b92");
+
+});
+
+// COCINA
+
+agregarMueble(302,42,40,35,()=>{
+
+  mueble(302,42,40,35,"#b4b8b7");
+  rect(307,47,30,22,"#e2e5df");
+  rect(309,54,2,9,"#666");
+  rect(307,71,30,2,"#888");
+
+});
+
+agregarMueble(353,43,91,30,()=>{
+
+  mueble(353,43,91,30,"#a17c55");
+  rect(358,48,81,19,"#d8c7a7");
+
+  for(let i=0;i<4;i++) {
+    const x=367+(i%2)*23;
+    const y=52+Math.floor(i/2)*9;
+    rect(x,y,10,7,"#333");
+    rect(x+2,y+2,6,3,"#777");
+  }
+
+});
+
+agregarMueble(350,129,65,35,()=>{
+
+  mueble(350,129,65,35,"#916941");
+  rect(356,135,53,23,"#c39a65");
+
+});
+
+agregarMueble(332,133,14,25,()=>{
+  mueble(332,133,14,25,"#70523d");
+});
+
+agregarMueble(419,133,14,25,()=>{
+  mueble(419,133,14,25,"#70523d");
+});
+
+// DORMITORIO
+
+agregarMueble(44,331,65,89,()=>{
+
+  mueble(44,331,65,89,"#79533e");
+
+  rect(49,337,55,77,"#e9dfc5");
+  rect(49,337,55,19,"#fff5df");
+  rect(52,340,49,12,"#f7f0e4");
+
+  rect(49,360,55,54,"#638b9b");
+  rect(49,360,55,5,"#86aeb9");
+  rect(49,405,55,9,"#416c80");
+
+});
+
+agregarMueble(170,341,45,48,()=>{
+
+  mueble(170,341,45,48,"#845d39");
+  rect(175,346,35,38,"#a47b4c");
+  rect(192,352,2,6,"#e7c985");
+
+});
+
+agregarMueble(145,418,35,27,()=>{
+
+  mueble(145,418,35,27,"#80552f");
+  rect(151,423,23,15,"#aa7b47");
+  rect(160,429,5,4,"#e2bd73");
+
+});
+
+// BAÑO
+
+agregarMueble(336,331,94,44,()=>{
+
+  mueble(336,331,94,44,"#e0e5df");
+  rect(342,337,82,31,"#f6f6ed");
+  rect(349,342,68,21,"#8bbcc4");
+  rect(377,335,10,6,"#999");
+
+});
+
+agregarMueble(450,342,28,35,()=>{
+
+  mueble(450,342,28,35,"#e8e9e4");
+  rect(454,347,20,17,"#ffffff");
+  rect(458,351,12,10,"#a5cbd1");
+
+});
+
+agregarMueble(343,419,43,30,()=>{
+
+  mueble(343,419,43,30,"#c8a68b");
+  rect(348,422,33,20,"#f1f1e9");
+  rect(354,426,21,12,"#9fc4cb");
+  rect(365,420,5,5,"#888");
+
+});
+
+// DECORACIONES
+
+function dibujarDecoraciones() {
+
+  // Alfombra salón
+  rect(48,169,128,55,"#a65d48");
+  rect(53,174,118,45,"#ce9471");
+  rect(60,181,104,31,"#a65d48");
+
+  // Alfombra dormitorio
+  rect(115,393,70,22,"#b87c64");
+  rect(120,397,60,14,"#d5a38b");
+
+  // Plantas
+  dibujarPlanta(189,191);
+  dibujarPlanta(287,81);
+
+  // Cuadros
+  rect(131,39,35,23,"#5c3c2d");
+  rect(135,43,27,15,"#81a3a0");
+  rect(142,46,10,9,"#537c53");
+
+  // Etiquetas
+  texto("SALON",40,251);
+  texto("COCINA",325,251);
+  texto("DORMITORIO",40,483);
+  texto("BAÑO",330,483);
+
+}
+
+function dibujarPlanta(x,y) {
+
+  rect(x+5,y+12,17,13,"#9c633c");
+  rect(x+2,y+4,22,14,"#346b3f");
+  rect(x+8,y,14,14,"#4e9955");
+  rect(x+12,y+4,5,5,"#82bb65");
+
+}
+
+// ============================================
+// COLISIONES
+// ============================================
+
+function colision(x,y,w,h) {
+
+  // Comprobar los cuatro extremos del personaje
+
+  const puntos = [
+    [x,y],
+    [x+w-1,y],
+    [x,y+h-1],
+    [x+w-1,y+h-1]
+  ];
+
+  for(const [px,py] of puntos) {
+
+    const columna = Math.floor(px/TAM);
+    const fila = Math.floor(py/TAM);
+
+    if(
+      fila<0 ||
+      fila>=FILAS ||
+      columna<0 ||
+      columna>=COLUMNAS
+    ) return true;
+
+    if(mapa[fila][columna]==="#") {
+      return true;
+    }
+
+  }
+
+  // Colisión con muebles
+
+  for(const m of muebles) {
+
+    if(
+      x < m.x+m.w &&
+      x+w > m.x &&
+      y < m.y+m.h &&
+      y+h > m.y
+    ) {
+      return true;
+    }
+
+  }
+
+  return false;
+}
+
+// ============================================
+// CONTROLES
+// ============================================
+
+const teclas = {};
+
+document.addEventListener("keydown",function(e){
+
+  const tecla = e.key.toLowerCase();
+
+  if(["w","a","s","d",
+      "arrowup","arrowdown",
+      "arrowleft","arrowright"].includes(tecla)) {
+    e.preventDefault();
+  }
+
+  teclas[tecla]=true;
+
+});
+
+document.addEventListener("keyup",function(e){
+  teclas[e.key.toLowerCase()]=false;
+});
+
+window.addEventListener("blur",()=>{
+  for(const tecla in teclas) teclas[tecla]=false;
+});
+
+// ============================================
+// BUCLE DEL VIDEOJUEGO
+// ============================================
+
+function actualizar() {
+
+  let dx=0;
+  let dy=0;
+
+  if(teclas["w"] || teclas["arrowup"]) {
+    dy-=1;
+  }
+
+  if(teclas["s"] || teclas["arrowdown"]) {
+    dy+=1;
+  }
+
+  if(teclas["a"] || teclas["arrowleft"]) {
+    dx-=1;
+  }
+
+  if(teclas["d"] || teclas["arrowright"]) {
+    dx+=1;
+  }
+
+  // Normalizar diagonal
+
+  if(dx!==0 && dy!==0) {
+    dx*=Math.SQRT1_2;
+    dy*=Math.SQRT1_2;
+  }
+
+  personaje.mover(
+    dx*personaje.velocidad,
+    dy*personaje.velocidad
+  );
+
+}
+
+function dibujar() {
+
+  contexto.clearRect(0,0,512,512);
+
+  dibujarMapa();
+
+  // Alfombras y decoración del suelo
+  dibujarDecoraciones();
+
+  // Muebles
+  for(const mueble of muebles) {
+    mueble.dibujar();
+  }
+
+  // Personaje
+  personaje.dibujar();
+
+}
+
+function bucle() {
+
+  actualizar();
+  dibujar();
+
+  requestAnimationFrame(bucle);
+
+}
+
+bucle();
+
+</script>
+</body>
+</html>

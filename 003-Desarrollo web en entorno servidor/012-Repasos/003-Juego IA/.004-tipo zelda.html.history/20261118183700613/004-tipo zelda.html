@@ -1,0 +1,625 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mi casa estilo Zelda</title>
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #202020;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    font-family: monospace;
+    color: white;
+}
+
+canvas {
+    width: min(90vw, 80vh, 768px);
+    height: auto;
+    image-rendering: pixelated;
+    border: 6px solid #111;
+    background: #171717;
+}
+
+.info {
+    text-align: center;
+    color: #ccc;
+    font-size: 13px;
+}
+</style>
+</head>
+<body>
+
+<canvas id="juego" width="512" height="512"></canvas>
+
+<div class="info">
+    WASD / Flechas: mover |
+    C: activar/desactivar colisiones
+    <div id="estado">Colisiones activadas</div>
+</div>
+
+<script>
+
+// ========================================
+// CONFIGURACIÓN
+// ========================================
+
+const lienzo = document.getElementById("juego");
+const contexto = lienzo.getContext("2d");
+
+contexto.imageSmoothingEnabled = false;
+
+const TAM = 32;
+const COLUMNAS = 16;
+const FILAS = 16;
+
+let colisionesActivas = true;
+
+// ========================================
+// MAPA DE LA CASA
+// ========================================
+
+// # = pared
+// . = madera salón
+// c = cocina
+// d = dormitorio
+// b = baño
+
+const mapa = [
+    "################",
+    "#.......#cccccc#",
+    "#.......#cccccc#",
+    "#.......#cccccc#",
+    "#........cccccc#",
+    "#.......#cccccc#",
+    "#.......#cccccc#",
+    "#.......#cccccc#",
+    "####..######..##",
+    "#ddddddd#bbbbbb#",
+    "#ddddddd#bbbbbb#",
+    "#ddddddd#bbbbbb#",
+    "#..............#",
+    "#ddddddd#bbbbbb#",
+    "#ddddddd#bbbbbb#",
+    "################"
+];
+
+// Comprobación del mapa
+for (let y = 0; y < mapa.length; y++) {
+    if (mapa[y].length !== COLUMNAS) {
+        throw new Error(
+            "Fila " + y + " tiene " +
+            mapa[y].length + " columnas"
+        );
+    }
+}
+
+// ========================================
+// FUNCIONES DE DIBUJO
+// ========================================
+
+function rect(x,y,w,h,color) {
+    contexto.fillStyle = color;
+    contexto.fillRect(x,y,w,h);
+}
+
+function borde(x,y,w,h,color="#49382b") {
+    contexto.strokeStyle = color;
+    contexto.lineWidth = 2;
+    contexto.strokeRect(x+1,y+1,w-2,h-2);
+}
+
+function mueble(x,y,w,h,color) {
+    rect(x+3,y+4,w,h,"#49382b");
+    rect(x,y,w,h,color);
+    borde(x,y,w,h);
+}
+
+function dibujarPlanta(x,y) {
+    rect(x+5,y+12,17,13,"#9c633c");
+    rect(x+2,y+4,22,14,"#346b3f");
+    rect(x+8,y,14,14,"#4e9955");
+    rect(x+12,y+4,5,5,"#82bb65");
+}
+
+// ========================================
+// DIBUJAR MAPA
+// ========================================
+
+function dibujarMapa() {
+
+    for (let y=0; y<FILAS; y++) {
+        for (let x=0; x<COLUMNAS; x++) {
+
+            const tipo = mapa[y][x];
+            const px = x*TAM;
+            const py = y*TAM;
+
+            if (tipo === "#") {
+
+                rect(px,py,32,32,"#514032");
+                rect(px,py,32,5,"#80634b");
+                rect(px,py+27,32,5,"#302820");
+
+            } else {
+
+                let color = "#bd8b57";
+
+                if (tipo === "c") color = "#c6b99b";
+                if (tipo === "b") color = "#a2c7cb";
+                if (tipo === "d") color = "#b58d68";
+
+                rect(px,py,32,32,color);
+
+                if (tipo === "." || tipo === "d") {
+
+                    rect(px,py+15,32,1,"#936c48");
+                    rect(
+                        px+(y%2)*16,
+                        py,
+                        1,
+                        15,
+                        "#936c48"
+                    );
+
+                } else {
+
+                    rect(px,py,32,1,"#ffffff30");
+                    rect(px,py,1,32,"#ffffff30");
+                    rect(px+31,py,1,32,"#00000020");
+
+                }
+            }
+        }
+    }
+}
+
+// ========================================
+// MUEBLES
+// ========================================
+
+const muebles = [];
+
+function agregarMueble(x,y,w,h,dibujar) {
+    muebles.push({x,y,w,h,dibujar});
+}
+
+// ---------- SALÓN ----------
+
+// Sofá
+agregarMueble(45,55,75,29,()=>{
+    mueble(45,55,75,29,"#8d4540");
+    rect(51,59,63,8,"#b86c60");
+    rect(51,69,63,9,"#a6574c");
+    rect(45,55,9,29,"#713b35");
+    rect(111,55,9,29,"#713b35");
+});
+
+// Mesa de centro
+agregarMueble(67,116,48,30,()=>{
+    mueble(67,116,48,30,"#875936");
+    rect(72,121,38,20,"#b4824d");
+    rect(75,124,32,2,"#d4a36c");
+});
+
+// Televisión
+agregarMueble(176,53,39,18,()=>{
+    mueble(176,53,39,18,"#46352d");
+    rect(181,56,29,11,"#243e45");
+    rect(184,58,23,7,"#488b92");
+});
+
+// ---------- COCINA ----------
+
+// Nevera
+agregarMueble(302,42,40,35,()=>{
+    mueble(302,42,40,35,"#b4b8b7");
+    rect(307,47,30,22,"#e2e5df");
+    rect(309,54,2,9,"#666");
+    rect(307,71,30,2,"#888");
+});
+
+// Encimera y fogones
+agregarMueble(353,43,91,30,()=>{
+    mueble(353,43,91,30,"#a17c55");
+    rect(358,48,81,19,"#d8c7a7");
+
+    for(let i=0;i<4;i++) {
+        const x=367+(i%2)*23;
+        const y=52+Math.floor(i/2)*9;
+        rect(x,y,10,7,"#333");
+        rect(x+2,y+2,6,3,"#777");
+    }
+});
+
+// Mesa cocina
+agregarMueble(350,129,65,35,()=>{
+    mueble(350,129,65,35,"#916941");
+    rect(356,135,53,23,"#c39a65");
+});
+
+// Sillas
+agregarMueble(332,133,14,25,()=>{
+    mueble(332,133,14,25,"#70523d");
+});
+
+agregarMueble(419,133,14,25,()=>{
+    mueble(419,133,14,25,"#70523d");
+});
+
+// ---------- DORMITORIO ----------
+
+// Cama
+agregarMueble(44,331,65,89,()=>{
+    mueble(44,331,65,89,"#79533e");
+    rect(49,337,55,77,"#e9dfc5");
+    rect(49,337,55,19,"#fff5df");
+    rect(52,340,49,12,"#f7f0e4");
+    rect(49,360,55,54,"#638b9b");
+    rect(49,360,55,5,"#86aeb9");
+    rect(49,405,55,9,"#416c80");
+});
+
+// Armario
+agregarMueble(170,341,45,48,()=>{
+    mueble(170,341,45,48,"#845d39");
+    rect(175,346,35,38,"#a47b4c");
+    rect(192,352,2,6,"#e7c985");
+});
+
+// Mesita
+agregarMueble(145,418,35,27,()=>{
+    mueble(145,418,35,27,"#80552f");
+    rect(151,423,23,15,"#aa7b47");
+    rect(160,429,5,4,"#e2bd73");
+});
+
+// ---------- BAÑO ----------
+
+// Bañera
+agregarMueble(336,331,94,44,()=>{
+    mueble(336,331,94,44,"#e0e5df");
+    rect(342,337,82,31,"#f6f6ed");
+    rect(349,342,68,21,"#8bbcc4");
+    rect(377,335,10,6,"#999");
+});
+
+// WC
+agregarMueble(450,342,28,35,()=>{
+    mueble(450,342,28,35,"#e8e9e4");
+    rect(454,347,20,17,"#ffffff");
+    rect(458,351,12,10,"#a5cbd1");
+});
+
+// Lavabo
+agregarMueble(343,419,43,30,()=>{
+    mueble(343,419,43,30,"#c8a68b");
+    rect(348,422,33,20,"#f1f1e9");
+    rect(354,426,21,12,"#9fc4cb");
+    rect(365,420,5,5,"#888");
+});
+
+// ========================================
+// DECORACIONES
+// ========================================
+
+function dibujarDecoraciones() {
+
+    // Alfombra salón
+    rect(48,169,128,55,"#a65d48");
+    rect(53,174,118,45,"#ce9471");
+    rect(60,181,104,31,"#a65d48");
+
+    // Alfombra dormitorio
+    rect(115,393,70,22,"#b87c64");
+    rect(120,397,60,14,"#d5a38b");
+
+    // Plantas
+    dibujarPlanta(189,191);
+    dibujarPlanta(274,172);
+
+    // Cuadro
+    rect(131,39,35,23,"#5c3c2d");
+    rect(135,43,27,15,"#81a3a0");
+    rect(142,46,10,9,"#537c53");
+
+}
+
+// ========================================
+// COLISIONES
+// ========================================
+
+function colision(x,y,w,h) {
+
+    if (!colisionesActivas) return false;
+
+    // Límites del canvas
+    if (
+        x < 0 ||
+        y < 0 ||
+        x+w > lienzo.width ||
+        y+h > lienzo.height
+    ) {
+        return true;
+    }
+
+    // Casillas ocupadas por el personaje
+    const izquierda = Math.floor(x/TAM);
+    const derecha = Math.floor((x+w-0.01)/TAM);
+    const arriba = Math.floor(y/TAM);
+    const abajo = Math.floor((y+h-0.01)/TAM);
+
+    // Paredes
+    for(let fila=arriba;fila<=abajo;fila++) {
+        for(let columna=izquierda;columna<=derecha;columna++) {
+
+            if (
+                !mapa[fila] ||
+                mapa[fila][columna] === "#" ||
+                mapa[fila][columna] === undefined
+            ) {
+                return true;
+            }
+        }
+    }
+
+    // Muebles
+    for(const m of muebles) {
+
+        if (
+            x < m.x+m.w &&
+            x+w > m.x &&
+            y < m.y+m.h &&
+            y+h > m.y
+        ) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+// ========================================
+// PERSONAJE
+// ========================================
+
+class Personaje {
+
+    constructor(x,y) {
+
+        this.x = x;
+        this.y = y;
+
+        this.ancho = 24;
+        this.alto = 24;
+
+        this.velocidad = 150; // píxeles por segundo
+        this.direccion = "abajo";
+
+    }
+
+    mover(dx,dy) {
+
+        // Movimiento horizontal
+        const nuevoX = this.x + dx;
+
+        if (!colision(
+            nuevoX,
+            this.y,
+            this.ancho,
+            this.alto
+        )) {
+            this.x = nuevoX;
+        }
+
+        // Movimiento vertical
+        const nuevoY = this.y + dy;
+
+        if (!colision(
+            this.x,
+            nuevoY,
+            this.ancho,
+            this.alto
+        )) {
+            this.y = nuevoY;
+        }
+
+    }
+
+    dibujar() {
+
+        if(sprite.complete && sprite.naturalWidth>0) {
+
+            contexto.drawImage(
+                sprite,
+                Math.round(this.x-4),
+                Math.round(this.y-8),
+                32,
+                32
+            );
+
+        } else {
+
+            // Personaje provisional
+            rect(this.x+4,this.y,16,10,"#503728");
+            rect(this.x+5,this.y+8,14,9,"#efbf91");
+            rect(this.x+3,this.y+17,18,7,"#437db4");
+            rect(this.x+4,this.y+24,6,4,"#453b37");
+            rect(this.x+14,this.y+24,6,4,"#453b37");
+
+        }
+
+    }
+}
+
+// ========================================
+// CARGAR SPRITE
+// ========================================
+
+const sprite = new Image();
+sprite.src = "sprite.png";
+
+// Posición inicial: zona libre del salón
+const personaje = new Personaje(145,100);
+
+// ========================================
+// TECLADO
+// ========================================
+
+const teclas = {};
+
+document.addEventListener("keydown",function(evento){
+
+    const tecla = evento.key.toLowerCase();
+
+    const controles = [
+        "w","a","s","d",
+        "arrowup","arrowdown",
+        "arrowleft","arrowright"
+    ];
+
+    if(controles.includes(tecla)) {
+        evento.preventDefault();
+    }
+
+    teclas[tecla] = true;
+
+    if(tecla==="c" && !evento.repeat) {
+
+        colisionesActivas = !colisionesActivas;
+
+        document.getElementById("estado").textContent =
+            colisionesActivas
+            ? "Colisiones activadas"
+            : "Colisiones desactivadas";
+
+    }
+
+});
+
+document.addEventListener("keyup",function(evento){
+    teclas[evento.key.toLowerCase()] = false;
+});
+
+window.addEventListener("blur",function(){
+    for(const tecla in teclas) {
+        teclas[tecla] = false;
+    }
+});
+
+// ========================================
+// ACTUALIZAR
+// ========================================
+
+function actualizar(delta) {
+
+    let dx = 0;
+    let dy = 0;
+
+    if(teclas["w"] || teclas["arrowup"]) {
+        dy -= 1;
+    }
+
+    if(teclas["s"] || teclas["arrowdown"]) {
+        dy += 1;
+    }
+
+    if(teclas["a"] || teclas["arrowleft"]) {
+        dx -= 1;
+    }
+
+    if(teclas["d"] || teclas["arrowright"]) {
+        dx += 1;
+    }
+
+    // Normalizar movimiento diagonal
+    const longitud = Math.hypot(dx,dy);
+
+    if(longitud>0) {
+        dx /= longitud;
+        dy /= longitud;
+    }
+
+    const desplazamiento = personaje.velocidad*delta;
+
+    // Dividir el movimiento en pasos pequeños
+    // para evitar atravesar paredes con FPS bajos.
+    const distancia = Math.hypot(
+        dx*desplazamiento,
+        dy*desplazamiento
+    );
+
+    const pasos = Math.max(1,Math.ceil(distancia/4));
+
+    for(let i=0;i<pasos;i++) {
+        personaje.mover(
+            dx*desplazamiento/pasos,
+            dy*desplazamiento/pasos
+        );
+    }
+
+}
+
+// ========================================
+// DIBUJAR
+// ========================================
+
+function dibujar() {
+
+    contexto.clearRect(
+        0,0,
+        lienzo.width,
+        lienzo.height
+    );
+
+    dibujarMapa();
+    dibujarDecoraciones();
+
+    for(const m of muebles) {
+        m.dibujar();
+    }
+
+    personaje.dibujar();
+
+}
+
+// ========================================
+// BUCLE PRINCIPAL
+// ========================================
+
+let tiempoAnterior = 0;
+
+function bucle(tiempoActual) {
+
+    if(tiempoAnterior===0) {
+        tiempoAnterior=tiempoActual;
+    }
+
+    let delta = (
+        tiempoActual-tiempoAnterior
+    )/1000;
+
+    tiempoAnterior=tiempoActual;
+
+    // Limitar delta si la pestaña pierde foco
+    delta=Math.min(delta,0.05);
+
+    actualizar(delta);
+    dibujar();
+
+    requestAnimationFrame(bucle);
+}
+
+requestAnimationFrame(bucle);
+
+</script>
+</body>
+</html>
