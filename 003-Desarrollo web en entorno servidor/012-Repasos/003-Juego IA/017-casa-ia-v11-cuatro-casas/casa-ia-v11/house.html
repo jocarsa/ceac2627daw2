@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Casa IA · Simulador</title>
+<style>*{box-sizing:border-box}body{margin:0;background:#1c1d20;color:#e9e9eb;font:14px system-ui,sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:0}.layout{display:grid;grid-template-columns:minmax(320px,640px);gap:20px;align-items:start}canvas{display:block;touch-action:none;cursor:grab;width:100%;image-rendering:pixelated;border:0;background:#29241e}aside{display:none;background:#292a30;border:1px solid #44454b;border-radius:12px;padding:18px}h2{margin:0 0 12px;font-size:18px}p{line-height:1.5}button{background:#45474f;color:white;border:1px solid #777;border-radius:7px;padding:8px 12px;cursor:pointer;margin:3px 2px 6px 0}.meter{margin:12px 0}.meter label{display:flex;justify-content:space-between;margin-bottom:5px}.track{height:10px;background:#161719;border-radius:5px;overflow:hidden}.fill{height:100%;width:0}.muted{color:#aeb0b8;font-size:12px}#status{min-height:65px;overflow-wrap:anywhere}@media(max-width:850px){.layout{grid-template-columns:minmax(280px,512px)}aside{max-width:512px}}</style></head><body>
+<div class="layout"><canvas id="juego" width="512" height="512"></canvas><aside><h2>Casa · IA local v11</h2><p class="muted">WASD o flechas: movimiento manual. IA: piloto automático.</p><button id="modo">IA: activada</button><button id="colisiones">Colisiones: sí</button><button id="decidir">Decidir ahora</button><button id="verRuta">Mostrar ruta: sí</button><div style="margin:10px 0"><label for="intervaloIA">Reevaluar IA cada <strong id="intervaloValor">20</strong> segundos</label><input id="intervaloIA" type="range" min="3" max="120" step="1" value="20" style="width:100%;accent-color:#8bbfd8"><div class="muted">Se aplica a todos los personajes. No interrumpe las rutas en curso.</div></div><button id="addAgent">+ Personaje</button><button id="removeAgent">− Personaje</button><div id="agents"></div><div id="social" class="muted" style="margin:8px 0;max-height:110px;overflow:auto"></div><div id="medidores"></div><details><summary>Memoria del personaje (SQLite)</summary><div id="memoria" class="muted">Cargando...</div></details><p id="status">Conectando con Ollama…</p><p class="muted" id="habitacion"></p><p class="muted">Azul: sed · Verde: pipí · Amarillo: cansancio · Morado: aburrimiento. Las barras se llenan al aumentar la necesidad.</p></aside></div>
+<script>
+'use strict';
+const HOUSE_ID=new URLSearchParams(location.search).get('casa')||'1';
+const canvas=document.getElementById('juego'),ctx=canvas.getContext('2d');ctx.imageSmoothingEnabled=false;
+const TILE=32,STEP=8;
+// 16x16. Puertas de dos casillas: salón/cocina, salón/dormitorio, cocina/baño y dormitorio/baño.
+const map=[
+'################',
+'#.......#cccccc#',
+'#.......#cccccc#',
+'#.......#cccccc#',
+'#........cccccc#',
+'#........cccccc#',
+'#.......#cccccc#',
+'#.......#cccccc#',
+'####..######..##',
+'#ddddddd#bbbbbb#',
+'#ddddddd#bbbbbb#',
+'#ddddddd#bbbbbb#',
+'#dddddd..bbbbbb#',
+'#dddddd..bbbbbb#',
+'#ddddddd#bbbbbb#',
+'################'];
+if(map.length!==16||map.some(r=>r.length!==16))throw Error('Mapa inválido');
+const rooms={salon:'.',cocina:'c',dormitorio:'d',bano:'b'};
+const roomNames={'.':'Salón',c:'Cocina',d:'Dormitorio',b:'Baño','#':'Pared'};
+const colors={sed:'#39b9ed',pipi:'#6bd775',cansancio:'#f2c34e',aburrimiento:'#c38aed'};
+const furniture=[];
+function rect(x,y,w,h,c){ctx.fillStyle=c;ctx.fillRect(Math.round(x),Math.round(y),Math.round(w),Math.round(h))}
+function box(x,y,w,h,c){rect(x+3,y+4,w,h,'#46352c');rect(x,y,w,h,c);rect(x+2,y+2,w-4,3,'#ffffff29');rect(x+2,y+h-4,w-4,2,'#00000033')}
+function add(x,y,w,h,draw){furniture.push({x,y,w,h,draw})}
+// Muebles con colisiones reales y pasillos despejados.
+add(45,55,75,29,()=>{box(45,55,75,29,'#914e47');rect(54,60,57,8,'#c47967');rect(54,70,57,9,'#ad6356')});
+add(65,115,49,31,()=>{box(65,115,49,31,'#865c38');rect(71,120,37,20,'#c08b52')});
+add(176,53,39,20,()=>{box(176,53,39,20,'#393c43');rect(181,57,29,12,'#42838e')});
+add(302,42,40,35,()=>{box(302,42,40,35,'#b6bcb9');rect(307,47,30,24,'#e7e9e5');rect(311,55,2,10,'#7c8080')});
+add(353,43,91,30,()=>{box(353,43,91,30,'#b78b5e');rect(360,48,76,19,'#d9c9aa');for(let i=0;i<4;i++)rect(369+i*17,53,11,9,'#45474a')});
+add(354,132,62,33,()=>{box(354,132,62,33,'#9b7047');rect(360,137,50,22,'#d0a372')});
+add(332,136,15,23,()=>box(332,136,15,23,'#795b40'));
+add(423,136,15,23,()=>box(423,136,15,23,'#795b40'));
+add(44,331,65,89,()=>{box(44,331,65,89,'#815b43');rect(49,337,55,76,'#e7dcc4');rect(52,341,49,15,'#fff7e9');rect(49,360,55,53,'#638ea3');rect(49,406,55,7,'#456a84')});
+add(170,341,45,48,()=>{box(170,341,45,48,'#8c603a');rect(176,347,33,35,'#ac8253');rect(191,357,3,7,'#efca78')});
+add(145,418,35,27,()=>box(145,418,35,27,'#95683d'));
+add(336,331,94,44,()=>{box(336,331,94,44,'#dce6e4');rect(342,337,82,31,'#f5f8f5');rect(350,342,66,20,'#8cbcc7')});
+add(450,342,28,35,()=>{box(450,342,28,35,'#e6e9e7');rect(454,348,20,17,'#fff');rect(458,352,12,10,'#a8d0d6')});
+add(343,419,43,30,()=>{box(343,419,43,30,'#bea38c');rect(348,423,33,19,'#f2f5f4');rect(354,427,21,11,'#9ec5cc')});
+function collide(x,y,w,h){if(!state.collisions)return false;if(x<0||y<0||x+w>512||y+h>512)return true;for(let r=Math.floor(y/TILE);r<=Math.floor((y+h-.01)/TILE);r++)for(let c=Math.floor(x/TILE);c<=Math.floor((x+w-.01)/TILE);c++)if(map[r]?.[c]==='#'||map[r]?.[c]===undefined)return true;return furniture.some(m=>x<m.x+m.w&&x+w>m.x&&y<m.y+m.h&&y+h>m.y)}
+class Personaje{
+ constructor(x,y){this.x=x;this.y=y;this.ancho=24;this.alto=24;this.velocidad=120;this.sed=35;this.pipi=15;this.cansancio=30;this.aburrimiento=45;this.incrementos={sed:1.5,pipi:1.1,cansancio:.8,aburrimiento:1.3};this.recuperacion=16}
+ room(){return map[Math.floor((this.y+12)/32)]?.[Math.floor((this.x+12)/32)]||'#'}
+ mover(dx,dy){if(!collide(this.x+dx,this.y,24,24))this.x+=dx;if(!collide(this.x,this.y+dy,24,24))this.y+=dy}
+ updateNeeds(dt){for(const key of Object.keys(this.incrementos))this[key]+=this.incrementos[key]*dt;const r=this.room();const recover={'.':'aburrimiento',c:'sed',d:'cansancio',b:'pipi'}[r];if(recover)this[recover]-=this.recuperacion*dt;for(const key of Object.keys(this.incrementos))this[key]=Math.max(0,Math.min(100,this[key]))}
+ draw(){if(sprite.complete&&sprite.naturalWidth)ctx.drawImage(sprite,Math.round(this.x-4),Math.round(this.y-8),32,32);else{rect(this.x+4,this.y,16,10,'#4e3228');rect(this.x+5,this.y+8,14,10,'#efbf91');rect(this.x+3,this.y+18,18,8,'#417cae');rect(this.x+4,this.y+25,6,4,'#3a3332');rect(this.x+14,this.y+25,6,4,'#3a3332')}
+ const x=Math.round(this.x-4),y=Math.round(this.y-40);Object.keys(colors).forEach((key,i)=>{rect(x-1,y+i*8-1,34,6,'#121212');rect(x,y+i*8,32,4,'#424242');rect(x,y+i*8,32*this[key]/100,4,colors[key])})}
+}
+const sprite=new Image();sprite.src='/sprite.png';
+const player=new Personaje(145,100);
+const agents=[];
+let activeAgent=null;
+let nextAgent=1;
+const spawnPoints=[[145,100],[215,190],[300,210],[120,380],[440,400],[300,120]];
+const INTERVALO_IA_DEFAULT=20;
+let intervaloIA=Number(localStorage.getItem("casa_intervalo_ia"))||INTERVALO_IA_DEFAULT;
+intervaloIA=Math.max(3,Math.min(120,intervaloIA));
+function addAgent(){
+ const id='casa-'+HOUSE_ID+'-agente-'+nextAgent++;
+ const pos=spawnPoints[(nextAgent-2)%spawnPoints.length];
+ const p=new Personaje(...pos);
+ // Buscar punto de aparición libre y sin superposición.
+ if(collide(p.x,p.y,24,24)||agents.some(a=>Math.hypot(a.player.x-p.x,a.player.y-p.y)<30)){
+   outer:for(let y=40;y<460;y+=8)for(let x=40;x<460;x+=8){
+     if(!collide(x,y,24,24)&&agents.every(a=>Math.hypot(a.player.x-x,a.player.y-y)>36)){p.x=x;p.y=y;break outer}
+   }
+ }
+ const a={id,name:'Personaje '+nextAgent.toString().padStart(2,'0'),player:p,ai:true,loading:false,destination:null,action:'',reason:'',error:'',path:[],elapsed:Math.max(0,intervaloIA-0.1),interval:intervaloIA,lastThought:'',thoughtUntil:0,retryAfter:0,reroutes:0,wait:0,socialCooldown:8+Math.random()*8,nearby:new Set(),naming:false,conversationBusy:false};
+ a.name='Personaje '+(nextAgent-1);
+ agents.push(a);activeAgent=a;renderAgents();chooseName(a);return a;
+}
+async function chooseName(a){
+ if(a.naming)return;a.naming=true;
+ try{const r=await fetch('/api/nombre',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({agente_id:a.id})});const d=await r.json();if(d.ok&&agents.includes(a)){a.name=d.nombre;renderAgents();say('Me llamo '+a.name,6,a)}}catch(e){console.warn(e)}finally{a.naming=false}
+}
+function removeAgent(){if(agents.length<=1)return;agents.splice(agents.indexOf(activeAgent),1);activeAgent=agents[0];renderAgents();}
+function renderAgents(){
+ const root=document.getElementById('agents');root.replaceChildren();
+ for(const a of agents){const b=document.createElement('button');b.textContent=a.name+(a===activeAgent?' ●':'');b.onclick=()=>{activeAgent=a;renderAgents();refreshMemory();updateUI()};root.appendChild(b)}
+}
+
+const state={ai:true,collisions:true,loading:false,destination:null,action:'',reason:'',error:'',path:[],elapsed:0,interval:intervaloIA,requestId:0,lastThought:"",thoughtUntil:0,retryAfter:0,showPath:true,reroutes:0};
+const intervaloControl=document.getElementById("intervaloIA");
+const intervaloValor=document.getElementById("intervaloValor");
+intervaloControl.value=intervaloIA;intervaloValor.textContent=intervaloIA;
+intervaloControl.addEventListener("input",()=>{
+ intervaloIA=Number(intervaloControl.value);intervaloValor.textContent=intervaloIA;
+ localStorage.setItem("casa_intervalo_ia",String(intervaloIA));
+ for(const a of agents){a.interval=intervaloIA;a.elapsed=Math.min(a.elapsed,intervaloIA)}
+});
+const keys=new Set();
+let lastRoom=player.room(),lastEventRoom='';
+addAgent();addAgent();activeAgent=agents[0];renderAgents();document.getElementById('addAgent').onclick=()=>{if(agents.length<8)addAgent()};document.getElementById('removeAgent').onclick=removeAgent;
+function logEvent(tipo,mensaje='',accion='',destino='',agent=activeAgent){
+ const p=agent.player;const necesidades={sed:p.sed,pipi:p.pipi,cansancio:p.cansancio,aburrimiento:p.aburrimiento};
+ fetch('/api/evento',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({agente_id:agent.id,tipo,mensaje,accion,destino,habitacion:roomNames[p.room()]||'pasillo',necesidades})}).then(()=>{if(agent===activeAgent)refreshMemory()}).catch(console.warn);
+}
+async function refreshMemory(){const agent=activeAgent;if(!agent)return;try{const r=await fetch('/api/memoria?agente_id='+encodeURIComponent(agent.id)+'&limit=15');const data=await r.json();if(agent!==activeAgent)return;document.getElementById('memoria').replaceChildren(...data.eventos.map(e=>{const div=document.createElement('div');div.style.padding='5px 0';div.textContent=`${e.fecha.slice(11,19)} · ${e.tipo}: ${e.mensaje||e.accion||e.destino||e.habitacion}`;return div}))}catch(e){document.getElementById('memoria').textContent='Sin conexión a memoria'}}
+refreshMemory();
+window.addEventListener('keydown',e=>{const k=e.key.toLowerCase();if(['w','a','s','d','arrowup','arrowdown','arrowleft','arrowright'].includes(k)){e.preventDefault();keys.add(k)}if(k==='c'&&!e.repeat)toggleCollisions()});
+window.addEventListener('keyup',e=>keys.delete(e.key.toLowerCase()));window.addEventListener('blur',()=>keys.clear());
+function toggleCollisions(){state.collisions=!state.collisions;for(const a of agents)a.path=[];document.getElementById('colisiones').textContent='Colisiones: '+(state.collisions?'sí':'no')}
+document.getElementById('colisiones').onclick=toggleCollisions;
+document.getElementById('modo').onclick=()=>{const a=activeAgent;a.ai=!a.ai;a.path=[];a.elapsed=a.interval;say(a.ai?'Voy a decidir qué hacer':'Ahora me controlas tú',5,a);updateUI();if(a.ai)decide(a)};
+document.getElementById('decidir').onclick=()=>{activeAgent.elapsed=0;decide(activeAgent)};
+// Navegación A* v6: búsqueda en una rejilla de 4 px, sin suavizado
+// agresivo. El algoritmo valida cada paso y conserva la geometría exacta.
+const GRID=4, N=123; // x,y de 0 a 488 (personaje 24x24)
+const nodeId=(x,y)=>y*N+x;
+function freePoint(x,y){return !collide(x,y,24,24)}
+function agentsNear(x,y,agent,margin=4){return agents.filter(a=>a!==agent && Math.abs(a.player.x-x)<24+margin && Math.abs(a.player.y-y)<24+margin)}
+function segmentFree(x1,y1,x2,y2){
+  const length=Math.hypot(x2-x1,y2-y1);
+  const steps=Math.max(1,Math.ceil(length/0.75));
+  for(let i=0;i<=steps;i++){
+    const t=i/steps;
+    if(!freePoint(x1+(x2-x1)*t,y1+(y2-y1)*t))return false;
+  }
+  return true;
+}
+function roomAt(x,y){return map[Math.floor((y+12)/TILE)]?.[Math.floor((x+12)/TILE)];}
+const NAV_DIRECTIONS=[[1,0],[-1,0],[0,1],[0,-1]];
+function routeTo(room,agent=activeAgent){
+  const player=agent.player,state=agent;
+  const target=rooms[room];if(!target)return [];
+  if(roomAt(player.x,player.y)===target)return [];
+  const size=N*N,valid=new Uint8Array(size),goals=[];
+  for(let y=0;y<N;y++)for(let x=0;x<N;x++){
+    const k=nodeId(x,y),px=x*GRID,py=y*GRID;
+    if(!freePoint(px,py))continue;
+    valid[k]=1;
+    if(roomAt(px,py)===target)goals.push(k);
+  }
+  if(!goals.length){state.error='No hay espacio libre en '+room;return []}
+  // Anclar la posición real a nodos visibles; evita empezar dentro
+  // de un nodo redondeado que esté detrás de una pared.
+  const starts=[];
+  const cx=Math.round(player.x/GRID),cy=Math.round(player.y/GRID);
+  for(let radius=0;radius<=12 && starts.length<4;radius++){
+    for(let y=Math.max(0,cy-radius);y<=Math.min(N-1,cy+radius);y++)
+    for(let x=Math.max(0,cx-radius);x<=Math.min(N-1,cx+radius);x++){
+      if(Math.max(Math.abs(x-cx),Math.abs(y-cy))!==radius)continue;
+      const k=nodeId(x,y);
+      if(valid[k]&&segmentFree(player.x,player.y,x*GRID,y*GRID))starts.push(k);
+    }
+  }
+  if(!starts.length){state.error='Posición inicial sin conexión a la rejilla';return []}
+  // A* multiobjetivo: heurística cero (Dijkstra), óptima y sin
+  // problemas de heurísticas incompatibles con varios destinos.
+  const goalMask=new Uint8Array(size);for(const k of goals)goalMask[k]=1;
+  const dist=new Float64Array(size);dist.fill(Infinity);
+  const parent=new Int32Array(size);parent.fill(-1);
+  const closed=new Uint8Array(size),heap=[];
+  function push(k,cost){
+    let i=heap.length;heap.push({k,cost});
+    while(i>0){const j=(i-1)>>1;if(heap[j].cost<=cost)break;heap[i]=heap[j];i=j}
+    heap[i]={k,cost};
+  }
+  function pop(){
+    const first=heap[0],last=heap.pop();
+    if(heap.length){let i=0;while(true){const l=i*2+1;if(l>=heap.length)break;const r=l+1,j=r<heap.length&&heap[r].cost<heap[l].cost?r:l;if(heap[j].cost>=last.cost)break;heap[i]=heap[j];i=j}heap[i]=last}
+    return first;
+  }
+  for(const k of starts){const x=k%N,y=(k/N)|0;const d=Math.hypot(x*GRID-player.x,y*GRID-player.y)/GRID;dist[k]=d;push(k,d)}
+  let found=-1;
+  while(heap.length){
+    const {k,cost}=pop();if(closed[k]||cost>dist[k]+1e-8)continue;
+    closed[k]=1;
+    if(goalMask[k]){found=k;break}
+    const x=k%N,y=(k/N)|0;
+    for(const [dx,dy] of NAV_DIRECTIONS){
+      const nx=x+dx,ny=y+dy;
+      if(nx<0||ny<0||nx>=N||ny>=N)continue;
+      const nk=nodeId(nx,ny);
+      if(!valid[nk]||closed[nk])continue;
+      if(!segmentFree(x*GRID,y*GRID,nx*GRID,ny*GRID))continue;
+      const nd=cost+1;
+      if(nd>=dist[nk])continue;
+      dist[nk]=nd;parent[nk]=k;push(nk,nd);
+    }
+  }
+  if(found<0){state.error='No existe conexión física hasta '+room+' (revisar puertas)';return []}
+  const path=[];
+  for(let k=found;k!==-1;k=parent[k])path.push({x:(k%N)*GRID,y:((k/N)|0)*GRID});
+  path.reverse();
+  // Comprimir exclusivamente segmentos rectos (sin diagonales).
+  // Conserva las esquinas necesarias para no chocar con las paredes.
+  const compact=[];
+  for(let i=0;i<path.length;i++){
+    const a=path[i-1],b=path[i],c=path[i+1];
+    if(a&&c&&b.x-a.x===c.x-b.x&&b.y-a.y===c.y-b.y)continue;
+    compact.push(b);
+  }
+  return compact;
+}
+document.getElementById('verRuta').onclick=()=>{
+  state.showPath=!state.showPath;
+  document.getElementById('verRuta').textContent='Mostrar ruta: '+(state.showPath?'sí':'no');
+};
+function globalThisShowPath(){return state.showPath}
+function drawPath(){
+ for(const agent of agents){const player=agent.player,state=agent;
+  if(!globalThisShowPath()||!state.path.length)continue;
+  ctx.save();ctx.strokeStyle='#00e8ff';ctx.lineWidth=2;ctx.setLineDash([4,3]);
+  ctx.beginPath();ctx.moveTo(player.x+12,player.y+12);
+  for(const p of state.path)ctx.lineTo(p.x+12,p.y+12);
+  ctx.stroke();ctx.setLineDash([]);
+  for(const p of state.path){ctx.fillStyle='#00e8ff';ctx.fillRect(p.x+9,p.y+9,6,6);}
+  ctx.restore();
+ }
+}
+async function decide(agent=activeAgent){const player=agent.player,state=agent;if(!state.ai||state.loading||state.dragging||performance.now()<state.retryAfter)return;state.loading=true;state.error='';try{const res=await fetch('/api/decidir',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sed:player.sed,pipi:player.pipi,cansancio:player.cansancio,aburrimiento:player.aburrimiento,habitacion:roomNames[player.room()]||'desconocida',destino_actual:state.destination,agente_id:agent.id,personajes_visibles:agents.filter(o=>o!==agent&&Math.hypot(o.player.x-player.x,o.player.y-player.y)<120&&lineOfSight(o.player.x+12,o.player.y+12,player.x+12,player.y+12)).map(o=>o.name)})});const data=await res.json();if(!res.ok||!data.ok)throw Error(data.error||'Error IA');if(!state.ai||state.dragging)return;const previousReason=state.reason;state.action=data.accion;state.reason=data.motivo; if(data.destino!==state.destination || data.motivo!==previousReason) say(data.motivo||data.accion,9,agent);const newRoom=data.destino;if(newRoom!==state.destination||(!state.path.length&&player.room()!==rooms[newRoom])){state.destination=newRoom;state.path=routeTo(newRoom,agent);state.reroutes=0;if(!state.path.length&&player.room()!==rooms[newRoom]){state.error='No existe ruta transitable hasta '+newRoom;say('No encuentro el camino...',7,agent)}}}catch(e){state.error=e.message;state.retryAfter=performance.now()+15000;say('No consigo pensar... volveré a intentarlo.',6,agent)}finally{state.loading=false;updateUI()}}
+function drawThought(agent){
+ const player=agent.player,state=agent;
+ const message=state.lastThought;
+ if(!message || performance.now()>state.thoughtUntil)return;
+ ctx.save();
+ ctx.font='11px monospace';
+ const words=message.split(/\s+/);let lines=[''];
+ for(const word of words){let i=lines.length-1;const candidate=(lines[i]+' '+word).trim();if(ctx.measureText(candidate).width>164&&lines[i]&&lines.length<3)lines.push(word);else lines[i]=candidate;}
+ const width=Math.min(188,Math.max(75,...lines.map(t=>ctx.measureText(t).width+18)));
+ const height=lines.length*14+12;
+ const x=Math.max(3,Math.min(512-width-3,player.x+12-width/2));
+ const y=Math.max(3,player.y-48-height);
+ rect(x+2,y+3,width,height,'#00000088');rect(x,y,width,height,'#fff9e9');
+ ctx.strokeStyle='#463a30';ctx.lineWidth=2;ctx.strokeRect(x,y,width,height);
+ ctx.fillStyle='#25201d';lines.forEach((line,i)=>ctx.fillText(line,x+9,y+17+i*14));
+ ctx.restore();
+}
+function say(message,seconds=7,agent=activeAgent,save=true){const state=agent;state.lastThought=String(message||'').slice(0,130);state.thoughtUntil=performance.now()+seconds*1000;if(state.lastThought&&save)logEvent('habla',state.lastThought,'','',agent)}
+function moveAI(dt,agent){
+ if(agent.dragging)return;
+ const p=agent.player;
+ if(!agent.path.length)return;
+ let remaining=p.velocidad*dt;
+ while(remaining>0.001 && agent.path.length){
+  const goal=agent.path[0],dx=goal.x-p.x,dy=goal.y-p.y,d=Math.hypot(dx,dy);
+  if(d<0.4){agent.path.shift();continue}
+  const step=Math.min(d,remaining,1.8),nx=p.x+dx/d*step,ny=p.y+dy/d*step;
+  if(!segmentFree(p.x,p.y,nx,ny)){
+   agent.path=routeTo(agent.destination,agent);
+   agent.wait+=dt;
+   if(agent.wait>3){agent.error='Obstáculo fijo: recalculando';agent.wait=0}
+   break;
+  }
+  const others=agentsNear(nx,ny,agent,2);
+  if(others.length){
+   agent.wait+=dt;
+   // Si dos personajes se bloquean, el de mayor ID cede el paso.
+   // Busca un espacio libre cercano fuera de la trayectoria del otro.
+   if(agent.wait>0.7 && (agent.id>others[0].id || agent.wait>3)){
+    const other=others[0];let best=null,score=Infinity;
+    for(const [ox,oy] of [[0,-16],[0,16],[-16,0],[16,0],[-24,-24],[24,24]]){
+     const tx=p.x+ox,ty=p.y+oy;
+     if(!segmentFree(p.x,p.y,tx,ty)||agentsNear(tx,ty,agent,3).length)continue;
+     const sc=Math.hypot(tx-other.player.x,ty-other.player.y)*-1 + Math.hypot(tx-p.x,ty-p.y)*0.1;
+     if(sc<score){score=sc;best={x:tx,y:ty}}
+    }
+    if(best){agent.path.unshift(best);agent.wait=0;}
+    else if(agent.wait>6){
+      // Último recurso: atravesar a otro agente, NUNCA paredes o muebles.
+      // Evita interbloqueos permanentes en puertas de una sola persona.
+      p.x=nx;p.y=ny;remaining-=step;
+    }
+   }
+   break;
+  }
+  p.x=nx;p.y=ny;remaining-=step;agent.wait=0;agent.error='';
+ }
+}
+function lineOfSight(x1,y1,x2,y2){const d=Math.hypot(x2-x1,y2-y1);for(let i=0;i<=Math.ceil(d/5);i++){const t=i/Math.max(1,Math.ceil(d/5)),x=x1+(x2-x1)*t,y=y1+(y2-y1)*t;if(map[Math.floor(y/32)]?.[Math.floor(x/32)]==='#')return false;}return true}
+let socialTick=0;
+async function converse(a,b){
+ if(a.conversationBusy||b.conversationBusy)return;
+ a.conversationBusy=b.conversationBusy=true;
+ try{
+  const r=await fetch('/api/dialogar',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({agente_id:a.id,otro_id:b.id,nombre:a.name,otro_nombre:b.name,habitacion:roomNames[a.player.room()]||'pasillo',necesidades:{sed:a.player.sed,pipi:a.player.pipi,cansancio:a.player.cansancio,aburrimiento:a.player.aburrimiento}})});
+  const d=await r.json();if(!d.ok||!agents.includes(a)||!agents.includes(b))return;
+  say(d.mensaje,8,a,false);say(d.respuesta,9,b,false);
+  const social=document.getElementById('social');const line=document.createElement('div');line.textContent=a.name+': '+d.mensaje+' | '+b.name+': '+d.respuesta;social.prepend(line);while(social.children.length>5)social.lastChild.remove();
+ }catch(e){console.warn('Diálogo',e)}finally{a.conversationBusy=b.conversationBusy=false;a.socialCooldown=18+Math.random()*12;b.socialCooldown=18+Math.random()*12}
+}
+function updateSocial(dt){
+ for(const a of agents){a.socialCooldown-=dt;
+  for(const b of agents){if(a===b)continue;
+   const distance=Math.hypot(a.player.x-b.player.x,a.player.y-b.player.y);
+   if(distance<95 && a.socialCooldown<=0 && b.socialCooldown<=0 && !a.conversationBusy && !b.conversationBusy){a.socialCooldown=30;b.socialCooldown=30;converse(a,b);break}
+  }
+ }
+}
+function update(dt){
+ updateSocial(dt);
+ for(const a of agents){for(const b of agents){if(a===b)continue;const visible=Math.hypot(a.player.x-b.player.x,a.player.y-b.player.y)<110 && lineOfSight(a.player.x+12,a.player.y+12,b.player.x+12,b.player.y+12);if(visible&&!a.nearby.has(b.id)){a.nearby.add(b.id);logEvent('encuentro','He visto a '+b.name,'','',a)}else if(!visible)a.nearby.delete(b.id)}}
+ for(const agent of agents){
+  const player=agent.player,state=agent;
+  player.updateNeeds(dt);
+  if(state.previousRoom!==player.room()){
+   state.previousRoom=player.room();
+   if(player.room()!=='#')logEvent('llegada','He entrado en '+(roomNames[player.room()]||'pasillo'),'',state.destination||'',agent);
+  }
+  if(state.dragging)continue;
+  if(state.ai){
+   state.elapsed+=dt;
+   if(state.elapsed>=state.interval && !state.loading){state.elapsed=0;decide(agent)}
+   moveAI(dt,agent);
+  }else if(agent===activeAgent){
+   let dx=Number(keys.has('d')||keys.has('arrowright'))-Number(keys.has('a')||keys.has('arrowleft'));
+   let dy=Number(keys.has('s')||keys.has('arrowdown'))-Number(keys.has('w')||keys.has('arrowup'));
+   const d=Math.hypot(dx,dy);if(d){dx/=d;dy/=d;const n=Math.ceil(player.velocidad*dt/3);for(let i=0;i<n;i++)player.mover(dx*player.velocidad*dt/n,dy*player.velocidad*dt/n)}
+  }
+ }
+}
+// ========================================
+// ARRASTRAR PERSONAJES (RATÓN Y TÁCTIL)
+// ========================================
+let drag=null;
+function canvasPoint(event){
+ const r=canvas.getBoundingClientRect();
+ const sx=canvas.width/r.width,sy=canvas.height/r.height;
+ return {x:(event.clientX-r.left)*sx,y:(event.clientY-r.top)*sy};
+}
+function freeForDrop(x,y,agent){
+ if(collide(x,y,24,24))return false;
+ return agents.every(a=>a===agent ||
+   !(x<a.player.x+24&&x+24>a.player.x&&y<a.player.y+24&&y+24>a.player.y));
+}
+function findDrop(x,y,agent){
+ x=Math.max(0,Math.min(488,x));y=Math.max(0,Math.min(488,y));
+ if(freeForDrop(x,y,agent))return {x,y};
+ // Buscar un punto válido alrededor de donde soltó el usuario.
+ for(let radius=4;radius<=160;radius+=4){
+  const count=Math.max(12,Math.ceil(2*Math.PI*radius/5));
+  for(let i=0;i<count;i++){
+   const a=2*Math.PI*i/count;
+   const nx=Math.round(Math.max(0,Math.min(488,x+Math.cos(a)*radius)));
+   const ny=Math.round(Math.max(0,Math.min(488,y+Math.sin(a)*radius)));
+   if(freeForDrop(nx,ny,agent))return {x:nx,y:ny};
+  }
+ }
+ return null;
+}
+canvas.addEventListener('pointerdown',event=>{
+ if(event.button!==0)return;
+ const p=canvasPoint(event);
+ // Elegir el último dibujado cuando se superponen.
+ const agent=[...agents].reverse().find(a=>
+  p.x>=a.player.x-4&&p.x<=a.player.x+28&&
+  p.y>=a.player.y-8&&p.y<=a.player.y+32);
+ if(!agent)return;
+ event.preventDefault();
+ activeAgent=agent;renderAgents();refreshMemory();updateUI();
+ drag={agent,pointerId:event.pointerId,offsetX:p.x-agent.player.x,
+  offsetY:p.y-agent.player.y,startX:agent.player.x,startY:agent.player.y,
+  lastValid:{x:agent.player.x,y:agent.player.y}};
+ agent.dragging=true;
+ agent.path=[];agent.wait=0;agent.reroutes=0;
+ canvas.setPointerCapture(event.pointerId);
+ canvas.style.cursor='grabbing';
+});
+canvas.addEventListener('pointermove',event=>{
+ if(!drag||event.pointerId!==drag.pointerId)return;
+ event.preventDefault();
+ const p=canvasPoint(event),a=drag.agent;
+ const x=Math.max(0,Math.min(488,p.x-drag.offsetX));
+ const y=Math.max(0,Math.min(488,p.y-drag.offsetY));
+ // Permitir arrastre visual libre; validar la posición al soltar.
+ a.player.x=x;a.player.y=y;
+ if(freeForDrop(x,y,a))drag.lastValid={x,y};
+});
+function endDrag(event){
+ if(!drag||event.pointerId!==drag.pointerId)return;
+ const d=drag,a=d.agent,p=a.player;
+ const position=findDrop(p.x,p.y,a)||d.lastValid;
+ p.x=position.x;p.y=position.y;
+ a.dragging=false;a.path=[];a.wait=0;a.reroutes=0;a.error='';
+ a.elapsed=a.interval; // Reevaluar en el siguiente ciclo sin interrumpir peticiones previas.
+ if(a.destination&&p.room()!==rooms[a.destination]){
+  a.path=routeTo(a.destination,a);
+ }
+ if(canvas.hasPointerCapture(event.pointerId))canvas.releasePointerCapture(event.pointerId);
+ canvas.style.cursor='grab';drag=null;
+ say('Ya puedo seguir desde aquí.',3,a,false);
+ updateUI();
+}
+canvas.addEventListener('pointerup',endDrag);
+canvas.addEventListener('pointercancel',endDrag);
+function drawMap(){for(let y=0;y<16;y++)for(let x=0;x<16;x++){const t=map[y][x],px=x*32,py=y*32;if(t==='#'){rect(px,py,32,32,'#514032');rect(px,py,32,5,'#80634b');rect(px,py+27,32,5,'#302820')}else{rect(px,py,32,32,({'.':'#bd8b57',c:'#c6b99b',d:'#b58d68',b:'#a2c7cb'})[t]);if(t==='.'||t==='d'){rect(px,py+15,32,1,'#936c48');rect(px+(y%2)*16,py,1,15,'#936c48')}else{rect(px,py,32,1,'#ffffff30');rect(px,py,1,32,'#ffffff30')}}}}
+function decor(){rect(48,169,128,55,'#a65d48');rect(53,174,118,45,'#ce9471');rect(60,181,104,31,'#a65d48');rect(115,393,70,22,'#b87c64');rect(120,397,60,14,'#d5a38b');for(const [x,y] of [[189,191],[273,175]]){rect(x+5,y+12,17,13,'#9c633c');rect(x+2,y+4,22,14,'#346b3f');rect(x+8,y,14,14,'#4e9955')}rect(131,39,35,23,'#5c3c2d');rect(135,43,27,15,'#81a3a0')}
+function draw(){ctx.clearRect(0,0,512,512);drawMap();decor();for(const m of furniture)m.draw();drawPath();for(const agent of agents){agent.player.draw();if(agent.dragging){ctx.save();ctx.strokeStyle="#00e8ff";ctx.setLineDash([3,3]);ctx.strokeRect(agent.player.x-2,agent.player.y-2,28,28);ctx.restore()}ctx.save();ctx.font='10px monospace';ctx.textAlign='center';ctx.fillStyle='#ffffff';ctx.strokeStyle='#222';ctx.lineWidth=3;ctx.strokeText(agent.name,agent.player.x+12,agent.player.y+41);ctx.fillText(agent.name,agent.player.x+12,agent.player.y+41);ctx.restore()}for(const agent of agents)drawThought(agent)}
+const meterRoot=document.getElementById('medidores');for(const [key,label] of [['sed','Sed'],['pipi','Pipí'],['cansancio','Cansancio'],['aburrimiento','Aburrimiento']]){const div=document.createElement('div');div.className='meter';div.innerHTML=`<label>${label}<span id="v-${key}">0%</span></label><div class="track"><div class="fill" id="b-${key}" style="background:${colors[key]}"></div></div>`;meterRoot.appendChild(div)}
+function updateUI(){const player=activeAgent.player,state=activeAgent;document.getElementById('modo').textContent='IA: '+(state.ai?'activada':'desactivada');for(const k of Object.keys(colors)){document.getElementById('v-'+k).textContent=Math.round(player[k])+'%';document.getElementById('b-'+k).style.width=player[k]+'%'}document.getElementById('habitacion').textContent=activeAgent.name+' · Habitación: '+(roomNames[player.room()]||'pasillo');document.getElementById('status').textContent=state.error?'Error: '+state.error:state.ai?(state.loading?'Consultando Ollama… ':'')+'Destino: '+(state.destination||'pendiente')+' · '+(state.action||'')+(state.reason?' · '+state.reason:''):'Control manual activo'}
+let previous=0,uiElapsed=0;function loop(time){if(!previous)previous=time;const dt=Math.min((time-previous)/1000,.05);previous=time;update(dt);draw();uiElapsed+=dt;if(uiElapsed>.15){uiElapsed=0;updateUI()}requestAnimationFrame(loop)}updateUI();requestAnimationFrame(loop);
+</script></body></html>

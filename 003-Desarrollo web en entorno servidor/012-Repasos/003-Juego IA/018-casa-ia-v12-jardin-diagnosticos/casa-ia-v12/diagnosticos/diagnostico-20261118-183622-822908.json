@@ -1,0 +1,2846 @@
+{
+  "schema": "jocarsa-casa-ia-diagnostic-v1",
+  "generated_at": "2026-11-18T18:36:22.820Z",
+  "intervalo_ia": 20,
+  "world": {
+    "width": 1216,
+    "height": 1216,
+    "houses": [
+      {
+        "id": 1,
+        "x": 32,
+        "y": 32,
+        "doors": [
+          "north",
+          "south"
+        ]
+      },
+      {
+        "id": 2,
+        "x": 640,
+        "y": 32,
+        "doors": [
+          "north",
+          "south"
+        ]
+      },
+      {
+        "id": 3,
+        "x": 32,
+        "y": 640,
+        "doors": [
+          "north",
+          "south"
+        ]
+      },
+      {
+        "id": 4,
+        "x": 640,
+        "y": 640,
+        "doors": [
+          "north",
+          "south"
+        ]
+      }
+    ]
+  },
+  "agents": [
+    {
+      "id": "casa-1-agente-1",
+      "name": "Alex",
+      "home": 1,
+      "position": {
+        "x": 167,
+        "y": 207
+      },
+      "zone": {
+        "home": 1,
+        "room": "salon",
+        "tile": "."
+      },
+      "goal": null,
+      "thought": "",
+      "needs": {
+        "sed": 55.00240000000169,
+        "pipi": 52.00176000000004,
+        "cansancio": 46.00127999999952,
+        "aburrimiento": 0
+      }
+    },
+    {
+      "id": "casa-1-agente-2",
+      "name": "Nora",
+      "home": 1,
+      "position": {
+        "x": 319.43050000000113,
+        "y": 192
+      },
+      "zone": {
+        "home": 1,
+        "room": "cocina",
+        "tile": "c"
+      },
+      "goal": "cocina",
+      "thought": "Necesito beber agua.",
+      "needs": {
+        "sed": 0.3352000000030274,
+        "pipi": 52.00176000000004,
+        "cansancio": 46.00127999999952,
+        "aburrimiento": 5.254210000000003
+      }
+    },
+    {
+      "id": "casa-2-agente-1",
+      "name": "Luna",
+      "home": 2,
+      "position": {
+        "x": 927.687519979586,
+        "y": 192.00002475878358
+      },
+      "zone": {
+        "home": 2,
+        "room": "cocina",
+        "tile": "c"
+      },
+      "goal": "cocina",
+      "thought": "Hola, Leo. ¿Cómo estás?",
+      "needs": {
+        "sed": 0,
+        "pipi": 52.00176000000004,
+        "cansancio": 46.00127999999952,
+        "aburrimiento": 8.71168999999999
+      }
+    },
+    {
+      "id": "casa-2-agente-2",
+      "name": "Leo",
+      "home": 2,
+      "position": {
+        "x": 906.3375368672929,
+        "y": 192.00586740469734
+      },
+      "zone": {
+        "home": 2,
+        "room": "salon",
+        "tile": "."
+      },
+      "goal": "cocina",
+      "thought": "¡Hola, Luna! Me alegro de verte.",
+      "needs": {
+        "sed": 65.00240000000255,
+        "pipi": 52.00176000000004,
+        "cansancio": 46.00127999999952,
+        "aburrimiento": 0
+      }
+    },
+    {
+      "id": "casa-3-agente-1",
+      "name": "Vera",
+      "home": 3,
+      "position": {
+        "x": 272.1058947257779,
+        "y": 800.0187970391697
+      },
+      "zone": {
+        "home": 3,
+        "room": "salon",
+        "tile": "."
+      },
+      "goal": "cocina",
+      "thought": "Hola, Bruno. ¿Cómo estás?",
+      "needs": {
+        "sed": 55.00240000000169,
+        "pipi": 52.00176000000004,
+        "cansancio": 46.00127999999952,
+        "aburrimiento": 0
+      }
+    },
+    {
+      "id": "casa-3-agente-2",
+      "name": "Bruno",
+      "home": 3,
+      "position": {
+        "x": 319.43050000000113,
+        "y": 800
+      },
+      "zone": {
+        "home": 3,
+        "room": "cocina",
+        "tile": "c"
+      },
+      "goal": "cocina",
+      "thought": "¡Hola, Vera! Me alegro de verte.",
+      "needs": {
+        "sed": 0.11280000000303306,
+        "pipi": 52.00176000000004,
+        "cansancio": 46.00127999999952,
+        "aburrimiento": 5.272280000000003
+      }
+    },
+    {
+      "id": "casa-4-agente-1",
+      "name": "Iris",
+      "home": 4,
+      "position": {
+        "x": 775,
+        "y": 815
+      },
+      "zone": {
+        "home": 4,
+        "room": "salon",
+        "tile": "."
+      },
+      "goal": null,
+      "thought": "",
+      "needs": {
+        "sed": 55.00240000000169,
+        "pipi": 52.00176000000004,
+        "cansancio": 46.00127999999952,
+        "aburrimiento": 0
+      }
+    },
+    {
+      "id": "casa-4-agente-2",
+      "name": "Hugo",
+      "home": 4,
+      "position": {
+        "x": 927.430499999999,
+        "y": 800
+      },
+      "zone": {
+        "home": 4,
+        "room": "cocina",
+        "tile": "c"
+      },
+      "goal": "cocina",
+      "thought": "Necesito beber agua.",
+      "needs": {
+        "sed": 0.22320000000302695,
+        "pipi": 52.00176000000004,
+        "cansancio": 46.00127999999952,
+        "aburrimiento": 5.263310000000003
+      }
+    }
+  ],
+  "events": [
+    {
+      "time": "2026-11-18T18:36:14.463Z",
+      "agent": "casa-2-agente-1",
+      "home": 2,
+      "type": "drag",
+      "from": {
+        "x": 775,
+        "y": 207
+      },
+      "to": {
+        "x": 747.3202033242641,
+        "y": 207
+      }
+    },
+    {
+      "time": "2026-11-18T18:36:14.475Z",
+      "agent": "casa-2-agente-1",
+      "home": 2,
+      "type": "decision",
+      "zone": "salon",
+      "goal": "cocina",
+      "reason": "Necesito beber agua.",
+      "pathLength": 2,
+      "needs": {
+        "sed": 42,
+        "pipi": 43,
+        "cansancio": 39,
+        "aburrimiento": 0
+      }
+    },
+    {
+      "time": "2026-11-18T18:36:16.124Z",
+      "agent": "casa-2-agente-1",
+      "home": 2,
+      "type": "arrival",
+      "from": "salon",
+      "to": "cocina",
+      "house": 2
+    },
+    {
+      "time": "2026-11-18T18:36:16.236Z",
+      "agent": "casa-2-agente-1",
+      "home": 2,
+      "type": "goal_reached",
+      "goal": "cocina"
+    },
+    {
+      "time": "2026-11-18T18:36:17.828Z",
+      "agent": "casa-3-agente-2",
+      "home": 3,
+      "type": "decision",
+      "zone": "salon",
+      "goal": "cocina",
+      "reason": "Necesito beber agua.",
+      "pathLength": 3,
+      "needs": {
+        "sed": 58,
+        "pipi": 47,
+        "cansancio": 42,
+        "aburrimiento": 0
+      }
+    },
+    {
+      "time": "2026-11-18T18:36:17.833Z",
+      "agent": "casa-4-agente-2",
+      "home": 4,
+      "type": "decision",
+      "zone": "salon",
+      "goal": "cocina",
+      "reason": "Necesito beber agua.",
+      "pathLength": 3,
+      "needs": {
+        "sed": 58,
+        "pipi": 47,
+        "cansancio": 42,
+        "aburrimiento": 0
+      }
+    },
+    {
+      "time": "2026-11-18T18:36:17.837Z",
+      "agent": "casa-1-agente-2",
+      "home": 1,
+      "type": "decision",
+      "zone": "salon",
+      "goal": "cocina",
+      "reason": "Necesito beber agua.",
+      "pathLength": 3,
+      "needs": {
+        "sed": 58,
+        "pipi": 47,
+        "cansancio": 42,
+        "aburrimiento": 0
+      }
+    },
+    {
+      "time": "2026-11-18T18:36:18.099Z",
+      "agent": "casa-2-agente-2",
+      "home": 2,
+      "type": "drag",
+      "from": {
+        "x": 845,
+        "y": 232
+      },
+      "to": {
+        "x": 817.320058514555,
+        "y": 208.2743772438211
+      }
+    },
+    {
+      "time": "2026-11-18T18:36:18.111Z",
+      "agent": "casa-2-agente-2",
+      "home": 2,
+      "type": "decision",
+      "zone": "salon",
+      "goal": "cocina",
+      "reason": "Necesito beber agua.",
+      "pathLength": 2,
+      "needs": {
+        "sed": 58,
+        "pipi": 47,
+        "cansancio": 42,
+        "aburrimiento": 0
+      }
+    },
+    {
+      "time": "2026-11-18T18:36:18.770Z",
+      "agent": "casa-3-agente-2",
+      "home": 3,
+      "type": "arrival",
+      "from": "salon",
+      "to": "cocina",
+      "house": 3
+    },
+    {
+      "time": "2026-11-18T18:36:18.778Z",
+      "agent": "casa-4-agente-2",
+      "home": 4,
+      "type": "arrival",
+      "from": "salon",
+      "to": "cocina",
+      "house": 4
+    },
+    {
+      "time": "2026-11-18T18:36:18.784Z",
+      "agent": "casa-1-agente-2",
+      "home": 1,
+      "type": "arrival",
+      "from": "salon",
+      "to": "cocina",
+      "house": 1
+    },
+    {
+      "time": "2026-11-18T18:36:18.874Z",
+      "agent": "casa-3-agente-2",
+      "home": 3,
+      "type": "goal_reached",
+      "goal": "cocina"
+    },
+    {
+      "time": "2026-11-18T18:36:18.882Z",
+      "agent": "casa-4-agente-2",
+      "home": 4,
+      "type": "goal_reached",
+      "goal": "cocina"
+    },
+    {
+      "time": "2026-11-18T18:36:18.888Z",
+      "agent": "casa-1-agente-2",
+      "home": 1,
+      "type": "goal_reached",
+      "goal": "cocina"
+    },
+    {
+      "time": "2026-11-18T18:36:19.829Z",
+      "agent": "casa-2-agente-1",
+      "home": 2,
+      "type": "dialogue",
+      "with": "casa-2-agente-2",
+      "text": "Hola, Leo. ¿Cómo estás?"
+    },
+    {
+      "time": "2026-11-18T18:36:19.829Z",
+      "agent": "casa-2-agente-2",
+      "home": 2,
+      "type": "dialogue",
+      "with": "casa-2-agente-1",
+      "text": "¡Hola, Luna! Me alegro de verte."
+    },
+    {
+      "time": "2026-11-18T18:36:21.022Z",
+      "agent": "casa-2-agente-2",
+      "home": 2,
+      "type": "blocked",
+      "reason": "other_agent",
+      "goal": "cocina"
+    },
+    {
+      "time": "2026-11-18T18:36:21.663Z",
+      "agent": "casa-3-agente-1",
+      "home": 3,
+      "type": "drag",
+      "from": {
+        "x": 167,
+        "y": 815
+      },
+      "to": {
+        "x": 152.50100027068459,
+        "y": 808.4094929195078
+      }
+    },
+    {
+      "time": "2026-11-18T18:36:21.674Z",
+      "agent": "casa-3-agente-1",
+      "home": 3,
+      "type": "decision",
+      "zone": "salon",
+      "goal": "cocina",
+      "reason": "Necesito beber agua.",
+      "pathLength": 2,
+      "needs": {
+        "sed": 53,
+        "pipi": 51,
+        "cansancio": 45,
+        "aburrimiento": 0
+      }
+    },
+    {
+      "time": "2026-11-18T18:36:22.482Z",
+      "agent": "casa-3-agente-1",
+      "home": 3,
+      "type": "dialogue",
+      "with": "casa-3-agente-2",
+      "text": "Hola, Bruno. ¿Cómo estás?"
+    },
+    {
+      "time": "2026-11-18T18:36:22.483Z",
+      "agent": "casa-3-agente-2",
+      "home": 3,
+      "type": "dialogue",
+      "with": "casa-3-agente-1",
+      "text": "¡Hola, Vera! Me alegro de verte."
+    }
+  ],
+  "movement_samples": [
+    {
+      "t": "2026-11-18T18:36:03.805Z",
+      "agents": [
+        {
+          "id": "casa-1-agente-1",
+          "home": 1,
+          "x": 167,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 26,
+            "pipi": 31,
+            "cansancio": 31,
+            "aburrimiento": 25
+          }
+        },
+        {
+          "id": "casa-1-agente-2",
+          "home": 1,
+          "x": 237,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 36,
+            "pipi": 31,
+            "cansancio": 31,
+            "aburrimiento": 25
+          }
+        },
+        {
+          "id": "casa-2-agente-1",
+          "home": 2,
+          "x": 775,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 26,
+            "pipi": 31,
+            "cansancio": 31,
+            "aburrimiento": 25
+          }
+        },
+        {
+          "id": "casa-2-agente-2",
+          "home": 2,
+          "x": 845,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 36,
+            "pipi": 31,
+            "cansancio": 31,
+            "aburrimiento": 25
+          }
+        },
+        {
+          "id": "casa-3-agente-1",
+          "home": 3,
+          "x": 167,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 26,
+            "pipi": 31,
+            "cansancio": 31,
+            "aburrimiento": 25
+          }
+        },
+        {
+          "id": "casa-3-agente-2",
+          "home": 3,
+          "x": 237,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 36,
+            "pipi": 31,
+            "cansancio": 31,
+            "aburrimiento": 25
+          }
+        },
+        {
+          "id": "casa-4-agente-1",
+          "home": 4,
+          "x": 775,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 26,
+            "pipi": 31,
+            "cansancio": 31,
+            "aburrimiento": 25
+          }
+        },
+        {
+          "id": "casa-4-agente-2",
+          "home": 4,
+          "x": 845,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 36,
+            "pipi": 31,
+            "cansancio": 31,
+            "aburrimiento": 25
+          }
+        }
+      ]
+    },
+    {
+      "t": "2026-11-18T18:36:04.805Z",
+      "agents": [
+        {
+          "id": "casa-1-agente-1",
+          "home": 1,
+          "x": 167,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 28,
+            "pipi": 32,
+            "cansancio": 32,
+            "aburrimiento": 11
+          }
+        },
+        {
+          "id": "casa-1-agente-2",
+          "home": 1,
+          "x": 237,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 38,
+            "pipi": 32,
+            "cansancio": 32,
+            "aburrimiento": 11
+          }
+        },
+        {
+          "id": "casa-2-agente-1",
+          "home": 2,
+          "x": 775,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 28,
+            "pipi": 32,
+            "cansancio": 32,
+            "aburrimiento": 11
+          }
+        },
+        {
+          "id": "casa-2-agente-2",
+          "home": 2,
+          "x": 845,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 38,
+            "pipi": 32,
+            "cansancio": 32,
+            "aburrimiento": 11
+          }
+        },
+        {
+          "id": "casa-3-agente-1",
+          "home": 3,
+          "x": 167,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 28,
+            "pipi": 32,
+            "cansancio": 32,
+            "aburrimiento": 11
+          }
+        },
+        {
+          "id": "casa-3-agente-2",
+          "home": 3,
+          "x": 237,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 38,
+            "pipi": 32,
+            "cansancio": 32,
+            "aburrimiento": 11
+          }
+        },
+        {
+          "id": "casa-4-agente-1",
+          "home": 4,
+          "x": 775,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 28,
+            "pipi": 32,
+            "cansancio": 32,
+            "aburrimiento": 11
+          }
+        },
+        {
+          "id": "casa-4-agente-2",
+          "home": 4,
+          "x": 845,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 38,
+            "pipi": 32,
+            "cansancio": 32,
+            "aburrimiento": 11
+          }
+        }
+      ]
+    },
+    {
+      "t": "2026-11-18T18:36:05.805Z",
+      "agents": [
+        {
+          "id": "casa-1-agente-1",
+          "home": 1,
+          "x": 167,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 29,
+            "pipi": 33,
+            "cansancio": 32,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-1-agente-2",
+          "home": 1,
+          "x": 237,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 39,
+            "pipi": 33,
+            "cansancio": 32,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-2-agente-1",
+          "home": 2,
+          "x": 775,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 29,
+            "pipi": 33,
+            "cansancio": 32,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-2-agente-2",
+          "home": 2,
+          "x": 845,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 39,
+            "pipi": 33,
+            "cansancio": 32,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-1",
+          "home": 3,
+          "x": 167,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 29,
+            "pipi": 33,
+            "cansancio": 32,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-2",
+          "home": 3,
+          "x": 237,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 39,
+            "pipi": 33,
+            "cansancio": 32,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-1",
+          "home": 4,
+          "x": 775,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 29,
+            "pipi": 33,
+            "cansancio": 32,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-2",
+          "home": 4,
+          "x": 845,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 39,
+            "pipi": 33,
+            "cansancio": 32,
+            "aburrimiento": 0
+          }
+        }
+      ]
+    },
+    {
+      "t": "2026-11-18T18:36:06.812Z",
+      "agents": [
+        {
+          "id": "casa-1-agente-1",
+          "home": 1,
+          "x": 167,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 31,
+            "pipi": 34,
+            "cansancio": 33,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-1-agente-2",
+          "home": 1,
+          "x": 237,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 41,
+            "pipi": 34,
+            "cansancio": 33,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-2-agente-1",
+          "home": 2,
+          "x": 775,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 31,
+            "pipi": 34,
+            "cansancio": 33,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-2-agente-2",
+          "home": 2,
+          "x": 845,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 41,
+            "pipi": 34,
+            "cansancio": 33,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-1",
+          "home": 3,
+          "x": 167,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 31,
+            "pipi": 34,
+            "cansancio": 33,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-2",
+          "home": 3,
+          "x": 237,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 41,
+            "pipi": 34,
+            "cansancio": 33,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-1",
+          "home": 4,
+          "x": 775,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 31,
+            "pipi": 34,
+            "cansancio": 33,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-2",
+          "home": 4,
+          "x": 845,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 41,
+            "pipi": 34,
+            "cansancio": 33,
+            "aburrimiento": 0
+          }
+        }
+      ]
+    },
+    {
+      "t": "2026-11-18T18:36:07.812Z",
+      "agents": [
+        {
+          "id": "casa-1-agente-1",
+          "home": 1,
+          "x": 167,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 32,
+            "pipi": 35,
+            "cansancio": 34,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-1-agente-2",
+          "home": 1,
+          "x": 237,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 42,
+            "pipi": 35,
+            "cansancio": 34,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-2-agente-1",
+          "home": 2,
+          "x": 775,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 32,
+            "pipi": 35,
+            "cansancio": 34,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-2-agente-2",
+          "home": 2,
+          "x": 845,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 42,
+            "pipi": 35,
+            "cansancio": 34,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-1",
+          "home": 3,
+          "x": 167,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 32,
+            "pipi": 35,
+            "cansancio": 34,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-2",
+          "home": 3,
+          "x": 237,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 42,
+            "pipi": 35,
+            "cansancio": 34,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-1",
+          "home": 4,
+          "x": 775,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 32,
+            "pipi": 35,
+            "cansancio": 34,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-2",
+          "home": 4,
+          "x": 845,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 42,
+            "pipi": 35,
+            "cansancio": 34,
+            "aburrimiento": 0
+          }
+        }
+      ]
+    },
+    {
+      "t": "2026-11-18T18:36:08.819Z",
+      "agents": [
+        {
+          "id": "casa-1-agente-1",
+          "home": 1,
+          "x": 167,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 34,
+            "pipi": 37,
+            "cansancio": 35,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-1-agente-2",
+          "home": 1,
+          "x": 237,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 44,
+            "pipi": 37,
+            "cansancio": 35,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-2-agente-1",
+          "home": 2,
+          "x": 775,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 34,
+            "pipi": 37,
+            "cansancio": 35,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-2-agente-2",
+          "home": 2,
+          "x": 845,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 44,
+            "pipi": 37,
+            "cansancio": 35,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-1",
+          "home": 3,
+          "x": 167,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 34,
+            "pipi": 37,
+            "cansancio": 35,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-2",
+          "home": 3,
+          "x": 237,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 44,
+            "pipi": 37,
+            "cansancio": 35,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-1",
+          "home": 4,
+          "x": 775,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 34,
+            "pipi": 37,
+            "cansancio": 35,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-2",
+          "home": 4,
+          "x": 845,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 44,
+            "pipi": 37,
+            "cansancio": 35,
+            "aburrimiento": 0
+          }
+        }
+      ]
+    },
+    {
+      "t": "2026-11-18T18:36:09.819Z",
+      "agents": [
+        {
+          "id": "casa-1-agente-1",
+          "home": 1,
+          "x": 167,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 36,
+            "pipi": 38,
+            "cansancio": 36,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-1-agente-2",
+          "home": 1,
+          "x": 237,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 46,
+            "pipi": 38,
+            "cansancio": 36,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-2-agente-1",
+          "home": 2,
+          "x": 775,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 36,
+            "pipi": 38,
+            "cansancio": 36,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-2-agente-2",
+          "home": 2,
+          "x": 845,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 46,
+            "pipi": 38,
+            "cansancio": 36,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-1",
+          "home": 3,
+          "x": 167,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 36,
+            "pipi": 38,
+            "cansancio": 36,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-2",
+          "home": 3,
+          "x": 237,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 46,
+            "pipi": 38,
+            "cansancio": 36,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-1",
+          "home": 4,
+          "x": 775,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 36,
+            "pipi": 38,
+            "cansancio": 36,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-2",
+          "home": 4,
+          "x": 845,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 46,
+            "pipi": 38,
+            "cansancio": 36,
+            "aburrimiento": 0
+          }
+        }
+      ]
+    },
+    {
+      "t": "2026-11-18T18:36:10.826Z",
+      "agents": [
+        {
+          "id": "casa-1-agente-1",
+          "home": 1,
+          "x": 167,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 37,
+            "pipi": 39,
+            "cansancio": 36,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-1-agente-2",
+          "home": 1,
+          "x": 237,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 47,
+            "pipi": 39,
+            "cansancio": 36,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-2-agente-1",
+          "home": 2,
+          "x": 775,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 37,
+            "pipi": 39,
+            "cansancio": 36,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-2-agente-2",
+          "home": 2,
+          "x": 845,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 47,
+            "pipi": 39,
+            "cansancio": 36,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-1",
+          "home": 3,
+          "x": 167,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 37,
+            "pipi": 39,
+            "cansancio": 36,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-2",
+          "home": 3,
+          "x": 237,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 47,
+            "pipi": 39,
+            "cansancio": 36,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-1",
+          "home": 4,
+          "x": 775,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 37,
+            "pipi": 39,
+            "cansancio": 36,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-2",
+          "home": 4,
+          "x": 845,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 47,
+            "pipi": 39,
+            "cansancio": 36,
+            "aburrimiento": 0
+          }
+        }
+      ]
+    },
+    {
+      "t": "2026-11-18T18:36:11.832Z",
+      "agents": [
+        {
+          "id": "casa-1-agente-1",
+          "home": 1,
+          "x": 167,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 39,
+            "pipi": 40,
+            "cansancio": 37,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-1-agente-2",
+          "home": 1,
+          "x": 237,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 49,
+            "pipi": 40,
+            "cansancio": 37,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-2-agente-1",
+          "home": 2,
+          "x": 775,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 39,
+            "pipi": 40,
+            "cansancio": 37,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-2-agente-2",
+          "home": 2,
+          "x": 845,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 49,
+            "pipi": 40,
+            "cansancio": 37,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-1",
+          "home": 3,
+          "x": 167,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 39,
+            "pipi": 40,
+            "cansancio": 37,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-2",
+          "home": 3,
+          "x": 237,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 49,
+            "pipi": 40,
+            "cansancio": 37,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-1",
+          "home": 4,
+          "x": 775,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 39,
+            "pipi": 40,
+            "cansancio": 37,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-2",
+          "home": 4,
+          "x": 845,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 49,
+            "pipi": 40,
+            "cansancio": 37,
+            "aburrimiento": 0
+          }
+        }
+      ]
+    },
+    {
+      "t": "2026-11-18T18:36:12.833Z",
+      "agents": [
+        {
+          "id": "casa-1-agente-1",
+          "home": 1,
+          "x": 167,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 40,
+            "pipi": 41,
+            "cansancio": 38,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-1-agente-2",
+          "home": 1,
+          "x": 237,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 50,
+            "pipi": 41,
+            "cansancio": 38,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-2-agente-1",
+          "home": 2,
+          "x": 775,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 40,
+            "pipi": 41,
+            "cansancio": 38,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-2-agente-2",
+          "home": 2,
+          "x": 845,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 50,
+            "pipi": 41,
+            "cansancio": 38,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-1",
+          "home": 3,
+          "x": 167,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 40,
+            "pipi": 41,
+            "cansancio": 38,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-2",
+          "home": 3,
+          "x": 237,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 50,
+            "pipi": 41,
+            "cansancio": 38,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-1",
+          "home": 4,
+          "x": 775,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 40,
+            "pipi": 41,
+            "cansancio": 38,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-2",
+          "home": 4,
+          "x": 845,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 50,
+            "pipi": 41,
+            "cansancio": 38,
+            "aburrimiento": 0
+          }
+        }
+      ]
+    },
+    {
+      "t": "2026-11-18T18:36:13.840Z",
+      "agents": [
+        {
+          "id": "casa-1-agente-1",
+          "home": 1,
+          "x": 167,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 42,
+            "pipi": 42,
+            "cansancio": 39,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-1-agente-2",
+          "home": 1,
+          "x": 237,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 52,
+            "pipi": 42,
+            "cansancio": 39,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-2-agente-1",
+          "home": 2,
+          "x": 775,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 42,
+            "pipi": 42,
+            "cansancio": 39,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-2-agente-2",
+          "home": 2,
+          "x": 845,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 52,
+            "pipi": 42,
+            "cansancio": 39,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-1",
+          "home": 3,
+          "x": 167,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 42,
+            "pipi": 42,
+            "cansancio": 39,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-2",
+          "home": 3,
+          "x": 237,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 52,
+            "pipi": 42,
+            "cansancio": 39,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-1",
+          "home": 4,
+          "x": 775,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 42,
+            "pipi": 42,
+            "cansancio": 39,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-2",
+          "home": 4,
+          "x": 845,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 52,
+            "pipi": 42,
+            "cansancio": 39,
+            "aburrimiento": 0
+          }
+        }
+      ]
+    },
+    {
+      "t": "2026-11-18T18:36:14.840Z",
+      "agents": [
+        {
+          "id": "casa-1-agente-1",
+          "home": 1,
+          "x": 167,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 43,
+            "pipi": 43,
+            "cansancio": 40,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-1-agente-2",
+          "home": 1,
+          "x": 237,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 53,
+            "pipi": 43,
+            "cansancio": 40,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-2-agente-1",
+          "home": 2,
+          "x": 782,
+          "y": 192,
+          "zone": "salon",
+          "goal": "cocina",
+          "pathRemaining": 1,
+          "needs": {
+            "sed": 43,
+            "pipi": 43,
+            "cansancio": 40,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-2-agente-2",
+          "home": 2,
+          "x": 845,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 53,
+            "pipi": 43,
+            "cansancio": 40,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-1",
+          "home": 3,
+          "x": 167,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 43,
+            "pipi": 43,
+            "cansancio": 40,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-2",
+          "home": 3,
+          "x": 237,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 53,
+            "pipi": 43,
+            "cansancio": 40,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-1",
+          "home": 4,
+          "x": 775,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 43,
+            "pipi": 43,
+            "cansancio": 40,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-2",
+          "home": 4,
+          "x": 845,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 53,
+            "pipi": 43,
+            "cansancio": 40,
+            "aburrimiento": 0
+          }
+        }
+      ]
+    },
+    {
+      "t": "2026-11-18T18:36:15.847Z",
+      "agents": [
+        {
+          "id": "casa-1-agente-1",
+          "home": 1,
+          "x": 167,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 45,
+            "pipi": 44,
+            "cansancio": 40,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-1-agente-2",
+          "home": 1,
+          "x": 237,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 55,
+            "pipi": 44,
+            "cansancio": 40,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-2-agente-1",
+          "home": 2,
+          "x": 888,
+          "y": 192,
+          "zone": "salon",
+          "goal": "cocina",
+          "pathRemaining": 1,
+          "needs": {
+            "sed": 45,
+            "pipi": 44,
+            "cansancio": 40,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-2-agente-2",
+          "home": 2,
+          "x": 845,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 55,
+            "pipi": 44,
+            "cansancio": 40,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-1",
+          "home": 3,
+          "x": 167,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 45,
+            "pipi": 44,
+            "cansancio": 40,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-2",
+          "home": 3,
+          "x": 237,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 55,
+            "pipi": 44,
+            "cansancio": 40,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-1",
+          "home": 4,
+          "x": 775,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 45,
+            "pipi": 44,
+            "cansancio": 40,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-2",
+          "home": 4,
+          "x": 845,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 55,
+            "pipi": 44,
+            "cansancio": 40,
+            "aburrimiento": 0
+          }
+        }
+      ]
+    },
+    {
+      "t": "2026-11-18T18:36:16.854Z",
+      "agents": [
+        {
+          "id": "casa-1-agente-1",
+          "home": 1,
+          "x": 167,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 46,
+            "pipi": 45,
+            "cansancio": 41,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-1-agente-2",
+          "home": 1,
+          "x": 237,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 56,
+            "pipi": 45,
+            "cansancio": 41,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-2-agente-1",
+          "home": 2,
+          "x": 928,
+          "y": 192,
+          "zone": "cocina",
+          "goal": "cocina",
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 34,
+            "pipi": 45,
+            "cansancio": 41,
+            "aburrimiento": 1
+          }
+        },
+        {
+          "id": "casa-2-agente-2",
+          "home": 2,
+          "x": 845,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 56,
+            "pipi": 45,
+            "cansancio": 41,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-1",
+          "home": 3,
+          "x": 167,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 46,
+            "pipi": 45,
+            "cansancio": 41,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-2",
+          "home": 3,
+          "x": 237,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 56,
+            "pipi": 45,
+            "cansancio": 41,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-1",
+          "home": 4,
+          "x": 775,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 46,
+            "pipi": 45,
+            "cansancio": 41,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-2",
+          "home": 4,
+          "x": 845,
+          "y": 840,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 56,
+            "pipi": 45,
+            "cansancio": 41,
+            "aburrimiento": 0
+          }
+        }
+      ]
+    },
+    {
+      "t": "2026-11-18T18:36:17.860Z",
+      "agents": [
+        {
+          "id": "casa-1-agente-1",
+          "home": 1,
+          "x": 167,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 48,
+            "pipi": 47,
+            "cansancio": 42,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-1-agente-2",
+          "home": 1,
+          "x": 239,
+          "y": 230,
+          "zone": "salon",
+          "goal": "cocina",
+          "pathRemaining": 3,
+          "needs": {
+            "sed": 58,
+            "pipi": 47,
+            "cansancio": 42,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-2-agente-1",
+          "home": 2,
+          "x": 928,
+          "y": 192,
+          "zone": "cocina",
+          "goal": "cocina",
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 20,
+            "pipi": 47,
+            "cansancio": 42,
+            "aburrimiento": 2
+          }
+        },
+        {
+          "id": "casa-2-agente-2",
+          "home": 2,
+          "x": 844,
+          "y": 232,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 58,
+            "pipi": 47,
+            "cansancio": 42,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-1",
+          "home": 3,
+          "x": 167,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 48,
+            "pipi": 47,
+            "cansancio": 42,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-2",
+          "home": 3,
+          "x": 240,
+          "y": 837,
+          "zone": "salon",
+          "goal": "cocina",
+          "pathRemaining": 3,
+          "needs": {
+            "sed": 58,
+            "pipi": 47,
+            "cansancio": 42,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-1",
+          "home": 4,
+          "x": 775,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 48,
+            "pipi": 47,
+            "cansancio": 42,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-2",
+          "home": 4,
+          "x": 847,
+          "y": 837,
+          "zone": "salon",
+          "goal": "cocina",
+          "pathRemaining": 3,
+          "needs": {
+            "sed": 58,
+            "pipi": 47,
+            "cansancio": 42,
+            "aburrimiento": 0
+          }
+        }
+      ]
+    },
+    {
+      "t": "2026-11-18T18:36:18.861Z",
+      "agents": [
+        {
+          "id": "casa-1-agente-1",
+          "home": 1,
+          "x": 167,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 49,
+            "pipi": 48,
+            "cansancio": 43,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-1-agente-2",
+          "home": 1,
+          "x": 317,
+          "y": 192,
+          "zone": "cocina",
+          "goal": "cocina",
+          "pathRemaining": 1,
+          "needs": {
+            "sed": 58,
+            "pipi": 48,
+            "cansancio": 43,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-2-agente-1",
+          "home": 2,
+          "x": 928,
+          "y": 192,
+          "zone": "cocina",
+          "goal": "cocina",
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 5,
+            "pipi": 48,
+            "cansancio": 43,
+            "aburrimiento": 4
+          }
+        },
+        {
+          "id": "casa-2-agente-2",
+          "home": 2,
+          "x": 890,
+          "y": 192,
+          "zone": "salon",
+          "goal": "cocina",
+          "pathRemaining": 1,
+          "needs": {
+            "sed": 59,
+            "pipi": 48,
+            "cansancio": 43,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-1",
+          "home": 3,
+          "x": 167,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 49,
+            "pipi": 48,
+            "cansancio": 43,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-2",
+          "home": 3,
+          "x": 319,
+          "y": 800,
+          "zone": "cocina",
+          "goal": "cocina",
+          "pathRemaining": 1,
+          "needs": {
+            "sed": 58,
+            "pipi": 48,
+            "cansancio": 43,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-1",
+          "home": 4,
+          "x": 775,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 49,
+            "pipi": 48,
+            "cansancio": 43,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-2",
+          "home": 4,
+          "x": 926,
+          "y": 800,
+          "zone": "cocina",
+          "goal": "cocina",
+          "pathRemaining": 1,
+          "needs": {
+            "sed": 58,
+            "pipi": 48,
+            "cansancio": 43,
+            "aburrimiento": 0
+          }
+        }
+      ]
+    },
+    {
+      "t": "2026-11-18T18:36:19.867Z",
+      "agents": [
+        {
+          "id": "casa-1-agente-1",
+          "home": 1,
+          "x": 167,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 51,
+            "pipi": 49,
+            "cansancio": 44,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-1-agente-2",
+          "home": 1,
+          "x": 319,
+          "y": 192,
+          "zone": "cocina",
+          "goal": "cocina",
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 43,
+            "pipi": 49,
+            "cansancio": 44,
+            "aburrimiento": 1
+          }
+        },
+        {
+          "id": "casa-2-agente-1",
+          "home": 2,
+          "x": 928,
+          "y": 192,
+          "zone": "cocina",
+          "goal": "cocina",
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 0,
+            "pipi": 49,
+            "cansancio": 44,
+            "aburrimiento": 5
+          }
+        },
+        {
+          "id": "casa-2-agente-2",
+          "home": 2,
+          "x": 906,
+          "y": 192,
+          "zone": "salon",
+          "goal": "cocina",
+          "pathRemaining": 1,
+          "needs": {
+            "sed": 61,
+            "pipi": 49,
+            "cansancio": 44,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-1",
+          "home": 3,
+          "x": 167,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 51,
+            "pipi": 49,
+            "cansancio": 44,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-2",
+          "home": 3,
+          "x": 319,
+          "y": 800,
+          "zone": "cocina",
+          "goal": "cocina",
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 43,
+            "pipi": 49,
+            "cansancio": 44,
+            "aburrimiento": 1
+          }
+        },
+        {
+          "id": "casa-4-agente-1",
+          "home": 4,
+          "x": 775,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 51,
+            "pipi": 49,
+            "cansancio": 44,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-2",
+          "home": 4,
+          "x": 927,
+          "y": 800,
+          "zone": "cocina",
+          "goal": "cocina",
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 43,
+            "pipi": 49,
+            "cansancio": 44,
+            "aburrimiento": 1
+          }
+        }
+      ]
+    },
+    {
+      "t": "2026-11-18T18:36:20.868Z",
+      "agents": [
+        {
+          "id": "casa-1-agente-1",
+          "home": 1,
+          "x": 167,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 52,
+            "pipi": 50,
+            "cansancio": 44,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-1-agente-2",
+          "home": 1,
+          "x": 319,
+          "y": 192,
+          "zone": "cocina",
+          "goal": "cocina",
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 29,
+            "pipi": 50,
+            "cansancio": 44,
+            "aburrimiento": 3
+          }
+        },
+        {
+          "id": "casa-2-agente-1",
+          "home": 2,
+          "x": 928,
+          "y": 192,
+          "zone": "cocina",
+          "goal": "cocina",
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 0,
+            "pipi": 50,
+            "cansancio": 44,
+            "aburrimiento": 6
+          }
+        },
+        {
+          "id": "casa-2-agente-2",
+          "home": 2,
+          "x": 906,
+          "y": 192,
+          "zone": "salon",
+          "goal": "cocina",
+          "pathRemaining": 1,
+          "needs": {
+            "sed": 62,
+            "pipi": 50,
+            "cansancio": 44,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-1",
+          "home": 3,
+          "x": 167,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 52,
+            "pipi": 50,
+            "cansancio": 44,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-2",
+          "home": 3,
+          "x": 319,
+          "y": 800,
+          "zone": "cocina",
+          "goal": "cocina",
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 28,
+            "pipi": 50,
+            "cansancio": 44,
+            "aburrimiento": 3
+          }
+        },
+        {
+          "id": "casa-4-agente-1",
+          "home": 4,
+          "x": 775,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 52,
+            "pipi": 50,
+            "cansancio": 44,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-2",
+          "home": 4,
+          "x": 927,
+          "y": 800,
+          "zone": "cocina",
+          "goal": "cocina",
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 29,
+            "pipi": 50,
+            "cansancio": 44,
+            "aburrimiento": 3
+          }
+        }
+      ]
+    },
+    {
+      "t": "2026-11-18T18:36:21.874Z",
+      "agents": [
+        {
+          "id": "casa-1-agente-1",
+          "home": 1,
+          "x": 167,
+          "y": 207,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 54,
+            "pipi": 51,
+            "cansancio": 45,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-1-agente-2",
+          "home": 1,
+          "x": 319,
+          "y": 192,
+          "zone": "cocina",
+          "goal": "cocina",
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 14,
+            "pipi": 51,
+            "cansancio": 45,
+            "aburrimiento": 4
+          }
+        },
+        {
+          "id": "casa-2-agente-1",
+          "home": 2,
+          "x": 928,
+          "y": 192,
+          "zone": "cocina",
+          "goal": "cocina",
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 0,
+            "pipi": 51,
+            "cansancio": 45,
+            "aburrimiento": 7
+          }
+        },
+        {
+          "id": "casa-2-agente-2",
+          "home": 2,
+          "x": 906,
+          "y": 192,
+          "zone": "salon",
+          "goal": "cocina",
+          "pathRemaining": 1,
+          "needs": {
+            "sed": 64,
+            "pipi": 51,
+            "cansancio": 45,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-1",
+          "home": 3,
+          "x": 173,
+          "y": 801,
+          "zone": "salon",
+          "goal": "cocina",
+          "pathRemaining": 2,
+          "needs": {
+            "sed": 54,
+            "pipi": 51,
+            "cansancio": 45,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-3-agente-2",
+          "home": 3,
+          "x": 319,
+          "y": 800,
+          "zone": "cocina",
+          "goal": "cocina",
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 14,
+            "pipi": 51,
+            "cansancio": 45,
+            "aburrimiento": 4
+          }
+        },
+        {
+          "id": "casa-4-agente-1",
+          "home": 4,
+          "x": 775,
+          "y": 815,
+          "zone": "salon",
+          "goal": null,
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 54,
+            "pipi": 51,
+            "cansancio": 45,
+            "aburrimiento": 0
+          }
+        },
+        {
+          "id": "casa-4-agente-2",
+          "home": 4,
+          "x": 927,
+          "y": 800,
+          "zone": "cocina",
+          "goal": "cocina",
+          "pathRemaining": 0,
+          "needs": {
+            "sed": 14,
+            "pipi": 51,
+            "cansancio": 45,
+            "aburrimiento": 4
+          }
+        }
+      ]
+    }
+  ]
+}
